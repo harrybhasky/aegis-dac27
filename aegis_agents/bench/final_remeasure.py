@@ -27,7 +27,7 @@ import aegis_eval  # noqa: E402
 import aegis_verify  # noqa: E402
 from aegis_common import load_design  # noqa: E402
 
-CHECKER = "aegis_verify.cdc + lock checksums, Phase 1 of 2026-11-02 (internal-register Gray contracts, recoded storage)"
+CHECKER = "aegis_verify.cdc + lock checksums, Phase 1 of 2026-11-02b (internal-register Gray contracts, recoded storage, flop-driven register names)"
 
 
 def flat_sdc(sdc, out):

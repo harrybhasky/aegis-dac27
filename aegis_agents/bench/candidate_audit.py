@@ -28,7 +28,7 @@ import aegis_verify  # noqa: E402
 from aegis_common import load_design  # noqa: E402
 
 PATTERNS = ["work/v*/drrtl/m*", "work/v*/vanilla/V*", "work/v*/regions/*/C*"]
-CHECKER = "aegis_verify.cdc, Phase 1 of 2026-11-02"
+CHECKER = "aegis_verify.cdc, Phase 1 of 2026-11-02b (flop-driven register names)"
 
 
 def load(p):

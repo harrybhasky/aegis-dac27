@@ -207,6 +207,14 @@ class Flat:
                 if not isinstance(b, str):
                     self.bitname.setdefault(b, []).append((n, int(w.get("offset", 0)) + i, len(w["bits"])))
         self.ports = {p.lstrip("\\"): d for p, d in self.m["ports"].items()}
+        # every bit driven by a flop's Q: a register's name must be a net whose bits are ALL flop outputs
+        # (2026-11-02: `assign full_target = {~wgray[..], wgray[..]}` aliased wgray's low bits and, sorting first,
+        # renamed the register to full_target -> a spurious "crossing disappeared" + failed contract)
+        self.ffq = {b for c in self.cells.values() if c["type"] in STATE_CELLS
+                    for b in c["connections"].get("Q", []) if not isinstance(b, str)}
+
+    def pure_reg(self, n):
+        return all(isinstance(b, str) or b in self.ffq for b in self.names[n]["bits"]) if n in self.names else False
 
     def ffs(self):
         return [cn for cn, c in self.cells.items() if c["type"] in STATE_CELLS]
@@ -223,6 +231,9 @@ class Flat:
         m = re.match(r"^\$flatten\\?(.*)\.\$", cn.lstrip("\\"))
         prefix = (m.group(1) + ".") if m else ""
         names = [n for n, _, _ in self.bitname[qs[0]]]
+        pure = [n for n in names if self.pure_reg(n)]
+        if pure:
+            names = pure
         own = [n for n in names if prefix and n.startswith(prefix) and "." not in n[len(prefix):]]
         if own:
             return own[0]
