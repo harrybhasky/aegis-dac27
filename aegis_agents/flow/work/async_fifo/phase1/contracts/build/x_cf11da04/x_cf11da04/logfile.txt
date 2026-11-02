@@ -1,0 +1,58 @@
+SBY 13:55:39 [x_cf11da04] Removing directory '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04'.
+SBY 13:55:39 [x_cf11da04] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/async_fifo.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04/src/async_fifo.v'.
+SBY 13:55:39 [x_cf11da04] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/fifomem.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04/src/fifomem.v'.
+SBY 13:55:39 [x_cf11da04] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/rptr_empty.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04/src/rptr_empty.v'.
+SBY 13:55:39 [x_cf11da04] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/wptr_full.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04/src/wptr_full.v'.
+SBY 13:55:39 [x_cf11da04] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/sync_r2w.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04/src/sync_r2w.v'.
+SBY 13:55:39 [x_cf11da04] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/sync_w2r.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04/src/sync_w2r.v'.
+SBY 13:55:39 [x_cf11da04] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/sync_ptr.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04/src/sync_ptr.v'.
+SBY 13:55:39 [x_cf11da04] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/checker.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04/src/checker.v'.
+SBY 13:55:39 [x_cf11da04] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/formal_top.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04/x_cf11da04/src/formal_top.v'.
+SBY 13:55:39 [x_cf11da04] engine_0: abc pdr
+SBY 13:55:39 [x_cf11da04] base: starting process "cd x_cf11da04/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:55:39 [x_cf11da04] base: finished (returncode=0)
+SBY 13:55:39 [x_cf11da04] prep: starting process "cd x_cf11da04/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:55:39 [x_cf11da04] prep: finished (returncode=0)
+SBY 13:55:39 [x_cf11da04] aig: starting process "cd x_cf11da04/model; yosys -ql design_aiger.log design_aiger.ys"
+SBY 13:55:39 [x_cf11da04] aig: Warning: Treating undriven bit aegis_formal_top.\wrst_n like $anyseq.
+SBY 13:55:39 [x_cf11da04] aig: Warning: Treating undriven bit aegis_formal_top.\wq2_rptr [0] like $anyseq.
+SBY 13:55:39 [x_cf11da04] aig: Warning: Treating undriven bit aegis_formal_top.\wq2_rptr [1] like $anyseq.
+SBY 13:55:39 [x_cf11da04] aig: Warning: Treating undriven bit aegis_formal_top.\wq2_rptr [2] like $anyseq.
+SBY 13:55:39 [x_cf11da04] aig: Warning: Treating undriven bit aegis_formal_top.\wq2_rptr [3] like $anyseq.
+SBY 13:55:39 [x_cf11da04] aig: Warning: Treating undriven bit aegis_formal_top.\wq2_rptr [4] like $anyseq.
+SBY 13:55:39 [x_cf11da04] aig: Warning: Treating undriven bit aegis_formal_top.\winc like $anyseq.
+SBY 13:55:39 [x_cf11da04] aig: Warning: Treating undriven bit aegis_formal_top.\wclk like $anyseq.
+SBY 13:55:39 [x_cf11da04] aig: Warning: Treating a total of 8 undriven bits in aegis_formal_top like $anyseq.
+SBY 13:55:39 [x_cf11da04] aig: finished (returncode=0)
+SBY 13:55:39 [x_cf11da04] engine_0: starting process "cd x_cf11da04; yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw'"
+SBY 13:55:39 [x_cf11da04] engine_0: ======== ABC command line "read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw"
+SBY 13:55:39 [x_cf11da04] engine_0: Warning: The last 2 outputs are interpreted as constraints.
+SBY 13:55:39 [x_cf11da04] engine_0: VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 139. MonoCNF = no. SkipGen = no. SolveAll = no.
+SBY 13:55:39 [x_cf11da04] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 13:55:39 [x_cf11da04] engine_0: 1 : 0 9                                                                 1    11      0.00 sec  T/O =  0  PRV =  0
+SBY 13:55:39 [x_cf11da04] engine_0: 2 : 0 2 114 ~1                                                           2    26      0.03 sec  T/O =  0  PRV =  0
+SBY 13:55:39 [x_cf11da04] engine_0: Proved output 0 in frame 2.
+SBY 13:55:39 [x_cf11da04] engine_0: Proved output 1 in frame 2.
+SBY 13:55:39 [x_cf11da04] engine_0: 3 : 0 2 2 -5 ~108                                                0    26      0.05 sec  T/O =  0  PRV =  2
+SBY 13:55:39 [x_cf11da04] engine_0: 4 : 0 2 2 1 -6 ~108                                              0    26      0.05 sec  T/O =  0  PRV =  2
+SBY 13:55:39 [x_cf11da04] engine_0: All outputs solved or timed out in frame 4.
+SBY 13:55:39 [x_cf11da04] engine_0: Block =   85  Oblig =   149  Clause =   117  Call =   921 (sat=69.7%)  Cex =   0  Start =   2
+SBY 13:55:39 [x_cf11da04] engine_0: SAT solving =     0.02 sec ( 36.71 %)
+SBY 13:55:39 [x_cf11da04] engine_0: unsat     =     0.00 sec (  2.82 %)
+SBY 13:55:39 [x_cf11da04] engine_0: sat       =     0.02 sec ( 33.89 %)
+SBY 13:55:39 [x_cf11da04] engine_0: Generalize  =     0.02 sec ( 34.37 %)
+SBY 13:55:39 [x_cf11da04] engine_0: Push clause =     0.00 sec (  0.82 %)
+SBY 13:55:39 [x_cf11da04] engine_0: Ternary sim =     0.00 sec (  3.20 %)
+SBY 13:55:39 [x_cf11da04] engine_0: Containment =     0.00 sec (  0.16 %)
+SBY 13:55:39 [x_cf11da04] engine_0: CNF compute =     0.00 sec (  4.03 %)
+SBY 13:55:39 [x_cf11da04] engine_0: Refinement  =     0.00 sec (  0.00 %)
+SBY 13:55:39 [x_cf11da04] engine_0: TOTAL       =     0.06 sec (100.00 %)
+SBY 13:55:39 [x_cf11da04] engine_0: Property proved.  Time =     0.06 sec
+SBY 13:55:39 [x_cf11da04] engine_0: Counter-example is not available.
+SBY 13:55:39 [x_cf11da04] engine_0: finished (returncode=0)
+SBY 13:55:39 [x_cf11da04] engine_0: Status returned by engine: PASS
+SBY 13:55:39 [x_cf11da04] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:55:39 [x_cf11da04] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:55:39 [x_cf11da04] summary: engine_0 (abc pdr) returned PASS
+SBY 13:55:39 [x_cf11da04] summary: engine_0 did not produce any traces
+SBY 13:55:39 [x_cf11da04] DONE (PASS, rc=0)

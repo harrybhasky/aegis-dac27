@@ -1,0 +1,108 @@
+{
+ "immutable": [
+  "async_fifo.v:10",
+  "async_fifo.v:11",
+  "async_fifo.v:12",
+  "fifomem.v:10",
+  "fifomem.v:11",
+  "fifomem.v:12",
+  "rptr_empty.v:10",
+  "sync_ptr.v:10",
+  "sync_r2w.v:10",
+  "sync_r2w.v:20",
+  "sync_r2w.v:21",
+  "sync_r2w.v:22",
+  "sync_r2w.v:23",
+  "sync_r2w.v:24",
+  "sync_r2w.v:25",
+  "sync_r2w.v:26",
+  "sync_r2w.v:27",
+  "sync_w2r.v:10",
+  "sync_w2r.v:20",
+  "sync_w2r.v:21",
+  "sync_w2r.v:22",
+  "sync_w2r.v:23",
+  "sync_w2r.v:24",
+  "sync_w2r.v:25",
+  "sync_w2r.v:26",
+  "sync_w2r.v:27",
+  "wptr_full.v:10"
+ ],
+ "category": {
+  "sync_r2w.v:20": "synchronizer",
+  "sync_r2w.v:21": "synchronizer",
+  "sync_r2w.v:22": "synchronizer",
+  "sync_r2w.v:23": "synchronizer",
+  "sync_r2w.v:24": "synchronizer",
+  "sync_r2w.v:25": "synchronizer",
+  "sync_r2w.v:26": "synchronizer",
+  "sync_r2w.v:27": "synchronizer",
+  "sync_w2r.v:20": "synchronizer",
+  "sync_w2r.v:21": "synchronizer",
+  "sync_w2r.v:22": "synchronizer",
+  "sync_w2r.v:23": "synchronizer",
+  "sync_w2r.v:24": "synchronizer",
+  "sync_w2r.v:25": "synchronizer",
+  "sync_w2r.v:26": "synchronizer",
+  "sync_w2r.v:27": "synchronizer",
+  "async_fifo.v:10": "capacity",
+  "async_fifo.v:11": "capacity",
+  "async_fifo.v:12": "capacity",
+  "fifomem.v:10": "capacity",
+  "fifomem.v:11": "capacity",
+  "fifomem.v:12": "capacity",
+  "rptr_empty.v:10": "capacity",
+  "wptr_full.v:10": "capacity",
+  "sync_r2w.v:10": "capacity",
+  "sync_w2r.v:10": "capacity",
+  "sync_ptr.v:10": "capacity"
+ },
+ "contract": {
+  "rptr_empty.v:40": "x_753d5e36",
+  "rptr_empty.v:41": "x_753d5e36",
+  "rptr_empty.v:29": "x_753d5e36",
+  "rptr_empty.v:30": "x_753d5e36",
+  "rptr_empty.v:31": "x_753d5e36",
+  "rptr_empty.v:32": "x_753d5e36",
+  "rptr_empty.v:33": "x_753d5e36",
+  "rptr_empty.v:34": "x_753d5e36",
+  "rptr_empty.v:35": "x_753d5e36",
+  "rptr_empty.v:36": "x_753d5e36",
+  "wptr_full.v:39": "x_cf11da04",
+  "wptr_full.v:38": "x_cf11da04",
+  "wptr_full.v:27": "x_cf11da04",
+  "wptr_full.v:28": "x_cf11da04",
+  "wptr_full.v:29": "x_cf11da04",
+  "wptr_full.v:30": "x_cf11da04",
+  "wptr_full.v:31": "x_cf11da04",
+  "wptr_full.v:32": "x_cf11da04",
+  "wptr_full.v:33": "x_cf11da04",
+  "wptr_full.v:34": "x_cf11da04"
+ },
+ "contracts": {
+  "x_753d5e36": {
+   "crossing": "x_753d5e36",
+   "type": "gray_src",
+   "scope_module": "rptr_empty",
+   "signals": {
+    "ptr": "rptr"
+   },
+   "properties": [
+    "G1",
+    "G2"
+   ]
+  },
+  "x_cf11da04": {
+   "crossing": "x_cf11da04",
+   "type": "gray_src",
+   "scope_module": "wptr_full",
+   "signals": {
+    "ptr": "wptr"
+   },
+   "properties": [
+    "G1",
+    "G2"
+   ]
+  }
+ }
+}

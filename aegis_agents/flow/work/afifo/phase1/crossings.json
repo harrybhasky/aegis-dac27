@@ -1,0 +1,24 @@
+[
+ {
+  "id": "x_fa1c1e76",
+  "src_reg": "rgray",
+  "dst_reg": "rgray_cross",
+  "src_clock": "i_rclk",
+  "dst_clock": "i_wclk",
+  "width": 4,
+  "sync_depth": 2,
+  "kind": "gray_candidate",
+  "contract": "proven"
+ },
+ {
+  "id": "x_8e8f57f7",
+  "src_reg": "wgray",
+  "dst_reg": "wgray_cross",
+  "src_clock": "i_wclk",
+  "dst_clock": "i_rclk",
+  "width": 4,
+  "sync_depth": 2,
+  "kind": "gray_candidate",
+  "contract": "proven"
+ }
+]

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-11-02T13:55:37" hostname="Haris-MacBook-Air-2.local" package="x_fa1c1e76" id="0" name="default" tests="1" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Darwin"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="default" time="0">
+</testcase>
+<system-out>SBY 13:55:36 [x_fa1c1e76] Removing directory '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_fa1c1e76/x_fa1c1e76'.
+SBY 13:55:36 [x_fa1c1e76] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_fa1c1e76/aegis_exposed.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_fa1c1e76/x_fa1c1e76/src/aegis_exposed.v'.
+SBY 13:55:36 [x_fa1c1e76] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_fa1c1e76/checker.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_fa1c1e76/x_fa1c1e76/src/checker.v'.
+SBY 13:55:36 [x_fa1c1e76] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_fa1c1e76/formal_top.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_fa1c1e76/x_fa1c1e76/src/formal_top.v'.
+SBY 13:55:36 [x_fa1c1e76] engine_0: abc pdr
+SBY 13:55:36 [x_fa1c1e76] base: starting process &quot;cd x_fa1c1e76/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 13:55:37 [x_fa1c1e76] base: finished (returncode=0)
+SBY 13:55:37 [x_fa1c1e76] prep: starting process &quot;cd x_fa1c1e76/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 13:55:37 [x_fa1c1e76] prep: finished (returncode=0)
+SBY 13:55:37 [x_fa1c1e76] aig: starting process &quot;cd x_fa1c1e76/model; yosys -ql design_aiger.log design_aiger.ys&quot;
+SBY 13:55:37 [x_fa1c1e76] aig: Warning: Treating undriven bit aegis_formal_top.\i_wr_reset_n like $anyseq.
+SBY 13:55:37 [x_fa1c1e76] aig: Warning: Treating undriven bit aegis_formal_top.\i_wr like $anyseq.
+SBY 13:55:37 [x_fa1c1e76] aig: Warning: Treating undriven bit aegis_formal_top.\i_wclk like $anyseq.
+SBY 13:55:37 [x_fa1c1e76] aig: Warning: Treating undriven bit aegis_formal_top.\i_rd_reset_n like $anyseq.
+SBY 13:55:37 [x_fa1c1e76] aig: Warning: Treating undriven bit aegis_formal_top.\i_rd like $anyseq.
+SBY 13:55:37 [x_fa1c1e76] aig: Warning: Treating undriven bit aegis_formal_top.\i_rclk like $anyseq.
+SBY 13:55:37 [x_fa1c1e76] aig: Warning: Treating a total of 6 undriven bits in aegis_formal_top like $anyseq.
+SBY 13:55:37 [x_fa1c1e76] aig: finished (returncode=0)
+SBY 13:55:37 [x_fa1c1e76] engine_0: starting process &quot;cd x_fa1c1e76; yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw'&quot;
+SBY 13:55:37 [x_fa1c1e76] engine_0: ======== ABC command line &quot;read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw&quot;
+SBY 13:55:37 [x_fa1c1e76] engine_0: Warning: The last 3 outputs are interpreted as constraints.
+SBY 13:55:37 [x_fa1c1e76] engine_0: VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 139. MonoCNF = no. SkipGen = no. SolveAll = no.
+SBY 13:55:37 [x_fa1c1e76] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 13:55:37 [x_fa1c1e76] engine_0: 1 : 0 8                                                                 1     9      0.00 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 2 : 0 8 20                                                              2    23      0.01 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 3 : 0 8 6 17 ~1                                                          2    24      0.02 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 4 : 0 8 4 10 18 ~1                                                       3    24      0.03 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 5 : 0 8 4 7 9 18 ~1                                                      3    24      0.03 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 6 : 0 8 4 7 8 14 22 ~3                                                   3    24      0.04 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 7 : 0 8 4 7 8 4 7 23 ~4                                                  1    24      0.05 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 8 : 0 8 4 7 8 4 7 14 25 ~4                                               3    24      0.06 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 9 : 0 8 4 7 8 4 7 7 6 22 ~9                                             1    24      0.07 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 10 : 0 8 4 7 8 4 7 7 6 18 21 ~11                                          3    24      0.08 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 11 : 0 8 4 7 8 4 7 7 6 6 7 19 ~15                                         1    24      0.09 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 12 : 0 8 4 7 8 4 7 7 6 6 7 10 14 ~18                                      2    24      0.10 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 13 : 0 8 4 7 8 4 7 7 6 6 7 5 5 15 ~19                                     1    24      0.11 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 14 : 0 8 4 7 8 4 7 7 6 6 7 5 5 21 23 ~20                                  3    24      0.13 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 15 : 0 8 4 7 8 4 7 7 6 6 7 5 5 8 7 8 ~38                                  1    24      0.14 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 16 : 0 8 4 7 8 4 7 7 6 6 7 5 5 8 7 6 -1 ~42                                 1    24      0.15 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: 17 : 0 8 4 7 8 4 7 7 6 6 7 5 5 8 7 6 1 -3 ~43                     1    24      0.17 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_fa1c1e76] engine_0: Proved output 0 in frame 17.
+SBY 13:55:37 [x_fa1c1e76] engine_0: Proved output 1 in frame 17.
+SBY 13:55:37 [x_fa1c1e76] engine_0: 18 : 0 8 4 7 8 4 7 7 6 6 7 5 5 8 7 6 1 0 -6 ~46                   0    24      0.18 sec  T/O =  0  PRV =  2
+SBY 13:55:37 [x_fa1c1e76] engine_0: Block =  123  Oblig =   223  Clause =   176  Call =  2377 (sat=73.6%)  Cex =   0  Start =   0
+SBY 13:55:37 [x_fa1c1e76] engine_0: SAT solving =     0.06 sec ( 31.63 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: unsat     =     0.00 sec (  2.10 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: sat       =     0.05 sec ( 29.53 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: Generalize  =     0.02 sec ( 12.29 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: Push clause =     0.03 sec ( 17.88 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: Ternary sim =     0.00 sec (  1.28 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: Containment =     0.00 sec (  0.06 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: CNF compute =     0.01 sec (  2.76 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: Refinement  =     0.00 sec (  0.00 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: TOTAL       =     0.19 sec (100.00 %)
+SBY 13:55:37 [x_fa1c1e76] engine_0: Property proved.  Time =     0.19 sec
+SBY 13:55:37 [x_fa1c1e76] engine_0: Counter-example is not available.
+SBY 13:55:37 [x_fa1c1e76] engine_0: finished (returncode=0)
+SBY 13:55:37 [x_fa1c1e76] engine_0: Status returned by engine: PASS
+SBY 13:55:37 [x_fa1c1e76] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:55:37 [x_fa1c1e76] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:55:37 [x_fa1c1e76] summary: engine_0 (abc pdr) returned PASS
+SBY 13:55:37 [x_fa1c1e76] summary: engine_0 did not produce any traces
+SBY 13:55:37 [x_fa1c1e76] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

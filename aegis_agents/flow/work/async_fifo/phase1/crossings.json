@@ -1,0 +1,24 @@
+[
+ {
+  "id": "x_753d5e36",
+  "src_reg": "rptr_empty.rptr",
+  "dst_reg": "sync_r2w.wq1_rptr",
+  "src_clock": "rclk",
+  "dst_clock": "wclk",
+  "width": 5,
+  "sync_depth": 2,
+  "kind": "gray_candidate",
+  "contract": "proven"
+ },
+ {
+  "id": "x_cf11da04",
+  "src_reg": "wptr_full.wptr",
+  "dst_reg": "sync_w2r.rq1_wptr",
+  "src_clock": "wclk",
+  "dst_clock": "rclk",
+  "width": 5,
+  "sync_depth": 2,
+  "kind": "gray_candidate",
+  "contract": "proven"
+ }
+]

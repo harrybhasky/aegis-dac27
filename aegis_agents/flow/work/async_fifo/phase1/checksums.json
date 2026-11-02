@@ -1,0 +1,174 @@
+{
+ "sdc": {
+  "file": "async_fifo.sdc",
+  "sha256": "ad9b59b3a9650cf124cac16463b03e76cc392a5ff8c018252846d27935946354"
+ },
+ "rtl_top": "async_fifo",
+ "entries": [
+  {
+   "reg": "sync_r2w.wq2_rptr",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "sync_r2w.v",
+   "lines": [
+    20,
+    27
+   ],
+   "sha256": "c10d9798cf7ee9daca3735bba768ad1d8ac101494d8b183dd7837f2c5f981083"
+  },
+  {
+   "reg": "sync_r2w.wq1_rptr",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "sync_r2w.v",
+   "lines": [
+    20,
+    27
+   ],
+   "sha256": "c10d9798cf7ee9daca3735bba768ad1d8ac101494d8b183dd7837f2c5f981083"
+  },
+  {
+   "reg": "sync_w2r.rq2_wptr",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "sync_w2r.v",
+   "lines": [
+    20,
+    27
+   ],
+   "sha256": "517f89dfe57b5a248fc645fa942a358e31b4ae203240177b935e8942becf7bbd"
+  },
+  {
+   "reg": "sync_w2r.rq1_wptr",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "sync_w2r.v",
+   "lines": [
+    20,
+    27
+   ],
+   "sha256": "517f89dfe57b5a248fc645fa942a358e31b4ae203240177b935e8942becf7bbd"
+  },
+  {
+   "reg": "param@async_fifo.v:10",
+   "category": "capacity",
+   "scope": "line",
+   "file": "async_fifo.v",
+   "lines": [
+    10,
+    10
+   ],
+   "sha256": "47ac26019c13640483cf89dc4701d9aeb51c7e6a0fbe5c3fbe30a6bc88bfbb1d"
+  },
+  {
+   "reg": "param@async_fifo.v:11",
+   "category": "capacity",
+   "scope": "line",
+   "file": "async_fifo.v",
+   "lines": [
+    11,
+    11
+   ],
+   "sha256": "c4d1d3f0212d0b4faea7082939f6fdc79ef8a2ea204a491e4610bd234ef0f272"
+  },
+  {
+   "reg": "param@async_fifo.v:12",
+   "category": "capacity",
+   "scope": "line",
+   "file": "async_fifo.v",
+   "lines": [
+    12,
+    12
+   ],
+   "sha256": "d95c751e32bafde7105f7261fb237322a6195c86762cea9a4a6dbd7f80ef7576"
+  },
+  {
+   "reg": "param@fifomem.v:10",
+   "category": "capacity",
+   "scope": "line",
+   "file": "fifomem.v",
+   "lines": [
+    10,
+    10
+   ],
+   "sha256": "807f59806eb1292b14b1343c0ab1f00fecdd36785d605cf83bc6227a3a09591e"
+  },
+  {
+   "reg": "param@fifomem.v:11",
+   "category": "capacity",
+   "scope": "line",
+   "file": "fifomem.v",
+   "lines": [
+    11,
+    11
+   ],
+   "sha256": "8be56dfc4d372d4ced04c6df80a81a0550253596be71e93ab6c2c0e5fd7e24e8"
+  },
+  {
+   "reg": "param@fifomem.v:12",
+   "category": "capacity",
+   "scope": "line",
+   "file": "fifomem.v",
+   "lines": [
+    12,
+    12
+   ],
+   "sha256": "d95c751e32bafde7105f7261fb237322a6195c86762cea9a4a6dbd7f80ef7576"
+  },
+  {
+   "reg": "param@rptr_empty.v:10",
+   "category": "capacity",
+   "scope": "line",
+   "file": "rptr_empty.v",
+   "lines": [
+    10,
+    10
+   ],
+   "sha256": "643c19a82b70c6938f1a33f8cc1fdfa2c12ad18c6746c0f6c7a74841387dea9c"
+  },
+  {
+   "reg": "param@wptr_full.v:10",
+   "category": "capacity",
+   "scope": "line",
+   "file": "wptr_full.v",
+   "lines": [
+    10,
+    10
+   ],
+   "sha256": "643c19a82b70c6938f1a33f8cc1fdfa2c12ad18c6746c0f6c7a74841387dea9c"
+  },
+  {
+   "reg": "param@sync_r2w.v:10",
+   "category": "capacity",
+   "scope": "line",
+   "file": "sync_r2w.v",
+   "lines": [
+    10,
+    10
+   ],
+   "sha256": "54f07d7b8a5e1fc074a730946047d5b2a5928963054873efa54a362fdce0b1ca"
+  },
+  {
+   "reg": "param@sync_w2r.v:10",
+   "category": "capacity",
+   "scope": "line",
+   "file": "sync_w2r.v",
+   "lines": [
+    10,
+    10
+   ],
+   "sha256": "54f07d7b8a5e1fc074a730946047d5b2a5928963054873efa54a362fdce0b1ca"
+  },
+  {
+   "reg": "param@sync_ptr.v:10",
+   "category": "capacity",
+   "scope": "line",
+   "file": "sync_ptr.v",
+   "lines": [
+    10,
+    10
+   ],
+   "sha256": "54f07d7b8a5e1fc074a730946047d5b2a5928963054873efa54a362fdce0b1ca"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "top": "key_expansion_128aes",
+ "rtl": [
+  "flow/designs/drrtl_aes/rtl/aes.v0.sv"
+ ],
+ "sdc": "flow/designs/drrtl_aes/drrtl_aes.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.0,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "clk"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "rst_async_n",
+   "active_low": true
+  }
+ ],
+ "suite": "drrtl",
+ "abc_delay_ps": 100
+}

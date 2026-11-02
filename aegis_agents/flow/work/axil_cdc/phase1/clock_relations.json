@@ -1,0 +1,10 @@
+{
+ "m_clk": {
+  "m_clk": "identical",
+  "s_clk": "asynchronous"
+ },
+ "s_clk": {
+  "m_clk": "asynchronous",
+  "s_clk": "identical"
+ }
+}

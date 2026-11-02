@@ -1,0 +1,38 @@
+{
+ "top": "prim_pulse_sync_bench",
+ "rtl": [
+  "flow/designs/prim_pulse_sync/rtl/prim_pulse_sync.v",
+  "flow/designs/prim_pulse_sync/rtl/bench_top.v"
+ ],
+ "sdc": "flow/designs/prim_pulse_sync/prim_pulse_sync.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "clk_src_i"
+  ],
+  [
+   "clk_dst_i"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "rst_src_ni",
+   "active_low": true
+  },
+  {
+   "port": "rst_dst_ni",
+   "active_low": true
+  }
+ ],
+ "abc_delay_ps": 100
+}

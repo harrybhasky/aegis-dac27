@@ -1,0 +1,1 @@
+{"clocks": 4, "constraint_audit": 8, "crossings": {"synchronizer": 3, "gray_candidate": 2, "qualified_capture": 1, "insufficient_depth": 0, "unsynchronized": 2}, "contracts_proven": ["x_41e513aa", "x_55a0f370"], "immutable_lines": 15, "contract_lines": 10}

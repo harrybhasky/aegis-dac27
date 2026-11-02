@@ -1,0 +1,63 @@
+SBY 13:55:37 [x_8e8f57f7] Removing directory '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_8e8f57f7/x_8e8f57f7'.
+SBY 13:55:37 [x_8e8f57f7] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_8e8f57f7/aegis_exposed.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_8e8f57f7/x_8e8f57f7/src/aegis_exposed.v'.
+SBY 13:55:37 [x_8e8f57f7] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_8e8f57f7/checker.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_8e8f57f7/x_8e8f57f7/src/checker.v'.
+SBY 13:55:37 [x_8e8f57f7] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_8e8f57f7/formal_top.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/afifo/phase1.new/contracts/build/x_8e8f57f7/x_8e8f57f7/src/formal_top.v'.
+SBY 13:55:37 [x_8e8f57f7] engine_0: abc pdr
+SBY 13:55:37 [x_8e8f57f7] base: starting process "cd x_8e8f57f7/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:55:37 [x_8e8f57f7] base: finished (returncode=0)
+SBY 13:55:37 [x_8e8f57f7] prep: starting process "cd x_8e8f57f7/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:55:37 [x_8e8f57f7] prep: finished (returncode=0)
+SBY 13:55:37 [x_8e8f57f7] aig: starting process "cd x_8e8f57f7/model; yosys -ql design_aiger.log design_aiger.ys"
+SBY 13:55:37 [x_8e8f57f7] aig: Warning: Treating undriven bit aegis_formal_top.\i_wr_reset_n like $anyseq.
+SBY 13:55:37 [x_8e8f57f7] aig: Warning: Treating undriven bit aegis_formal_top.\i_wr like $anyseq.
+SBY 13:55:37 [x_8e8f57f7] aig: Warning: Treating undriven bit aegis_formal_top.\i_wclk like $anyseq.
+SBY 13:55:37 [x_8e8f57f7] aig: Warning: Treating undriven bit aegis_formal_top.\i_rd_reset_n like $anyseq.
+SBY 13:55:37 [x_8e8f57f7] aig: Warning: Treating undriven bit aegis_formal_top.\i_rd like $anyseq.
+SBY 13:55:37 [x_8e8f57f7] aig: Warning: Treating undriven bit aegis_formal_top.\i_rclk like $anyseq.
+SBY 13:55:37 [x_8e8f57f7] aig: Warning: Treating a total of 6 undriven bits in aegis_formal_top like $anyseq.
+SBY 13:55:37 [x_8e8f57f7] aig: finished (returncode=0)
+SBY 13:55:37 [x_8e8f57f7] engine_0: starting process "cd x_8e8f57f7; yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw'"
+SBY 13:55:37 [x_8e8f57f7] engine_0: ======== ABC command line "read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw"
+SBY 13:55:37 [x_8e8f57f7] engine_0: Warning: The last 3 outputs are interpreted as constraints.
+SBY 13:55:37 [x_8e8f57f7] engine_0: VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 139. MonoCNF = no. SkipGen = no. SolveAll = no.
+SBY 13:55:37 [x_8e8f57f7] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 13:55:37 [x_8e8f57f7] engine_0: 1 : 0 8                                                                 1     9      0.00 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 2 : 0 13 25                                                             2    26      0.01 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 3 : 0 13 14 17 ~1                                                        2    26      0.02 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 4 : 0 13 10 10 18 ~1                                                     2    26      0.03 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 5 : 0 13 10 7 8 18 ~2                                                    3    26      0.03 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 6 : 0 13 10 7 6 14 24 ~2                                                 2    26      0.04 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 7 : 0 13 10 7 6 5 5 21 ~4                                                1    26      0.05 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 8 : 0 13 10 7 6 5 5 7 23 ~4                                              2    26      0.06 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 9 : 0 13 10 7 6 5 5 5 6 21 ~6                                            1    26      0.07 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 10 : 0 13 10 7 6 5 5 5 6 18 23 ~7                                         2    26      0.08 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 11 : 0 13 10 7 6 5 5 5 6 4 4 19 ~14                                       1    26      0.09 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 12 : 0 13 10 7 6 5 5 5 6 4 4 6 21 ~16                                     2    26      0.10 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 13 : 0 13 10 7 6 5 5 5 6 4 4 3 6 19 ~18                                   1    26      0.11 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 14 : 0 13 10 7 6 5 5 5 6 4 4 3 6 14 19 ~22                                2    26      0.12 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 15 : 0 13 10 7 6 5 5 5 6 4 4 3 6 3 6 14 ~29                               1    26      0.13 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 16 : 0 13 10 7 6 5 5 5 6 4 4 3 6 3 6 13 14 ~32                            2    26      0.15 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: 17 : 0 13 10 7 6 5 5 5 6 4 4 3 6 3 6 5 2 4 ~46                            1    26      0.16 sec  T/O =  0  PRV =  0
+SBY 13:55:37 [x_8e8f57f7] engine_0: Proved output 0 in frame 17.
+SBY 13:55:37 [x_8e8f57f7] engine_0: Proved output 1 in frame 17.
+SBY 13:55:37 [x_8e8f57f7] engine_0: 18 : 0 13 10 7 6 5 5 5 6 4 4 3 6 3 6 5 2 0 -8 ~51                 0    26      0.17 sec  T/O =  0  PRV =  2
+SBY 13:55:37 [x_8e8f57f7] engine_0: Block =  130  Oblig =   220  Clause =   182  Call =  2496 (sat=72.6%)  Cex =   0  Start =   1
+SBY 13:55:37 [x_8e8f57f7] engine_0: SAT solving =     0.06 sec ( 30.82 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: unsat     =     0.00 sec (  2.28 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: sat       =     0.05 sec ( 28.54 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: Generalize  =     0.02 sec ( 12.53 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: Push clause =     0.03 sec ( 16.60 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: Ternary sim =     0.00 sec (  1.30 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: Containment =     0.00 sec (  0.06 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: CNF compute =     0.01 sec (  2.84 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: Refinement  =     0.00 sec (  0.00 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: TOTAL       =     0.18 sec (100.00 %)
+SBY 13:55:37 [x_8e8f57f7] engine_0: Property proved.  Time =     0.19 sec
+SBY 13:55:37 [x_8e8f57f7] engine_0: Counter-example is not available.
+SBY 13:55:37 [x_8e8f57f7] engine_0: finished (returncode=0)
+SBY 13:55:37 [x_8e8f57f7] engine_0: Status returned by engine: PASS
+SBY 13:55:37 [x_8e8f57f7] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:55:37 [x_8e8f57f7] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 13:55:37 [x_8e8f57f7] summary: engine_0 (abc pdr) returned PASS
+SBY 13:55:37 [x_8e8f57f7] summary: engine_0 did not produce any traces
+SBY 13:55:37 [x_8e8f57f7] DONE (PASS, rc=0)

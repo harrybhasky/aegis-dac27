@@ -1,0 +1,522 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: aegis_exposed.v
+Parsing formal SystemVerilog input from `aegis_exposed.v' to AST representation.
+Storing AST representation for module `$abstract\afifo'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: checker.v
+Parsing formal SystemVerilog input from `checker.v' to AST representation.
+Storing AST representation for module `$abstract\aegis_chk_gray_src_x_8e8f57f7'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: formal_top.v
+Parsing formal SystemVerilog input from `formal_top.v' to AST representation.
+Storing AST representation for module `$abstract\aegis_formal_top'.
+Successfully finished Verilog frontend.
+
+4. Executing PREP pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\aegis_formal_top'.
+Generating RTLIL representation for module `\aegis_formal_top'.
+
+4.2.1. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+
+4.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\aegis_chk_gray_src_x_8e8f57f7'.
+Generating RTLIL representation for module `\aegis_chk_gray_src_x_8e8f57f7'.
+
+4.2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\afifo'.
+Generating RTLIL representation for module `\afifo'.
+
+4.2.4. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_8e8f57f7
+Used module:     \afifo
+
+4.2.5. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_8e8f57f7
+Used module:     \afifo
+Removing unused module `$abstract\aegis_formal_top'.
+Removing unused module `$abstract\aegis_chk_gray_src_x_8e8f57f7'.
+Removing unused module `$abstract\afifo'.
+Removed 3 unused modules.
+Module aegis_chk_gray_src_x_8e8f57f7 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module aegis_formal_top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4.3. Executing PROC pass (convert processes to netlists).
+
+4.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:82$74 in module afifo.
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:79$72 in module afifo.
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:76$70 in module afifo.
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:73$68 in module afifo.
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:70$66 in module afifo.
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:67$64 in module afifo.
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:64$62 in module afifo.
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:61$60 in module afifo.
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:58$58 in module afifo.
+Marked 1 switch rules as full_case in process $proc$checker.v:21$12 in module aegis_chk_gray_src_x_8e8f57f7.
+Removed a total of 0 dead cases.
+
+4.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 9 redundant assignments.
+Promoted 18 assignments to connections.
+
+4.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:20$47'.
+  Set init value: \f_ok = 8'00000000
+Found init rule in `\aegis_formal_top.$proc$formal_top.v:16$7'.
+  Set init value: \aegis_init = 1'1
+
+4.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \i_rd_reset_n in `\afifo.$proc$aegis_exposed.v:82$74'.
+Found async reset \i_rd_reset_n in `\afifo.$proc$aegis_exposed.v:79$72'.
+Found async reset \i_wr_reset_n in `\afifo.$proc$aegis_exposed.v:76$70'.
+Found async reset \i_wr_reset_n in `\afifo.$proc$aegis_exposed.v:73$68'.
+Found async reset \i_rd_reset_n in `\afifo.$proc$aegis_exposed.v:70$66'.
+Found async reset \i_rd_reset_n in `\afifo.$proc$aegis_exposed.v:67$64'.
+Found async reset \i_rd_reset_n in `\afifo.$proc$aegis_exposed.v:64$62'.
+Found async reset \i_wr_reset_n in `\afifo.$proc$aegis_exposed.v:61$60'.
+Found async reset \i_wr_reset_n in `\afifo.$proc$aegis_exposed.v:58$58'.
+
+4.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~5 debug messages>
+
+4.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\afifo.$proc$aegis_exposed.v:82$74'.
+     1/1: $0\rgray[3:0]
+Creating decoders for process `\afifo.$proc$aegis_exposed.v:79$72'.
+     1/1: $0\rd_addr[3:0]
+Creating decoders for process `\afifo.$proc$aegis_exposed.v:76$70'.
+     1/1: $0\rgray_cross[3:0]
+Creating decoders for process `\afifo.$proc$aegis_exposed.v:73$68'.
+     1/1: $0\wr_rgray[3:0]
+Creating decoders for process `\afifo.$proc$aegis_exposed.v:70$66'.
+     1/1: $0\wgray_cross[3:0]
+Creating decoders for process `\afifo.$proc$aegis_exposed.v:67$64'.
+     1/1: $0\rd_wgray[3:0]
+Creating decoders for process `\afifo.$proc$aegis_exposed.v:64$62'.
+     1/1: $0\o_rd_empty[0:0]
+Creating decoders for process `\afifo.$proc$aegis_exposed.v:61$60'.
+     1/1: $0\wgray[3:0]
+Creating decoders for process `\afifo.$proc$aegis_exposed.v:58$58'.
+     1/1: $0\wr_addr[3:0]
+Creating decoders for process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:20$47'.
+Creating decoders for process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:38$39'.
+Creating decoders for process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:37$31'.
+Creating decoders for process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:42$25'.
+     1/1: $assert$checker.v:42$26_EN
+Creating decoders for process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:41$20'.
+     1/1: $assert$checker.v:41$21_EN
+Creating decoders for process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:25$15'.
+Creating decoders for process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:21$12'.
+     1/1: $0\f_ok[7:0]
+Creating decoders for process `\aegis_formal_top.$proc$formal_top.v:16$7'.
+Creating decoders for process `\aegis_formal_top.$proc$formal_top.v:18$5'.
+     1/1: $assume$formal_top.v:18$6_EN
+Creating decoders for process `\aegis_formal_top.$proc$formal_top.v:17$4'.
+
+4.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\aegis_chk_gray_src_x_8e8f57f7.\g2b$func$checker.v:38$9.$result' from process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:38$39'.
+No latch inferred for signal `\aegis_chk_gray_src_x_8e8f57f7.\g2b$func$checker.v:37$8.$result' from process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:37$31'.
+
+4.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\afifo.\rgray' using process `\afifo.$proc$aegis_exposed.v:82$74'.
+  created $adff cell `$procdff$98' with positive edge clock and positive level reset.
+Creating register for signal `\afifo.\rd_addr' using process `\afifo.$proc$aegis_exposed.v:79$72'.
+  created $adff cell `$procdff$103' with positive edge clock and positive level reset.
+Creating register for signal `\afifo.\rgray_cross' using process `\afifo.$proc$aegis_exposed.v:76$70'.
+  created $adff cell `$procdff$108' with positive edge clock and positive level reset.
+Creating register for signal `\afifo.\wr_rgray' using process `\afifo.$proc$aegis_exposed.v:73$68'.
+  created $adff cell `$procdff$113' with positive edge clock and positive level reset.
+Creating register for signal `\afifo.\wgray_cross' using process `\afifo.$proc$aegis_exposed.v:70$66'.
+  created $adff cell `$procdff$118' with positive edge clock and positive level reset.
+Creating register for signal `\afifo.\rd_wgray' using process `\afifo.$proc$aegis_exposed.v:67$64'.
+  created $adff cell `$procdff$123' with positive edge clock and positive level reset.
+Creating register for signal `\afifo.\o_rd_empty' using process `\afifo.$proc$aegis_exposed.v:64$62'.
+  created $adff cell `$procdff$128' with positive edge clock and positive level reset.
+Creating register for signal `\afifo.\wgray' using process `\afifo.$proc$aegis_exposed.v:61$60'.
+  created $adff cell `$procdff$133' with positive edge clock and positive level reset.
+Creating register for signal `\afifo.\wr_addr' using process `\afifo.$proc$aegis_exposed.v:58$58'.
+  created $adff cell `$procdff$138' with positive edge clock and positive level reset.
+Creating register for signal `\aegis_chk_gray_src_x_8e8f57f7.\past_ptr' using process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:25$15'.
+  created $dff cell `$procdff$139' with positive edge clock.
+Creating register for signal `\aegis_chk_gray_src_x_8e8f57f7.\f_ok' using process `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:21$12'.
+  created $dff cell `$procdff$140' with positive edge clock.
+Creating register for signal `\aegis_formal_top.\aegis_init' using process `\aegis_formal_top.$proc$formal_top.v:17$4'.
+  created $dff cell `$procdff$141' with positive edge clock.
+
+4.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `afifo.$proc$aegis_exposed.v:82$74'.
+Removing empty process `afifo.$proc$aegis_exposed.v:79$72'.
+Removing empty process `afifo.$proc$aegis_exposed.v:76$70'.
+Removing empty process `afifo.$proc$aegis_exposed.v:73$68'.
+Removing empty process `afifo.$proc$aegis_exposed.v:70$66'.
+Removing empty process `afifo.$proc$aegis_exposed.v:67$64'.
+Removing empty process `afifo.$proc$aegis_exposed.v:64$62'.
+Removing empty process `afifo.$proc$aegis_exposed.v:61$60'.
+Removing empty process `afifo.$proc$aegis_exposed.v:58$58'.
+Removing empty process `aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:20$47'.
+Removing empty process `aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:38$39'.
+Removing empty process `aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:37$31'.
+Found and cleaned up 1 empty switch in `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:42$25'.
+Removing empty process `aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:42$25'.
+Found and cleaned up 1 empty switch in `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:41$20'.
+Removing empty process `aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:41$20'.
+Removing empty process `aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:25$15'.
+Found and cleaned up 2 empty switches in `\aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:21$12'.
+Removing empty process `aegis_chk_gray_src_x_8e8f57f7.$proc$checker.v:21$12'.
+Removing empty process `aegis_formal_top.$proc$formal_top.v:16$7'.
+Found and cleaned up 1 empty switch in `\aegis_formal_top.$proc$formal_top.v:18$5'.
+Removing empty process `aegis_formal_top.$proc$formal_top.v:18$5'.
+Removing empty process `aegis_formal_top.$proc$formal_top.v:17$4'.
+Cleaned up 5 empty switches.
+
+4.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module afifo.
+<suppressed ~18 debug messages>
+Optimizing module aegis_chk_gray_src_x_8e8f57f7.
+<suppressed ~1 debug messages>
+Optimizing module aegis_formal_top.
+
+4.4. Executing FUTURE pass.
+
+4.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module afifo.
+Optimizing module aegis_chk_gray_src_x_8e8f57f7.
+Optimizing module aegis_formal_top.
+
+4.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \afifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_8e8f57f7..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 18 unused cells and 88 unused wires.
+<suppressed ~21 debug messages>
+
+4.7. Executing CHECK pass (checking for obvious problems).
+Checking module afifo...
+Checking module aegis_chk_gray_src_x_8e8f57f7...
+Checking module aegis_formal_top...
+Found and reported 0 problems.
+
+4.8. Executing OPT pass (performing simple optimizations).
+
+4.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module afifo.
+Optimizing module aegis_chk_gray_src_x_8e8f57f7.
+Optimizing module aegis_formal_top.
+
+4.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\afifo'.
+Computing hashes of 26 cells of `\afifo'.
+Finding duplicate cells in `\afifo'.
+Finding identical cells in module `\aegis_chk_gray_src_x_8e8f57f7'.
+Computing hashes of 27 cells of `\aegis_chk_gray_src_x_8e8f57f7'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_8e8f57f7'.
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 7 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Computing hashes of 6 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \afifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \aegis_chk_gray_src_x_8e8f57f7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \aegis_formal_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+4.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \afifo.
+  Optimizing cells in module \aegis_chk_gray_src_x_8e8f57f7.
+  Optimizing cells in module \aegis_formal_top.
+Performed a total of 0 changes.
+
+4.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\afifo'.
+Computing hashes of 26 cells of `\afifo'.
+Finding duplicate cells in `\afifo'.
+Finding identical cells in module `\aegis_chk_gray_src_x_8e8f57f7'.
+Computing hashes of 27 cells of `\aegis_chk_gray_src_x_8e8f57f7'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_8e8f57f7'.
+Computing hashes of 26 cells of `\aegis_chk_gray_src_x_8e8f57f7'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_8e8f57f7'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 6 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Removed a total of 1 cells.
+
+4.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \afifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_8e8f57f7..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+4.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module afifo.
+Optimizing module aegis_chk_gray_src_x_8e8f57f7.
+Optimizing module aegis_formal_top.
+
+4.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \afifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \aegis_chk_gray_src_x_8e8f57f7..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \aegis_formal_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~17 debug messages>
+
+4.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \afifo.
+  Optimizing cells in module \aegis_chk_gray_src_x_8e8f57f7.
+  Optimizing cells in module \aegis_formal_top.
+Performed a total of 0 changes.
+
+4.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\afifo'.
+Computing hashes of 26 cells of `\afifo'.
+Finding duplicate cells in `\afifo'.
+Finding identical cells in module `\aegis_chk_gray_src_x_8e8f57f7'.
+Computing hashes of 26 cells of `\aegis_chk_gray_src_x_8e8f57f7'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_8e8f57f7'.
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 6 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Removed a total of 0 cells.
+
+4.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \afifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_8e8f57f7..
+Finding unused cells or wires in module \aegis_formal_top..
+
+4.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module afifo.
+Optimizing module aegis_chk_gray_src_x_8e8f57f7.
+Optimizing module aegis_formal_top.
+
+4.8.14. Finished fast OPT passes. (There is nothing left to do.)
+
+4.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell afifo.$add$aegis_exposed.v:48$48 ($add).
+Removed top 28 bits (of 32) from port Y of cell afifo.$add$aegis_exposed.v:48$48 ($add).
+Removed top 31 bits (of 32) from port B of cell afifo.$add$aegis_exposed.v:49$49 ($add).
+Removed top 28 bits (of 32) from port Y of cell afifo.$add$aegis_exposed.v:49$49 ($add).
+Removed top 1 bits (of 4) from port B of cell afifo.$xor$aegis_exposed.v:90$81 ($xor).
+Removed top 1 bits (of 4) from port B of cell afifo.$xor$aegis_exposed.v:91$82 ($xor).
+Removed top 7 bits (of 8) from port B of cell aegis_chk_gray_src_x_8e8f57f7.$add$checker.v:23$14 ($add).
+Removed top 7 bits (of 8) from port B of cell aegis_chk_gray_src_x_8e8f57f7.$ge$checker.v:39$17 ($ge).
+Removed top 27 bits (of 32) from port Y of cell aegis_chk_gray_src_x_8e8f57f7.$sub$checker.v:41$22 ($sub).
+
+4.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \afifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_8e8f57f7..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+4.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.12. Executing OPT pass (performing simple optimizations).
+
+4.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module afifo.
+Optimizing module aegis_chk_gray_src_x_8e8f57f7.
+Optimizing module aegis_formal_top.
+
+4.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\afifo'.
+Computing hashes of 26 cells of `\afifo'.
+Finding duplicate cells in `\afifo'.
+Finding identical cells in module `\aegis_chk_gray_src_x_8e8f57f7'.
+Computing hashes of 26 cells of `\aegis_chk_gray_src_x_8e8f57f7'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_8e8f57f7'.
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 6 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Removed a total of 0 cells.
+
+4.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \afifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_8e8f57f7..
+Finding unused cells or wires in module \aegis_formal_top..
+
+4.12.4. Finished fast OPT passes.
+
+4.13. Executing SORT pass.
+
+4.14. Printing statistics.
+
+=== aegis_chk_gray_src_x_8e8f57f7 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       27 wires
+      203 wire bits
+       13 public wires
+      103 public wire bits
+        3 ports
+        6 port bits
+       26 cells
+        2   $add
+        1   $and
+        2   $check
+        2   $dff
+        2   $eq
+        1   $ge
+        1   $logic_and
+        2   $logic_not
+        1   $logic_or
+        3   $mux
+        1   $ne
+        1   $sub
+        7   $xor
+
+=== aegis_formal_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       12 wires
+       30 wire bits
+       11 public wires
+       29 public wire bits
+        7 ports
+       22 port bits
+        4 cells
+        1   $check
+        1   $dff
+        1   $mux
+        1   $not
+        2 submodules
+        1   aegis_chk_gray_src_x_8e8f57f7
+        1   afifo
+
+=== afifo ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       34 wires
+       98 wire bits
+       34 public wires
+       98 public wire bits
+        8 ports
+       26 port bits
+       26 cells
+        2   $add
+        9   $adff
+        2   $eq
+        2   $logic_and
+        2   $logic_not
+        1   $logic_or
+        5   $mux
+        1   $not
+        2   $xor
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       56 aegis_formal_top
+       26 aegis_chk_gray_src_x_8e8f57f7
+       26 afifo
+
+        +----------Count including submodules.
+        | 
+       73 wires
+      331 wire bits
+       58 public wires
+      230 public wire bits
+       18 ports
+       54 port bits
+        - memories
+        - memory bits
+        - processes
+       56 cells
+        4   $add
+        9   $adff
+        1   $and
+        3   $check
+        3   $dff
+        4   $eq
+        1   $ge
+        3   $logic_and
+        4   $logic_not
+        2   $logic_or
+        9   $mux
+        1   $ne
+        2   $not
+        1   $sub
+        9   $xor
+        2 submodules
+        1   aegis_chk_gray_src_x_8e8f57f7
+        1   afifo
+
+4.15. Executing CHECK pass (checking for obvious problems).
+Checking module aegis_chk_gray_src_x_8e8f57f7...
+Checking module aegis_formal_top...
+Checking module afifo...
+Found and reported 0 problems.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `aegis_formal_top'. Setting top module to aegis_formal_top.
+
+5.1. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_8e8f57f7
+Used module:     \afifo
+
+5.2. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_8e8f57f7
+Used module:     \afifo
+Removed 0 unused modules.
+Module aegis_chk_gray_src_x_8e8f57f7 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module aegis_formal_top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+6. Executing jny backend.
+
+7. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: f75ad20c01, time: 0.03s, user: 0.02s, system: 0.00s, MEM: 13.47 MB peak
+Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+Time spent: 21% 2x hierarchy (0 sec), 14% 5x opt_clean (0 sec), ...

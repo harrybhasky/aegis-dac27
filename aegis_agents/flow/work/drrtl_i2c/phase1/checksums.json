@@ -1,0 +1,284 @@
+{
+ "sdc": {
+  "file": "drrtl_i2c.sdc",
+  "sha256": "4961e0e0155fec21f69be9cb84b655c885f52469c4a650b714ff1165fe243b4f"
+ },
+ "rtl_top": "i2c_master_top",
+ "entries": [
+  {
+   "reg": "param@i2c.v0.v:199",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    199,
+    199
+   ],
+   "sha256": "043efd290a28258a47518940ec8966fc931550a951da3115e7899d10914b57c8"
+  },
+  {
+   "reg": "param@i2c.v0.v:200",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    200,
+    200
+   ],
+   "sha256": "6bebbb492256187fbb5c31483ace38a4dd9007db924110ee35b225a39229af5c"
+  },
+  {
+   "reg": "param@i2c.v0.v:201",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    201,
+    201
+   ],
+   "sha256": "3ab6a8ec7223d8352240ca6f2af516b55c758bd6f585f64260b55141fa658bfd"
+  },
+  {
+   "reg": "param@i2c.v0.v:202",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    202,
+    202
+   ],
+   "sha256": "4b064c1f46fb149d8265b8e365e8d159baa77f518d0ddb9cb270289ed4f6fe4f"
+  },
+  {
+   "reg": "param@i2c.v0.v:203",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    203,
+    203
+   ],
+   "sha256": "fa6c9c3df4ed41f18bcf4f2a9ac33e158859ddc6418b7770220b5cb1a57ae973"
+  },
+  {
+   "reg": "param@i2c.v0.v:204",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    204,
+    204
+   ],
+   "sha256": "aabc5287316cce44054db78a5e7d626fe73ce951dd8540235ba86153b75220da"
+  },
+  {
+   "reg": "param@i2c.v0.v:205",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    205,
+    205
+   ],
+   "sha256": "c7cce147798ed6e85d13d3ad4b40b3771eb4411f39cc2c90b14f06d03ffe9642"
+  },
+  {
+   "reg": "param@i2c.v0.v:206",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    206,
+    206
+   ],
+   "sha256": "c27dfd45b06560d610e18be997e24f743eb1c4b2433fbe0310a82e14ed25fae5"
+  },
+  {
+   "reg": "param@i2c.v0.v:207",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    207,
+    207
+   ],
+   "sha256": "9c7455e4e06473dbc7c40c17dd23d3b4541746aa0cb7bf5ec1330f640ed44275"
+  },
+  {
+   "reg": "param@i2c.v0.v:208",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    208,
+    208
+   ],
+   "sha256": "ab1aa7bc6a80520980b1a55d3139e8697f6dd1adac3a395670cfcebf70c6db64"
+  },
+  {
+   "reg": "param@i2c.v0.v:209",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    209,
+    209
+   ],
+   "sha256": "818f9d9089ce2f6387940ee6c6f6a42e185ccdcb258eb0f945155f5bce75f447"
+  },
+  {
+   "reg": "param@i2c.v0.v:210",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    210,
+    210
+   ],
+   "sha256": "238c4c22d90a0257a3b6edcc852502dbb284a06d034ae6e1569a383c64da1203"
+  },
+  {
+   "reg": "param@i2c.v0.v:211",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    211,
+    211
+   ],
+   "sha256": "a2a431e5583e6a9533aff76dc49b36efaff875c017627de235b6e6593c74d47e"
+  },
+  {
+   "reg": "param@i2c.v0.v:212",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    212,
+    212
+   ],
+   "sha256": "059acb284b33ec7b283a359d0e5f665ad6028918703ed8583fff485c46fde775"
+  },
+  {
+   "reg": "param@i2c.v0.v:213",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    213,
+    213
+   ],
+   "sha256": "5d8195099897ebb5fe611a085cb1ead6591d0f709c1742b925d73fce858af5ac"
+  },
+  {
+   "reg": "param@i2c.v0.v:214",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    214,
+    214
+   ],
+   "sha256": "072c8bd1216e1703f99658baf7e177880ac034c8c9a47a596bc3bb0054aba8a7"
+  },
+  {
+   "reg": "param@i2c.v0.v:215",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    215,
+    215
+   ],
+   "sha256": "f96873ccd0d1308045df8f062450359f97b1b2e6a6c0cfc399146cc8ca19129c"
+  },
+  {
+   "reg": "param@i2c.v0.v:216",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    216,
+    216
+   ],
+   "sha256": "db30fbbad42e3069b8d9943045c3f60f293fabe8da9f11c3702b3af6c9138c8e"
+  },
+  {
+   "reg": "param@i2c.v0.v:466",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    466,
+    466
+   ],
+   "sha256": "7542ea19e6b023c05a96adfd1d7eb19d40528e219767a3d56b36e631795b0eb4"
+  },
+  {
+   "reg": "param@i2c.v0.v:467",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    467,
+    467
+   ],
+   "sha256": "7bf13b69f5c838d381cb6e77c01203af9512969f986a660e0d8af40a5a5ff521"
+  },
+  {
+   "reg": "param@i2c.v0.v:468",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    468,
+    468
+   ],
+   "sha256": "b4602e481f131d5a2fd981d7bd9a864cbf504a3c22315b826e17ebc82e0175be"
+  },
+  {
+   "reg": "param@i2c.v0.v:469",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    469,
+    469
+   ],
+   "sha256": "f400d5f546ba72030b31ce5b1fe928dcce4561757d5e009873bd641b2d630ac4"
+  },
+  {
+   "reg": "param@i2c.v0.v:470",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    470,
+    470
+   ],
+   "sha256": "4acb5f19568efa7b737c19753c8d87c6158e5e738806533f1e8608366e481a44"
+  },
+  {
+   "reg": "param@i2c.v0.v:471",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    471,
+    471
+   ],
+   "sha256": "94b848ecb61bc5090d33e95c0ef7f82a61dc40a80790e1986025c5603333f999"
+  },
+  {
+   "reg": "param@i2c.v0.v:699",
+   "category": "capacity",
+   "scope": "line",
+   "file": "i2c.v0.v",
+   "lines": [
+    699,
+    699
+   ],
+   "sha256": "a75346d998fc3ed1686b3906ccf6ec7d93ccb81c551233b9125a6b5f1ea249ee"
+  }
+ ]
+}

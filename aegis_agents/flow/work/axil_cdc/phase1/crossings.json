@@ -1,0 +1,132 @@
+[
+ {
+  "id": "x_5d127e18",
+  "src_reg": "axil_cdc_rd_inst.m_axil_rdata_reg",
+  "dst_reg": "s_axil_rdata",
+  "src_clock": "m_clk",
+  "dst_clock": "s_clk",
+  "width": 32,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_476c9e10",
+  "src_reg": "axil_cdc_rd_inst.m_axil_rresp_reg",
+  "dst_reg": "s_axil_rresp",
+  "src_clock": "m_clk",
+  "dst_clock": "s_clk",
+  "width": 2,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_9461b111",
+  "src_reg": "axil_cdc_rd_inst.m_flag_reg",
+  "dst_reg": "axil_cdc_rd_inst.m_flag_sync_reg_1",
+  "src_clock": "m_clk",
+  "dst_clock": "s_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_4ec31d4d",
+  "src_reg": "axil_cdc_rd_inst.s_axil_araddr_reg",
+  "dst_reg": "m_axil_araddr",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 32,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_71f5faba",
+  "src_reg": "axil_cdc_rd_inst.s_axil_arprot_reg",
+  "dst_reg": "m_axil_arprot",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 3,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_7ae3aae6",
+  "src_reg": "axil_cdc_rd_inst.s_flag_reg",
+  "dst_reg": "axil_cdc_rd_inst.s_flag_sync_reg_1",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_1591b8c7",
+  "src_reg": "axil_cdc_wr_inst.m_axil_bresp_reg",
+  "dst_reg": "s_axil_bresp",
+  "src_clock": "m_clk",
+  "dst_clock": "s_clk",
+  "width": 2,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_7330534d",
+  "src_reg": "axil_cdc_wr_inst.m_flag_reg",
+  "dst_reg": "axil_cdc_wr_inst.m_flag_sync_reg_1",
+  "src_clock": "m_clk",
+  "dst_clock": "s_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_af3dc5f9",
+  "src_reg": "axil_cdc_wr_inst.s_axil_awaddr_reg",
+  "dst_reg": "m_axil_awaddr",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 32,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_54ff738d",
+  "src_reg": "axil_cdc_wr_inst.s_axil_awprot_reg",
+  "dst_reg": "m_axil_awprot",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 3,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_779b02e7",
+  "src_reg": "axil_cdc_wr_inst.s_axil_wdata_reg",
+  "dst_reg": "m_axil_wdata",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 32,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_fee71a4d",
+  "src_reg": "axil_cdc_wr_inst.s_axil_wstrb_reg",
+  "dst_reg": "m_axil_wstrb",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 4,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_eddb5d90",
+  "src_reg": "axil_cdc_wr_inst.s_flag_reg",
+  "dst_reg": "axil_cdc_wr_inst.s_flag_sync_reg_1",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ }
+]

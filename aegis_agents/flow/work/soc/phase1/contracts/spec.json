@@ -1,0 +1,62 @@
+{
+ "clocks": {
+  "clk_w": {
+   "period_ns": 0.55
+  },
+  "clk_r": {
+   "period_ns": 0.9
+  },
+  "clk_x": {
+   "period_ns": 0.45
+  },
+  "clk_div": {
+   "period_ns": 1.1
+  }
+ },
+ "crossings": [
+  {
+   "id": "x_55a0f370",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/soc/rtl/soc.v"
+   ],
+   "scope_module": "rptr_empty",
+   "clock": "rclk",
+   "reset": "rrst_n",
+   "reset_active_low": true,
+   "src_clock": "clk_r",
+   "dst_clock": "clk_w",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "rptr"
+   },
+   "params": {
+    "AW": 3
+   },
+   "resets": null,
+   "settle": 1
+  },
+  {
+   "id": "x_41e513aa",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/soc/rtl/soc.v"
+   ],
+   "scope_module": "wptr_full",
+   "clock": "wclk",
+   "reset": "wrst_n",
+   "reset_active_low": true,
+   "src_clock": "clk_w",
+   "dst_clock": "clk_r",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "wptr"
+   },
+   "params": {
+    "AW": 3
+   },
+   "resets": null,
+   "settle": 1
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "top": "dcpu16_cpu",
+ "rtl": [
+  "flow/designs/drrtl_cpu_pipe/rtl/cpu_pipe.v0.v"
+ ],
+ "sdc": "flow/designs/drrtl_cpu_pipe/drrtl_cpu_pipe.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.0,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "clk"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "rst",
+   "active_low": false
+  }
+ ],
+ "suite": "drrtl",
+ "abc_delay_ps": 100
+}

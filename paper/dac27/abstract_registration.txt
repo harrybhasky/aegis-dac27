@@ -1,0 +1,45 @@
+DAC 2027 Research Track -- Stage 1 (abstract registration)
+Deadline: Nov 11, 2026, 5:00 PM US Pacific  (= Nov 12, 6:30 AM IST). No grace period.
+Site: https://softconf.com/dac27/research  ("Submit an Abstract")
+Source of the rules: https://www.dac.com/2027/program/research-manuscript-submissions
+
+------------------------------------------------------------------------------------------
+TITLE
+Aegis: Clock-Domain-Aware Guardrails for Agentic LLM Timing Optimization of Multi-Clock RTL
+
+ABSTRACT (~95 words; no author names, as required for double-blind review)
+LLM agents now improve RTL timing by iterating rewrite, synthesis, and equivalence checking. On multi-clock designs this gate is unsound: equivalence checking and simulation cannot see clock-domain-crossing (CDC) hazards. We observe a reproduced state-of-the-art agent promoting a formally equivalent rewrite that duplicates a synchronizer stage. We present Aegis, which classifies every crossing on the elaborated netlist, locks logic its verifiers cannot check, optimizes per clock domain, and re-checks crossings and CDC contracts on every candidate. On open-source multi-clock designs, Aegis never promotes a CDC-unsafe design, with competitive timing and lower LLM cost.
+
+PRIMARY TOPIC
+AI1.3  Agentic AI for RTL generation and PPA-driven refinement
+
+TOPICS (max 2)
+AI, EDA
+
+KEYWORDS (max 3)
+LLM agents; clock-domain crossing; RTL timing optimization
+
+(If a secondary subtopic is asked for: EDA3.7 AI/ML for timing analysis and optimization,
+ or EDA2.3 Formal and semi-formal verification.)
+
+------------------------------------------------------------------------------------------
+AUTHORS -- every co-author, in order: name, affiliation, country, email
+1. Hari Bhaskaran, BITS Pilani K K Birla Goa Campus, India, f20230822@goa.bits-pilani.ac.in   <-- confirm
+2. V Lalit Kishore, BITS Pilani K K Birla Goa Campus, India, <his email>                         <-- confirm (named as co-author in lalit_experiments.pdf)
+3. ...                                                                                          <-- any others
+(The author list given here is the one used for the paper. Add everyone now.)
+
+CONFLICTS OF INTEREST with TPC members (declared at this stage)
+Declare any TPC member who: is at the same institution as an author; is or was an author's advisor or student;
+co-authored a paper with an author in roughly the last 2 years; or has a close personal or financial relationship
+with an author. Check the TPC list shown on the softconf form against every author.
+TO FILL: ...
+
+------------------------------------------------------------------------------------------
+CHECKLIST before pressing submit
+[ ] Every co-author has agreed to be listed and the order is final
+[ ] Emails are the ones each author uses on softconf (they are used to detect conflicts)
+[ ] Conflicts declared for all authors
+[ ] Abstract pasted exactly as above (no names, no affiliation, no repository link)
+[ ] Save the confirmation email / submission ID; put the ID in main.tex (\author block placeholder)
+[ ] Optional: the PDF may be uploaded now, but the final manuscript is due Nov 18, 5 PM PT

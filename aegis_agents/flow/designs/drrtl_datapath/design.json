@@ -1,0 +1,31 @@
+{
+ "top": "datapath",
+ "rtl": [
+  "flow/designs/drrtl_datapath/rtl/datapath.v0.v"
+ ],
+ "sdc": "flow/designs/drrtl_datapath/drrtl_datapath.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.0,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "clk"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "rst_n",
+   "active_low": true
+  }
+ ],
+ "suite": "drrtl",
+ "abc_delay_ps": 100
+}

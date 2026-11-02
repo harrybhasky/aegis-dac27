@@ -1,0 +1,613 @@
+// Plain Verilog-2005 produced by sv2v 0.0.13 from upstream SystemVerilog (see SOURCE.txt; do not edit).
+// lowRISC/opentitan 0cd56ca0 (hw/ip/prim, hw/ip/prim_generic). Copyright lowRISC contributors (OpenTitan project).
+// Licensed under the Apache License, Version 2.0 (see LICENSE). SPDX-License-Identifier: Apache-2.0
+// Top: prim_reg_cdc_w8 (Aegis shim that fixes the widths, see shims/).
+module prim_flop (
+	clk_i,
+	rst_ni,
+	d_i,
+	q_o
+);
+	parameter signed [31:0] Width = 1;
+	parameter [Width - 1:0] ResetValue = 0;
+	input clk_i;
+	input rst_ni;
+	input [Width - 1:0] d_i;
+	output reg [Width - 1:0] q_o;
+	always @(posedge clk_i or negedge rst_ni)
+		if (!rst_ni)
+			q_o <= ResetValue;
+		else
+			q_o <= d_i;
+endmodule
+module prim_flop_2sync (
+	clk_i,
+	rst_ni,
+	d_i,
+	q_o
+);
+	reg _sv2v_0;
+	parameter signed [31:0] Width = 16;
+	parameter [Width - 1:0] ResetValue = 1'sb0;
+	parameter [0:0] EnablePrimCdcRand = 1;
+	input clk_i;
+	input rst_ni;
+	input [Width - 1:0] d_i;
+	output wire [Width - 1:0] q_o;
+	reg [Width - 1:0] d_o;
+	wire [Width - 1:0] intq;
+	wire unused_sig;
+	assign unused_sig = EnablePrimCdcRand;
+	always @(*) begin
+		if (_sv2v_0)
+			;
+		d_o = d_i;
+	end
+	prim_flop #(
+		.Width(Width),
+		.ResetValue(ResetValue)
+	) u_sync_1(
+		.clk_i(clk_i),
+		.rst_ni(rst_ni),
+		.d_i(d_o),
+		.q_o(intq)
+	);
+	prim_flop #(
+		.Width(Width),
+		.ResetValue(ResetValue)
+	) u_sync_2(
+		.clk_i(clk_i),
+		.rst_ni(rst_ni),
+		.d_i(intq),
+		.q_o(q_o)
+	);
+	initial _sv2v_0 = 0;
+endmodule
+module prim_sync_reqack (
+	clk_src_i,
+	rst_src_ni,
+	clk_dst_i,
+	rst_dst_ni,
+	req_chk_i,
+	src_req_i,
+	src_ack_o,
+	dst_req_o,
+	dst_ack_i
+);
+	reg _sv2v_0;
+	parameter [0:0] EnRstChks = 1'b0;
+	parameter [0:0] EnRzHs = 1'b0;
+	input clk_src_i;
+	input rst_src_ni;
+	input clk_dst_i;
+	input rst_dst_ni;
+	input wire req_chk_i;
+	input wire src_req_i;
+	output reg src_ack_o;
+	output reg dst_req_o;
+	input wire dst_ack_i;
+	wire unused_req_chk;
+	assign unused_req_chk = req_chk_i;
+	generate
+		if (EnRzHs) begin : gen_rz_hs_protocol
+			reg src_fsm_d;
+			reg src_fsm_q;
+			reg dst_fsm_d;
+			reg dst_fsm_q;
+			wire src_ack;
+			wire dst_ack;
+			wire src_req;
+			wire dst_req;
+			always @(*) begin : src_fsm
+				if (_sv2v_0)
+					;
+				src_fsm_d = src_fsm_q;
+				src_ack_o = 1'b0;
+				(* full_case, parallel_case *)
+				case (src_fsm_q)
+					1'b0:
+						if (!src_ack && src_req_i)
+							src_fsm_d = 1'b1;
+					1'b1: begin
+						src_ack_o = src_ack;
+						if (!src_req_i || src_ack)
+							src_fsm_d = 1'b0;
+					end
+					default:
+						;
+				endcase
+			end
+			prim_flop_2sync #(.Width(1)) ack_sync(
+				.clk_i(clk_src_i),
+				.rst_ni(rst_src_ni),
+				.d_i(dst_ack),
+				.q_o(src_ack)
+			);
+			always @(posedge clk_src_i or negedge rst_src_ni)
+				if (!rst_src_ni)
+					src_fsm_q <= 1'b0;
+				else
+					src_fsm_q <= src_fsm_d;
+			assign src_req = src_fsm_q;
+			always @(*) begin : dst_fsm
+				if (_sv2v_0)
+					;
+				dst_fsm_d = dst_fsm_q;
+				dst_req_o = 1'b0;
+				(* full_case, parallel_case *)
+				case (dst_fsm_q)
+					1'b0:
+						if (dst_req) begin
+							dst_req_o = 1'b1;
+							if (dst_ack_i)
+								dst_fsm_d = 1'b1;
+						end
+					1'b1:
+						if (!dst_req)
+							dst_fsm_d = 1'b0;
+					default:
+						;
+				endcase
+			end
+			prim_flop_2sync #(.Width(1)) req_sync(
+				.clk_i(clk_dst_i),
+				.rst_ni(rst_dst_ni),
+				.d_i(src_req),
+				.q_o(dst_req)
+			);
+			always @(posedge clk_dst_i or negedge rst_dst_ni)
+				if (!rst_dst_ni)
+					dst_fsm_q <= 1'b0;
+				else
+					dst_fsm_q <= dst_fsm_d;
+			assign dst_ack = dst_fsm_q;
+		end
+		else begin : gen_nrz_hs_protocol
+			reg src_fsm_ns;
+			reg src_fsm_cs;
+			reg dst_fsm_ns;
+			reg dst_fsm_cs;
+			reg src_req_d;
+			reg src_req_q;
+			wire src_ack;
+			reg dst_ack_d;
+			reg dst_ack_q;
+			wire dst_req;
+			wire src_handshake;
+			wire dst_handshake;
+			assign src_handshake = src_req_i & src_ack_o;
+			assign dst_handshake = dst_req_o & dst_ack_i;
+			prim_flop_2sync #(.Width(1)) req_sync(
+				.clk_i(clk_dst_i),
+				.rst_ni(rst_dst_ni),
+				.d_i(src_req_q),
+				.q_o(dst_req)
+			);
+			prim_flop_2sync #(.Width(1)) ack_sync(
+				.clk_i(clk_src_i),
+				.rst_ni(rst_src_ni),
+				.d_i(dst_ack_q),
+				.q_o(src_ack)
+			);
+			always @(*) begin : src_fsm
+				if (_sv2v_0)
+					;
+				src_fsm_ns = src_fsm_cs;
+				src_req_d = src_req_q;
+				src_ack_o = 1'b0;
+				(* full_case, parallel_case *)
+				case (src_fsm_cs)
+					1'd0: begin
+						src_req_d = src_req_i;
+						src_ack_o = src_ack;
+						if (src_handshake)
+							src_fsm_ns = 1'd1;
+					end
+					1'd1: begin
+						src_req_d = ~src_req_i;
+						src_ack_o = ~src_ack;
+						if (src_handshake)
+							src_fsm_ns = 1'd0;
+					end
+					default:
+						;
+				endcase
+			end
+			always @(*) begin : dst_fsm
+				if (_sv2v_0)
+					;
+				dst_fsm_ns = dst_fsm_cs;
+				dst_req_o = 1'b0;
+				dst_ack_d = dst_ack_q;
+				(* full_case, parallel_case *)
+				case (dst_fsm_cs)
+					1'd0: begin
+						dst_req_o = dst_req;
+						dst_ack_d = dst_ack_i;
+						if (dst_handshake)
+							dst_fsm_ns = 1'd1;
+					end
+					1'd1: begin
+						dst_req_o = ~dst_req;
+						dst_ack_d = ~dst_ack_i;
+						if (dst_handshake)
+							dst_fsm_ns = 1'd0;
+					end
+					default:
+						;
+				endcase
+			end
+			always @(posedge clk_src_i or negedge rst_src_ni)
+				if (!rst_src_ni) begin
+					src_fsm_cs <= 1'd0;
+					src_req_q <= 1'b0;
+				end
+				else begin
+					src_fsm_cs <= src_fsm_ns;
+					src_req_q <= src_req_d;
+				end
+			always @(posedge clk_dst_i or negedge rst_dst_ni)
+				if (!rst_dst_ni) begin
+					dst_fsm_cs <= 1'd0;
+					dst_ack_q <= 1'b0;
+				end
+				else begin
+					dst_fsm_cs <= dst_fsm_ns;
+					dst_ack_q <= dst_ack_d;
+				end
+		end
+	endgenerate
+	initial _sv2v_0 = 0;
+endmodule
+module prim_pulse_sync (
+	clk_src_i,
+	rst_src_ni,
+	src_pulse_i,
+	clk_dst_i,
+	rst_dst_ni,
+	dst_pulse_o
+);
+	input wire clk_src_i;
+	input wire rst_src_ni;
+	input wire src_pulse_i;
+	input wire clk_dst_i;
+	input wire rst_dst_ni;
+	output wire dst_pulse_o;
+	reg src_level;
+	always @(posedge clk_src_i or negedge rst_src_ni)
+		if (!rst_src_ni)
+			src_level <= 1'b0;
+		else
+			src_level <= src_level ^ src_pulse_i;
+	wire dst_level;
+	prim_flop_2sync #(.Width(1)) prim_flop_2sync(
+		.d_i(src_level),
+		.clk_i(clk_dst_i),
+		.rst_ni(rst_dst_ni),
+		.q_o(dst_level)
+	);
+	reg dst_level_q;
+	always @(posedge clk_dst_i or negedge rst_dst_ni)
+		if (!rst_dst_ni)
+			dst_level_q <= 1'b0;
+		else
+			dst_level_q <= dst_level;
+	assign dst_pulse_o = dst_level_q ^ dst_level;
+endmodule
+module prim_reg_cdc_arb (
+	clk_src_i,
+	rst_src_ni,
+	clk_dst_i,
+	rst_dst_ni,
+	src_ack_o,
+	src_update_o,
+	dst_req_i,
+	dst_req_o,
+	dst_update_i,
+	dst_ds_i,
+	dst_qs_i,
+	dst_qs_o
+);
+	reg _sv2v_0;
+	parameter signed [31:0] DataWidth = 32;
+	parameter [DataWidth - 1:0] ResetVal = 32'h00000000;
+	parameter [0:0] DstWrReq = 0;
+	input clk_src_i;
+	input rst_src_ni;
+	input clk_dst_i;
+	input rst_dst_ni;
+	output wire src_ack_o;
+	output wire src_update_o;
+	input dst_req_i;
+	output wire dst_req_o;
+	input dst_update_i;
+	input [DataWidth - 1:0] dst_ds_i;
+	input [DataWidth - 1:0] dst_qs_i;
+	output reg [DataWidth - 1:0] dst_qs_o;
+	wire dst_update;
+	assign dst_update = dst_update_i & (dst_qs_o != dst_ds_i);
+	generate
+		if (DstWrReq) begin : gen_wr_req
+			reg dst_lat_q;
+			reg dst_lat_d;
+			wire dst_update_req;
+			wire dst_update_ack;
+			reg id_q;
+			reg idle_q;
+			reg idle_d;
+			always @(posedge clk_dst_i or negedge rst_dst_ni)
+				if (!rst_dst_ni)
+					idle_q <= 1'b1;
+				else
+					idle_q <= idle_d;
+			reg dst_req_q;
+			wire dst_req;
+			always @(posedge clk_dst_i or negedge rst_dst_ni)
+				if (!rst_dst_ni)
+					dst_req_q <= 1'sb0;
+				else if (dst_req_q && dst_lat_d)
+					dst_req_q <= 1'sb0;
+				else if (dst_req_i && !idle_q)
+					dst_req_q <= 1'b1;
+			assign dst_req = dst_req_q | dst_req_i;
+			always @(posedge clk_dst_i or negedge rst_dst_ni)
+				if (!rst_dst_ni)
+					dst_qs_o <= ResetVal;
+				else if (dst_lat_d)
+					dst_qs_o <= dst_ds_i;
+				else if (dst_lat_q)
+					dst_qs_o <= dst_qs_i;
+			always @(posedge clk_dst_i or negedge rst_dst_ni)
+				if (!rst_dst_ni)
+					id_q <= 1'd0;
+				else if (dst_update_ack)
+					id_q <= 1'd0;
+				else if (dst_req && dst_lat_d)
+					id_q <= 1'd0;
+				else if (!dst_req && dst_lat_d)
+					id_q <= 1'd1;
+				else if (dst_lat_q)
+					id_q <= 1'd1;
+			assign dst_req_o = idle_q & dst_req;
+			reg dst_hold_req;
+			always @(*) begin
+				if (_sv2v_0)
+					;
+				idle_d = idle_q;
+				dst_hold_req = 1'sb0;
+				dst_lat_q = 1'sb0;
+				dst_lat_d = 1'sb0;
+				if (idle_q) begin
+					if (dst_req) begin
+						idle_d = 1'b0;
+						dst_lat_d = 1'b1;
+					end
+					else if (dst_update) begin
+						idle_d = 1'b0;
+						dst_lat_d = 1'b1;
+					end
+					else if (dst_qs_o != dst_qs_i) begin
+						idle_d = 1'b0;
+						dst_lat_q = 1'b1;
+					end
+				end
+				else begin
+					dst_hold_req = 1'b1;
+					if (dst_update_ack)
+						idle_d = 1'b1;
+				end
+			end
+			assign dst_update_req = (dst_hold_req | dst_lat_d) | dst_lat_q;
+			wire src_req;
+			prim_sync_reqack u_dst_update_sync(
+				.clk_src_i(clk_dst_i),
+				.rst_src_ni(rst_dst_ni),
+				.clk_dst_i(clk_src_i),
+				.rst_dst_ni(rst_src_ni),
+				.req_chk_i(1'b1),
+				.src_req_i(dst_update_req),
+				.src_ack_o(dst_update_ack),
+				.dst_req_o(src_req),
+				.dst_ack_i(src_req)
+			);
+			assign src_ack_o = src_req & (id_q == 1'd0);
+			assign src_update_o = src_req & (id_q == 1'd1);
+		end
+		else begin : gen_passthru
+			wire [DataWidth:1] sv2v_tmp_2294F;
+			assign sv2v_tmp_2294F = dst_qs_i;
+			always @(*) dst_qs_o = sv2v_tmp_2294F;
+			assign dst_req_o = dst_req_i;
+			assign src_update_o = 1'sb0;
+			prim_pulse_sync u_dst_to_src_ack(
+				.clk_src_i(clk_dst_i),
+				.rst_src_ni(rst_dst_ni),
+				.clk_dst_i(clk_src_i),
+				.rst_dst_ni(rst_src_ni),
+				.src_pulse_i(dst_req_i),
+				.dst_pulse_o(src_ack_o)
+			);
+			wire unused_sigs;
+			assign unused_sigs = |{dst_ds_i, dst_update};
+		end
+	endgenerate
+	initial _sv2v_0 = 0;
+endmodule
+module prim_reg_cdc (
+	clk_src_i,
+	rst_src_ni,
+	clk_dst_i,
+	rst_dst_ni,
+	src_regwen_i,
+	src_we_i,
+	src_re_i,
+	src_wd_i,
+	src_busy_o,
+	src_qs_o,
+	dst_ds_i,
+	dst_qs_i,
+	dst_update_i,
+	dst_we_o,
+	dst_re_o,
+	dst_regwen_o,
+	dst_wd_o
+);
+	parameter signed [31:0] DataWidth = 32;
+	parameter [DataWidth - 1:0] ResetVal = 32'h00000000;
+	parameter [DataWidth - 1:0] BitMask = 32'hffffffff;
+	parameter [0:0] DstWrReq = 0;
+	input clk_src_i;
+	input rst_src_ni;
+	input clk_dst_i;
+	input rst_dst_ni;
+	input src_regwen_i;
+	input src_we_i;
+	input src_re_i;
+	input [DataWidth - 1:0] src_wd_i;
+	output wire src_busy_o;
+	output wire [DataWidth - 1:0] src_qs_o;
+	input [DataWidth - 1:0] dst_ds_i;
+	input [DataWidth - 1:0] dst_qs_i;
+	input dst_update_i;
+	output wire dst_we_o;
+	output wire dst_re_o;
+	output wire dst_regwen_o;
+	output wire [DataWidth - 1:0] dst_wd_o;
+	localparam signed [31:0] TxnWidth = 3;
+	wire src_ack;
+	reg src_busy_q;
+	reg [DataWidth - 1:0] src_q;
+	reg [2:0] txn_bits_q;
+	wire src_req;
+	assign src_req = src_we_i | src_re_i;
+	always @(posedge clk_src_i or negedge rst_src_ni)
+		if (!rst_src_ni)
+			src_busy_q <= 1'sb0;
+		else if (src_req)
+			src_busy_q <= 1'b1;
+		else if (src_ack)
+			src_busy_q <= 1'b0;
+	assign src_busy_o = src_busy_q;
+	wire busy;
+	assign busy = src_busy_q & !src_ack;
+	wire [DataWidth - 1:0] dst_qs;
+	wire src_update;
+	wire dst_to_src;
+	generate
+		if (DstWrReq) begin : gen_wr_req
+			assign dst_to_src = (src_busy_q && src_ack) || (src_update && !busy);
+		end
+		else begin : gen_passthru
+			assign dst_to_src = src_busy_q && src_ack;
+			wire unused_dst_wr;
+			assign unused_dst_wr = src_update ^ busy;
+		end
+	endgenerate
+	always @(posedge clk_src_i or negedge rst_src_ni)
+		if (!rst_src_ni) begin
+			src_q <= ResetVal;
+			txn_bits_q <= 1'sb0;
+		end
+		else if (src_req) begin
+			src_q <= src_wd_i & BitMask;
+			txn_bits_q <= {src_we_i, src_re_i, src_regwen_i};
+		end
+		else if (dst_to_src) begin
+			src_q <= dst_qs;
+			txn_bits_q <= 1'sb0;
+		end
+	wire unused_wd;
+	assign unused_wd = ^src_wd_i;
+	assign src_qs_o = src_q;
+	assign dst_wd_o = src_q;
+	wire dst_req_from_src;
+	wire dst_req;
+	prim_pulse_sync u_src_to_dst_req(
+		.clk_src_i(clk_src_i),
+		.rst_src_ni(rst_src_ni),
+		.clk_dst_i(clk_dst_i),
+		.rst_dst_ni(rst_dst_ni),
+		.src_pulse_i(src_req),
+		.dst_pulse_o(dst_req_from_src)
+	);
+	prim_reg_cdc_arb #(
+		.DataWidth(DataWidth),
+		.ResetVal(ResetVal),
+		.DstWrReq(DstWrReq)
+	) u_arb(
+		.clk_src_i(clk_src_i),
+		.rst_src_ni(rst_src_ni),
+		.clk_dst_i(clk_dst_i),
+		.rst_dst_ni(rst_dst_ni),
+		.src_ack_o(src_ack),
+		.src_update_o(src_update),
+		.dst_req_i(dst_req_from_src),
+		.dst_req_o(dst_req),
+		.dst_update_i(dst_update_i),
+		.dst_ds_i(dst_ds_i),
+		.dst_qs_i(dst_qs_i),
+		.dst_qs_o(dst_qs)
+	);
+	assign {dst_we_o, dst_re_o, dst_regwen_o} = txn_bits_q & {TxnWidth {dst_req}};
+endmodule
+module prim_reg_cdc_w8 (
+	clk_src_i,
+	rst_src_ni,
+	clk_dst_i,
+	rst_dst_ni,
+	src_regwen_i,
+	src_we_i,
+	src_re_i,
+	src_wd_i,
+	src_busy_o,
+	src_qs_o,
+	dst_ds_i,
+	dst_qs_i,
+	dst_update_i,
+	dst_we_o,
+	dst_re_o,
+	dst_regwen_o,
+	dst_wd_o
+);
+	input wire clk_src_i;
+	input wire rst_src_ni;
+	input wire clk_dst_i;
+	input wire rst_dst_ni;
+	input wire src_regwen_i;
+	input wire src_we_i;
+	input wire src_re_i;
+	input wire [7:0] src_wd_i;
+	output wire src_busy_o;
+	output wire [7:0] src_qs_o;
+	input wire [7:0] dst_ds_i;
+	input wire [7:0] dst_qs_i;
+	input wire dst_update_i;
+	output wire dst_we_o;
+	output wire dst_re_o;
+	output wire dst_regwen_o;
+	output wire [7:0] dst_wd_o;
+	prim_reg_cdc #(
+		.DataWidth(8),
+		.ResetVal(8'h00),
+		.BitMask(8'hff),
+		.DstWrReq(1'b1)
+	) u_reg(
+		.clk_src_i(clk_src_i),
+		.rst_src_ni(rst_src_ni),
+		.clk_dst_i(clk_dst_i),
+		.rst_dst_ni(rst_dst_ni),
+		.src_regwen_i(src_regwen_i),
+		.src_we_i(src_we_i),
+		.src_re_i(src_re_i),
+		.src_wd_i(src_wd_i),
+		.src_busy_o(src_busy_o),
+		.src_qs_o(src_qs_o),
+		.dst_ds_i(dst_ds_i),
+		.dst_qs_i(dst_qs_i),
+		.dst_update_i(dst_update_i),
+		.dst_we_o(dst_we_o),
+		.dst_re_o(dst_re_o),
+		.dst_regwen_o(dst_regwen_o),
+		.dst_wd_o(dst_wd_o)
+	);
+endmodule

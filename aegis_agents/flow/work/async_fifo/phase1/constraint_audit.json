@@ -1,0 +1,14 @@
+[
+ {
+  "from": "rclk",
+  "to": "wclk",
+  "crossing": "x_753d5e36",
+  "issue": "multi-bit Gray bus rptr_empty.rptr -> sync_r2w.wq1_rptr is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ },
+ {
+  "from": "wclk",
+  "to": "rclk",
+  "crossing": "x_cf11da04",
+  "issue": "multi-bit Gray bus wptr_full.wptr -> sync_w2r.rq1_wptr is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ }
+]

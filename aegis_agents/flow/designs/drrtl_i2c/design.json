@@ -1,0 +1,31 @@
+{
+ "top": "i2c_master_top",
+ "rtl": [
+  "flow/designs/drrtl_i2c/rtl/i2c.v0.v"
+ ],
+ "sdc": "flow/designs/drrtl_i2c/drrtl_i2c.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.0,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "wb_clk_i"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "wb_rst_i",
+   "active_low": false
+  }
+ ],
+ "suite": "drrtl",
+ "abc_delay_ps": 100
+}

@@ -1,0 +1,38 @@
+{
+ "top": "axis_async_fifo_bench",
+ "rtl": [
+  "flow/designs/axis_async_fifo/rtl/axis_async_fifo.v",
+  "flow/designs/axis_async_fifo/rtl/bench_top.v"
+ ],
+ "sdc": "flow/designs/axis_async_fifo/axis_async_fifo.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "s_clk"
+  ],
+  [
+   "m_clk"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "s_rst",
+   "active_low": false
+  },
+  {
+   "port": "m_rst",
+   "active_low": false
+  }
+ ],
+ "abc_delay_ps": 580
+}

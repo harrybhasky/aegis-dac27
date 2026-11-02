@@ -1,0 +1,38 @@
+{
+ "clock_groups": [
+  {
+   "kind": "asynchronous",
+   "groups": [
+    [
+     "clk_w",
+     "clk_div"
+    ],
+    [
+     "clk_r"
+    ]
+   ]
+  }
+ ],
+ "exceptions": [
+  {
+   "cmd": "set_multicycle_path",
+   "raw": "set_multicycle_path 2 -setup -from [get_cells fast_q_reg*] -to [get_cells slow_q_reg*]",
+   "datapath_only": false,
+   "from": [
+    "cells",
+    [
+     "fast_q_reg*"
+    ]
+   ],
+   "to": [
+    "cells",
+    [
+     "slow_q_reg*"
+    ]
+   ]
+  }
+ ],
+ "other": [
+  "set_clock_uncertainty 0.1 [all_clocks]"
+ ]
+}

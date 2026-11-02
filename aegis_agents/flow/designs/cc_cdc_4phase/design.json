@@ -1,0 +1,38 @@
+{
+ "top": "cc_cdc_4phase_bench",
+ "rtl": [
+  "flow/designs/cc_cdc_4phase/rtl/cc_cdc_4phase.v",
+  "flow/designs/cc_cdc_4phase/rtl/bench_top.v"
+ ],
+ "sdc": "flow/designs/cc_cdc_4phase/cc_cdc_4phase.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "src_clk_i"
+  ],
+  [
+   "dst_clk_i"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "src_rst_ni",
+   "active_low": true
+  },
+  {
+   "port": "dst_rst_ni",
+   "active_low": true
+  }
+ ],
+ "abc_delay_ps": 210
+}

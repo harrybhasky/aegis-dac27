@@ -1,0 +1,35 @@
+{
+ "top": "wbxclk_bench",
+ "rtl": [
+  "flow/designs/wbxclk/rtl/wbxclk.v",
+  "flow/designs/wbxclk/rtl/afifo.v",
+  "flow/designs/wbxclk/rtl/bench_top.v"
+ ],
+ "sdc": "flow/designs/wbxclk/wbxclk.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "i_wb_clk"
+  ],
+  [
+   "i_xclk_clk"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "i_reset",
+   "active_low": false
+  }
+ ],
+ "abc_delay_ps": 490
+}

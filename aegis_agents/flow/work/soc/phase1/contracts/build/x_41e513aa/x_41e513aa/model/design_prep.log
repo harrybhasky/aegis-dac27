@@ -1,0 +1,95 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+
+-- Executing script file `design_prep.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module $paramod\wptr_full\AW=s32'00000000000000000000000000000011.
+Found 0 SCCs in module aegis_chk_gray_src_x_41e513aa.
+Found 0 SCCs in module aegis_formal_top.
+Found 0 SCCs.
+
+3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+4. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+5. Executing ASYNC2SYNC pass.
+Replacing $paramod\wptr_full\AW=s32'00000000000000000000000000000011.$procdff$75 ($adff): ARST=\wrst_n, D=\wgray_next, Q=\wptr
+Replacing $paramod\wptr_full\AW=s32'00000000000000000000000000000011.$procdff$80 ($adff): ARST=\wrst_n, D=\wfull_next, Q=\wfull
+Replacing $paramod\wptr_full\AW=s32'00000000000000000000000000000011.$procdff$85 ($adff): ARST=\wrst_n, D=\wbin_next, Q=\wbin
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\wptr_full\AW=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_41e513aa..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 6 unused cells and 6 unused wires.
+<suppressed ~8 debug messages>
+
+7. Executing FORMALFF pass.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\wptr_full\AW=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_41e513aa..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 3 unused cells and 3 unused wires.
+<suppressed ~6 debug messages>
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\wptr_full\AW=s32'00000000000000000000000000000011...
+Checking module aegis_chk_gray_src_x_41e513aa...
+Checking module aegis_formal_top...
+Found and reported 0 problems.
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\wptr_full\AW=s32'00000000000000000000000000000011.
+Optimizing module aegis_chk_gray_src_x_41e513aa.
+Optimizing module aegis_formal_top.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\wptr_full\AW=s32'00000000000000000000000000000011'.
+Computing hashes of 15 cells of `$paramod\wptr_full\AW=s32'00000000000000000000000000000011'.
+Finding duplicate cells in `$paramod\wptr_full\AW=s32'00000000000000000000000000000011'.
+Finding identical cells in module `\aegis_chk_gray_src_x_41e513aa'.
+Computing hashes of 30 cells of `\aegis_chk_gray_src_x_41e513aa'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_41e513aa'.
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 6 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Removed a total of 0 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\wptr_full\AW=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_41e513aa..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 4 unused cells and 8 unused wires.
+<suppressed ~9 debug messages>
+
+11.5. Finished fast OPT passes.
+
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\wptr_full\AW=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_41e513aa..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+13. Executing RTLIL backend.
+Output filename: ../model/design_prep.il
+
+End of script. Logfile hash: 34af115040, time: 0.01s, user: 0.01s, system: 0.00s, MEM: 12.00 MB peak
+Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+Time spent: 30% 4x opt_clean (0 sec), 14% 1x setundef (0 sec), ...

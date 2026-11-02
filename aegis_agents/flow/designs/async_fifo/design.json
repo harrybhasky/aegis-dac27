@@ -1,0 +1,33 @@
+{
+ "top": "async_fifo",
+ "rtl": [
+  "flow/designs/async_fifo/rtl/async_fifo.v",
+  "flow/designs/async_fifo/rtl/fifomem.v",
+  "flow/designs/async_fifo/rtl/rptr_empty.v",
+  "flow/designs/async_fifo/rtl/wptr_full.v",
+  "flow/designs/async_fifo/rtl/sync_r2w.v",
+  "flow/designs/async_fifo/rtl/sync_w2r.v",
+  "flow/designs/async_fifo/rtl/sync_ptr.v"
+ ],
+ "sdc": "flow/designs/async_fifo/async_fifo.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "wclk"
+  ],
+  [
+   "rclk"
+  ]
+ ],
+ "abc_delay_ps": 370
+}

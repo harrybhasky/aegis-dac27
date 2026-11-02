@@ -1,0 +1,27 @@
+{
+ "top": "afifo",
+ "rtl": [
+  "flow/designs/afifo/rtl/afifo.v"
+ ],
+ "sdc": "flow/designs/afifo/afifo.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "i_wclk"
+  ],
+  [
+   "i_rclk"
+  ]
+ ],
+ "abc_delay_ps": 400
+}

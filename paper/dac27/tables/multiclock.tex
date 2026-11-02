@@ -1,0 +1,36 @@
+\texttt{soc} & \textsc{Aegis} & $-$0.38$\to$$-$0.38 (+0\%) & $-$3.34$\to$$-$2.38 (+29\%) & +0 & $-$3.4 & \cmark & \cmark & 138 & 20 \\
+ & Dr.\,RTL & $-$0.38$\to$$-$0.38 (+0\%) & $-$3.34$\to$$-$2.37 (+29\%) & +0 & $-$3.4 & \cmark & \cmark & 1016 & 50 \\
+ & Vanilla & $-$0.38$\to$$-$0.18 (+53\%) & $-$3.34$\to$$-$1.43 (+57\%) & +53 & +0.3 & \xmark & \cmark & 220 & 25 \\
+\midrule
+\texttt{prim\_fifo\_async} & \textsc{Aegis} & $-$0.11$\to$$-$0.11 (+0\%) & $-$3.53$\to$$-$3.53 (+0\%) & +0 & $-$1.4 & \cmark & \cmark & 500 & 32 \\
+ & Dr.\,RTL & $-$0.11$\to$$-$0.11 (+0\%) & $-$3.53$\to$$-$3.53 (+0\%) & +0 & $-$1.2 & \cmark & \cmark & 1670 & 50 \\
+ & Vanilla & $-$0.11$\to$0.01 (+109\%) & $-$3.53$\to$0.00 (+100\%) & +64 & +9.0 & \xmark & \cmark & 434 & 25 \\
+\midrule
+\texttt{afifo} & \textsc{Aegis} & $-$0.15$\to$$-$0.11 (+27\%) & $-$11.21$\to$$-$10.89 (+3\%) & +27 & +1.9 & \cmark & \cmark & 1094 & 35 \\
+ & Dr.\,RTL & $-$0.15$\to$$-$0.10 (+33\%) & $-$11.21$\to$$-$8.32 (+26\%) & +33 & $-$3.2 & \cmark & \cmark & 1819 & 48 \\
+ & Vanilla & $-$0.15$\to$0.00 (+100\%) & $-$11.21$\to$0.00 (+100\%) & +100 & +10.2 & \xmark & \xmark & 628 & 25 \\
+\midrule
+\texttt{axil\_cdc} & \textsc{Aegis} & $-$0.09$\to$$-$0.09 (+0\%) & $-$18.73$\to$$-$18.51 (+1\%) & +0 & $-$0.0 & \cmark & \cmark & 1438 & 80 \\
+ & Dr.\,RTL & $-$0.09$\to$$-$0.09 (+0\%) & $-$18.73$\to$$-$17.48 (+7\%) & +0 & $-$0.0 & \cmark & \xmark & 2172 & 49 \\
+\midrule
+\texttt{async\_fifo} & \textsc{Aegis} & $-$0.16$\to$$-$0.13 (+19\%) & $-$2.87$\to$$-$0.58 (+80\%) & +16 & $-$4.6 & \cmark & \cmark & 734 & 68 \\
+ & Dr.\,RTL & $-$0.16$\to$$-$0.14 (+12\%) & $-$2.87$\to$$-$2.19 (+24\%) & $-$5 & $-$4.7 & \cmark & \cmark & 1497 & 50 \\
+\midrule
+\texttt{axis\_async\_fifo} & \textsc{Aegis} & $-$0.24$\to$$-$0.24 (+0\%) & $-$25.86$\to$$-$25.86 (+0\%) & +0 & +0.0 & n/c & n/c & 1167 & 29 \\
+ & Dr.\,RTL & $-$0.24$\to$$-$0.11 (+54\%) & $-$25.86$\to$$-$26.32 ($-$2\%) & $-$12 & $-$3.1 & \cmark & \cmark & 2796 & 48 \\
+\midrule
+\texttt{eth\_mac\_1g\_fifo} & \textsc{Aegis} & \multicolumn{8}{c}{\emph{run pending}} \\
+ & Dr.\,RTL & \multicolumn{8}{c}{\emph{run pending}} \\
+\midrule
+\texttt{drrtl\_fifo\_2clk} & \textsc{Aegis} & \multicolumn{8}{c}{\emph{run pending}} \\
+ & Dr.\,RTL & \multicolumn{8}{c}{\emph{run pending}} \\
+\midrule
+\texttt{cc\_cdc\_fifo\_gray} & \textsc{Aegis} & \multicolumn{8}{c}{\emph{run pending}} \\
+ & Dr.\,RTL & \multicolumn{8}{c}{\emph{run pending}} \\
+\midrule
+\multicolumn{2}{@{}l}{Avg.\ \textsc{Aegis} (6)} & +7.6\% & +18.8\% & +7.1 & $-$1.3 & 5/5 & 6/6 & 845 & \\
+\multicolumn{2}{@{}l}{\quad shippable only} & +7.6\% & +18.8\% & & $-$1.3 & & & & \\
+\multicolumn{2}{@{}l}{Avg.\ Dr.\,RTL (6)} & +16.7\% & +13.9\% & +2.6 & $-$2.6 & 6/6 & 5/6 & 1828 & \\
+\multicolumn{2}{@{}l}{\quad shippable only} & +16.7\% & +12.8\% & & $-$2.6 & & & & \\
+\multicolumn{2}{@{}l}{Avg.\ Vanilla (3)} & +87.2\% & +85.7\% & +72.1 & +6.5 & 0/3 & 2/3 & 427 & \\
+\multicolumn{2}{@{}l}{\quad shippable only} & +0.0\% & +0.0\% & & +0.0 & & & & \\

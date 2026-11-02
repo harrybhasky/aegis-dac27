@@ -1,0 +1,14 @@
+[
+ {
+  "from": "i_rclk",
+  "to": "i_wclk",
+  "crossing": "x_fa1c1e76",
+  "issue": "multi-bit Gray bus rgray -> rgray_cross is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ },
+ {
+  "from": "i_wclk",
+  "to": "i_rclk",
+  "crossing": "x_8e8f57f7",
+  "issue": "multi-bit Gray bus wgray -> wgray_cross is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ }
+]

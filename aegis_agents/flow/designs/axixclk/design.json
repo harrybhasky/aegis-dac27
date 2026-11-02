@@ -1,0 +1,35 @@
+{
+ "top": "axixclk_bench",
+ "rtl": [
+  "flow/designs/axixclk/rtl/axixclk.v",
+  "flow/designs/axixclk/rtl/afifo.v",
+  "flow/designs/axixclk/rtl/bench_top.v"
+ ],
+ "sdc": "flow/designs/axixclk/axixclk.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "S_AXI_ACLK"
+  ],
+  [
+   "M_AXI_ACLK"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "S_AXI_ARESETN",
+   "active_low": true
+  }
+ ],
+ "abc_delay_ps": 420
+}

@@ -1,0 +1,31 @@
+{
+ "top": "tv80s",
+ "rtl": [
+  "flow/designs/drrtl_tv80/rtl/tv80.v0.v"
+ ],
+ "sdc": "flow/designs/drrtl_tv80/drrtl_tv80.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.0,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "clk"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "reset_n",
+   "active_low": true
+  }
+ ],
+ "suite": "drrtl",
+ "abc_delay_ps": 100
+}

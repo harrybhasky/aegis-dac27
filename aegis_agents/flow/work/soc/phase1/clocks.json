@@ -1,0 +1,29 @@
+{
+ "clocks": {
+  "clk_w": {
+   "period_ns": 0.55,
+   "master": null,
+   "root": "clk_w",
+   "source": "clk_w"
+  },
+  "clk_r": {
+   "period_ns": 0.9,
+   "master": null,
+   "root": "clk_r",
+   "source": "clk_r"
+  },
+  "clk_x": {
+   "period_ns": 0.45,
+   "master": null,
+   "root": "clk_x",
+   "source": "clk_x"
+  },
+  "clk_div": {
+   "period_ns": 1.1,
+   "master": "clk_w",
+   "root": "clk_w",
+   "source": "u_div/div_q_reg/Q"
+  }
+ },
+ "synchronous_groups": []
+}

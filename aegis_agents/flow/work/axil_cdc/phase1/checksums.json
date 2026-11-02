@@ -1,0 +1,438 @@
+{
+ "sdc": {
+  "file": "axil_cdc.sdc",
+  "sha256": "96f74092192fdaa05132f448ff770e13ecfb19cb86c6927df3d4c90b539555a7"
+ },
+ "rtl_top": "axil_cdc",
+ "entries": [
+  {
+   "reg": "axil_cdc_rd_inst.s_flag_sync_reg_1",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    159,
+    162
+   ],
+   "sha256": "b73ad0c949ac5b6a957aa99ffb2e85921eac4472c98f75dd1e43a2eac0b966a3"
+  },
+  {
+   "reg": "axil_cdc_rd_inst.s_flag_sync_reg_2",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    159,
+    162
+   ],
+   "sha256": "b73ad0c949ac5b6a957aa99ffb2e85921eac4472c98f75dd1e43a2eac0b966a3"
+  },
+  {
+   "reg": "axil_cdc_rd_inst.m_flag_sync_reg_1",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    154,
+    157
+   ],
+   "sha256": "2540940de6a4709c61f8bd756b00646c1520f379854b4f80e0d27322ba770623"
+  },
+  {
+   "reg": "axil_cdc_rd_inst.m_flag_sync_reg_2",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    154,
+    157
+   ],
+   "sha256": "2540940de6a4709c61f8bd756b00646c1520f379854b4f80e0d27322ba770623"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.s_flag_sync_reg_1",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    179,
+    182
+   ],
+   "sha256": "b73ad0c949ac5b6a957aa99ffb2e85921eac4472c98f75dd1e43a2eac0b966a3"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.s_flag_sync_reg_2",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    179,
+    182
+   ],
+   "sha256": "b73ad0c949ac5b6a957aa99ffb2e85921eac4472c98f75dd1e43a2eac0b966a3"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.m_flag_sync_reg_1",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    174,
+    177
+   ],
+   "sha256": "2540940de6a4709c61f8bd756b00646c1520f379854b4f80e0d27322ba770623"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.m_flag_sync_reg_2",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    174,
+    177
+   ],
+   "sha256": "2540940de6a4709c61f8bd756b00646c1520f379854b4f80e0d27322ba770623"
+  },
+  {
+   "reg": "param@axil_cdc.v:37",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axil_cdc.v",
+   "lines": [
+    37,
+    37
+   ],
+   "sha256": "7618adaf3a00c8a0dd0b699eb499829b3bc631225dd5fd20dd7b46ea69b20d78"
+  },
+  {
+   "reg": "param@axil_cdc.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axil_cdc.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "6564bb9bc8c413eb93efd692d6be0e6b9de7c32050ff04e34578258dd04a96fb"
+  },
+  {
+   "reg": "param@axil_cdc.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axil_cdc.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "e959d3275ac8361c3c67abe8f9a2a39234b75c2af23b396c183ee21cf922a668"
+  },
+  {
+   "reg": "param@axil_cdc_rd.v:37",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    37,
+    37
+   ],
+   "sha256": "7618adaf3a00c8a0dd0b699eb499829b3bc631225dd5fd20dd7b46ea69b20d78"
+  },
+  {
+   "reg": "param@axil_cdc_rd.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "6564bb9bc8c413eb93efd692d6be0e6b9de7c32050ff04e34578258dd04a96fb"
+  },
+  {
+   "reg": "param@axil_cdc_rd.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "e959d3275ac8361c3c67abe8f9a2a39234b75c2af23b396c183ee21cf922a668"
+  },
+  {
+   "reg": "param@axil_cdc_wr.v:37",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    37,
+    37
+   ],
+   "sha256": "7618adaf3a00c8a0dd0b699eb499829b3bc631225dd5fd20dd7b46ea69b20d78"
+  },
+  {
+   "reg": "param@axil_cdc_wr.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "6564bb9bc8c413eb93efd692d6be0e6b9de7c32050ff04e34578258dd04a96fb"
+  },
+  {
+   "reg": "param@axil_cdc_wr.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "e959d3275ac8361c3c67abe8f9a2a39234b75c2af23b396c183ee21cf922a668"
+  },
+  {
+   "reg": "axil_cdc_rd_inst.m_axil_rdata_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    165,
+    204
+   ],
+   "sha256": "1806ae5c75d1cd2870675e8463783b2467d4ee81aae0b543d0f8ac68e4ddeeda"
+  },
+  {
+   "reg": "s_axil_rdata",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    112,
+    151
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "axil_cdc_rd_inst.m_axil_rresp_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    165,
+    204
+   ],
+   "sha256": "1bb2f262154426c14af7dbe2a26885e0de81787945b88ce5e79e172836196158"
+  },
+  {
+   "reg": "s_axil_rresp",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    112,
+    151
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "axil_cdc_rd_inst.m_flag_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    165,
+    204
+   ],
+   "sha256": "6bb14dd52261c35f971aa8a1a655b73d515c3c83055061d28c5e9ba0e4ac534b"
+  },
+  {
+   "reg": "axil_cdc_rd_inst.s_axil_araddr_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    112,
+    151
+   ],
+   "sha256": "1af0613e4751881a6922969db19035025a2536451d0aa5a41a75975ed1171e6f"
+  },
+  {
+   "reg": "m_axil_araddr",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    165,
+    204
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "axil_cdc_rd_inst.s_axil_arprot_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    112,
+    151
+   ],
+   "sha256": "5d3deb844458957d4f0331af83ee58f30deeac863d83ca56de8e6b79b490bb6e"
+  },
+  {
+   "reg": "m_axil_arprot",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    165,
+    204
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "axil_cdc_rd_inst.s_flag_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_rd.v",
+   "lines": [
+    112,
+    151
+   ],
+   "sha256": "3af399ed38337640e4df6adc506b93865f80f80ab1b98fef2578fe11a9f93df0"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.m_axil_bresp_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    185,
+    228
+   ],
+   "sha256": "98d24de5cd8803513b8b08a7675de6e7af31f795ab85d840da472d2954283f10"
+  },
+  {
+   "reg": "s_axil_bresp",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    125,
+    171
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.m_flag_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    185,
+    228
+   ],
+   "sha256": "6bb14dd52261c35f971aa8a1a655b73d515c3c83055061d28c5e9ba0e4ac534b"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.s_axil_awaddr_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    125,
+    171
+   ],
+   "sha256": "9a4522e30dcdee8c0c7abf0082ee73a1da5ca3900d33d49486d3eb6ab996b64a"
+  },
+  {
+   "reg": "m_axil_awaddr",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    185,
+    228
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.s_axil_awprot_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    125,
+    171
+   ],
+   "sha256": "ea4521b650819058174e40014fed5fb0949444c2c25090e73d120bbe66a6b9ae"
+  },
+  {
+   "reg": "m_axil_awprot",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    185,
+    228
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.s_axil_wdata_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    125,
+    171
+   ],
+   "sha256": "df6916c30fc04b48e332428aece3d9d2575683ccb8b81159008cca51efa7057f"
+  },
+  {
+   "reg": "m_axil_wdata",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    185,
+    228
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.s_axil_wstrb_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    125,
+    171
+   ],
+   "sha256": "d4ce1688f078d0132cf4acecd3a7204b3ff9ff27348bfe867cba4ad161acb673"
+  },
+  {
+   "reg": "m_axil_wstrb",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    185,
+    228
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "axil_cdc_wr_inst.s_flag_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axil_cdc_wr.v",
+   "lines": [
+    125,
+    171
+   ],
+   "sha256": "3af399ed38337640e4df6adc506b93865f80f80ab1b98fef2578fe11a9f93df0"
+  }
+ ]
+}

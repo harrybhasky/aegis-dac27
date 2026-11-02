@@ -1,0 +1,12 @@
+{
+ "immutable": [
+  "ticket_machine.v0.v:2",
+  "ticket_machine.v0.v:3"
+ ],
+ "category": {
+  "ticket_machine.v0.v:2": "capacity",
+  "ticket_machine.v0.v:3": "capacity"
+ },
+ "contract": {},
+ "contracts": {}
+}

@@ -1,0 +1,10 @@
+{
+ "i_rclk": {
+  "i_rclk": "identical",
+  "i_wclk": "asynchronous"
+ },
+ "i_wclk": {
+  "i_rclk": "asynchronous",
+  "i_wclk": "identical"
+ }
+}

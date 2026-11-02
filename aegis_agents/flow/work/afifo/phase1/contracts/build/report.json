@@ -1,0 +1,50 @@
+[
+  {
+    "id": "x_fa1c1e76",
+    "type": "gray_src",
+    "dir": "flow/work/afifo/phase1.new/contracts/build/x_fa1c1e76",
+    "job": "x_fa1c1e76",
+    "checker_module": "aegis_chk_gray_src_x_fa1c1e76",
+    "lat": 1,
+    "n_hold": 4,
+    "min_gap": 2,
+    "obligations": [],
+    "proof": {
+      "status": "PASS",
+      "failed": [],
+      "trace": null,
+      "engine": "abc pdr",
+      "note": "PDR PASS"
+    },
+    "structural": {
+      "rule": "R4 registered launch",
+      "signal": "rgray",
+      "ok": true,
+      "problems": []
+    }
+  },
+  {
+    "id": "x_8e8f57f7",
+    "type": "gray_src",
+    "dir": "flow/work/afifo/phase1.new/contracts/build/x_8e8f57f7",
+    "job": "x_8e8f57f7",
+    "checker_module": "aegis_chk_gray_src_x_8e8f57f7",
+    "lat": 1,
+    "n_hold": 5,
+    "min_gap": 3,
+    "obligations": [],
+    "proof": {
+      "status": "PASS",
+      "failed": [],
+      "trace": null,
+      "engine": "abc pdr",
+      "note": "PDR PASS"
+    },
+    "structural": {
+      "rule": "R4 registered launch",
+      "signal": "wgray",
+      "ok": true,
+      "problems": []
+    }
+  }
+]

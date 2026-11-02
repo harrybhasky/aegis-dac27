@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 32
+
+[engines]
+abc pdr
+
+[script]
+read -formal soc.v checker.v formal_top.v
+prep -top aegis_formal_top
+
+[files]
+soc.v
+checker.v
+formal_top.v

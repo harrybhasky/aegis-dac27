@@ -1,0 +1,26 @@
+{
+ "clk_div": {
+  "clk_div": "identical",
+  "clk_r": "asynchronous",
+  "clk_w": "related",
+  "clk_x": "asynchronous"
+ },
+ "clk_r": {
+  "clk_div": "asynchronous",
+  "clk_r": "identical",
+  "clk_w": "asynchronous",
+  "clk_x": "asynchronous"
+ },
+ "clk_w": {
+  "clk_div": "related",
+  "clk_r": "asynchronous",
+  "clk_w": "identical",
+  "clk_x": "asynchronous"
+ },
+ "clk_x": {
+  "clk_div": "asynchronous",
+  "clk_r": "asynchronous",
+  "clk_w": "asynchronous",
+  "clk_x": "identical"
+ }
+}

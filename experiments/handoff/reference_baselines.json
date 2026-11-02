@@ -1,0 +1,172 @@
+{
+ "drrtl_ticket_machine": {
+  "wns_ns": -0.26,
+  "tns_ns": -1.94,
+  "area_um2": 71.022,
+  "per_domain": [
+   {
+    "clock": "clk",
+    "wns_ns": -0.26,
+    "tns_ns": -1.94
+   }
+  ]
+ },
+ "drrtl_controller": {
+  "wns_ns": -0.39,
+  "tns_ns": -9.29,
+  "area_um2": 214.928,
+  "per_domain": [
+   {
+    "clock": "asynchronous",
+    "wns_ns": 0.15,
+    "tns_ns": 0
+   },
+   {
+    "clock": "clk",
+    "wns_ns": -0.39,
+    "tns_ns": -9.29
+   }
+  ]
+ },
+ "drrtl_uart": {
+  "wns_ns": -0.65,
+  "tns_ns": -24.24,
+  "area_um2": 762.622,
+  "per_domain": [
+   {
+    "clock": "clk",
+    "wns_ns": -0.65,
+    "tns_ns": -24.24
+   }
+  ]
+ },
+ "drrtl_communication": {
+  "wns_ns": -0.43,
+  "tns_ns": -30.72,
+  "area_um2": 816.088,
+  "per_domain": [
+   {
+    "clock": "asynchronous",
+    "wns_ns": 0.15,
+    "tns_ns": 0
+   },
+   {
+    "clock": "clk",
+    "wns_ns": -0.43,
+    "tns_ns": -30.72
+   }
+  ]
+ },
+ "drrtl_simple_spi": {
+  "wns_ns": -0.49,
+  "tns_ns": -43.41,
+  "area_um2": 1179.976,
+  "per_domain": [
+   {
+    "clock": "asynchronous",
+    "wns_ns": 0.15,
+    "tns_ns": 0
+   },
+   {
+    "clock": "clk_i",
+    "wns_ns": -0.49,
+    "tns_ns": -43.41
+   }
+  ]
+ },
+ "drrtl_i2c": {
+  "wns_ns": -0.65,
+  "tns_ns": -36.08,
+  "area_um2": 1289.302,
+  "per_domain": [
+   {
+    "clock": "asynchronous",
+    "wns_ns": 0.14,
+    "tns_ns": 0
+   },
+   {
+    "clock": "wb_clk_i",
+    "wns_ns": -0.65,
+    "tns_ns": -36.08
+   }
+  ]
+ },
+ "afifo": {
+  "wns_ns": -0.15,
+  "tns_ns": -11.21,
+  "area_um2": 1341.172,
+  "per_domain": [
+   {
+    "clock": "i_rclk",
+    "wns_ns": -0.15,
+    "tns_ns": -2.27
+   },
+   {
+    "clock": "i_wclk",
+    "wns_ns": -0.11,
+    "tns_ns": -8.94
+   }
+  ]
+ },
+ "axil_cdc": {
+  "wns_ns": -0.09,
+  "tns_ns": -18.73,
+  "area_um2": 2040.752,
+  "per_domain": [
+   {
+    "clock": "m_clk",
+    "wns_ns": -0.09,
+    "tns_ns": -10.16
+   },
+   {
+    "clock": "s_clk",
+    "wns_ns": -0.09,
+    "tns_ns": -8.57
+   }
+  ]
+ },
+ "async_fifo": {
+  "wns_ns": -0.16,
+  "tns_ns": -2.87,
+  "area_um2": 1387.456,
+  "per_domain": [
+   {
+    "clock": "rclk",
+    "wns_ns": -0.16,
+    "tns_ns": -0.28
+   },
+   {
+    "clock": "wclk",
+    "wns_ns": -0.12,
+    "tns_ns": -2.59
+   }
+  ]
+ },
+ "soc": {
+  "wns_ns": -0.38,
+  "tns_ns": -3.34,
+  "area_um2": 1146.992,
+  "per_domain": [
+   {
+    "clock": "clk_div",
+    "wns_ns": 1.35,
+    "tns_ns": 0
+   },
+   {
+    "clock": "clk_r",
+    "wns_ns": 0.19,
+    "tns_ns": 0
+   },
+   {
+    "clock": "clk_w",
+    "wns_ns": -0.04,
+    "tns_ns": -0.96
+   },
+   {
+    "clock": "clk_x",
+    "wns_ns": -0.38,
+    "tns_ns": -2.38
+   }
+  ]
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "clocks": {
+  "rclk": {
+   "period_ns": 0.48
+  },
+  "wclk": {
+   "period_ns": 0.37
+  }
+ },
+ "crossings": [
+  {
+   "id": "x_753d5e36",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/async_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/fifomem.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/rptr_empty.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/wptr_full.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/sync_r2w.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/sync_w2r.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/sync_ptr.v"
+   ],
+   "scope_module": "rptr_empty",
+   "clock": "rclk",
+   "reset": "rrst_n",
+   "reset_active_low": true,
+   "src_clock": "rclk",
+   "dst_clock": "wclk",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "rptr"
+   },
+   "params": {
+    "ADDRSIZE": 4
+   },
+   "resets": null,
+   "settle": 1
+  },
+  {
+   "id": "x_cf11da04",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/async_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/fifomem.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/rptr_empty.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/wptr_full.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/sync_r2w.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/sync_w2r.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/async_fifo/rtl/sync_ptr.v"
+   ],
+   "scope_module": "wptr_full",
+   "clock": "wclk",
+   "reset": "wrst_n",
+   "reset_active_low": true,
+   "src_clock": "wclk",
+   "dst_clock": "rclk",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "wptr"
+   },
+   "params": {
+    "ADDRSIZE": 4
+   },
+   "resets": null,
+   "settle": 1
+  }
+ ]
+}

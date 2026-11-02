@@ -1,0 +1,74 @@
+{
+ "immutable": [
+  "soc.v:11",
+  "soc.v:2",
+  "soc.v:23",
+  "soc.v:35",
+  "soc.v:45",
+  "soc.v:46",
+  "soc.v:47",
+  "soc.v:5",
+  "soc.v:54",
+  "soc.v:57",
+  "soc.v:58",
+  "soc.v:6",
+  "soc.v:64",
+  "soc.v:7",
+  "soc.v:88"
+ ],
+ "category": {
+  "soc.v:5": "synchronizer",
+  "soc.v:6": "synchronizer",
+  "soc.v:7": "synchronizer",
+  "soc.v:64": "clock_generation",
+  "soc.v:2": "capacity",
+  "soc.v:11": "capacity",
+  "soc.v:23": "capacity",
+  "soc.v:35": "capacity",
+  "soc.v:54": "crossing_launch",
+  "soc.v:57": "crossing_launch",
+  "soc.v:58": "crossing_launch",
+  "soc.v:45": "crossing_launch",
+  "soc.v:46": "crossing_launch",
+  "soc.v:47": "crossing_launch",
+  "soc.v:88": "crossing_launch"
+ },
+ "contract": {
+  "soc.v:27": "x_55a0f370",
+  "soc.v:26": "x_55a0f370",
+  "soc.v:30": "x_55a0f370",
+  "soc.v:31": "x_55a0f370",
+  "soc.v:32": "x_55a0f370",
+  "soc.v:14": "x_41e513aa",
+  "soc.v:15": "x_41e513aa",
+  "soc.v:18": "x_41e513aa",
+  "soc.v:19": "x_41e513aa",
+  "soc.v:20": "x_41e513aa"
+ },
+ "contracts": {
+  "x_55a0f370": {
+   "crossing": "x_55a0f370",
+   "type": "gray_src",
+   "scope_module": "rptr_empty",
+   "signals": {
+    "ptr": "rptr"
+   },
+   "properties": [
+    "G1",
+    "G2"
+   ]
+  },
+  "x_41e513aa": {
+   "crossing": "x_41e513aa",
+   "type": "gray_src",
+   "scope_module": "wptr_full",
+   "signals": {
+    "ptr": "wptr"
+   },
+   "properties": [
+    "G1",
+    "G2"
+   ]
+  }
+ }
+}

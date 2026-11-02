@@ -1,0 +1,8 @@
+  // ---- common harness (generated) ---------------------------------------
+  // f_ok = clock edges since this domain's reset was released (saturating).
+  // Every check is gated on f_ok so nothing is judged during or straight
+  // after reset.
+  reg [7:0] f_ok = 8'd0;
+  always @(posedge clk)
+    if (rst_act)              f_ok <= 8'd0;
+    else if (f_ok != 8'hff)   f_ok <= f_ok + 8'd1;

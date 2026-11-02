@@ -1,0 +1,52 @@
+{
+ "clocks": {
+  "i_rclk": {
+   "period_ns": 0.46
+  },
+  "i_wclk": {
+   "period_ns": 0.4
+  }
+ },
+ "crossings": [
+  {
+   "id": "x_fa1c1e76",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/afifo/rtl/afifo.v"
+   ],
+   "scope_module": "afifo",
+   "clock": "i_rclk",
+   "reset": "i_rd_reset_n",
+   "reset_active_low": true,
+   "src_clock": "i_rclk",
+   "dst_clock": "i_wclk",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "rgray"
+   },
+   "params": {},
+   "resets": null,
+   "settle": 1
+  },
+  {
+   "id": "x_8e8f57f7",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/afifo/rtl/afifo.v"
+   ],
+   "scope_module": "afifo",
+   "clock": "i_wclk",
+   "reset": "i_wr_reset_n",
+   "reset_active_low": true,
+   "src_clock": "i_wclk",
+   "dst_clock": "i_rclk",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "wgray"
+   },
+   "params": {},
+   "resets": null,
+   "settle": 1
+  }
+ ]
+}

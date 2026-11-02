@@ -1,0 +1,50 @@
+[
+  {
+    "id": "x_753d5e36",
+    "type": "gray_src",
+    "dir": "flow/work/async_fifo/phase1.new/contracts/build/x_753d5e36",
+    "job": "x_753d5e36",
+    "checker_module": "aegis_chk_gray_src_x_753d5e36",
+    "lat": 1,
+    "n_hold": 4,
+    "min_gap": 2,
+    "obligations": [],
+    "proof": {
+      "status": "PASS",
+      "failed": [],
+      "trace": null,
+      "engine": "abc pdr",
+      "note": "PDR PASS"
+    },
+    "structural": {
+      "rule": "R4 registered launch",
+      "signal": "rptr",
+      "ok": true,
+      "problems": []
+    }
+  },
+  {
+    "id": "x_cf11da04",
+    "type": "gray_src",
+    "dir": "flow/work/async_fifo/phase1.new/contracts/build/x_cf11da04",
+    "job": "x_cf11da04",
+    "checker_module": "aegis_chk_gray_src_x_cf11da04",
+    "lat": 1,
+    "n_hold": 6,
+    "min_gap": 3,
+    "obligations": [],
+    "proof": {
+      "status": "PASS",
+      "failed": [],
+      "trace": null,
+      "engine": "abc pdr",
+      "note": "PDR PASS"
+    },
+    "structural": {
+      "rule": "R4 registered launch",
+      "signal": "wptr",
+      "ok": true,
+      "problems": []
+    }
+  }
+]

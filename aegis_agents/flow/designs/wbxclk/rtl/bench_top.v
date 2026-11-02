@@ -1,0 +1,32 @@
+module wbxclk_bench (
+  input wire i_wb_clk,
+  input wire i_reset,
+  input wire i_wb_cyc,
+  input wire i_wb_stb,
+  input wire i_wb_we,
+  input wire [7:0] i_wb_addr,
+  input wire [7:0] i_wb_data,
+  input wire i_wb_sel,
+  output wire o_wb_stall,
+  output wire o_wb_ack,
+  output wire [7:0] o_wb_data,
+  output wire o_wb_err,
+  input wire i_xclk_clk,
+  output wire o_xclk_cyc,
+  output wire o_xclk_stb,
+  output wire o_xclk_we,
+  output wire [7:0] o_xclk_addr,
+  output wire [7:0] o_xclk_data,
+  output wire o_xclk_sel,
+  input wire i_xclk_stall,
+  input wire i_xclk_ack,
+  input wire [7:0] i_xclk_data,
+  input wire i_xclk_err
+);
+  wbxclk #(.AW(8), .DW(8), .LGFIFO(3)) u (.i_wb_clk(i_wb_clk), .i_reset(i_reset), .i_wb_cyc(i_wb_cyc),
+    .i_wb_stb(i_wb_stb), .i_wb_we(i_wb_we), .i_wb_addr(i_wb_addr), .i_wb_data(i_wb_data), .i_wb_sel(i_wb_sel),
+    .o_wb_stall(o_wb_stall), .o_wb_ack(o_wb_ack), .o_wb_data(o_wb_data), .o_wb_err(o_wb_err),
+    .i_xclk_clk(i_xclk_clk), .o_xclk_cyc(o_xclk_cyc), .o_xclk_stb(o_xclk_stb), .o_xclk_we(o_xclk_we),
+    .o_xclk_addr(o_xclk_addr), .o_xclk_data(o_xclk_data), .o_xclk_sel(o_xclk_sel), .i_xclk_stall(i_xclk_stall),
+    .i_xclk_ack(i_xclk_ack), .i_xclk_data(i_xclk_data), .i_xclk_err(i_xclk_err));
+endmodule

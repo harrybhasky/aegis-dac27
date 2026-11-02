@@ -1,0 +1,34 @@
+{
+ "top": "apbxclk_bench",
+ "rtl": [
+  "flow/designs/apbxclk/rtl/apbxclk.v",
+  "flow/designs/apbxclk/rtl/bench_top.v"
+ ],
+ "sdc": "flow/designs/apbxclk/apbxclk.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "S_APB_PCLK"
+  ],
+  [
+   "M_APB_PCLK"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "S_PRESETn",
+   "active_low": true
+  }
+ ],
+ "abc_delay_ps": 190
+}

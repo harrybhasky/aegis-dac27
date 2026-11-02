@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.DS_Store
+aegis_agents/flow/runs/
+aegis_agents/flow/runs_archive/
+aegis_agents/flow/log/
+aegis_agents/flow/rtl/
+aegis_agents/flow/work/*/*
+!aegis_agents/flow/work/*/phase1/
+experiments/handoff/machine2.out
+experiments/01_drrtl_suite/results/run.log
+experiments/03_ablation/run.log
+paper/dac27/*.aux
+paper/dac27/*.log
+paper/dac27/*.out

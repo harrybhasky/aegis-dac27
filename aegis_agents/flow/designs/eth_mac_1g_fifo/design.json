@@ -1,0 +1,53 @@
+{
+ "top": "eth_mac_1g_fifo_bench",
+ "rtl": [
+  "flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v",
+  "flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g.v",
+  "flow/designs/eth_mac_1g_fifo/rtl/axis_gmii_rx.v",
+  "flow/designs/eth_mac_1g_fifo/rtl/axis_gmii_tx.v",
+  "flow/designs/eth_mac_1g_fifo/rtl/lfsr.v",
+  "flow/designs/eth_mac_1g_fifo/rtl/axis_async_fifo.v",
+  "flow/designs/eth_mac_1g_fifo/rtl/axis_async_fifo_adapter.v",
+  "flow/designs/eth_mac_1g_fifo/rtl/axis_adapter.v",
+  "flow/designs/eth_mac_1g_fifo/rtl/bench_top.v"
+ ],
+ "sdc": "flow/designs/eth_mac_1g_fifo/eth_mac_1g_fifo.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "rx_clk"
+  ],
+  [
+   "tx_clk"
+  ],
+  [
+   "logic_clk"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "rx_rst",
+   "active_low": false
+  },
+  {
+   "port": "tx_rst",
+   "active_low": false
+  },
+  {
+   "port": "logic_rst",
+   "active_low": false
+  }
+ ],
+ "abc_delay_ps": 560,
+ "eqy_timeout_s": 2700
+}

@@ -1,0 +1,8 @@
+# running in x_753d5e36/src/
+read -formal async_fifo.v fifomem.v rptr_empty.v wptr_full.v sync_r2w.v sync_w2r.v sync_ptr.v checker.v formal_top.v
+prep -top aegis_formal_top
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

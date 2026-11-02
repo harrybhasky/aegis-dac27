@@ -1,0 +1,130 @@
+{
+ "sdc": {
+  "file": "afifo.sdc",
+  "sha256": "accd00576b03a21572e0e77ea6cf3200b8b2970ce104c9607ea660db0d57a706"
+ },
+ "rtl_top": "afifo",
+ "entries": [
+  {
+   "reg": "rd_wgray",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "afifo.v",
+   "lines": [
+    194,
+    198
+   ],
+   "sha256": "fce13ca4fcee7f4c73986d779088724c2a6e2a796feb52a50a26cc21dddb20e8"
+  },
+  {
+   "reg": "wgray_cross",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "afifo.v",
+   "lines": [
+    194,
+    198
+   ],
+   "sha256": "fce13ca4fcee7f4c73986d779088724c2a6e2a796feb52a50a26cc21dddb20e8"
+  },
+  {
+   "reg": "wr_rgray",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "afifo.v",
+   "lines": [
+    185,
+    189
+   ],
+   "sha256": "c910a855dcbbfb5b3eeeabd16e6bfedd5ad7235c32f20692b5c4a2d92196923f"
+  },
+  {
+   "reg": "rgray_cross",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "afifo.v",
+   "lines": [
+    185,
+    189
+   ],
+   "sha256": "c910a855dcbbfb5b3eeeabd16e6bfedd5ad7235c32f20692b5c4a2d92196923f"
+  },
+  {
+   "reg": "param@afifo.v:40",
+   "category": "capacity",
+   "scope": "line",
+   "file": "afifo.v",
+   "lines": [
+    40,
+    40
+   ],
+   "sha256": "35e0f15e5c0235ddbb0ef8631c17747669c3bf9ad0cc6665f9074f97ba8c6773"
+  },
+  {
+   "reg": "param@afifo.v:43",
+   "category": "capacity",
+   "scope": "line",
+   "file": "afifo.v",
+   "lines": [
+    43,
+    43
+   ],
+   "sha256": "fda9f6e72ecb5311c648449eb31efe0c2d197ac31513ce6afd7106d6d37d4ba6"
+  },
+  {
+   "reg": "param@afifo.v:47",
+   "category": "capacity",
+   "scope": "line",
+   "file": "afifo.v",
+   "lines": [
+    47,
+    47
+   ],
+   "sha256": "0febe9671683249e79ff6845023aad183d8a2e35f2d87a2894ff0f69f1c57807"
+  },
+  {
+   "reg": "param@afifo.v:52",
+   "category": "capacity",
+   "scope": "line",
+   "file": "afifo.v",
+   "lines": [
+    52,
+    52
+   ],
+   "sha256": "d591cfe7fd5ef9ae9db1078c4355fa441f21916af83a0526abb7b78abb63fd6b"
+  },
+  {
+   "reg": "param@afifo.v:61",
+   "category": "capacity",
+   "scope": "line",
+   "file": "afifo.v",
+   "lines": [
+    61,
+    61
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "param@afifo.v:62",
+   "category": "capacity",
+   "scope": "line",
+   "file": "afifo.v",
+   "lines": [
+    62,
+    62
+   ],
+   "sha256": "0cc00a3c9fae7b34ac5a9cf2e6ab36749e097013df2abc8bea2a0740293b7d0e"
+  },
+  {
+   "reg": "param@afifo.v:70",
+   "category": "capacity",
+   "scope": "line",
+   "file": "afifo.v",
+   "lines": [
+    70,
+    70
+   ],
+   "sha256": "49f6d28829b524a3df87ce9881480ba425f338ca83563b1482d96b548a40e653"
+  }
+ ]
+}

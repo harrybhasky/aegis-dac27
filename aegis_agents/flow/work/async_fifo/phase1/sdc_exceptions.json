@@ -1,0 +1,17 @@
+{
+ "clock_groups": [
+  {
+   "kind": "asynchronous",
+   "groups": [
+    [
+     "wclk"
+    ],
+    [
+     "rclk"
+    ]
+   ]
+  }
+ ],
+ "exceptions": [],
+ "other": []
+}

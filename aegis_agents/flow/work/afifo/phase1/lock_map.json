@@ -1,0 +1,93 @@
+{
+ "immutable": [
+  "afifo.v:185",
+  "afifo.v:186",
+  "afifo.v:187",
+  "afifo.v:188",
+  "afifo.v:189",
+  "afifo.v:194",
+  "afifo.v:195",
+  "afifo.v:196",
+  "afifo.v:197",
+  "afifo.v:198",
+  "afifo.v:40",
+  "afifo.v:43",
+  "afifo.v:47",
+  "afifo.v:52",
+  "afifo.v:61",
+  "afifo.v:62",
+  "afifo.v:70"
+ ],
+ "category": {
+  "afifo.v:194": "synchronizer",
+  "afifo.v:195": "synchronizer",
+  "afifo.v:196": "synchronizer",
+  "afifo.v:197": "synchronizer",
+  "afifo.v:198": "synchronizer",
+  "afifo.v:185": "synchronizer",
+  "afifo.v:186": "synchronizer",
+  "afifo.v:187": "synchronizer",
+  "afifo.v:188": "synchronizer",
+  "afifo.v:189": "synchronizer",
+  "afifo.v:40": "capacity",
+  "afifo.v:43": "capacity",
+  "afifo.v:47": "capacity",
+  "afifo.v:52": "capacity",
+  "afifo.v:61": "capacity",
+  "afifo.v:62": "capacity",
+  "afifo.v:70": "capacity"
+ },
+ "contract": {
+  "afifo.v:222": "x_fa1c1e76",
+  "afifo.v:165": "x_fa1c1e76",
+  "afifo.v:214": "x_fa1c1e76",
+  "afifo.v:156": "x_fa1c1e76",
+  "afifo.v:162": "x_fa1c1e76",
+  "afifo.v:157": "x_fa1c1e76",
+  "afifo.v:158": "x_fa1c1e76",
+  "afifo.v:159": "x_fa1c1e76",
+  "afifo.v:160": "x_fa1c1e76",
+  "afifo.v:161": "x_fa1c1e76",
+  "afifo.v:163": "x_fa1c1e76",
+  "afifo.v:164": "x_fa1c1e76",
+  "afifo.v:166": "x_fa1c1e76",
+  "afifo.v:134": "x_8e8f57f7",
+  "afifo.v:211": "x_8e8f57f7",
+  "afifo.v:143": "x_8e8f57f7",
+  "afifo.v:140": "x_8e8f57f7",
+  "afifo.v:135": "x_8e8f57f7",
+  "afifo.v:136": "x_8e8f57f7",
+  "afifo.v:137": "x_8e8f57f7",
+  "afifo.v:138": "x_8e8f57f7",
+  "afifo.v:139": "x_8e8f57f7",
+  "afifo.v:141": "x_8e8f57f7",
+  "afifo.v:142": "x_8e8f57f7",
+  "afifo.v:144": "x_8e8f57f7"
+ },
+ "contracts": {
+  "x_fa1c1e76": {
+   "crossing": "x_fa1c1e76",
+   "type": "gray_src",
+   "scope_module": "afifo",
+   "signals": {
+    "ptr": "rgray"
+   },
+   "properties": [
+    "G1",
+    "G2"
+   ]
+  },
+  "x_8e8f57f7": {
+   "crossing": "x_8e8f57f7",
+   "type": "gray_src",
+   "scope_module": "afifo",
+   "signals": {
+    "ptr": "wgray"
+   },
+   "properties": [
+    "G1",
+    "G2"
+   ]
+  }
+ }
+}

@@ -1,0 +1,42 @@
+{
+  "version": "Yosys Witness Aiger map",
+  "gennerator": "Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)",
+  "latch_count": 23,
+  "input_count": 20,
+  "clocks": [
+    {"edge": "posedge", "input": 6, "offset": 0, "path": ["\\rclk"]}
+  ],
+  "inputs": [
+    {"input": 0, "offset": 0, "path": ["\\rrst_n"]},
+    {"input": 1, "offset": 0, "path": ["\\rq2_wptr"]},
+    {"input": 2, "offset": 1, "path": ["\\rq2_wptr"]},
+    {"input": 3, "offset": 2, "path": ["\\rq2_wptr"]},
+    {"input": 4, "offset": 3, "path": ["\\rq2_wptr"]},
+    {"input": 5, "offset": 0, "path": ["\\rinc"]},
+    {"input": 6, "offset": 0, "path": ["\\rclk"]}
+  ],
+  "seqs": [],
+  "inits": [
+    {"input": 10, "offset": 3, "path": ["\\dut", "\\_witness_", "\\anyinit_procdff_74"]},
+    {"input": 9, "offset": 2, "path": ["\\dut", "\\_witness_", "\\anyinit_procdff_74"]},
+    {"input": 8, "offset": 1, "path": ["\\dut", "\\_witness_", "\\anyinit_procdff_74"]},
+    {"input": 7, "offset": 0, "path": ["\\dut", "\\_witness_", "\\anyinit_procdff_74"]},
+    {"input": 11, "offset": 0, "path": ["\\dut", "\\_witness_", "\\anyinit_procdff_79"]},
+    {"input": 15, "offset": 3, "path": ["\\dut", "\\_witness_", "\\anyinit_procdff_84"]},
+    {"input": 14, "offset": 2, "path": ["\\dut", "\\_witness_", "\\anyinit_procdff_84"]},
+    {"input": 13, "offset": 1, "path": ["\\dut", "\\_witness_", "\\anyinit_procdff_84"]},
+    {"input": 12, "offset": 0, "path": ["\\dut", "\\_witness_", "\\anyinit_procdff_84"]},
+    {"input": 19, "offset": 3, "path": ["\\chk", "\\past_ptr"]},
+    {"input": 18, "offset": 2, "path": ["\\chk", "\\past_ptr"]},
+    {"input": 17, "offset": 1, "path": ["\\chk", "\\past_ptr"]},
+    {"input": 16, "offset": 0, "path": ["\\chk", "\\past_ptr"]}
+  ],
+  "asserts": [
+    ["\\chk", "\\_witness_", "\\check_assert_checker_v_41_21"],
+    ["\\chk", "\\_witness_", "\\check_assert_checker_v_42_26"]
+  ],
+  "assumes": [
+    ["$flatten\\chk.$auto$formalff.cc:987:execute$131"],
+    ["\\_witness_", "\\check_assume_formal_top_v_17_6"]
+  ]
+}

@@ -1,0 +1,38 @@
+{
+ "top": "cc_cdc_reset_ctrlr_bench",
+ "rtl": [
+  "flow/designs/cc_cdc_reset_ctrlr/rtl/cc_cdc_reset_ctrlr.v",
+  "flow/designs/cc_cdc_reset_ctrlr/rtl/bench_top.v"
+ ],
+ "sdc": "flow/designs/cc_cdc_reset_ctrlr/cc_cdc_reset_ctrlr.sdc",
+ "liberty": "pdk/nangate45.lib",
+ "annotations": null,
+ "weights": null,
+ "margin": 0.05,
+ "budget": 10,
+ "rho": 0.8,
+ "dispatch": 3,
+ "theta": 0.5,
+ "phi": 32,
+ "smax": 80,
+ "n_max": 5,
+ "groups": [
+  [
+   "a_clk_i"
+  ],
+  [
+   "b_clk_i"
+  ]
+ ],
+ "resets": [
+  {
+   "port": "a_rst_ni",
+   "active_low": true
+  },
+  {
+   "port": "b_rst_ni",
+   "active_low": true
+  }
+ ],
+ "abc_delay_ps": 310
+}

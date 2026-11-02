@@ -1,0 +1,20 @@
+{
+ "sdc": {
+  "file": "drrtl_simple_spi.sdc",
+  "sha256": "151ed5df6ac517c921cae2126e236b7c1f65120f3417f58ff56d219205f4e09a"
+ },
+ "rtl_top": "simple_spi_top",
+ "entries": [
+  {
+   "reg": "param@simple_spi.v0.v:393",
+   "category": "capacity",
+   "scope": "line",
+   "file": "simple_spi.v0.v",
+   "lines": [
+    393,
+    393
+   ],
+   "sha256": "47f9eba906cc4aef69b840ae08f759243cdf160d0cde0b20bdb7e9b479401fea"
+  }
+ ]
+}

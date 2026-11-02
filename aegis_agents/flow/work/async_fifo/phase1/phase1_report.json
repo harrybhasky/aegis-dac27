@@ -1,0 +1,23 @@
+{
+ "clocks": 2,
+ "asynchronous_pairs": 2,
+ "constraint_audit": 2,
+ "flops": 12,
+ "unclocked_flops": 0,
+ "crossings": {
+  "synchronizer": 0,
+  "gray_candidate": 2,
+  "qualified_capture": 0,
+  "insufficient_depth": 0,
+  "unsynchronized": 0
+ },
+ "contracts_proven": [
+  "x_753d5e36",
+  "x_cf11da04"
+ ],
+ "immutable_lines": 27,
+ "contract_lines": 20,
+ "checksum_entries": 15,
+ "warnings": [],
+ "issues": []
+}

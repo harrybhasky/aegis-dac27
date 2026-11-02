@@ -1,0 +1,229 @@
+{
+ "sdc": {
+  "file": "soc.sdc",
+  "sha256": "59d790beab1e976d3c3c3d36cc519e3b724ba4f4a7720575731b265c0b925db7"
+ },
+ "rtl_top": "soc",
+ "entries": [
+  {
+   "reg": "u_s_ack.s1",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_s_ack.q",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_s_r2w.s1",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_s_r2w.q",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_s_req.s1",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_s_req.q",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_s_tgl.s1",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_s_tgl.q",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_s_w2r.s1",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_s_w2r.q",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    5,
+    7
+   ],
+   "sha256": "a0f7b819334907bfc1f5ab7ebcc29ff230cd2beb26c492390e438a08331f4099"
+  },
+  {
+   "reg": "u_div.clk_out",
+   "category": "clock_generation",
+   "scope": "block",
+   "file": "soc.v",
+   "lines": [
+    64,
+    64
+   ],
+   "sha256": "510e69c344bc4afd41c5b4cf6235e17826f7189da2fc4f6c6cdbc521a7884078"
+  },
+  {
+   "reg": "param@soc.v:2",
+   "category": "capacity",
+   "scope": "line",
+   "file": "soc.v",
+   "lines": [
+    2,
+    2
+   ],
+   "sha256": "e9ef8a3676917c3582ce8eb5112173eb4f42571a6ca7730cb80a1166ef4620d8"
+  },
+  {
+   "reg": "param@soc.v:11",
+   "category": "capacity",
+   "scope": "line",
+   "file": "soc.v",
+   "lines": [
+    11,
+    11
+   ],
+   "sha256": "6af30ddde8002511090accb983e5d14577cb1fe7cabe4c3dd2ea29e6f7947e0b"
+  },
+  {
+   "reg": "param@soc.v:23",
+   "category": "capacity",
+   "scope": "line",
+   "file": "soc.v",
+   "lines": [
+    23,
+    23
+   ],
+   "sha256": "a64df0fc0c153437c2fee392d42e80b7c13e4efe427aeb2c8312d81335aff177"
+  },
+  {
+   "reg": "param@soc.v:35",
+   "category": "capacity",
+   "scope": "line",
+   "file": "soc.v",
+   "lines": [
+    35,
+    35
+   ],
+   "sha256": "33ce61746793bda9eaaf20c36e638299dd9eca076abed81fb5b9b67623d029ef"
+  },
+  {
+   "reg": "ack",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "soc.v",
+   "lines": [
+    53,
+    59
+   ],
+   "sha256": "0cda81421dec6d32894724e35b2e9389ae79dd8ae38eeefb2b8dc570b9cf9190"
+  },
+  {
+   "reg": "hs_data",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "soc.v",
+   "lines": [
+    44,
+    47
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "hs_out",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "soc.v",
+   "lines": [
+    53,
+    59
+   ],
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "reg": "req",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "soc.v",
+   "lines": [
+    44,
+    47
+   ],
+   "sha256": "53a712fe366d0ec03525623d11f733088d02e1edd2b3e724b64bd7eb7700e61f"
+  },
+  {
+   "reg": "tgl",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "soc.v",
+   "lines": [
+    88,
+    88
+   ],
+   "sha256": "ff6bd1a1122579c5cec30c1d5dac0f281b1da3500256d84290da3d515a3d1704"
+  }
+ ]
+}

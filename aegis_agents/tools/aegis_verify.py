@@ -1,0 +1,356 @@
+#!/usr/bin/env python3
+"""
+AEGIS Phase 4 -- Verification Node (fast pre-filter), deterministic.
+
+  python3 aegis_verify.py --design soc --base-rtl flow/rtl/soc/v0/*.v --cand-rtl cand/C1/rtl/*.v \\
+      --envelope cand/<rid>/envelope.json --out cand/<rid>/C1/verify.json [--no-sim] [--no-cdc]
+
+Cascade (stops at the first hard failure; every result is logged):
+  1. gate      checksum test of every Phase 1 lock (aegis_ingest.py verify) and the
+               edit-envelope test: no base statement outside E(r) may change, insertions
+               only inside the region's modules, module set and every port list identical.
+  2. lint      Icarus Verilog and Verilator (Verilator only if the baseline itself lints).
+  3. sim       differential simulation of baseline vs candidate on identical random stimulus,
+               every SDC clock driven at its own period, run for
+               T_sim = LCM(T_clk1..T_clkN) x K_cycles (at least min_cycles of the slowest clock),
+               comparing every output bit whose baseline value is known.
+  4. cdc       Phase 1 re-run on the candidate: no new unsynchronized or single-flop crossing,
+               no synchronizer / Gray / qualified crossing lost or downgraded, and every contract
+               proven on the baseline still proven at the same latency.
+
+graded = fraction of checks passed (simulation counted per compared output-bit sample), so a
+partially failing candidate is still informative for the Librarian. Hard failures (gate, lint,
+any simulation mismatch, any CDC regression) make the candidate ineligible for Phase 5.
+"""
+import argparse
+import difflib
+import json
+import math
+import os
+import re
+import subprocess
+import sys
+import tempfile
+from functools import reduce
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from aegis_common import load_design, module_spans, module_ports, norm, read_cmd, yosys_json, ROOT, run_tree  # noqa: E402
+
+
+# ----------------------------------------------------------------------------
+def gate(design, base, cand, env, checksums):
+    res = {"checksum": None, "envelope": [], "ports": []}
+    r = subprocess.run([sys.executable, os.path.join(HERE, "aegis_ingest.py"), "verify", "--checksums", checksums,
+                        "--rtl"] + cand + ["--top", design["top"], "--sdc", design["sdc"]],
+                       capture_output=True, text=True)
+    try:
+        res["checksum"] = json.loads(r.stdout)
+    except ValueError:
+        res["checksum"] = {"pass": False, "failures": [{"why": "verify crashed: " + (r.stderr or r.stdout)[-400:]}]}
+    if env is not None:
+        editable = {f: set(ls) for f, ls in env["files"].items()}
+        mods = {(m["file"], m["module"]) for m in env["modules"]}
+        for b in base:
+            f = os.path.basename(b)
+            c = next((x for x in cand if os.path.basename(x) == f), None)
+            bt, ct = open(b).read(), open(c).read() if c else ""
+            bl, cl = bt.splitlines(), ct.splitlines()
+            bn, cn = [norm(x) for x in bl], [norm(x) for x in cl]
+            spans = module_spans(bt)
+            in_mod = lambda line: any(a <= line <= z and (f, n) in mods for n, a, z in spans)
+            sm = difflib.SequenceMatcher(None, bn, cn, autojunk=False)
+            for op, i1, i2, j1, j2 in sm.get_opcodes():
+                if op == "equal":
+                    continue
+                for i in range(i1, i2):          # base lines removed or replaced (0-based i)
+                    if bn[i] and (i + 1) not in editable.get(f, set()):
+                        res["envelope"].append("%s:%d changed outside the edit envelope: %s" % (f, i + 1, bl[i].strip()[:100]))
+                if op == "insert" and any(cn[j] for j in range(j1, j2)):
+                    anchor = max(i1, 1)
+                    if not in_mod(anchor) and not in_mod(i1 + 1):
+                        res["envelope"].append("%s: code inserted outside the region's modules near line %d" % (f, i1 + 1))
+        try:
+            pb, pc = module_ports(base, design["top"]), module_ports(cand, design["top"])
+            if set(pb) != set(pc):
+                res["ports"].append("module set changed: +%s -%s" % (sorted(set(pc) - set(pb)), sorted(set(pb) - set(pc))))
+            for m in set(pb) & set(pc):
+                if pb[m] != pc[m]:
+                    res["ports"].append("ports of %s changed" % m)
+        except RuntimeError as e:
+            res["ports"].append("elaboration failed: " + str(e)[-300:])
+    res["pass"] = bool(res["checksum"] and res["checksum"].get("pass")) and not res["envelope"] and not res["ports"]
+    return res
+
+
+# ----------------------------------------------------------------------------
+def lint(design, files, verilator_ok=True, iverilog_ok=True):
+    """Only linters that accept the baseline are used (a benchmark that already fails
+    a linter would otherwise reject every candidate)."""
+    out = {}
+    if iverilog_ok:
+        with tempfile.TemporaryDirectory() as td:
+            r = subprocess.run(["iverilog", "-g2012", "-o", os.path.join(td, "a.out"), "-s", design["top"]] + files,
+                               capture_output=True, text=True)
+            out["iverilog"] = {"ok": r.returncode == 0, "log": (r.stderr or r.stdout)[-1200:]}
+    if verilator_ok:
+        r = subprocess.run(["verilator", "--lint-only", "-Wno-fatal", "-Wno-lint", "-Wno-style", "-Wno-MULTIDRIVEN",
+                            "--top-module", design["top"]] + files, capture_output=True, text=True)
+        out["verilator"] = {"ok": r.returncode == 0, "log": (r.stderr or r.stdout)[-1200:]}
+    out["pass"] = all(v["ok"] for v in out.values() if isinstance(v, dict))
+    return out
+
+
+# ----------------------------------------------------------------------------
+def flat_netlist(files, top, suffix, out):
+    script = "%s; hierarchy -top %s; proc; flatten; opt_clean; hierarchy -top %s; memory -nomap; opt_clean; rename %s %s%s; write_verilog -noattr %s" % (
+        read_cmd(files), top, top, top, top, suffix, out)
+    r = subprocess.run(["yosys", "-q", "-p", script], capture_output=True, text=True)
+    if r.returncode != 0:
+        raise RuntimeError("yosys (sim netlist) failed: " + (r.stderr or r.stdout)[-800:])
+
+
+RESET_RE = re.compile(r"(^|_)(n?rst|reset|n?reset|clr|clear|rstn|resetn|arst|srst)(_?n|_b|_l)?($|_)", re.I)
+
+
+def guess_resets(ports):
+    out = []
+    for p, (d, w) in ports.items():
+        if d == "input" and w == 1 and (RESET_RE.search(p) or re.match(r"^n(rst|reset)", p, re.I)):
+            low = bool(re.search(r"(_n|n|_b|_l)$", p) and not p.lower().endswith(("clr", "reset"))) or p.lower().startswith("n")
+            if p.lower().endswith("resetn") or p.lower().endswith("rstn"):
+                low = True
+            out.append({"port": p, "active_low": low})
+    return out
+
+
+def sim(design, base, cand, clocks, seeds=(1, 2), k_cycles=4, min_cycles=200, max_steps=60000):
+    top = design["top"]
+    ports = module_ports(base, top)[top]
+    clk_ports = {}
+    for c, v in clocks["clocks"].items():
+        if v.get("source") in ports and v.get("period_ns"):
+            clk_ports[v["source"]] = v["period_ns"]
+    resets = design.get("resets") or guess_resets({p: v for p, v in ports.items() if p not in clk_ports})
+    reset_names = {r["port"] for r in resets}
+    if not clk_ports:
+        return {"pass": None, "skipped": "no SDC clock is a top-level port"}
+    ps = {p: max(1, int(round(t * 1000))) for p, t in clk_ports.items()}
+    P = {p: 4 * v for p, v in ps.items()}                       # half periods even -> edges at even times
+    lcm = reduce(lambda x, y: x * y // math.gcd(x, y), P.values())
+    t_sim = max(lcm * k_cycles, max(P.values()) * min_cycles)
+    step = min(P.values()) // 2
+    capped = False
+    if t_sim // step > max_steps:
+        t_sim, capped = step * max_steps, True
+    t_reset = max(P.values()) * 4
+    ins = [(p, w) for p, (d, w) in ports.items() if d == "input" and p not in clk_ports and p not in reset_names]
+    outs = [(p, w) for p, (d, w) in ports.items() if d == "output"]
+    if not outs:
+        return {"pass": None, "skipped": "no outputs"}
+    decl = []
+    for p in clk_ports:
+        decl.append("reg %s = 1'b0;" % p)
+    for r in resets:
+        decl.append("reg %s = 1'b%d;" % (r["port"], 0 if r["active_low"] else 1))
+    for p, w in ins:
+        decl.append("reg [%d:0] %s = 0;" % (w - 1, p))
+    for p, w in outs:
+        decl.append("wire [%d:0] g_%s, t_%s;" % (w - 1, p, p))
+    conn = lambda pre: ", ".join([".%s(%s)" % (p, p) for p in clk_ports] + [".%s(%s)" % (r["port"], r["port"]) for r in resets] +
+                                 [".%s(%s)" % (p, p) for p, _ in ins] + [".%s(%s%s)" % (p, pre, p) for p, _ in outs])
+    clk_gen = ["always #%d %s = ~%s;" % (P[p] // 2, p, p) for p in clk_ports]
+    rnd = []
+    for p, w in ins:
+        chunks = ["$random(seed)"] * ((w + 31) // 32)
+        rnd.append("%s = {%s};" % (p, ", ".join(chunks)))
+    cmp = []
+    for p, w in outs:
+        cmp.append("for (i = 0; i < %d; i = i + 1) begin if (g_%s[i] === 1'b0 || g_%s[i] === 1'b1) begin samples = samples + 1;"
+                   " if (t_%s[i] !== g_%s[i]) begin mism = mism + 1; if (first_t < 0) begin first_t = $time; first_p = \"%s\"; end end end end"
+                   % (w, p, p, p, p, p))
+    rst_release = ["%s = 1'b%d;" % (r["port"], 1 if r["active_low"] else 0) for r in resets]
+    tb = "\n".join(["`timescale 1ps/1ps", "module aegis_tb;", "integer seed, i, samples = 0, mism = 0, first_t = -1;",
+                    "reg [8*64-1:0] first_p;"] + decl +
+                   ["%s__gold G (%s);" % (top, conn("g_")), "%s__gate T (%s);" % (top, conn("t_"))] + clk_gen +
+                   ["initial begin", "  if (!$value$plusargs(\"seed=%d\", seed)) seed = 1;",
+                    "  #%d;" % t_reset] + ["  " + x for x in rst_release] + ["end",
+                    "initial begin", "  #1;", "  forever begin"] + ["    " + c for c in cmp] + ["    " + x for x in rnd] +
+                   ["    #%d;" % step, "  end", "end",
+                    "initial begin #%d; $display(\"AEGIS_SIM samples=%%0d mism=%%0d first_t=%%0d first_p=%%0s\", samples, mism, first_t, first_p); $finish; end" % t_sim,
+                    "endmodule"])
+    res = {"clocks_ps": ps, "t_sim_ps": t_sim // 4, "lcm_ps": lcm // 4, "capped": capped, "resets": resets,
+           "runs": []}
+    with tempfile.TemporaryDirectory() as td:
+        g, t = os.path.join(td, "gold.v"), os.path.join(td, "gate.v")
+        flat_netlist(base, top, "__gold", g)
+        flat_netlist(cand, top, "__gate", t)
+        open(os.path.join(td, "tb.v"), "w").write(tb)
+        r = subprocess.run(["iverilog", "-g2012", "-o", os.path.join(td, "sim"), os.path.join(td, "tb.v"), g, t],
+                           capture_output=True, text=True)
+        if r.returncode != 0:
+            return {"pass": False, "error": "testbench compile failed: " + (r.stderr or r.stdout)[-800:]}
+        for s in seeds:
+            r = subprocess.run(["vvp", "-n", os.path.join(td, "sim"), "+seed=%d" % s], capture_output=True, text=True,
+                               timeout=1800)
+            m = re.search(r"AEGIS_SIM samples=(\d+) mism=(\d+) first_t=(-?\d+) first_p=\s*(\S*)", r.stdout)
+            if not m:
+                res["runs"].append({"seed": s, "error": (r.stdout + r.stderr)[-500:]})
+                continue
+            res["runs"].append({"seed": s, "samples": int(m.group(1)), "mismatches": int(m.group(2)),
+                                "first_mismatch_ps": int(m.group(3)) // 4 if int(m.group(3)) >= 0 else None,
+                                "first_port": m.group(4) or None})
+    tot = sum(x.get("samples", 0) for x in res["runs"])
+    bad = sum(x.get("mismatches", 0) for x in res["runs"])
+    res["samples"], res["mismatches"] = tot, bad
+    res["graded"] = round(1 - bad / tot, 6) if tot else None
+    res["pass"] = tot > 0 and bad == 0 and not any("error" in x for x in res["runs"])
+    return res
+
+
+# ----------------------------------------------------------------------------
+def cdc(design, cand, phase1_dir):
+    base_x = {(x["src_reg"], x["dst_reg"]): x for x in json.load(open(os.path.join(phase1_dir, "crossings.json")))}
+    base_rep = os.path.join(phase1_dir, "contracts", "build", "report.json")
+    base_lat = {e["id"]: e.get("lat") for e in json.load(open(base_rep))} if os.path.exists(base_rep) else {}
+    base_proven = set(json.load(open(os.path.join(phase1_dir, "phase1_report.json"))).get("contracts_proven", []))
+    with tempfile.TemporaryDirectory() as td:
+        cmd = [sys.executable, os.path.join(HERE, "aegis_ingest.py"), "ingest", "--rtl"] + cand + [
+            "--top", design["top"], "--sdc", design["sdc"], "--out", td]
+        if base_proven:
+            cmd += ["--contracts-tool", os.path.join(HERE, "gen_cdc_props.py")]
+        if design.get("annotations"):
+            cmd += ["--annotations", design["annotations"]]
+        r = run_tree(cmd, timeout=3600)
+        if r.returncode != 0:
+            return {"pass": False, "violations": ["Phase 1 re-run failed: " + (r.stderr or r.stdout)[-500:]]}
+        cx = {(x["src_reg"], x["dst_reg"]): x for x in json.load(open(os.path.join(td, "crossings.json")))}
+        rep = json.load(open(os.path.join(td, "phase1_report.json")))
+        crep = os.path.join(td, "contracts", "build", "report.json")
+        lat = {e["id"]: e.get("lat") for e in json.load(open(crep))} if os.path.exists(crep) else {}
+    v, resourced, storage = [], [], []
+    mp = os.path.join(phase1_dir, "memories.json")
+    mems = set(json.load(open(mp))) if os.path.exists(mp) else set()
+    # a register array element of an ORIGINAL memory (mem[i] after the rewrite recodes `mem` as registers)
+    is_storage = lambda r: bool(re.match(r"^(.*)\[\d+\]$", r)) and re.match(r"^(.*)\[\d+\]$", r).group(1) in mems
+    rank = {"unsynchronized": 0, "insufficient_depth": 1, "qualified_capture": 2, "synchronizer": 3, "gray_candidate": 3}
+    # capture registers that already had an unsafe crossing in the original design: re-driving such a crossing
+    # from a renamed/retimed source register is not a new hazard (it is recorded, not counted)
+    base_bad_dst = {d: b["kind"] for (s, d), b in base_x.items() if b["kind"] in ("unsynchronized", "insufficient_depth")}
+    for k, x in cx.items():
+        b = base_x.get(k)
+        if x["kind"] not in ("unsynchronized", "insufficient_depth"):
+            continue
+        if b is not None:
+            if rank[x["kind"]] < rank[b["kind"]]:
+                v.append("crossing %s -> %s downgraded %s -> %s" % (k[0], k[1], b["kind"], x["kind"]))
+        elif is_storage(k[0]):
+            # the original design read this storage across domains as a memory (not a crossing Phase 1
+            # classifies); the recoded registers get the same treatment, recorded but not counted
+            storage.append("%s -> %s" % k)
+        elif k[1] in base_bad_dst and rank[x["kind"]] >= rank[base_bad_dst[k[1]]]:
+            resourced.append("%s -> %s (%s, was %s)" % (k[0], k[1], x["kind"], base_bad_dst[k[1]]))
+        else:
+            v.append("new %s crossing %s -> %s" % (x["kind"], k[0], k[1]))
+    for k, b in base_x.items():
+        if b["kind"] in ("synchronizer", "gray_candidate", "qualified_capture"):
+            x = cx.get(k)
+            if x is None:
+                v.append("crossing %s -> %s (%s) disappeared" % (k[0], k[1], b["kind"]))
+            elif rank[x["kind"]] < rank[b["kind"]] or x.get("sync_depth", 0) < b.get("sync_depth", 0):
+                v.append("crossing %s -> %s downgraded %s/%d -> %s/%d" % (k[0], k[1], b["kind"], b.get("sync_depth", 0),
+                                                                          x["kind"], x.get("sync_depth", 0)))
+    now = set(rep.get("contracts_proven", []))
+    for c in sorted(base_proven):
+        if c not in now:
+            v.append("contract %s no longer proven" % c)
+        elif base_lat.get(c) != lat.get(c):
+            v.append("contract %s proven only at a different latency (%s -> %s)" % (c, base_lat.get(c), lat.get(c)))
+    return {"pass": not v, "violations": v, "resourced_unsafe": resourced, "recoded_storage": storage,
+            "crossings": {k: sum(1 for x in cx.values() if x["kind"] == k) for k in rank}}
+
+
+# ----------------------------------------------------------------------------
+def run(design, base, cand, env, phase1, out=None, do_sim=True, do_cdc=True, verilator_ok=True, gate_only=False,
+        no_gate=False, gate_locks=True, gate_cdc=True, gate_envelope=True, linters=None):
+    """gate_locks / gate_cdc / gate_envelope=False keep the check as a measurement but
+    do not reject on it (ablations and the unguarded vanilla baseline)."""
+    res = {"stages": {}, "status": None, "reject_reason": None, "measured_violations": []}
+    checks_total, checks_ok = 0, 0.0
+
+    def finish(status, reason=None):
+        res["status"], res["reject_reason"] = status, reason
+        res["graded"] = round(checks_ok / checks_total, 4) if checks_total else 0.0
+        if out:
+            os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
+            json.dump(res, open(out, "w"), indent=1)
+        return res
+
+    if not no_gate:
+        g = gate(design, base, cand, env, os.path.join(phase1, "checksums.json"))
+        res["stages"]["gate"] = g
+        checks_total += 1
+        lock_bad = not g["checksum"].get("pass")
+        env_bad = bool(g["envelope"])
+        if lock_bad:
+            res["measured_violations"].append("lock_violation")
+        if env_bad:
+            res["measured_violations"].append("envelope")
+        if g["ports"] or (lock_bad and gate_locks) or (env_bad and gate_envelope):
+            why = "ports" if g["ports"] else ("lock_violation" if (lock_bad and gate_locks) else "envelope")
+            return finish("reject", why)
+        checks_ok += 0 if (lock_bad or env_bad) else 1
+        if gate_only:
+            return finish("pass")
+    linters = linters or {"iverilog": True, "verilator": verilator_ok}
+    l = lint(design, cand, linters.get("verilator", True), linters.get("iverilog", True))
+    res["stages"]["lint"] = l
+    checks_total += 1
+    if not l["pass"]:
+        return finish("reject", "lint")
+    checks_ok += 1
+    if do_sim:
+        clocks = json.load(open(os.path.join(phase1, "clocks.json")))
+        try:
+            s = sim(design, base, cand, clocks)
+        except (RuntimeError, subprocess.TimeoutExpired) as e:
+            s = {"pass": False, "error": str(e)[-600:]}
+        res["stages"]["sim"] = s
+        if s.get("pass") is not None:
+            checks_total += 1
+            checks_ok += s.get("graded") or 0.0
+            if not s["pass"]:
+                return finish("reject", "sim_mismatch" if s.get("mismatches") else "sim_error")
+    if do_cdc:
+        c = cdc(design, cand, phase1)
+        res["stages"]["cdc"] = c
+        checks_total += 1
+        if not c["pass"]:
+            res["measured_violations"].append("cdc")
+            if gate_cdc:
+                return finish("reject", "cdc")
+        else:
+            checks_ok += 1
+    return finish("pass")
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--design", required=True)
+    ap.add_argument("--base-rtl", nargs="+", required=True)
+    ap.add_argument("--cand-rtl", nargs="+", required=True)
+    ap.add_argument("--envelope")
+    ap.add_argument("--phase1")
+    ap.add_argument("--out")
+    ap.add_argument("--no-sim", action="store_true")
+    ap.add_argument("--no-cdc", action="store_true")
+    a = ap.parse_args()
+    d = load_design(a.design)
+    phase1 = a.phase1 or os.path.join(ROOT, "flow", "work", a.design, "phase1")
+    env = json.load(open(a.envelope)) if a.envelope else None
+    r = run(d, a.base_rtl, a.cand_rtl, env, phase1, a.out, not a.no_sim, not a.no_cdc)
+    print(json.dumps({"status": r["status"], "reject_reason": r["reject_reason"], "graded": r["graded"]}))
+
+
+if __name__ == "__main__":
+    main()

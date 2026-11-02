@@ -1,0 +1,44 @@
+[
+ {
+  "from": "clk_div",
+  "to": "clk_x",
+  "issue": "asynchronous clock pair has no clock group, false path, or -datapath_only bound"
+ },
+ {
+  "from": "clk_r",
+  "to": "clk_x",
+  "issue": "asynchronous clock pair has no clock group, false path, or -datapath_only bound"
+ },
+ {
+  "from": "clk_w",
+  "to": "clk_x",
+  "issue": "asynchronous clock pair has no clock group, false path, or -datapath_only bound"
+ },
+ {
+  "from": "clk_x",
+  "to": "clk_div",
+  "issue": "asynchronous clock pair has no clock group, false path, or -datapath_only bound"
+ },
+ {
+  "from": "clk_x",
+  "to": "clk_r",
+  "issue": "asynchronous clock pair has no clock group, false path, or -datapath_only bound"
+ },
+ {
+  "from": "clk_x",
+  "to": "clk_w",
+  "issue": "asynchronous clock pair has no clock group, false path, or -datapath_only bound"
+ },
+ {
+  "from": "clk_r",
+  "to": "clk_w",
+  "crossing": "x_55a0f370",
+  "issue": "multi-bit Gray bus u_rptr.rptr -> u_s_r2w.s1 is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ },
+ {
+  "from": "clk_w",
+  "to": "clk_r",
+  "crossing": "x_41e513aa",
+  "issue": "multi-bit Gray bus u_wptr.wptr -> u_s_w2r.s1 is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ }
+]

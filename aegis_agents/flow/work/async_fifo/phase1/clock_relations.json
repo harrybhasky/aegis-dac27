@@ -1,0 +1,10 @@
+{
+ "rclk": {
+  "rclk": "identical",
+  "wclk": "asynchronous"
+ },
+ "wclk": {
+  "rclk": "asynchronous",
+  "wclk": "identical"
+ }
+}
