@@ -218,7 +218,7 @@ def cdc(design, cand, phase1_dir):
         cmd = [sys.executable, os.path.join(HERE, "aegis_ingest.py"), "ingest", "--rtl"] + cand + [
             "--top", design["top"], "--sdc", design["sdc"], "--out", td]
         if base_proven:
-            cmd += ["--contracts-tool", os.path.join(HERE, "gen_cdc_props.py")]
+            cmd += ["--contracts-tool", os.path.join(HERE, "gen_cdc_props.py"), "--only-contracts", ",".join(sorted(base_proven))]
         if design.get("annotations"):
             cmd += ["--annotations", design["annotations"]]
         r = run_tree(cmd, timeout=3600)

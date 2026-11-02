@@ -607,6 +607,11 @@ def ingest(a):
             s["_crossing"] = None
             specs.append(s)
 
+    if getattr(a, "only_contracts", None) is not None:
+        # Phase 4 re-check: only the contracts proven on the ORIGINAL design matter for the verdict ("no longer
+        # proven"); re-proving the others is wasted solver time (2026-11-02)
+        keep = set(x for x in a.only_contracts.split(",") if x)
+        specs = [s_ for s_ in specs if s_["id"] in keep]
     passed = {}
     if specs and a.contracts_tool:
         cdir = os.path.join(a.out, "contracts")
@@ -787,6 +792,7 @@ def main():
     i.add_argument("--sdc", required=True)
     i.add_argument("--annotations")
     i.add_argument("--contracts-tool")
+    i.add_argument("--only-contracts", help="comma-separated contract ids to run (Phase 4 re-check)")
     i.add_argument("--out", required=True)
     v = sub.add_parser("verify")
     v.add_argument("--checksums", required=True)
