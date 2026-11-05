@@ -1,0 +1,20 @@
+[
+ {
+  "from": "logic_clk",
+  "to": "rx_clk",
+  "crossing": "x_4f5bb0f0",
+  "issue": "multi-bit Gray bus u.rx_fifo.fifo_inst.rd_ptr_gray_reg -> u.rx_fifo.fifo_inst.rd_ptr_gray_sync1_reg is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ },
+ {
+  "from": "rx_clk",
+  "to": "logic_clk",
+  "crossing": "x_7d5121c5",
+  "issue": "multi-bit Gray bus u.rx_sync_reg_1 -> u.rx_sync_reg_2 is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ },
+ {
+  "from": "tx_clk",
+  "to": "logic_clk",
+  "crossing": "x_2de12529",
+  "issue": "multi-bit Gray bus u.tx_fifo.fifo_inst.rd_ptr_gray_reg -> u.tx_fifo.fifo_inst.rd_ptr_gray_sync1_reg is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ }
+]

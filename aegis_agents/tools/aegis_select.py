@@ -414,7 +414,7 @@ def prepare(a):
             "design": a.design, "base_version": a.base_version, "region_id": r["region_id"],
             "capture_clock": r["capture_clock"], "period_ns": r["period_ns"], "margin_ns": a.margin,
             "endpoints": [{k: e[k] for k in ("endpoint", "startpoint", "launch_clock", "slack_ns",
-                                             "required_ns", "deficit", "relation", "tags")} for e in r["endpoints"]],
+                                             "required_ns", "deficit", "relation", "tags")} for e in (r["endpoints"] if len(r["endpoints"]) <= REP_MAX else rep_endpoints(r["endpoints"]))],
             "cone": [{"file": s.split(":")[0], "line": int(s.split(":")[1]), "text": srctext.get(s, ""),
                       "tier": "contract" if s in K else "free"} for s in r["cone"]],
             "rtl_files": [os.path.abspath(f) for f in a.rtl],
@@ -444,6 +444,34 @@ def prepare(a):
     print("paths<margin=%d async=%d unmapped=%d no_logic=%d kept=%d regions=%d needs_diagnosis=%d"
           % (len([p for p in paths if p["slack_ns"] < a.margin]), len(audit), len(unmapped), len(no_logic),
              len(kept), len(regions), len(todo)))
+
+
+# 2026-11-04: a region with more than REP_MAX endpoints (only drrtl_fifo_2clk: its 128x32 FIFO memory synthesized to
+# 2494 flops sharing one cone; every other region in every run so far has <= 665) is shown to the analyzer as one
+# endpoint per register (its worst bit); the diagnosis of a register applies to all its bits. Regions at or below
+# REP_MAX are unchanged, so completed runs are unaffected.
+REP_MAX = 1000
+
+
+def rep_key(e):
+    return re.sub(r"\[\d+\]$", "", e["endpoint"])
+
+
+def rep_endpoints(eps):
+    seen, out = set(), []
+    for e in eps:  # eps are sorted by deficit, so the first of each register is its worst bit
+        if rep_key(e) not in seen:
+            seen.add(rep_key(e)); out.append(e)
+    return out
+
+
+def expand_diag(r, d):
+    if len(r["endpoints"]) <= REP_MAX:
+        return d
+    by = {rep_key({"endpoint": e.get("endpoint", "")}): e for e in d.get("endpoints", [])}
+    d = dict(d)
+    d["endpoints"] = [dict(by[rep_key(e)], endpoint=e["endpoint"]) for e in r["endpoints"] if rep_key(e) in by]
+    return d
 
 
 # ----------------------------------------------------------------------------
@@ -478,7 +506,7 @@ def finalize(a):
             problems[r["region_id"]] = ["missing diagnosis"]
             r["diagnosis"] = None
             continue
-        d = json.load(open(p))
+        d = expand_diag(r, json.load(open(p)))
         errs = check_diag(r, d)
         if errs:
             problems[r["region_id"]] = errs

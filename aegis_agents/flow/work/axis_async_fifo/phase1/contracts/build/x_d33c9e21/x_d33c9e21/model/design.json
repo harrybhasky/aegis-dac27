@@ -1,0 +1,3591 @@
+{
+  "$schema": "https://raw.githubusercontent.com/YosysHQ/yosys/main/misc/jny.schema.json",
+  "generator": "Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)",
+  "version": "0.0.1",
+  "invocation": "write_jny -no-connections ../model/design.json ",
+  "features": ["attributes", "properties"],
+  "modules": [
+      {
+        "name": "aegis_chk_gray_src_x_d33c9e21",
+        "cell_sorts": [
+          {
+            "type": "$xor",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$xor$checker.v:32$36",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:32$37",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:32$38",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:32$39",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:32$40",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:32$46",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:32$47",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:32$48",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:32$49",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:32$50",
+                  "attributes": {
+                    "src": "checker.v:32.49-32.64"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$checker.v:36$16",
+                  "attributes": {
+                    "src": "checker.v:36.25-36.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000110",
+                    "Y_WIDTH": "00000000000000000000000000000110"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$sub",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [7, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$sub$checker.v:41$22",
+                  "attributes": {
+                    "src": "checker.v:41.43-41.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000111"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$check",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "ARGS",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "TRG",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "_witness_.check_assert_checker_v_41_21",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_checker_v_41_21",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "checker.v:41.26-41.62"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_checker_v_42_26",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_checker_v_42_26",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "checker.v:42.26-42.80"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [6, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$527",
+                  "attributes": {
+                    "src": "checker.v:25.3-25.41"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$528",
+                  "attributes": {
+                    "src": "checker.v:21.3-23.51"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ne",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ne$checker.v:23$13",
+                  "attributes": {
+                    "src": "checker.v:23.14-23.27"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$453",
+                  "attributes": {
+                    "src": "checker.v:41.19-41.24|checker.v:41.15-41.63"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$455",
+                  "attributes": {
+                    "src": "checker.v:23.14-23.27|checker.v:23.10-23.51"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procmux$458",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "checker.v:22.9-22.16|checker.v:22.5-23.51"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$checker.v:42$30",
+                  "attributes": {
+                    "src": "checker.v:42.34-42.79"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ge",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [3, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ge$checker.v:39$17",
+                  "attributes": {
+                    "src": "checker.v:39.26-39.38"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$checker.v:42$27",
+                  "attributes": {
+                    "src": "checker.v:42.35-42.50"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000110",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$checker.v:42$29",
+                  "attributes": {
+                    "src": "checker.v:42.56-42.78"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000110",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$checker.v:39$19",
+                  "attributes": {
+                    "src": "checker.v:39.25-39.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$checker.v:41$24",
+                  "attributes": {
+                    "src": "checker.v:41.34-41.61"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$checker.v:39$18",
+                  "attributes": {
+                    "src": "checker.v:39.43-39.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [32, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$and$checker.v:41$23",
+                  "attributes": {
+                    "src": "checker.v:41.35-41.55"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000100000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [8, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$add$checker.v:23$14",
+                  "attributes": {
+                    "src": "checker.v:23.39-23.50"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$add$checker.v:42$28",
+                  "attributes": {
+                    "src": "checker.v:42.65-42.78"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000110"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "dynports": "00000000000000000000000000000001",
+            "hdlname": "aegis_chk_gray_src_x_d33c9e21",
+            "src": "checker.v:11.1-43.10"
+        }
+      },
+      {
+        "name": "aegis_formal_top",
+        "cell_sorts": [
+          {
+            "type": "aegis_chk_gray_src_x_d33c9e21",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "ptr",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "rst_act",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "chk",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "formal_top.v:26.33-26.98"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$460",
+                  "attributes": {
+                    "src": "formal_top.v:25.19-25.29|formal_top.v:25.15-25.54"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "axis_async_fifo",
+            "ports": [
+                {
+                  "name": "m_axis_tready",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "m_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "m_pause_req",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "m_rst",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "s_axis_tdata",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "s_axis_tdest",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "s_axis_tid",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "s_axis_tkeep",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "s_axis_tlast",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "s_axis_tuser",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "s_axis_tvalid",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "s_clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "s_pause_req",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "s_rst",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "wr_ptr_gray_reg",
+                  "direction": "",
+                  "range": [6, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "dut",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "formal_top.v:19.19-19.404"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$check",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "ARGS",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "TRG",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "_witness_.check_assume_formal_top_v_25_6",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_formal_top_v_25_6",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "formal_top.v:25.31-25.53"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000000",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$529",
+                  "attributes": {
+                    "src": "formal_top.v:24.3-24.46"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$or$formal_top.v:20$2",
+                  "attributes": {
+                    "src": "formal_top.v:20.24-20.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$and$formal_top.v:21$3",
+                  "attributes": {
+                    "src": "formal_top.v:21.24-21.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "hdlname": "aegis_formal_top",
+            "top": "00000000000000000000000000000001",
+            "src": "formal_top.v:2.1-27.10"
+        }
+      },
+      {
+        "name": "axis_async_fifo",
+        "cell_sorts": [
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$362",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:286.9-286.17|aegis_exposed.v:286.5-287.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$365",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:286.9-286.17|aegis_exposed.v:286.5-287.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$368",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:286.9-286.17|aegis_exposed.v:286.5-287.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$371",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:284.9-284.17|aegis_exposed.v:284.5-285.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$374",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:284.9-284.17|aegis_exposed.v:284.5-285.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$377",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:284.9-284.17|aegis_exposed.v:284.5-285.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$380",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:282.9-282.17|aegis_exposed.v:282.5-283.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$383",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:282.9-282.17|aegis_exposed.v:282.5-283.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$386",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:282.9-282.17|aegis_exposed.v:282.5-283.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$389",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:280.9-280.17|aegis_exposed.v:280.5-281.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$392",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:280.9-280.17|aegis_exposed.v:280.5-281.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$395",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:280.9-280.17|aegis_exposed.v:280.5-281.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$398",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:278.9-278.17|aegis_exposed.v:278.5-279.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$401",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:278.9-278.17|aegis_exposed.v:278.5-279.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$404",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:278.9-278.17|aegis_exposed.v:278.5-279.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$407",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:276.9-276.17|aegis_exposed.v:276.5-277.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$410",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:276.9-276.17|aegis_exposed.v:276.5-277.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$413",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:276.9-276.17|aegis_exposed.v:276.5-277.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$416",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:274.9-274.17|aegis_exposed.v:274.5-275.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$419",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:274.9-274.17|aegis_exposed.v:274.5-275.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$422",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:274.9-274.17|aegis_exposed.v:274.5-275.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$425",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:272.9-272.17|aegis_exposed.v:272.5-273.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$428",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:272.9-272.17|aegis_exposed.v:272.5-273.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$431",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:272.9-272.17|aegis_exposed.v:272.5-273.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$434",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:270.9-270.17|aegis_exposed.v:270.5-271.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$437",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:270.9-270.17|aegis_exposed.v:270.5-271.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$440",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:270.9-270.17|aegis_exposed.v:270.5-271.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$procmux$443",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:268.9-268.17|aegis_exposed.v:268.5-269.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$446",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:268.9-268.17|aegis_exposed.v:268.5-269.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procmux$449",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "aegis_exposed.v:268.9-268.17|aegis_exposed.v:268.5-269.35"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:420$221",
+                  "attributes": {
+                    "src": "aegis_exposed.v:420.18-420.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:421$222",
+                  "attributes": {
+                    "src": "aegis_exposed.v:421.18-421.48"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:422$223",
+                  "attributes": {
+                    "src": "aegis_exposed.v:422.18-422.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:423$224",
+                  "attributes": {
+                    "src": "aegis_exposed.v:423.18-423.56"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:424$225",
+                  "attributes": {
+                    "src": "aegis_exposed.v:424.18-424.57"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:425$226",
+                  "attributes": {
+                    "src": "aegis_exposed.v:425.18-425.37"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:426$227",
+                  "attributes": {
+                    "src": "aegis_exposed.v:426.18-426.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:427$228",
+                  "attributes": {
+                    "src": "aegis_exposed.v:427.18-427.46"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:428$229",
+                  "attributes": {
+                    "src": "aegis_exposed.v:428.18-428.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:429$230",
+                  "attributes": {
+                    "src": "aegis_exposed.v:429.18-429.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:430$231",
+                  "attributes": {
+                    "src": "aegis_exposed.v:430.18-430.48"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:431$232",
+                  "attributes": {
+                    "src": "aegis_exposed.v:431.18-431.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:432$233",
+                  "attributes": {
+                    "src": "aegis_exposed.v:432.18-432.68"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:433$234",
+                  "attributes": {
+                    "src": "aegis_exposed.v:433.18-433.56"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:434$235",
+                  "attributes": {
+                    "src": "aegis_exposed.v:434.18-434.44"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:435$236",
+                  "attributes": {
+                    "src": "aegis_exposed.v:435.18-435.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:436$237",
+                  "attributes": {
+                    "src": "aegis_exposed.v:436.18-436.46"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:437$238",
+                  "attributes": {
+                    "src": "aegis_exposed.v:437.18-437.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:438$239",
+                  "attributes": {
+                    "src": "aegis_exposed.v:438.18-438.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:439$240",
+                  "attributes": {
+                    "src": "aegis_exposed.v:439.18-439.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:440$241",
+                  "attributes": {
+                    "src": "aegis_exposed.v:440.18-440.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:441$242",
+                  "attributes": {
+                    "src": "aegis_exposed.v:441.18-441.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:442$243",
+                  "attributes": {
+                    "src": "aegis_exposed.v:442.18-442.46"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:443$244",
+                  "attributes": {
+                    "src": "aegis_exposed.v:443.18-443.56"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:444$245",
+                  "attributes": {
+                    "src": "aegis_exposed.v:444.18-444.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:445$246",
+                  "attributes": {
+                    "src": "aegis_exposed.v:445.18-445.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:446$247",
+                  "attributes": {
+                    "src": "aegis_exposed.v:446.18-446.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:447$248",
+                  "attributes": {
+                    "src": "aegis_exposed.v:447.18-447.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:449$250",
+                  "attributes": {
+                    "src": "aegis_exposed.v:449.18-449.58"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:450$251",
+                  "attributes": {
+                    "src": "aegis_exposed.v:450.18-450.51"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:451$252",
+                  "attributes": {
+                    "src": "aegis_exposed.v:451.18-451.51"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:452$253",
+                  "attributes": {
+                    "src": "aegis_exposed.v:452.18-452.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:453$254",
+                  "attributes": {
+                    "src": "aegis_exposed.v:453.18-453.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:454$255",
+                  "attributes": {
+                    "src": "aegis_exposed.v:454.18-454.56"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:455$256",
+                  "attributes": {
+                    "src": "aegis_exposed.v:455.18-455.51"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:456$257",
+                  "attributes": {
+                    "src": "aegis_exposed.v:456.18-456.63"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:457$258",
+                  "attributes": {
+                    "src": "aegis_exposed.v:457.18-457.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:458$259",
+                  "attributes": {
+                    "src": "aegis_exposed.v:458.18-458.44"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:459$260",
+                  "attributes": {
+                    "src": "aegis_exposed.v:459.18-459.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:460$261",
+                  "attributes": {
+                    "src": "aegis_exposed.v:460.18-460.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:461$262",
+                  "attributes": {
+                    "src": "aegis_exposed.v:461.18-461.60"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:462$263",
+                  "attributes": {
+                    "src": "aegis_exposed.v:462.18-462.56"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:463$264",
+                  "attributes": {
+                    "src": "aegis_exposed.v:463.18-463.55"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:464$265",
+                  "attributes": {
+                    "src": "aegis_exposed.v:464.18-464.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:465$266",
+                  "attributes": {
+                    "src": "aegis_exposed.v:465.18-465.56"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:466$267",
+                  "attributes": {
+                    "src": "aegis_exposed.v:466.18-466.56"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:467$268",
+                  "attributes": {
+                    "src": "aegis_exposed.v:467.18-467.50"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:468$269",
+                  "attributes": {
+                    "src": "aegis_exposed.v:468.18-468.73"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:469$270",
+                  "attributes": {
+                    "src": "aegis_exposed.v:469.18-469.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:470$271",
+                  "attributes": {
+                    "src": "aegis_exposed.v:470.18-470.66"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:471$272",
+                  "attributes": {
+                    "src": "aegis_exposed.v:471.18-471.59"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:472$273",
+                  "attributes": {
+                    "src": "aegis_exposed.v:472.18-472.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:473$274",
+                  "attributes": {
+                    "src": "aegis_exposed.v:473.21-473.41"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:474$275",
+                  "attributes": {
+                    "src": "aegis_exposed.v:474.18-474.58"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:475$276",
+                  "attributes": {
+                    "src": "aegis_exposed.v:475.18-475.37"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:476$277",
+                  "attributes": {
+                    "src": "aegis_exposed.v:476.18-476.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:477$278",
+                  "attributes": {
+                    "src": "aegis_exposed.v:477.18-477.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:478$279",
+                  "attributes": {
+                    "src": "aegis_exposed.v:478.21-478.41"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:479$280",
+                  "attributes": {
+                    "src": "aegis_exposed.v:479.18-479.53"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:480$281",
+                  "attributes": {
+                    "src": "aegis_exposed.v:480.18-480.62"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:481$282",
+                  "attributes": {
+                    "src": "aegis_exposed.v:481.18-481.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:482$283",
+                  "attributes": {
+                    "src": "aegis_exposed.v:482.18-482.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:483$284",
+                  "attributes": {
+                    "src": "aegis_exposed.v:483.18-483.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:484$285",
+                  "attributes": {
+                    "src": "aegis_exposed.v:484.18-484.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:485$286",
+                  "attributes": {
+                    "src": "aegis_exposed.v:485.18-485.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:486$287",
+                  "attributes": {
+                    "src": "aegis_exposed.v:486.18-486.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:487$288",
+                  "attributes": {
+                    "src": "aegis_exposed.v:487.18-487.37"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:488$289",
+                  "attributes": {
+                    "src": "aegis_exposed.v:488.18-488.45"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:489$290",
+                  "attributes": {
+                    "src": "aegis_exposed.v:489.18-489.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:490$291",
+                  "attributes": {
+                    "src": "aegis_exposed.v:490.18-490.68"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:491$292",
+                  "attributes": {
+                    "src": "aegis_exposed.v:491.18-491.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:492$293",
+                  "attributes": {
+                    "src": "aegis_exposed.v:492.18-492.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:493$294",
+                  "attributes": {
+                    "src": "aegis_exposed.v:493.18-493.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:494$295",
+                  "attributes": {
+                    "src": "aegis_exposed.v:494.18-494.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:495$296",
+                  "attributes": {
+                    "src": "aegis_exposed.v:495.18-495.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:496$297",
+                  "attributes": {
+                    "src": "aegis_exposed.v:496.18-496.44"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:497$298",
+                  "attributes": {
+                    "src": "aegis_exposed.v:497.18-497.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:498$299",
+                  "attributes": {
+                    "src": "aegis_exposed.v:498.18-498.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:499$300",
+                  "attributes": {
+                    "src": "aegis_exposed.v:499.18-499.43"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:501$302",
+                  "attributes": {
+                    "src": "aegis_exposed.v:501.18-501.65"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:503$304",
+                  "attributes": {
+                    "src": "aegis_exposed.v:503.18-503.49"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:505$306",
+                  "attributes": {
+                    "src": "aegis_exposed.v:505.18-505.41"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:506$307",
+                  "attributes": {
+                    "src": "aegis_exposed.v:506.18-506.41"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:507$308",
+                  "attributes": {
+                    "src": "aegis_exposed.v:507.18-507.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000101"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:508$309",
+                  "attributes": {
+                    "src": "aegis_exposed.v:508.18-508.47"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:509$310",
+                  "attributes": {
+                    "src": "aegis_exposed.v:509.18-509.47"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:510$311",
+                  "attributes": {
+                    "src": "aegis_exposed.v:510.18-510.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:511$312",
+                  "attributes": {
+                    "src": "aegis_exposed.v:511.18-511.48"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:512$313",
+                  "attributes": {
+                    "src": "aegis_exposed.v:512.18-512.44"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:513$314",
+                  "attributes": {
+                    "src": "aegis_exposed.v:513.18-513.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:514$315",
+                  "attributes": {
+                    "src": "aegis_exposed.v:514.18-514.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:515$316",
+                  "attributes": {
+                    "src": "aegis_exposed.v:515.18-515.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:516$317",
+                  "attributes": {
+                    "src": "aegis_exposed.v:516.18-516.45"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:517$318",
+                  "attributes": {
+                    "src": "aegis_exposed.v:517.18-517.38"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:518$319",
+                  "attributes": {
+                    "src": "aegis_exposed.v:518.18-518.51"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:519$320",
+                  "attributes": {
+                    "src": "aegis_exposed.v:519.18-519.51"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:520$321",
+                  "attributes": {
+                    "src": "aegis_exposed.v:520.18-520.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:521$322",
+                  "attributes": {
+                    "src": "aegis_exposed.v:521.18-521.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:522$323",
+                  "attributes": {
+                    "src": "aegis_exposed.v:522.18-522.46"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:523$324",
+                  "attributes": {
+                    "src": "aegis_exposed.v:523.18-523.39"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$aegis_exposed.v:524$325",
+                  "attributes": {
+                    "src": "aegis_exposed.v:524.39-524.94"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [10, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$465",
+                  "attributes": {
+                    "src": "aegis_exposed.v:415.3-416.35"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procdff$466",
+                  "attributes": {
+                    "src": "aegis_exposed.v:413.3-414.35"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001010"
+                  }
+                },
+                {
+                  "name": "$procdff$467",
+                  "attributes": {
+                    "src": "aegis_exposed.v:411.3-412.36"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$468",
+                  "attributes": {
+                    "src": "aegis_exposed.v:409.3-410.31"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$469",
+                  "attributes": {
+                    "src": "aegis_exposed.v:407.3-408.26"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$470",
+                  "attributes": {
+                    "src": "aegis_exposed.v:405.3-406.37"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$471",
+                  "attributes": {
+                    "src": "aegis_exposed.v:403.3-404.30"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$472",
+                  "attributes": {
+                    "src": "aegis_exposed.v:401.3-402.25"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$473",
+                  "attributes": {
+                    "src": "aegis_exposed.v:399.3-400.38"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$474",
+                  "attributes": {
+                    "src": "aegis_exposed.v:397.3-398.38"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$475",
+                  "attributes": {
+                    "src": "aegis_exposed.v:395.3-396.38"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$476",
+                  "attributes": {
+                    "src": "aegis_exposed.v:393.3-394.37"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$477",
+                  "attributes": {
+                    "src": "aegis_exposed.v:391.3-392.42"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$478",
+                  "attributes": {
+                    "src": "aegis_exposed.v:389.3-390.42"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$479",
+                  "attributes": {
+                    "src": "aegis_exposed.v:387.3-388.36"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$480",
+                  "attributes": {
+                    "src": "aegis_exposed.v:385.3-386.36"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$481",
+                  "attributes": {
+                    "src": "aegis_exposed.v:383.3-384.29"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$482",
+                  "attributes": {
+                    "src": "aegis_exposed.v:381.3-382.29"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$483",
+                  "attributes": {
+                    "src": "aegis_exposed.v:379.3-380.26"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$484",
+                  "attributes": {
+                    "src": "aegis_exposed.v:377.3-378.32"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$485",
+                  "attributes": {
+                    "src": "aegis_exposed.v:375.3-376.38"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$486",
+                  "attributes": {
+                    "src": "aegis_exposed.v:373.3-374.37"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$487",
+                  "attributes": {
+                    "src": "aegis_exposed.v:371.3-372.30"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$488",
+                  "attributes": {
+                    "src": "aegis_exposed.v:369.3-370.32"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$489",
+                  "attributes": {
+                    "src": "aegis_exposed.v:367.3-368.25"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$procdff$490",
+                  "attributes": {
+                    "src": "aegis_exposed.v:365.3-366.40"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$491",
+                  "attributes": {
+                    "src": "aegis_exposed.v:363.3-364.40"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$495",
+                  "attributes": {
+                    "src": "aegis_exposed.v:358.3-359.40"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$496",
+                  "attributes": {
+                    "src": "aegis_exposed.v:356.3-357.40"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$adff",
+            "ports": [
+                {
+                  "name": "ARST",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$464",
+                  "attributes": {
+                    "src": "aegis_exposed.v:417.3-419.34"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "1",
+                    "ARST_VALUE": "1",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$494",
+                  "attributes": {
+                    "src": "aegis_exposed.v:360.3-362.34"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "1",
+                    "ARST_VALUE": "1",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$xor",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [6, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$xor$aegis_exposed.v:527$328",
+                  "attributes": {
+                    "src": "aegis_exposed.v:527.18-527.70"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000101",
+                    "Y_WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$xor$aegis_exposed.v:528$329",
+                  "attributes": {
+                    "src": "aegis_exposed.v:528.18-528.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000101",
+                    "Y_WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$xor$aegis_exposed.v:529$330",
+                  "attributes": {
+                    "src": "aegis_exposed.v:529.18-529.67"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$xor$aegis_exposed.v:530$331",
+                  "attributes": {
+                    "src": "aegis_exposed.v:530.18-530.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000101",
+                    "Y_WIDTH": "00000000000000000000000000000110"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$or$aegis_exposed.v:354$188",
+                  "attributes": {
+                    "src": "aegis_exposed.v:354.22-354.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$or$aegis_exposed.v:355$189",
+                  "attributes": {
+                    "src": "aegis_exposed.v:355.30-355.77"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [2, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$not$aegis_exposed.v:293$127",
+                  "attributes": {
+                    "src": "aegis_exposed.v:293.18-293.46"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$not$aegis_exposed.v:294$128",
+                  "attributes": {
+                    "src": "aegis_exposed.v:294.18-294.40"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$not$aegis_exposed.v:353$187",
+                  "attributes": {
+                    "src": "aegis_exposed.v:353.18-353.42"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000010"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$aegis_exposed.v:342$176",
+                  "attributes": {
+                    "src": "aegis_exposed.v:342.18-342.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$aegis_exposed.v:343$177",
+                  "attributes": {
+                    "src": "aegis_exposed.v:343.18-343.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$aegis_exposed.v:344$178",
+                  "attributes": {
+                    "src": "aegis_exposed.v:344.18-344.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$aegis_exposed.v:345$179",
+                  "attributes": {
+                    "src": "aegis_exposed.v:345.18-345.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$aegis_exposed.v:346$180",
+                  "attributes": {
+                    "src": "aegis_exposed.v:346.18-346.53"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$aegis_exposed.v:347$181",
+                  "attributes": {
+                    "src": "aegis_exposed.v:347.18-347.40"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000010",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$aegis_exposed.v:348$182",
+                  "attributes": {
+                    "src": "aegis_exposed.v:348.18-348.40"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$aegis_exposed.v:349$183",
+                  "attributes": {
+                    "src": "aegis_exposed.v:349.18-349.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$aegis_exposed.v:350$184",
+                  "attributes": {
+                    "src": "aegis_exposed.v:350.18-350.59"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_not$aegis_exposed.v:328$162",
+                  "attributes": {
+                    "src": "aegis_exposed.v:328.18-328.24"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:329$163",
+                  "attributes": {
+                    "src": "aegis_exposed.v:329.18-329.35"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:332$166",
+                  "attributes": {
+                    "src": "aegis_exposed.v:332.18-332.25"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:333$167",
+                  "attributes": {
+                    "src": "aegis_exposed.v:333.18-333.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:334$168",
+                  "attributes": {
+                    "src": "aegis_exposed.v:334.18-334.47"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:335$169",
+                  "attributes": {
+                    "src": "aegis_exposed.v:335.18-335.25"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:336$170",
+                  "attributes": {
+                    "src": "aegis_exposed.v:336.18-336.35"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:337$171",
+                  "attributes": {
+                    "src": "aegis_exposed.v:337.18-337.36"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:339$173",
+                  "attributes": {
+                    "src": "aegis_exposed.v:339.18-339.45"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:340$174",
+                  "attributes": {
+                    "src": "aegis_exposed.v:340.18-340.37"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$aegis_exposed.v:341$175",
+                  "attributes": {
+                    "src": "aegis_exposed.v:341.18-341.25"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$aegis_exposed.v:302$136",
+                  "attributes": {
+                    "src": "aegis_exposed.v:302.26-302.40"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:303$137",
+                  "attributes": {
+                    "src": "aegis_exposed.v:303.18-303.59"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000001",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:305$139",
+                  "attributes": {
+                    "src": "aegis_exposed.v:305.18-305.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:306$140",
+                  "attributes": {
+                    "src": "aegis_exposed.v:306.18-306.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:308$142",
+                  "attributes": {
+                    "src": "aegis_exposed.v:308.18-308.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:309$143",
+                  "attributes": {
+                    "src": "aegis_exposed.v:309.18-309.38"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:311$145",
+                  "attributes": {
+                    "src": "aegis_exposed.v:311.18-311.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:312$146",
+                  "attributes": {
+                    "src": "aegis_exposed.v:312.18-312.48"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:313$147",
+                  "attributes": {
+                    "src": "aegis_exposed.v:313.18-313.40"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:314$148",
+                  "attributes": {
+                    "src": "aegis_exposed.v:314.18-314.43"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:315$149",
+                  "attributes": {
+                    "src": "aegis_exposed.v:315.18-315.48"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:316$150",
+                  "attributes": {
+                    "src": "aegis_exposed.v:316.18-316.53"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:317$151",
+                  "attributes": {
+                    "src": "aegis_exposed.v:317.18-317.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000001",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:318$152",
+                  "attributes": {
+                    "src": "aegis_exposed.v:318.18-318.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:319$153",
+                  "attributes": {
+                    "src": "aegis_exposed.v:319.18-319.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:320$154",
+                  "attributes": {
+                    "src": "aegis_exposed.v:320.18-320.61"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:321$155",
+                  "attributes": {
+                    "src": "aegis_exposed.v:321.18-321.52"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:322$156",
+                  "attributes": {
+                    "src": "aegis_exposed.v:322.18-322.43"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:323$157",
+                  "attributes": {
+                    "src": "aegis_exposed.v:323.18-323.41"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:324$158",
+                  "attributes": {
+                    "src": "aegis_exposed.v:324.18-324.51"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000001",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:325$159",
+                  "attributes": {
+                    "src": "aegis_exposed.v:325.18-325.52"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:326$160",
+                  "attributes": {
+                    "src": "aegis_exposed.v:326.18-326.38"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$aegis_exposed.v:327$161",
+                  "attributes": {
+                    "src": "aegis_exposed.v:327.18-327.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$aegis_exposed.v:296$130",
+                  "attributes": {
+                    "src": "aegis_exposed.v:296.17-296.73"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000110",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$aegis_exposed.v:297$131",
+                  "attributes": {
+                    "src": "aegis_exposed.v:297.18-297.54"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000110",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$aegis_exposed.v:298$132",
+                  "attributes": {
+                    "src": "aegis_exposed.v:298.20-298.67"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000110",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$aegis_exposed.v:300$134",
+                  "attributes": {
+                    "src": "aegis_exposed.v:300.18-300.66"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mem_v2",
+            "ports": [
+                {
+                  "name": "RD_ADDR",
+                  "direction": "io",
+                  "range": [5, 0]
+                },
+                {
+                  "name": "RD_ARST",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "RD_CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "RD_DATA",
+                  "direction": "",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "RD_EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "RD_SRST",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "WR_ADDR",
+                  "direction": "io",
+                  "range": [50, 0]
+                },
+                {
+                  "name": "WR_CLK",
+                  "direction": "io",
+                  "range": [10, 0]
+                },
+                {
+                  "name": "WR_DATA",
+                  "direction": "io",
+                  "range": [100, 0]
+                },
+                {
+                  "name": "WR_EN",
+                  "direction": "io",
+                  "range": [100, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "mem",
+                  "attributes": {
+                    "src": "aegis_exposed.v:266.13-266.16"
+                  },
+                  "parameters": {
+                    "ABITS": "00000000000000000000000000000101",
+                    "INIT": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                    "MEMID": "\\mem",
+                    "OFFSET": "00000000000000000000000000000000",
+                    "RD_ARST_VALUE": "xxxxxxxxxx",
+                    "RD_CE_OVER_SRST": "0",
+                    "RD_CLK_ENABLE": "0",
+                    "RD_CLK_POLARITY": "0",
+                    "RD_COLLISION_X_MASK": "0000000000",
+                    "RD_INIT_VALUE": "xxxxxxxxxx",
+                    "RD_PORTS": "00000000000000000000000000000001",
+                    "RD_SRST_VALUE": "xxxxxxxxxx",
+                    "RD_TRANSPARENCY_MASK": "0000000000",
+                    "RD_WIDE_CONTINUATION": "0",
+                    "SIZE": "00000000000000000000000000100000",
+                    "WIDTH": "00000000000000000000000000001010",
+                    "WR_CLK_ENABLE": "1111111111",
+                    "WR_CLK_POLARITY": "1111111111",
+                    "WR_PORTS": "00000000000000000000000000001010",
+                    "WR_PRIORITY_MASK": "0111111111001111111100011111110000111111000001111100000011110000000111000000001100000000010000000000",
+                    "WR_WIDE_CONTINUATION": "0000000000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [6, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [6, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$add$aegis_exposed.v:291$125",
+                  "attributes": {
+                    "src": "aegis_exposed.v:291.18-291.36"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000110"
+                  }
+                },
+                {
+                  "name": "$add$aegis_exposed.v:292$126",
+                  "attributes": {
+                    "src": "aegis_exposed.v:292.18-292.36"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000110"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "hdlname": "axis_async_fifo",
+            "src": "aegis_exposed.v:3.1-559.10"
+        }
+      }
+  ]
+}

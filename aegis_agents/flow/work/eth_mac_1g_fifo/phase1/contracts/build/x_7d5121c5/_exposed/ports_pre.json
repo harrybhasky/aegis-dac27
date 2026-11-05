@@ -1,0 +1,1383 @@
+{
+  "creator": "Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)",
+  "modules": {
+    "eth_mac_1g_fifo": {
+      "attributes": {
+        "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:34.1-331.10",
+        "top": "00000000000000000000000000000001",
+        "dynports": "00000000000000000000000000000001",
+        "hdlname": "eth_mac_1g_fifo"
+      },
+      "parameter_default_values": {
+        "AXIS_DATA_WIDTH": "00000000000000000000000000001000",
+        "AXIS_KEEP_ENABLE": "00000000000000000000000000000000",
+        "AXIS_KEEP_WIDTH": "00000000000000000000000000000001",
+        "ENABLE_PADDING": "00000000000000000000000000000001",
+        "MIN_FRAME_LENGTH": "00000000000000000000000001000000",
+        "RX_DROP_BAD_FRAME": "00000000000000000000000000000001",
+        "RX_DROP_OVERSIZE_FRAME": "00000000000000000000000000000001",
+        "RX_DROP_WHEN_FULL": "00000000000000000000000000000001",
+        "RX_FIFO_DEPTH": "00000000000000000000000001000000",
+        "RX_FIFO_RAM_PIPELINE": "00000000000000000000000000000001",
+        "RX_FRAME_FIFO": "00000000000000000000000000000001",
+        "TX_DROP_BAD_FRAME": "00000000000000000000000000000001",
+        "TX_DROP_OVERSIZE_FRAME": "00000000000000000000000000000001",
+        "TX_DROP_WHEN_FULL": "00000000000000000000000000000000",
+        "TX_FIFO_DEPTH": "00000000000000000000000001000000",
+        "TX_FIFO_RAM_PIPELINE": "00000000000000000000000000000001",
+        "TX_FRAME_FIFO": "00000000000000000000000000000001"
+      },
+      "ports": {
+        "rx_clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rx_rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "tx_clk": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "tx_rst": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "logic_clk": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "logic_rst": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "tx_axis_tdata": {
+          "direction": "input",
+          "bits": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
+        },
+        "tx_axis_tkeep": {
+          "direction": "input",
+          "bits": [ 16 ]
+        },
+        "tx_axis_tvalid": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "tx_axis_tready": {
+          "direction": "output",
+          "bits": [ 18 ]
+        },
+        "tx_axis_tlast": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "tx_axis_tuser": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "rx_axis_tdata": {
+          "direction": "output",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ]
+        },
+        "rx_axis_tkeep": {
+          "direction": "output",
+          "bits": [ 29 ]
+        },
+        "rx_axis_tvalid": {
+          "direction": "output",
+          "bits": [ 30 ]
+        },
+        "rx_axis_tready": {
+          "direction": "input",
+          "bits": [ 31 ]
+        },
+        "rx_axis_tlast": {
+          "direction": "output",
+          "bits": [ 32 ]
+        },
+        "rx_axis_tuser": {
+          "direction": "output",
+          "bits": [ 33 ]
+        },
+        "gmii_rxd": {
+          "direction": "input",
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41 ]
+        },
+        "gmii_rx_dv": {
+          "direction": "input",
+          "bits": [ 42 ]
+        },
+        "gmii_rx_er": {
+          "direction": "input",
+          "bits": [ 43 ]
+        },
+        "gmii_txd": {
+          "direction": "output",
+          "bits": [ 44, 45, 46, 47, 48, 49, 50, 51 ]
+        },
+        "gmii_tx_en": {
+          "direction": "output",
+          "bits": [ 52 ]
+        },
+        "gmii_tx_er": {
+          "direction": "output",
+          "bits": [ 53 ]
+        },
+        "rx_clk_enable": {
+          "direction": "input",
+          "bits": [ 54 ]
+        },
+        "tx_clk_enable": {
+          "direction": "input",
+          "bits": [ 55 ]
+        },
+        "rx_mii_select": {
+          "direction": "input",
+          "bits": [ 56 ]
+        },
+        "tx_mii_select": {
+          "direction": "input",
+          "bits": [ 57 ]
+        },
+        "tx_error_underflow": {
+          "direction": "output",
+          "bits": [ 58 ]
+        },
+        "tx_fifo_overflow": {
+          "direction": "output",
+          "bits": [ 59 ]
+        },
+        "tx_fifo_bad_frame": {
+          "direction": "output",
+          "bits": [ 60 ]
+        },
+        "tx_fifo_good_frame": {
+          "direction": "output",
+          "bits": [ 61 ]
+        },
+        "rx_error_bad_frame": {
+          "direction": "output",
+          "bits": [ 62 ]
+        },
+        "rx_error_bad_fcs": {
+          "direction": "output",
+          "bits": [ 63 ]
+        },
+        "rx_fifo_overflow": {
+          "direction": "output",
+          "bits": [ 64 ]
+        },
+        "rx_fifo_bad_frame": {
+          "direction": "output",
+          "bits": [ 65 ]
+        },
+        "rx_fifo_good_frame": {
+          "direction": "output",
+          "bits": [ 66 ]
+        },
+        "cfg_ifg": {
+          "direction": "input",
+          "bits": [ 67, 68, 69, 70, 71, 72, 73, 74 ]
+        },
+        "cfg_tx_enable": {
+          "direction": "input",
+          "bits": [ 75 ]
+        },
+        "cfg_rx_enable": {
+          "direction": "input",
+          "bits": [ 76 ]
+        }
+      },
+      "cells": {
+        "$procdff$41219": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:142.1-148.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 5 ],
+            "CLK": [ 4 ],
+            "D": [ 77 ],
+            "Q": [ 78 ]
+          }
+        },
+        "$procdff$41222": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:150.1-160.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 6 ],
+            "D": [ 78 ],
+            "Q": [ 79 ]
+          }
+        },
+        "$procdff$41225": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:150.1-160.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 6 ],
+            "D": [ 79 ],
+            "Q": [ 80 ]
+          }
+        },
+        "$procdff$41228": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:150.1-160.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 6 ],
+            "D": [ 80 ],
+            "Q": [ 81 ]
+          }
+        },
+        "$procdff$41231": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "00",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:173.1-179.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 82, 83 ],
+            "Q": [ 84, 85 ]
+          }
+        },
+        "$procdff$41234": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "00",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:181.1-191.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 6 ],
+            "D": [ 84, 85 ],
+            "Q": [ 86, 87 ]
+          }
+        },
+        "$procdff$41237": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "00",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:181.1-191.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 6 ],
+            "D": [ 86, 87 ],
+            "Q": [ 88, 89 ]
+          }
+        },
+        "$procdff$41240": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "00",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:181.1-191.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 6 ],
+            "D": [ 88, 89 ],
+            "Q": [ 90, 91 ]
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:140$9196": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:140.29-140.64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 80 ],
+            "B": [ 81 ],
+            "Y": [ 58 ]
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:146$9198": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:146.26-146.66"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 78 ],
+            "B": [ 92 ],
+            "Y": [ 77 ]
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:170$9200": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:170.29-170.64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 88 ],
+            "B": [ 90 ],
+            "Y": [ 62 ]
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:171$9201": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:171.27-171.62"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 89 ],
+            "B": [ 91 ],
+            "Y": [ 63 ]
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:177$9203": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:177.26-177.88"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 84, 85 ],
+            "B": [ 93, 94 ],
+            "Y": [ 82, 83 ]
+          }
+        },
+        "eth_mac_1g_inst": {
+          "hide_name": 0,
+          "type": "$paramod$a1737bbd843fa27902cc3746696291615106444d\\eth_mac_1g",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:197.1-227.2"
+          },
+          "port_directions": {
+            "cfg_ifg": "input",
+            "cfg_rx_enable": "input",
+            "cfg_tx_enable": "input",
+            "gmii_rx_dv": "input",
+            "gmii_rx_er": "input",
+            "gmii_rxd": "input",
+            "gmii_tx_en": "output",
+            "gmii_tx_er": "output",
+            "gmii_txd": "output",
+            "rx_axis_tdata": "output",
+            "rx_axis_tlast": "output",
+            "rx_axis_tuser": "output",
+            "rx_axis_tvalid": "output",
+            "rx_clk": "input",
+            "rx_clk_enable": "input",
+            "rx_error_bad_fcs": "output",
+            "rx_error_bad_frame": "output",
+            "rx_mii_select": "input",
+            "rx_rst": "input",
+            "tx_axis_tdata": "input",
+            "tx_axis_tlast": "input",
+            "tx_axis_tready": "output",
+            "tx_axis_tuser": "input",
+            "tx_axis_tvalid": "input",
+            "tx_clk": "input",
+            "tx_clk_enable": "input",
+            "tx_error_underflow": "output",
+            "tx_mii_select": "input",
+            "tx_rst": "input"
+          },
+          "connections": {
+            "cfg_ifg": [ 67, 68, 69, 70, 71, 72, 73, 74 ],
+            "cfg_rx_enable": [ 76 ],
+            "cfg_tx_enable": [ 75 ],
+            "gmii_rx_dv": [ 42 ],
+            "gmii_rx_er": [ 43 ],
+            "gmii_rxd": [ 34, 35, 36, 37, 38, 39, 40, 41 ],
+            "gmii_tx_en": [ 52 ],
+            "gmii_tx_er": [ 53 ],
+            "gmii_txd": [ 44, 45, 46, 47, 48, 49, 50, 51 ],
+            "rx_axis_tdata": [ 95, 96, 97, 98, 99, 100, 101, 102 ],
+            "rx_axis_tlast": [ 103 ],
+            "rx_axis_tuser": [ 104 ],
+            "rx_axis_tvalid": [ 105 ],
+            "rx_clk": [ 2 ],
+            "rx_clk_enable": [ 54 ],
+            "rx_error_bad_fcs": [ 94 ],
+            "rx_error_bad_frame": [ 93 ],
+            "rx_mii_select": [ 56 ],
+            "rx_rst": [ 3 ],
+            "tx_axis_tdata": [ 106, 107, 108, 109, 110, 111, 112, 113 ],
+            "tx_axis_tlast": [ 114 ],
+            "tx_axis_tready": [ 115 ],
+            "tx_axis_tuser": [ 116 ],
+            "tx_axis_tvalid": [ 117 ],
+            "tx_clk": [ 4 ],
+            "tx_clk_enable": [ 55 ],
+            "tx_error_underflow": [ 92 ],
+            "tx_mii_select": [ 57 ],
+            "tx_rst": [ 5 ]
+          }
+        },
+        "rx_fifo": {
+          "hide_name": 0,
+          "type": "$paramod$3d538ecd3700346adccca5c6c961552513392983\\axis_async_fifo_adapter",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:299.1-329.2"
+          },
+          "port_directions": {
+            "m_axis_tdata": "output",
+            "m_axis_tdest": "output",
+            "m_axis_tid": "output",
+            "m_axis_tkeep": "output",
+            "m_axis_tlast": "output",
+            "m_axis_tready": "input",
+            "m_axis_tuser": "output",
+            "m_axis_tvalid": "output",
+            "m_clk": "input",
+            "m_rst": "input",
+            "m_status_bad_frame": "output",
+            "m_status_good_frame": "output",
+            "m_status_overflow": "output",
+            "s_axis_tdata": "input",
+            "s_axis_tdest": "input",
+            "s_axis_tid": "input",
+            "s_axis_tkeep": "input",
+            "s_axis_tlast": "input",
+            "s_axis_tready": "output",
+            "s_axis_tuser": "input",
+            "s_axis_tvalid": "input",
+            "s_clk": "input",
+            "s_rst": "input",
+            "s_status_bad_frame": "output",
+            "s_status_good_frame": "output",
+            "s_status_overflow": "output"
+          },
+          "connections": {
+            "m_axis_tdata": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+            "m_axis_tdest": [ ],
+            "m_axis_tid": [ ],
+            "m_axis_tkeep": [ 29 ],
+            "m_axis_tlast": [ 32 ],
+            "m_axis_tready": [ 31 ],
+            "m_axis_tuser": [ 33 ],
+            "m_axis_tvalid": [ 30 ],
+            "m_clk": [ 6 ],
+            "m_rst": [ 7 ],
+            "m_status_bad_frame": [ 65 ],
+            "m_status_good_frame": [ 66 ],
+            "m_status_overflow": [ 64 ],
+            "s_axis_tdata": [ 95, 96, 97, 98, 99, 100, 101, 102 ],
+            "s_axis_tdest": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "s_axis_tid": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "s_axis_tkeep": [ "0" ],
+            "s_axis_tlast": [ 103 ],
+            "s_axis_tready": [ ],
+            "s_axis_tuser": [ 104 ],
+            "s_axis_tvalid": [ 105 ],
+            "s_clk": [ 2 ],
+            "s_rst": [ 3 ],
+            "s_status_bad_frame": [ ],
+            "s_status_good_frame": [ ],
+            "s_status_overflow": [ ]
+          }
+        },
+        "tx_fifo": {
+          "hide_name": 0,
+          "type": "$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\\axis_async_fifo_adapter",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:248.1-278.2"
+          },
+          "port_directions": {
+            "m_axis_tdata": "output",
+            "m_axis_tdest": "output",
+            "m_axis_tid": "output",
+            "m_axis_tkeep": "output",
+            "m_axis_tlast": "output",
+            "m_axis_tready": "input",
+            "m_axis_tuser": "output",
+            "m_axis_tvalid": "output",
+            "m_clk": "input",
+            "m_rst": "input",
+            "m_status_bad_frame": "output",
+            "m_status_good_frame": "output",
+            "m_status_overflow": "output",
+            "s_axis_tdata": "input",
+            "s_axis_tdest": "input",
+            "s_axis_tid": "input",
+            "s_axis_tkeep": "input",
+            "s_axis_tlast": "input",
+            "s_axis_tready": "output",
+            "s_axis_tuser": "input",
+            "s_axis_tvalid": "input",
+            "s_clk": "input",
+            "s_rst": "input",
+            "s_status_bad_frame": "output",
+            "s_status_good_frame": "output",
+            "s_status_overflow": "output"
+          },
+          "connections": {
+            "m_axis_tdata": [ 106, 107, 108, 109, 110, 111, 112, 113 ],
+            "m_axis_tdest": [ ],
+            "m_axis_tid": [ ],
+            "m_axis_tkeep": [ ],
+            "m_axis_tlast": [ 114 ],
+            "m_axis_tready": [ 115 ],
+            "m_axis_tuser": [ 116 ],
+            "m_axis_tvalid": [ 117 ],
+            "m_clk": [ 4 ],
+            "m_rst": [ 5 ],
+            "m_status_bad_frame": [ ],
+            "m_status_good_frame": [ ],
+            "m_status_overflow": [ ],
+            "s_axis_tdata": [ 8, 9, 10, 11, 12, 13, 14, 15 ],
+            "s_axis_tdest": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "s_axis_tid": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "s_axis_tkeep": [ 16 ],
+            "s_axis_tlast": [ 19 ],
+            "s_axis_tready": [ 18 ],
+            "s_axis_tuser": [ 20 ],
+            "s_axis_tvalid": [ 17 ],
+            "s_clk": [ 6 ],
+            "s_rst": [ 7 ],
+            "s_status_bad_frame": [ 60 ],
+            "s_status_good_frame": [ 61 ],
+            "s_status_overflow": [ 59 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\rx_sync_reg_1[1:0]": {
+          "hide_name": 1,
+          "bits": [ 82, 83 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:173.1-179.4"
+          }
+        },
+        "$0\\rx_sync_reg_2[1:0]": {
+          "hide_name": 1,
+          "bits": [ 84, 85 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:181.1-191.4"
+          }
+        },
+        "$0\\rx_sync_reg_3[1:0]": {
+          "hide_name": 1,
+          "bits": [ 86, 87 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:181.1-191.4"
+          }
+        },
+        "$0\\rx_sync_reg_4[1:0]": {
+          "hide_name": 1,
+          "bits": [ 88, 89 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:181.1-191.4"
+          }
+        },
+        "$0\\tx_sync_reg_1[0:0]": {
+          "hide_name": 1,
+          "bits": [ 77 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:142.1-148.4"
+          }
+        },
+        "$0\\tx_sync_reg_2[0:0]": {
+          "hide_name": 1,
+          "bits": [ 78 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:150.1-160.4"
+          }
+        },
+        "$0\\tx_sync_reg_3[0:0]": {
+          "hide_name": 1,
+          "bits": [ 79 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:150.1-160.4"
+          }
+        },
+        "$0\\tx_sync_reg_4[0:0]": {
+          "hide_name": 1,
+          "bits": [ 80 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:150.1-160.4"
+          }
+        },
+        "$1\\rx_sync_reg_1[1:0]": {
+          "hide_name": 1,
+          "bits": [ "0", "0" ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:165.11-165.31"
+          }
+        },
+        "$1\\rx_sync_reg_2[1:0]": {
+          "hide_name": 1,
+          "bits": [ "0", "0" ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:166.11-166.31"
+          }
+        },
+        "$1\\rx_sync_reg_3[1:0]": {
+          "hide_name": 1,
+          "bits": [ "0", "0" ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:167.11-167.31"
+          }
+        },
+        "$1\\rx_sync_reg_4[1:0]": {
+          "hide_name": 1,
+          "bits": [ "0", "0" ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:168.11-168.31"
+          }
+        },
+        "$1\\tx_sync_reg_1[0:0]": {
+          "hide_name": 1,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:135.11-135.31"
+          }
+        },
+        "$1\\tx_sync_reg_2[0:0]": {
+          "hide_name": 1,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:136.11-136.31"
+          }
+        },
+        "$1\\tx_sync_reg_3[0:0]": {
+          "hide_name": 1,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:137.11-137.31"
+          }
+        },
+        "$1\\tx_sync_reg_4[0:0]": {
+          "hide_name": 1,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:138.11-138.31"
+          }
+        },
+        "$auto$genrtlil.cc:2218:genRTLIL$9205": {
+          "hide_name": 1,
+          "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "signed": 1,
+          "attributes": {
+          }
+        },
+        "$auto$genrtlil.cc:2218:genRTLIL$9206": {
+          "hide_name": 1,
+          "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "signed": 1,
+          "attributes": {
+          }
+        },
+        "$auto$genrtlil.cc:2218:genRTLIL$9207": {
+          "hide_name": 1,
+          "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "signed": 1,
+          "attributes": {
+          }
+        },
+        "$auto$genrtlil.cc:2218:genRTLIL$9208": {
+          "hide_name": 1,
+          "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "signed": 1,
+          "attributes": {
+          }
+        },
+        "$auto$genrtlil.cc:2218:genRTLIL$9209": {
+          "hide_name": 1,
+          "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "signed": 1,
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3268:ReduceOr$41218": {
+          "hide_name": 1,
+          "bits": [ 5 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3268:ReduceOr$41221": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3268:ReduceOr$41224": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3268:ReduceOr$41227": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3268:ReduceOr$41230": {
+          "hide_name": 1,
+          "bits": [ 3 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3268:ReduceOr$41233": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3268:ReduceOr$41236": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3268:ReduceOr$41239": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:140$9196_Y": {
+          "hide_name": 1,
+          "bits": [ 58 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:140.29-140.64"
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:146$9198_Y": {
+          "hide_name": 1,
+          "bits": [ 77 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:146.26-146.66"
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:170$9200_Y": {
+          "hide_name": 1,
+          "bits": [ 62 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:170.29-170.64"
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:171$9201_Y": {
+          "hide_name": 1,
+          "bits": [ 63 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:171.27-171.62"
+          }
+        },
+        "$xor$/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:177$9203_Y": {
+          "hide_name": 1,
+          "bits": [ 82, 83 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:177.26-177.88"
+          }
+        },
+        "cfg_ifg": {
+          "hide_name": 0,
+          "bits": [ 67, 68, 69, 70, 71, 72, 73, 74 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:116.39-116.46"
+          }
+        },
+        "cfg_rx_enable": {
+          "hide_name": 0,
+          "bits": [ 76 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:118.39-118.52"
+          }
+        },
+        "cfg_tx_enable": {
+          "hide_name": 0,
+          "bits": [ 75 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:117.39-117.52"
+          }
+        },
+        "gmii_rx_dv": {
+          "hide_name": 0,
+          "bits": [ 42 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:86.39-86.49"
+          }
+        },
+        "gmii_rx_er": {
+          "hide_name": 0,
+          "bits": [ 43 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:87.39-87.49"
+          }
+        },
+        "gmii_rxd": {
+          "hide_name": 0,
+          "bits": [ 34, 35, 36, 37, 38, 39, 40, 41 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:85.39-85.47"
+          }
+        },
+        "gmii_tx_en": {
+          "hide_name": 0,
+          "bits": [ 52 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:89.39-89.49"
+          }
+        },
+        "gmii_tx_er": {
+          "hide_name": 0,
+          "bits": [ 53 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:90.39-90.49"
+          }
+        },
+        "gmii_txd": {
+          "hide_name": 0,
+          "bits": [ 44, 45, 46, 47, 48, 49, 50, 51 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:88.39-88.47"
+          }
+        },
+        "logic_clk": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:59.39-59.48"
+          }
+        },
+        "logic_rst": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:60.39-60.48"
+          }
+        },
+        "rx_axis_tdata": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:75.39-75.52"
+          }
+        },
+        "rx_axis_tkeep": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:76.39-76.52"
+          }
+        },
+        "rx_axis_tlast": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:79.39-79.52"
+          }
+        },
+        "rx_axis_tready": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:78.39-78.53"
+          }
+        },
+        "rx_axis_tuser": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:80.39-80.52"
+          }
+        },
+        "rx_axis_tvalid": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:77.39-77.53"
+          }
+        },
+        "rx_clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:55.39-55.45"
+          }
+        },
+        "rx_clk_enable": {
+          "hide_name": 0,
+          "bits": [ 54 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:95.39-95.52"
+          }
+        },
+        "rx_error_bad_fcs": {
+          "hide_name": 0,
+          "bits": [ 63 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:108.39-108.55"
+          }
+        },
+        "rx_error_bad_fcs_int": {
+          "hide_name": 0,
+          "bits": [ 94 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:163.6-163.26"
+          }
+        },
+        "rx_error_bad_frame": {
+          "hide_name": 0,
+          "bits": [ 62 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:107.39-107.57"
+          }
+        },
+        "rx_error_bad_frame_int": {
+          "hide_name": 0,
+          "bits": [ 93 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:162.6-162.28"
+          }
+        },
+        "rx_fifo_axis_tdata": {
+          "hide_name": 0,
+          "bits": [ 95, 96, 97, 98, 99, 100, 101, 102 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:127.13-127.31"
+          }
+        },
+        "rx_fifo_axis_tlast": {
+          "hide_name": 0,
+          "bits": [ 103 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:129.13-129.31"
+          }
+        },
+        "rx_fifo_axis_tuser": {
+          "hide_name": 0,
+          "bits": [ 104 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:130.13-130.31"
+          }
+        },
+        "rx_fifo_axis_tvalid": {
+          "hide_name": 0,
+          "bits": [ 105 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:128.13-128.32"
+          }
+        },
+        "rx_fifo_bad_frame": {
+          "hide_name": 0,
+          "bits": [ 65 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:110.39-110.56"
+          }
+        },
+        "rx_fifo_good_frame": {
+          "hide_name": 0,
+          "bits": [ 66 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:111.39-111.57"
+          }
+        },
+        "rx_fifo_overflow": {
+          "hide_name": 0,
+          "bits": [ 64 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:109.39-109.55"
+          }
+        },
+        "rx_mii_select": {
+          "hide_name": 0,
+          "bits": [ 56 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:97.39-97.52"
+          }
+        },
+        "rx_rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:56.39-56.45"
+          }
+        },
+        "rx_sync_reg_1": {
+          "hide_name": 0,
+          "bits": [ 84, 85 ],
+          "attributes": {
+            "init": "00",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:165.11-165.24"
+          }
+        },
+        "rx_sync_reg_2": {
+          "hide_name": 0,
+          "bits": [ 86, 87 ],
+          "attributes": {
+            "init": "00",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:166.11-166.24"
+          }
+        },
+        "rx_sync_reg_3": {
+          "hide_name": 0,
+          "bits": [ 88, 89 ],
+          "attributes": {
+            "init": "00",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:167.11-167.24"
+          }
+        },
+        "rx_sync_reg_4": {
+          "hide_name": 0,
+          "bits": [ 90, 91 ],
+          "attributes": {
+            "init": "00",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:168.11-168.24"
+          }
+        },
+        "tx_axis_tdata": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11, 12, 13, 14, 15 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:65.39-65.52"
+          }
+        },
+        "tx_axis_tkeep": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:66.39-66.52"
+          }
+        },
+        "tx_axis_tlast": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:69.39-69.52"
+          }
+        },
+        "tx_axis_tready": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:68.39-68.53"
+          }
+        },
+        "tx_axis_tuser": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:70.39-70.52"
+          }
+        },
+        "tx_axis_tvalid": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:67.39-67.53"
+          }
+        },
+        "tx_clk": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:57.39-57.45"
+          }
+        },
+        "tx_clk_enable": {
+          "hide_name": 0,
+          "bits": [ 55 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:96.39-96.52"
+          }
+        },
+        "tx_error_underflow": {
+          "hide_name": 0,
+          "bits": [ 58 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:103.39-103.57"
+          }
+        },
+        "tx_error_underflow_int": {
+          "hide_name": 0,
+          "bits": [ 92 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:133.6-133.28"
+          }
+        },
+        "tx_fifo_axis_tdata": {
+          "hide_name": 0,
+          "bits": [ 106, 107, 108, 109, 110, 111, 112, 113 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:121.13-121.31"
+          }
+        },
+        "tx_fifo_axis_tlast": {
+          "hide_name": 0,
+          "bits": [ 114 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:124.13-124.31"
+          }
+        },
+        "tx_fifo_axis_tready": {
+          "hide_name": 0,
+          "bits": [ 115 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:123.13-123.32"
+          }
+        },
+        "tx_fifo_axis_tuser": {
+          "hide_name": 0,
+          "bits": [ 116 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:125.13-125.31"
+          }
+        },
+        "tx_fifo_axis_tvalid": {
+          "hide_name": 0,
+          "bits": [ 117 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:122.13-122.32"
+          }
+        },
+        "tx_fifo_bad_frame": {
+          "hide_name": 0,
+          "bits": [ 60 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:105.39-105.56"
+          }
+        },
+        "tx_fifo_good_frame": {
+          "hide_name": 0,
+          "bits": [ 61 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:106.39-106.57"
+          }
+        },
+        "tx_fifo_overflow": {
+          "hide_name": 0,
+          "bits": [ 59 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:104.39-104.55"
+          }
+        },
+        "tx_mii_select": {
+          "hide_name": 0,
+          "bits": [ 57 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:98.39-98.52"
+          }
+        },
+        "tx_rst": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:58.39-58.45"
+          }
+        },
+        "tx_sync_reg_1": {
+          "hide_name": 0,
+          "bits": [ 78 ],
+          "attributes": {
+            "init": "0",
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:135.11-135.24"
+          }
+        },
+        "tx_sync_reg_2": {
+          "hide_name": 0,
+          "bits": [ 79 ],
+          "attributes": {
+            "init": "0",
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:136.11-136.24"
+          }
+        },
+        "tx_sync_reg_3": {
+          "hide_name": 0,
+          "bits": [ 80 ],
+          "attributes": {
+            "init": "0",
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:137.11-137.24"
+          }
+        },
+        "tx_sync_reg_4": {
+          "hide_name": 0,
+          "bits": [ 81 ],
+          "attributes": {
+            "init": "0",
+            "single_bit_vector": "00000000000000000000000000000001",
+            "src": "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v:138.11-138.24"
+          }
+        }
+      }
+    }
+  }
+}

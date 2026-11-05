@@ -1,0 +1,1802 @@
+{
+ "sdc": {
+  "file": "eth_mac_1g_fifo.sdc",
+  "sha256": "fac9b9bbf42aba14931a933bddc39180a28850174378954751a47e614602b209"
+ },
+ "rtl_top": "eth_mac_1g_fifo_bench",
+ "entries": [
+  {
+   "reg": "u.rx_fifo.fifo_inst.wr_ptr_update_ack_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.wr_ptr_update_ack_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.rd_ptr_gray_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.rd_ptr_gray_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.wr_ptr_update_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "5165f07df80510cbcaf4f79a4e39abaf9fbf5e1063a84c764bc3bee0d17e6fe1"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.wr_ptr_update_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "5165f07df80510cbcaf4f79a4e39abaf9fbf5e1063a84c764bc3bee0d17e6fe1"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.good_frame_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.good_frame_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.bad_frame_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.bad_frame_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.overflow_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.overflow_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.wr_ptr_update_ack_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.wr_ptr_update_ack_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.rd_ptr_gray_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.rd_ptr_gray_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.wr_ptr_update_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "5165f07df80510cbcaf4f79a4e39abaf9fbf5e1063a84c764bc3bee0d17e6fe1"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.wr_ptr_update_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "5165f07df80510cbcaf4f79a4e39abaf9fbf5e1063a84c764bc3bee0d17e6fe1"
+  },
+  {
+   "reg": "u.rx_sync_reg_2",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    181,
+    191
+   ],
+   "sha256": "978c939c6f194ec3ff99e726337dfac912045e67e65692cf8af2f8f9f525428e"
+  },
+  {
+   "reg": "u.rx_sync_reg_3",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    181,
+    191
+   ],
+   "sha256": "978c939c6f194ec3ff99e726337dfac912045e67e65692cf8af2f8f9f525428e"
+  },
+  {
+   "reg": "u.tx_sync_reg_2",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    150,
+    160
+   ],
+   "sha256": "b5cb44a5ad8a8f4a0b5ec26b84f4096ee96d5d0bf958e153153254b8d3b1dbd6"
+  },
+  {
+   "reg": "u.tx_sync_reg_3",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    150,
+    160
+   ],
+   "sha256": "b5cb44a5ad8a8f4a0b5ec26b84f4096ee96d5d0bf958e153153254b8d3b1dbd6"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.m_rst_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    378,
+    381
+   ],
+   "sha256": "b842c6ee2c056ba390d738c52f61f47297966181ce1e0e23b4b6c3a37a3f793b"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.m_rst_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    378,
+    381
+   ],
+   "sha256": "b842c6ee2c056ba390d738c52f61f47297966181ce1e0e23b4b6c3a37a3f793b"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.s_rst_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    365,
+    368
+   ],
+   "sha256": "50dffe6f74e3229888c4b9c0074eda9c59dbe1e54e545415998c16625b26d710"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.s_rst_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    365,
+    368
+   ],
+   "sha256": "50dffe6f74e3229888c4b9c0074eda9c59dbe1e54e545415998c16625b26d710"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.m_rst_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    378,
+    381
+   ],
+   "sha256": "b842c6ee2c056ba390d738c52f61f47297966181ce1e0e23b4b6c3a37a3f793b"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.m_rst_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    378,
+    381
+   ],
+   "sha256": "b842c6ee2c056ba390d738c52f61f47297966181ce1e0e23b4b6c3a37a3f793b"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.s_rst_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    365,
+    368
+   ],
+   "sha256": "50dffe6f74e3229888c4b9c0074eda9c59dbe1e54e545415998c16625b26d710"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.s_rst_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    365,
+    368
+   ],
+   "sha256": "50dffe6f74e3229888c4b9c0074eda9c59dbe1e54e545415998c16625b26d710"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:36",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    36,
+    36
+   ],
+   "sha256": "4417b91cda5b5ec6f6f3caf90bb3a0669ca19998e646a48c2c5d0ef57fa70ed6"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:37",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    37,
+    37
+   ],
+   "sha256": "3d500ce381279031f6ec0d7109d3eadfa7c36bcc51b100e4762d8f0808e74310"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:38",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    38,
+    38
+   ],
+   "sha256": "36670e2397a2ffe668dfb8211610304706453655cd238b84c6d9c2e9c5103635"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "fe4d84c4dde1d90a0a06becd2d2e255f9a4637b38cc68d1d5df5013457eee4eb"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:40",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    40,
+    40
+   ],
+   "sha256": "57a993c2e19121a13da9789c246c6672cbf53f448c7c163ebaf38b74861579bd"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "5e296cf296d4f7355fef342f421437155152d963502a727531b6dbe093aae719"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:42",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    42,
+    42
+   ],
+   "sha256": "96afdc61026d1642986bf5a07dd4bbea61ab7eee6146b4950e9e182052abb207"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:43",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    43,
+    43
+   ],
+   "sha256": "8846ab91af9fac4452638fd68e730cc751f2c1af7e0c1802a9af0727abef54b3"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:44",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    44,
+    44
+   ],
+   "sha256": "cdcf9891ab44b86f91a3a570317d15f21b8b8a01ae8bc8a098e646a13d227a03"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:45",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    45,
+    45
+   ],
+   "sha256": "1dec619958da24d9c4136b329067450be0324fe0f9f33bef12b116bc9d4ebcde"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:46",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    46,
+    46
+   ],
+   "sha256": "35260beb68a34da06ff0d52071bf9aef2074fb67fd0fc93ec48e1f2e3ca2efd8"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:47",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    47,
+    47
+   ],
+   "sha256": "dbaed9241d385f782046480cd034322682426a286ebbdfd5eccbd9282c9bd04e"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:48",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    48,
+    48
+   ],
+   "sha256": "921907fe1c19c4296d3d8a6d21133c8159b0254c51a11067330df75a17e0e147"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:49",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    49,
+    49
+   ],
+   "sha256": "971fe31ebff21cb430c2e1adceea78393765c10cb101f7ec0a1a865bf369a5e0"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:50",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    50,
+    50
+   ],
+   "sha256": "fd35caabd8a9e2aa56f2e5270c3793cae6e9b7c8d9a2d25ddb740ff977aa598a"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:51",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    51,
+    51
+   ],
+   "sha256": "74d104f884e5e7c8d7ff3088cd9cb0dda82e5650c68182792c4852740c5edeb3"
+  },
+  {
+   "reg": "param@eth_mac_1g_fifo.v:52",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    52,
+    52
+   ],
+   "sha256": "157f5a56a75da1f8f051cbd9cf98daec2b2f2dc5f6a5c6fdf359d35b97dbeb0a"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:36",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    36,
+    36
+   ],
+   "sha256": "957d686b05898287c4936746d9feda16f1d2619f5c06c9dc51f45fc6cb474ca3"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:37",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    37,
+    37
+   ],
+   "sha256": "fe4d84c4dde1d90a0a06becd2d2e255f9a4637b38cc68d1d5df5013457eee4eb"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:38",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    38,
+    38
+   ],
+   "sha256": "57a993c2e19121a13da9789c246c6672cbf53f448c7c163ebaf38b74861579bd"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "17c3d3dfec9f9183b8fe6a8f66578dd04da549e3fbb29da6bf7fb7b6e313a7d9"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:40",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    40,
+    40
+   ],
+   "sha256": "e24598bab294707c801d7c3bd98acf3e3f20aaf4515902af77f72cb40662864b"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "a0ad9c2519df5ea997f1acc45a242f466f85357576b0c7d65d801994ed356eec"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:42",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    42,
+    42
+   ],
+   "sha256": "e75c0c3d6dcd8527e004da96ed96cad6614f140ff21c61e12e727e409eabf153"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:43",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    43,
+    43
+   ],
+   "sha256": "b05bf06d14b7b1b64dfece2305c829a8d09c230883402ef87ef946afcf5346cf"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:44",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    44,
+    44
+   ],
+   "sha256": "04fa56f7c62f82c75e672134f181c8f4995ad0f1b8be0e7828078c0bd12469a6"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:45",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    45,
+    45
+   ],
+   "sha256": "08e784ea1f7bfa4a2d0123c1dd276ac94bc8b8562de7889986430e5de59e669e"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:46",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    46,
+    46
+   ],
+   "sha256": "567369bfea8b3b69bcbcd3c8e91511e8e5e27760cf12a581ef577d5307e3f0cb"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:47",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    47,
+    47
+   ],
+   "sha256": "c7c5b65ff1cebabd20abcdd35bd74d126f5fba40b15a33f4455eee9fbbe0e3ab"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:48",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    48,
+    48
+   ],
+   "sha256": "379075e036f8313564335d7fac8c8b83a1dc7569fd676689c0ad99abe03d1d42"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:191",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    191,
+    191
+   ],
+   "sha256": "44f80ee41203260a88c3563f6aa4b21e29e80df6eaaa83a20267caac31e24bbc"
+  },
+  {
+   "reg": "param@eth_mac_1g.v:192",
+   "category": "capacity",
+   "scope": "line",
+   "file": "eth_mac_1g.v",
+   "lines": [
+    192,
+    192
+   ],
+   "sha256": "012ffc31b0cf5a2fa3328435950163026f41ec726e3ab81b061e2f804a09c119"
+  },
+  {
+   "reg": "param@axis_gmii_rx.v:36",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_rx.v",
+   "lines": [
+    36,
+    36
+   ],
+   "sha256": "957d686b05898287c4936746d9feda16f1d2619f5c06c9dc51f45fc6cb474ca3"
+  },
+  {
+   "reg": "param@axis_gmii_rx.v:37",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_rx.v",
+   "lines": [
+    37,
+    37
+   ],
+   "sha256": "17c3d3dfec9f9183b8fe6a8f66578dd04da549e3fbb29da6bf7fb7b6e313a7d9"
+  },
+  {
+   "reg": "param@axis_gmii_rx.v:38",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_rx.v",
+   "lines": [
+    38,
+    38
+   ],
+   "sha256": "d0403ac0c1d06d7d337c7294c13662b556eab1e4ef8f03cc04ea7f51ae6a0555"
+  },
+  {
+   "reg": "param@axis_gmii_rx.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_rx.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "8d622c92c4ac0b1f2e45af4eeb03941da9b0e16e7d0b0cad4c6830d3508756b6"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:36",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    36,
+    36
+   ],
+   "sha256": "957d686b05898287c4936746d9feda16f1d2619f5c06c9dc51f45fc6cb474ca3"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:37",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    37,
+    37
+   ],
+   "sha256": "fe4d84c4dde1d90a0a06becd2d2e255f9a4637b38cc68d1d5df5013457eee4eb"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:38",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    38,
+    38
+   ],
+   "sha256": "57a993c2e19121a13da9789c246c6672cbf53f448c7c163ebaf38b74861579bd"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "17c3d3dfec9f9183b8fe6a8f66578dd04da549e3fbb29da6bf7fb7b6e313a7d9"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:40",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    40,
+    40
+   ],
+   "sha256": "d0403ac0c1d06d7d337c7294c13662b556eab1e4ef8f03cc04ea7f51ae6a0555"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "277449869f1d4471b54fc5ef441e57a9b566fc5c15af55a094786127dd6a0133"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:42",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    42,
+    42
+   ],
+   "sha256": "590f67df7321c0d35c29c88ee91a67156f031fbd220a72cbbded08275c8b8472"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:43",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    43,
+    43
+   ],
+   "sha256": "825dd6eb1f670aa91e946fafef9c91730464056b07504274537a47137ff945a7"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:44",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    44,
+    44
+   ],
+   "sha256": "647de565a7f36a9900de453823b7dd8dc3930f8356a03cebdfe4d2cf64a426fd"
+  },
+  {
+   "reg": "param@axis_gmii_tx.v:93",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_gmii_tx.v",
+   "lines": [
+    93,
+    93
+   ],
+   "sha256": "12eacd100c8c9b4d29b2b1e91cf0ea6e229278693ecdbaa16e13e7a0f2582353"
+  },
+  {
+   "reg": "param@lfsr.v:37",
+   "category": "capacity",
+   "scope": "line",
+   "file": "lfsr.v",
+   "lines": [
+    37,
+    37
+   ],
+   "sha256": "7f990c3cc0c4f951b002d66053f24393598a947267fc30899fdf738ecc0c4afe"
+  },
+  {
+   "reg": "param@lfsr.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "lfsr.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "fd0a8309b75ec2ce10ae428874219a08a98ff09845d677663216b9ee50265990"
+  },
+  {
+   "reg": "param@lfsr.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "lfsr.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "36f822b9c4c2ff57816dba04ac0ff874cf19f6dbf092e4eafec8086b8b1876c0"
+  },
+  {
+   "reg": "param@lfsr.v:43",
+   "category": "capacity",
+   "scope": "line",
+   "file": "lfsr.v",
+   "lines": [
+    43,
+    43
+   ],
+   "sha256": "9a5ad4b81515c0a2d7103309d9927fc5a52d39c54fc6b82822838b4f804657a7"
+  },
+  {
+   "reg": "param@lfsr.v:45",
+   "category": "capacity",
+   "scope": "line",
+   "file": "lfsr.v",
+   "lines": [
+    45,
+    45
+   ],
+   "sha256": "ca7f1aa36dbbb97f679f563435fa7cb9298d671129aacb0f61406a38c64042f1"
+  },
+  {
+   "reg": "param@lfsr.v:47",
+   "category": "capacity",
+   "scope": "line",
+   "file": "lfsr.v",
+   "lines": [
+    47,
+    47
+   ],
+   "sha256": "957d686b05898287c4936746d9feda16f1d2619f5c06c9dc51f45fc6cb474ca3"
+  },
+  {
+   "reg": "param@lfsr.v:49",
+   "category": "capacity",
+   "scope": "line",
+   "file": "lfsr.v",
+   "lines": [
+    49,
+    49
+   ],
+   "sha256": "876f578acc58e61aa879ee8e1bfcf8f33307b845a34d097f9f42157964535f5e"
+  },
+  {
+   "reg": "param@lfsr.v:352",
+   "category": "capacity",
+   "scope": "line",
+   "file": "lfsr.v",
+   "lines": [
+    352,
+    352
+   ],
+   "sha256": "0a00e87e1d35a67892e3a1cf9c9b353bd60974d6786de3473f683a464e9a9b3c"
+  },
+  {
+   "reg": "param@lfsr.v:355",
+   "category": "capacity",
+   "scope": "line",
+   "file": "lfsr.v",
+   "lines": [
+    355,
+    355
+   ],
+   "sha256": "3cf16d2a39450c3b789bba60229d25372f22727fe4fad3848ef1329c238d5bca"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "98563a27d65d0c8836135fe892b2e0ff68ba7804e2f8fcb5b099d8a9515aa007"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "957d686b05898287c4936746d9feda16f1d2619f5c06c9dc51f45fc6cb474ca3"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:44",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    44,
+    44
+   ],
+   "sha256": "38d3b76987e98e5849a2456b3b0354736cc40ce1bfca4be11c2aa45491c4f750"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:46",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    46,
+    46
+   ],
+   "sha256": "264c4d0fc84d1facbd55a295aecf50a66ba68c69e11cc777b9d5c43aff6e4f0b"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:48",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    48,
+    48
+   ],
+   "sha256": "c8306a5fdf6748a0bc0db84ca48160f8fac7074f56a106832e9b269b88433f2b"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:50",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    50,
+    50
+   ],
+   "sha256": "401800a9f047b3a4d8c95634089ea5ec15ff22299a075b80dd091152b1bb865c"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:52",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    52,
+    52
+   ],
+   "sha256": "7c27951570ecd031fe993ba6854431047367dca6afa39b120b0bd2ee105e8446"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:54",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    54,
+    54
+   ],
+   "sha256": "0f666e05c1d00288ec6e7b2018779124a90ef51f026964ea92e88a10161326ed"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:56",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    56,
+    56
+   ],
+   "sha256": "83513beb95195f9273a97c948945abce4151e4948e8b400e844e1718c0d9a888"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:58",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    58,
+    58
+   ],
+   "sha256": "45c4a1de3ea2189edd44423c2e51f7293712e64bd5c00e065dc1a7a5595ed06d"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:60",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    60,
+    60
+   ],
+   "sha256": "c679a19dd284f07be7ad0238d4992a78924fe7c5a86a96a900822ecc4c17252d"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:62",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    62,
+    62
+   ],
+   "sha256": "9472f660c1f977ef9ec8117f39e9a564bca0138c918741e493ac4b238f998114"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:65",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    65,
+    65
+   ],
+   "sha256": "9b6f6f3daa043dfd20f541bd51e2c24f7302d9f0193b63b574ebef3c23b3b9c0"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:69",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    69,
+    69
+   ],
+   "sha256": "973b8e5ab0c09a8dc7cee1405af4542c09cbab8f3c63558498c007f8f80087f2"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:71",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    71,
+    71
+   ],
+   "sha256": "eee40e0e725e3039913569dc86dcb8df346886dd5d282ec38e1eb103c8fd5e48"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:73",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    73,
+    73
+   ],
+   "sha256": "9f39ed7540513330485a49dc023bfb9a3435a4762ba1345b3a2d4ba0bbcaeba5"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:76",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    76,
+    76
+   ],
+   "sha256": "51fdd10bfe61b58267eec2aa9281a583d555ebf9eb7dc02360406d63dc495952"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:79",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    79,
+    79
+   ],
+   "sha256": "d16013f1946435d0e365397577d4db0eac6a39811b7cec1fc4de7a2eb6f50c26"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:83",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    83,
+    83
+   ],
+   "sha256": "8a33530e0944583eb5334f1e09c2947cdfca852b0af36bbe54255d9b734a2101"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:87",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    87,
+    87
+   ],
+   "sha256": "26b3892bdc1851f0c93c09014165185b791d470c77524f1886216266c1c54af8"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:89",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    89,
+    89
+   ],
+   "sha256": "3fa3a7f0096a6c39852db7924033d0a78c66fd67c54cffc66cc102ae26a9a481"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:91",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    91,
+    91
+   ],
+   "sha256": "e32302e08b6e828018e088d67be7458a3b55158d1559d42f4c666b45b401bd9b"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:145",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    145,
+    145
+   ],
+   "sha256": "91f3ab9aaf12d990b01842c49e1f4ff622e0d04b1dd365b24ac1628fa2ecc695"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:146",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    146,
+    146
+   ],
+   "sha256": "2cd7f33427a3e1aca150af7cd0a03625d5cf3d241bc9b775aa79134f594ec6e9"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:148",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    148,
+    148
+   ],
+   "sha256": "519fce8300d29ace9699253c2c7e6b67ab61c40281e49dc51745b4d896ce7092"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "98563a27d65d0c8836135fe892b2e0ff68ba7804e2f8fcb5b099d8a9515aa007"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "04ba4100db43489bd29f817739fe2fc6582955292805c284f6ac19784016bc64"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:44",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    44,
+    44
+   ],
+   "sha256": "c967ced1617813ae6a883af327ee9eb8fd38570a4d0e90500c7785f601c666d5"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:46",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    46,
+    46
+   ],
+   "sha256": "4e9d45ef0184e09324ff0d5b17790fa58fd2661416af86341e9975b40a3fe617"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:48",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    48,
+    48
+   ],
+   "sha256": "2985b45afe926d11e81c19fb9ba9e6e074d1ea95bf9b8196078ba31f8e69946e"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:51",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    51,
+    51
+   ],
+   "sha256": "a27fe24d784fe413d7ff5289976a93977aefdf161401381e1e31d3684e95c1c2"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:53",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    53,
+    53
+   ],
+   "sha256": "920789b813e9dc8471ffbe837e9361476db7baa746120571c5cd0b1b7cdf6f6e"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:55",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    55,
+    55
+   ],
+   "sha256": "401800a9f047b3a4d8c95634089ea5ec15ff22299a075b80dd091152b1bb865c"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:57",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    57,
+    57
+   ],
+   "sha256": "7c27951570ecd031fe993ba6854431047367dca6afa39b120b0bd2ee105e8446"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:59",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    59,
+    59
+   ],
+   "sha256": "0f666e05c1d00288ec6e7b2018779124a90ef51f026964ea92e88a10161326ed"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:61",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    61,
+    61
+   ],
+   "sha256": "83513beb95195f9273a97c948945abce4151e4948e8b400e844e1718c0d9a888"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:63",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    63,
+    63
+   ],
+   "sha256": "45c4a1de3ea2189edd44423c2e51f7293712e64bd5c00e065dc1a7a5595ed06d"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:65",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    65,
+    65
+   ],
+   "sha256": "c679a19dd284f07be7ad0238d4992a78924fe7c5a86a96a900822ecc4c17252d"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:67",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    67,
+    67
+   ],
+   "sha256": "9472f660c1f977ef9ec8117f39e9a564bca0138c918741e493ac4b238f998114"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:70",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    70,
+    70
+   ],
+   "sha256": "9b6f6f3daa043dfd20f541bd51e2c24f7302d9f0193b63b574ebef3c23b3b9c0"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:74",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    74,
+    74
+   ],
+   "sha256": "973b8e5ab0c09a8dc7cee1405af4542c09cbab8f3c63558498c007f8f80087f2"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:76",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    76,
+    76
+   ],
+   "sha256": "eee40e0e725e3039913569dc86dcb8df346886dd5d282ec38e1eb103c8fd5e48"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:78",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    78,
+    78
+   ],
+   "sha256": "9f39ed7540513330485a49dc023bfb9a3435a4762ba1345b3a2d4ba0bbcaeba5"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:81",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    81,
+    81
+   ],
+   "sha256": "51fdd10bfe61b58267eec2aa9281a583d555ebf9eb7dc02360406d63dc495952"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:84",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    84,
+    84
+   ],
+   "sha256": "d16013f1946435d0e365397577d4db0eac6a39811b7cec1fc4de7a2eb6f50c26"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:88",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    88,
+    88
+   ],
+   "sha256": "8a33530e0944583eb5334f1e09c2947cdfca852b0af36bbe54255d9b734a2101"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:92",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    92,
+    92
+   ],
+   "sha256": "26b3892bdc1851f0c93c09014165185b791d470c77524f1886216266c1c54af8"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:94",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    94,
+    94
+   ],
+   "sha256": "3fa3a7f0096a6c39852db7924033d0a78c66fd67c54cffc66cc102ae26a9a481"
+  },
+  {
+   "reg": "param@axis_async_fifo_adapter.v:96",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo_adapter.v",
+   "lines": [
+    96,
+    96
+   ],
+   "sha256": "e32302e08b6e828018e088d67be7458a3b55158d1559d42f4c666b45b401bd9b"
+  },
+  {
+   "reg": "param@axis_adapter.v:37",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    37,
+    37
+   ],
+   "sha256": "04ba4100db43489bd29f817739fe2fc6582955292805c284f6ac19784016bc64"
+  },
+  {
+   "reg": "param@axis_adapter.v:40",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    40,
+    40
+   ],
+   "sha256": "c967ced1617813ae6a883af327ee9eb8fd38570a4d0e90500c7785f601c666d5"
+  },
+  {
+   "reg": "param@axis_adapter.v:42",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    42,
+    42
+   ],
+   "sha256": "4e9d45ef0184e09324ff0d5b17790fa58fd2661416af86341e9975b40a3fe617"
+  },
+  {
+   "reg": "param@axis_adapter.v:44",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    44,
+    44
+   ],
+   "sha256": "2985b45afe926d11e81c19fb9ba9e6e074d1ea95bf9b8196078ba31f8e69946e"
+  },
+  {
+   "reg": "param@axis_adapter.v:47",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    47,
+    47
+   ],
+   "sha256": "a27fe24d784fe413d7ff5289976a93977aefdf161401381e1e31d3684e95c1c2"
+  },
+  {
+   "reg": "param@axis_adapter.v:49",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    49,
+    49
+   ],
+   "sha256": "920789b813e9dc8471ffbe837e9361476db7baa746120571c5cd0b1b7cdf6f6e"
+  },
+  {
+   "reg": "param@axis_adapter.v:51",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    51,
+    51
+   ],
+   "sha256": "401800a9f047b3a4d8c95634089ea5ec15ff22299a075b80dd091152b1bb865c"
+  },
+  {
+   "reg": "param@axis_adapter.v:53",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    53,
+    53
+   ],
+   "sha256": "7c27951570ecd031fe993ba6854431047367dca6afa39b120b0bd2ee105e8446"
+  },
+  {
+   "reg": "param@axis_adapter.v:55",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    55,
+    55
+   ],
+   "sha256": "0f666e05c1d00288ec6e7b2018779124a90ef51f026964ea92e88a10161326ed"
+  },
+  {
+   "reg": "param@axis_adapter.v:57",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    57,
+    57
+   ],
+   "sha256": "83513beb95195f9273a97c948945abce4151e4948e8b400e844e1718c0d9a888"
+  },
+  {
+   "reg": "param@axis_adapter.v:59",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    59,
+    59
+   ],
+   "sha256": "45c4a1de3ea2189edd44423c2e51f7293712e64bd5c00e065dc1a7a5595ed06d"
+  },
+  {
+   "reg": "param@axis_adapter.v:61",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_adapter.v",
+   "lines": [
+    61,
+    61
+   ],
+   "sha256": "9976ad83dcdb4add349045974dbb641ec695982593d5fd4c7c664fbc57383a07"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.bad_frame_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    609,
+    619
+   ],
+   "sha256": "e8808dc5bd31f4864720311e89fe56cd567cf5001aa0eee565ab4c5ab206660d"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.good_frame_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    609,
+    619
+   ],
+   "sha256": "57124faa6e69e0bc7066072b5ddae25864065965b1a33c6bd6443a7bef4b36fb"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.m_rst_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    370,
+    376
+   ],
+   "sha256": "e03df64a4cb02825b37bc1aedf8969c5cdb2aaf0035794b853722070005bc31e"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.overflow_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    609,
+    619
+   ],
+   "sha256": "fc537517fa8417415d66534f76ad08ef6ddc10a868bc5e8f6ff7a6016d12cffe"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.s_rst_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    357,
+    363
+   ],
+   "sha256": "e91fa522de48b31550e0e0bb3fe4729342c8188994c7bc8cc146c572f514b21f"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.wr_ptr_sync_commit_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    384,
+    560
+   ],
+   "sha256": "cc47a4ef50cd78fdf4ab830daed3a6fbcf80627dea1db8962e9b2392785df38a"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.wr_ptr_commit_sync_reg",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "3f5f34878a9d667d2c8f8da598dfa44bb7969e83de2bad4e6b0dd746d1b6504e"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.wr_ptr_update_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    384,
+    560
+   ],
+   "sha256": "018c2c9f704fbf031292836975f0123bde05f074d69ba3553f6dfb9911fb2a00"
+  },
+  {
+   "reg": "u.rx_fifo.fifo_inst.wr_ptr_update_sync3_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "b3f0132f50b149fc6c4f89eb8b9193a0cf439a6b941f778ab4eef31b04054ea4"
+  },
+  {
+   "reg": "u.rx_sync_reg_1",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    173,
+    179
+   ],
+   "sha256": "73268f1ce3bfed19db4ab9dc2778091b44e3c7a5f26be8dfdfdb4df0ebaae439"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.m_rst_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    370,
+    376
+   ],
+   "sha256": "e03df64a4cb02825b37bc1aedf8969c5cdb2aaf0035794b853722070005bc31e"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.s_rst_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    357,
+    363
+   ],
+   "sha256": "e91fa522de48b31550e0e0bb3fe4729342c8188994c7bc8cc146c572f514b21f"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.wr_ptr_sync_commit_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    384,
+    560
+   ],
+   "sha256": "cc47a4ef50cd78fdf4ab830daed3a6fbcf80627dea1db8962e9b2392785df38a"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.wr_ptr_commit_sync_reg",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "3f5f34878a9d667d2c8f8da598dfa44bb7969e83de2bad4e6b0dd746d1b6504e"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.wr_ptr_update_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    384,
+    560
+   ],
+   "sha256": "018c2c9f704fbf031292836975f0123bde05f074d69ba3553f6dfb9911fb2a00"
+  },
+  {
+   "reg": "u.tx_fifo.fifo_inst.wr_ptr_update_sync3_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "b3f0132f50b149fc6c4f89eb8b9193a0cf439a6b941f778ab4eef31b04054ea4"
+  },
+  {
+   "reg": "u.tx_sync_reg_1",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "eth_mac_1g_fifo.v",
+   "lines": [
+    142,
+    148
+   ],
+   "sha256": "8e5e8c6d65aa6b08dd10bd13e0368a122f60c521d1a4dbf298bdd3771359f6f4"
+  }
+ ]
+}

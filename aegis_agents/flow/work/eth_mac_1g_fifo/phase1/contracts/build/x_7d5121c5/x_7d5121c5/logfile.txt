@@ -1,0 +1,63 @@
+SBY 18:12:24 [x_7d5121c5] Removing directory '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_7d5121c5/x_7d5121c5'.
+SBY 18:12:24 [x_7d5121c5] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_7d5121c5/aegis_exposed.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_7d5121c5/x_7d5121c5/src/aegis_exposed.v'.
+SBY 18:12:24 [x_7d5121c5] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_7d5121c5/checker.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_7d5121c5/x_7d5121c5/src/checker.v'.
+SBY 18:12:24 [x_7d5121c5] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_7d5121c5/formal_top.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_7d5121c5/x_7d5121c5/src/formal_top.v'.
+SBY 18:12:24 [x_7d5121c5] engine_0: smtbmc z3
+SBY 18:12:24 [x_7d5121c5] base: starting process "cd x_7d5121c5/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 18:12:24 [x_7d5121c5] base: Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+SBY 18:12:25 [x_7d5121c5] base: finished (returncode=0)
+SBY 18:12:25 [x_7d5121c5] prep: starting process "cd x_7d5121c5/model; yosys -ql design_prep.log design_prep.ys"
+SBY 18:12:25 [x_7d5121c5] prep: finished (returncode=0)
+SBY 18:12:25 [x_7d5121c5] smt2: starting process "cd x_7d5121c5/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 18:12:25 [x_7d5121c5] smt2: finished (returncode=0)
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: starting process "cd x_7d5121c5; yosys-smtbmc -s z3 --presat --noprogress -t 32  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 18:12:25 [x_7d5121c5] engine_0.induction: starting process "cd x_7d5121c5; yosys-smtbmc -s z3 --presat -i --noprogress -t 32  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Solver: z3
+SBY 18:12:25 [x_7d5121c5] engine_0.induction: ##   0:00:00  Solver: z3
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 18:12:25 [x_7d5121c5] engine_0.induction: ##   0:00:00  Trying induction in step 32..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 18:12:25 [x_7d5121c5] engine_0.induction: ##   0:00:00  Trying induction in step 31..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 18:12:25 [x_7d5121c5] engine_0.induction: ##   0:00:00  Trying induction in step 30..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 18:12:25 [x_7d5121c5] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 18:12:26 [x_7d5121c5] engine_0.induction: ##   0:00:00  Trying induction in step 29..
+SBY 18:12:26 [x_7d5121c5] engine_0.basecase: ##   0:00:01  Checking assertions in step 6..
+SBY 18:12:26 [x_7d5121c5] engine_0.basecase: ##   0:00:01  Checking assumptions in step 7..
+SBY 18:12:27 [x_7d5121c5] engine_0.induction: ##   0:00:02  Trying induction in step 28..
+SBY 18:13:01 [x_7d5121c5] engine_0.basecase: ##   0:00:35  Checking assertions in step 7..
+SBY 18:13:01 [x_7d5121c5] engine_0.basecase: ##   0:00:35  Checking assumptions in step 8..
+SBY 18:13:06 [x_7d5121c5] engine_0.induction: ##   0:00:41  Trying induction in step 27..
+SBY 18:13:10 [x_7d5121c5] engine_0.basecase: ##   0:00:44  Checking assertions in step 8..
+SBY 18:13:11 [x_7d5121c5] engine_0.basecase: ##   0:00:46  Checking assumptions in step 9..
+SBY 18:13:30 [x_7d5121c5] engine_0.basecase: ##   0:01:05  Checking assertions in step 9..
+SBY 18:14:06 [x_7d5121c5] engine_0.induction: ##   0:01:41  waiting for solver (1 minute)
+SBY 18:14:19 [x_7d5121c5] engine_0.induction: ##   0:01:54  Trying induction in step 26..
+SBY 18:14:30 [x_7d5121c5] engine_0.basecase: ##   0:02:05  waiting for solver (1 minute)
+SBY 18:14:41 [x_7d5121c5] engine_0.basecase: ##   0:02:15  BMC failed!
+SBY 18:14:41 [x_7d5121c5] engine_0.basecase: ##   0:02:15  Assert failed in aegis_formal_top.chk: checker.v:41.26-41.62 (_witness_.check_assert_checker_v_41_19)
+SBY 18:14:41 [x_7d5121c5] engine_0.basecase: ##   0:02:15  Assert failed in aegis_formal_top.chk: checker.v:42.26-42.80 (_witness_.check_assert_checker_v_42_24)
+SBY 18:14:41 [x_7d5121c5] engine_0.basecase: ##   0:02:15  Writing trace to VCD file: engine_0/trace.vcd
+SBY 18:14:41 [x_7d5121c5] engine_0.basecase: ##   0:02:16  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 18:14:41 [x_7d5121c5] engine_0.basecase: ##   0:02:16  Writing trace to constraints file: engine_0/trace.smtc
+SBY 18:14:41 [x_7d5121c5] engine_0.basecase: ##   0:02:16  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 18:14:42 [x_7d5121c5] engine_0.basecase: ##   0:02:16  Status: failed
+SBY 18:14:42 [x_7d5121c5] engine_0.basecase: finished (returncode=1)
+SBY 18:14:42 [x_7d5121c5] engine_0.basecase: Status returned by engine for basecase: FAIL
+SBY 18:14:42 [x_7d5121c5] engine_0.induction: terminating process
+SBY 18:14:42 [x_7d5121c5] summary: Elapsed clock time [H:MM:SS (secs)]: 0:02:17 (137)
+SBY 18:14:42 [x_7d5121c5] summary: Elapsed process time [H:MM:SS (secs)]: 0:02:10 (130)
+SBY 18:14:42 [x_7d5121c5] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY 18:14:42 [x_7d5121c5] summary: counterexample trace [basecase]: x_7d5121c5/engine_0/trace.vcd
+SBY 18:14:42 [x_7d5121c5] summary:   failed assertion aegis_formal_top.chk._witness_.check_assert_checker_v_41_19 at checker.v:41.26-41.62 step 9
+SBY 18:14:42 [x_7d5121c5] summary:   failed assertion aegis_formal_top.chk._witness_.check_assert_checker_v_42_24 at checker.v:42.26-42.80 step 9
+SBY 18:14:42 [x_7d5121c5] DONE (FAIL, rc=2)

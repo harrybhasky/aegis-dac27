@@ -1,0 +1,14 @@
+[
+ {
+  "from": "m_clk",
+  "to": "s_clk",
+  "crossing": "x_0b91db9a",
+  "issue": "multi-bit Gray bus u.rd_ptr_gray_reg -> u.rd_ptr_gray_sync1_reg is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ },
+ {
+  "from": "s_clk",
+  "to": "m_clk",
+  "crossing": "x_d33c9e21",
+  "issue": "multi-bit Gray bus u.wr_ptr_gray_reg -> u.wr_ptr_gray_sync1_reg is covered by clock_groups; use set_max_delay -datapath_only so bit skew stays bounded"
+ }
+]

@@ -1,0 +1,1010 @@
+{
+ "sdc": {
+  "file": "axis_async_fifo.sdc",
+  "sha256": "e87e45c341e69d6d8e7970b8764eb55bf92a7606aa450c03252bfee9224713b0"
+ },
+ "rtl_top": "axis_async_fifo_bench",
+ "entries": [
+  {
+   "reg": "u.wr_ptr_update_ack_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.wr_ptr_update_ack_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.rd_ptr_gray_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.rd_ptr_gray_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    570,
+    582
+   ],
+   "sha256": "b05169d78cb4b3c90abcad12bf73a5387007a85f6364c144aaffff9b9f8361c8"
+  },
+  {
+   "reg": "u.wr_ptr_update_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "5165f07df80510cbcaf4f79a4e39abaf9fbf5e1063a84c764bc3bee0d17e6fe1"
+  },
+  {
+   "reg": "u.wr_ptr_update_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "5165f07df80510cbcaf4f79a4e39abaf9fbf5e1063a84c764bc3bee0d17e6fe1"
+  },
+  {
+   "reg": "u.wr_ptr_gray_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "5165f07df80510cbcaf4f79a4e39abaf9fbf5e1063a84c764bc3bee0d17e6fe1"
+  },
+  {
+   "reg": "u.wr_ptr_gray_sync1_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "5165f07df80510cbcaf4f79a4e39abaf9fbf5e1063a84c764bc3bee0d17e6fe1"
+  },
+  {
+   "reg": "u.good_frame_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.good_frame_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.bad_frame_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.bad_frame_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.overflow_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.overflow_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    621,
+    643
+   ],
+   "sha256": "b489423e09044dcc00d7bfee4597e51b921b1f8ce17b714928b9288c8a205787"
+  },
+  {
+   "reg": "u.m_rst_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    378,
+    381
+   ],
+   "sha256": "b842c6ee2c056ba390d738c52f61f47297966181ce1e0e23b4b6c3a37a3f793b"
+  },
+  {
+   "reg": "u.m_rst_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    378,
+    381
+   ],
+   "sha256": "b842c6ee2c056ba390d738c52f61f47297966181ce1e0e23b4b6c3a37a3f793b"
+  },
+  {
+   "reg": "u.s_rst_sync2_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    365,
+    368
+   ],
+   "sha256": "50dffe6f74e3229888c4b9c0074eda9c59dbe1e54e545415998c16625b26d710"
+  },
+  {
+   "reg": "u.s_rst_sync3_reg",
+   "category": "synchronizer",
+   "scope": "block",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    365,
+    368
+   ],
+   "sha256": "50dffe6f74e3229888c4b9c0074eda9c59dbe1e54e545415998c16625b26d710"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:39",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    39,
+    39
+   ],
+   "sha256": "98563a27d65d0c8836135fe892b2e0ff68ba7804e2f8fcb5b099d8a9515aa007"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:41",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    41,
+    41
+   ],
+   "sha256": "957d686b05898287c4936746d9feda16f1d2619f5c06c9dc51f45fc6cb474ca3"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:44",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    44,
+    44
+   ],
+   "sha256": "38d3b76987e98e5849a2456b3b0354736cc40ce1bfca4be11c2aa45491c4f750"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:46",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    46,
+    46
+   ],
+   "sha256": "264c4d0fc84d1facbd55a295aecf50a66ba68c69e11cc777b9d5c43aff6e4f0b"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:48",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    48,
+    48
+   ],
+   "sha256": "c8306a5fdf6748a0bc0db84ca48160f8fac7074f56a106832e9b269b88433f2b"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:50",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    50,
+    50
+   ],
+   "sha256": "401800a9f047b3a4d8c95634089ea5ec15ff22299a075b80dd091152b1bb865c"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:52",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    52,
+    52
+   ],
+   "sha256": "7c27951570ecd031fe993ba6854431047367dca6afa39b120b0bd2ee105e8446"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:54",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    54,
+    54
+   ],
+   "sha256": "0f666e05c1d00288ec6e7b2018779124a90ef51f026964ea92e88a10161326ed"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:56",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    56,
+    56
+   ],
+   "sha256": "83513beb95195f9273a97c948945abce4151e4948e8b400e844e1718c0d9a888"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:58",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    58,
+    58
+   ],
+   "sha256": "45c4a1de3ea2189edd44423c2e51f7293712e64bd5c00e065dc1a7a5595ed06d"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:60",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    60,
+    60
+   ],
+   "sha256": "c679a19dd284f07be7ad0238d4992a78924fe7c5a86a96a900822ecc4c17252d"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:62",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    62,
+    62
+   ],
+   "sha256": "9472f660c1f977ef9ec8117f39e9a564bca0138c918741e493ac4b238f998114"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:65",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    65,
+    65
+   ],
+   "sha256": "9b6f6f3daa043dfd20f541bd51e2c24f7302d9f0193b63b574ebef3c23b3b9c0"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:69",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    69,
+    69
+   ],
+   "sha256": "973b8e5ab0c09a8dc7cee1405af4542c09cbab8f3c63558498c007f8f80087f2"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:71",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    71,
+    71
+   ],
+   "sha256": "eee40e0e725e3039913569dc86dcb8df346886dd5d282ec38e1eb103c8fd5e48"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:73",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    73,
+    73
+   ],
+   "sha256": "9f39ed7540513330485a49dc023bfb9a3435a4762ba1345b3a2d4ba0bbcaeba5"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:76",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    76,
+    76
+   ],
+   "sha256": "51fdd10bfe61b58267eec2aa9281a583d555ebf9eb7dc02360406d63dc495952"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:79",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    79,
+    79
+   ],
+   "sha256": "d16013f1946435d0e365397577d4db0eac6a39811b7cec1fc4de7a2eb6f50c26"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:83",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    83,
+    83
+   ],
+   "sha256": "8a33530e0944583eb5334f1e09c2947cdfca852b0af36bbe54255d9b734a2101"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:87",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    87,
+    87
+   ],
+   "sha256": "26b3892bdc1851f0c93c09014165185b791d470c77524f1886216266c1c54af8"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:89",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    89,
+    89
+   ],
+   "sha256": "3fa3a7f0096a6c39852db7924033d0a78c66fd67c54cffc66cc102ae26a9a481"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:91",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    91,
+    91
+   ],
+   "sha256": "e32302e08b6e828018e088d67be7458a3b55158d1559d42f4c666b45b401bd9b"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:145",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    145,
+    145
+   ],
+   "sha256": "91f3ab9aaf12d990b01842c49e1f4ff622e0d04b1dd365b24ac1628fa2ecc695"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:146",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    146,
+    146
+   ],
+   "sha256": "2cd7f33427a3e1aca150af7cd0a03625d5cf3d241bc9b775aa79134f594ec6e9"
+  },
+  {
+   "reg": "param@axis_async_fifo.v:148",
+   "category": "capacity",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    148,
+    148
+   ],
+   "sha256": "519fce8300d29ace9699253c2c7e6b67ab61c40281e49dc51745b4d896ce7092"
+  },
+  {
+   "reg": "u.bad_frame_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    609,
+    619
+   ],
+   "sha256": "e8808dc5bd31f4864720311e89fe56cd567cf5001aa0eee565ab4c5ab206660d"
+  },
+  {
+   "reg": "u.good_frame_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    609,
+    619
+   ],
+   "sha256": "57124faa6e69e0bc7066072b5ddae25864065965b1a33c6bd6443a7bef4b36fb"
+  },
+  {
+   "reg": "u.m_rst_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    370,
+    376
+   ],
+   "sha256": "e03df64a4cb02825b37bc1aedf8969c5cdb2aaf0035794b853722070005bc31e"
+  },
+  {
+   "reg": "u.overflow_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    609,
+    619
+   ],
+   "sha256": "fc537517fa8417415d66534f76ad08ef6ddc10a868bc5e8f6ff7a6016d12cffe"
+  },
+  {
+   "reg": "u.s_rst_sync1_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    357,
+    363
+   ],
+   "sha256": "e91fa522de48b31550e0e0bb3fe4729342c8188994c7bc8cc146c572f514b21f"
+  },
+  {
+   "reg": "u.wr_ptr_gray_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    384,
+    560
+   ],
+   "sha256": "92be1771fd03fc4725ee37bef52e9ce7335d155909009f0931f5a3b47c97efbc"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:418",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    418,
+    418
+   ],
+   "sha256": "f277593d1639a13b81b27444538c9297946484d863f351ddd69fba33de74e11e"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:265",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    265,
+    265
+   ],
+   "sha256": "ce861e779f7aff3a8eb87e0d132bec56dcc0a3fd02e273e6ca7bb482e0cc580b"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:196",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    196,
+    196
+   ],
+   "sha256": "3417f03f28d4319a332d8cdba45db28c2d6af095a29e71a52cd46e8a7f973f5e"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:421",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    421,
+    421
+   ],
+   "sha256": "9ade8dd9e39246af21d217210ca9112f0ead396fd39ef0632795b343b4a0ea5a"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:422",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    422,
+    422
+   ],
+   "sha256": "4935f15488c1c47eaabb34ee16faf6a2db2e19e648b4be4a1293e82f1e8039f9"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:424",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    424,
+    424
+   ],
+   "sha256": "4856c2916734b2e8dd98f5524e919b8e041ba9bdf42236839bd41734f73258fd"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:425",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    425,
+    425
+   ],
+   "sha256": "aff9098f3fbbe3a0b7a347ff2b9ebab60017cc0bbeeca348b2cb270a8352ec86"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:427",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    427,
+    427
+   ],
+   "sha256": "2aa7ae341576ce0b12fb277dc31dd50414f47107c7d1e387f12865b8b53c468c"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:428",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    428,
+    428
+   ],
+   "sha256": "ea39316ff41f2cafe78570125be6a6eb6d62e4defac3dd1ea4a949b6b0010afd"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:429",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    429,
+    429
+   ],
+   "sha256": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:430",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    430,
+    430
+   ],
+   "sha256": "aecd1ab60c9c4cf5b4ca25f8fa7f7d66733f12c647229fcfdaf2f6625e28b53f"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:431",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    431,
+    431
+   ],
+   "sha256": "a7db3c804fa7ca7aa986e51616a16c348ce9a4f9a7dfc4e42228e4adfcc52cfa"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:432",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    432,
+    432
+   ],
+   "sha256": "df2848fe4544e2d77a7f6c925f39d28daa6dbfcc9554604ae621ab47845b86a3"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:433",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    433,
+    433
+   ],
+   "sha256": "aff9098f3fbbe3a0b7a347ff2b9ebab60017cc0bbeeca348b2cb270a8352ec86"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:435",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    435,
+    435
+   ],
+   "sha256": "a3b57ededf907152aa4826eff3688b8f7627d8a215ac756c97d164e7e68b8e04"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:437",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    437,
+    437
+   ],
+   "sha256": "372f2422413bafa8d5c8faf7eb660247634d82e2da00d1fd8ebf0a2f8e4e5f12"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:438",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    438,
+    438
+   ],
+   "sha256": "18df068636c3a6a6ddf80f76e97b9240ae962823b3e857f9b37e9700f206e018"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:440",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    440,
+    440
+   ],
+   "sha256": "4856c2916734b2e8dd98f5524e919b8e041ba9bdf42236839bd41734f73258fd"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:441",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    441,
+    441
+   ],
+   "sha256": "aff9098f3fbbe3a0b7a347ff2b9ebab60017cc0bbeeca348b2cb270a8352ec86"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:443",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    443,
+    443
+   ],
+   "sha256": "d500aa4e3e7884e8a289876f68cbe72721f566a37b073acd9d9a14c3afc66e81"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:444",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    444,
+    444
+   ],
+   "sha256": "aecd1ab60c9c4cf5b4ca25f8fa7f7d66733f12c647229fcfdaf2f6625e28b53f"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:446",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    446,
+    446
+   ],
+   "sha256": "df2848fe4544e2d77a7f6c925f39d28daa6dbfcc9554604ae621ab47845b86a3"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:447",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    447,
+    447
+   ],
+   "sha256": "aff9098f3fbbe3a0b7a347ff2b9ebab60017cc0bbeeca348b2cb270a8352ec86"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:448",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    448,
+    448
+   ],
+   "sha256": "3292f500f99bf5462e4cae0a3a7bb1b7f730157e288279977edb68fa54b0e530"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:451",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    451,
+    451
+   ],
+   "sha256": "21c9c5b88bb1a314400595661e3e9efb6a5fbf8a4547345cb097d6033e55aeaf"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:453",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    453,
+    453
+   ],
+   "sha256": "0b46d6468b4c8d2a2251778fdd064b49bd5f655eb13a6661f67e523a547d8b91"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:454",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    454,
+    454
+   ],
+   "sha256": "59807e192c9de8500d54811f9754a4471173df72ccc8e07d332950b4ebc9476a"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:455",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    455,
+    455
+   ],
+   "sha256": "d12431ba1cc822250873c0d0216635de99745650edc9a2c18304917b10f69f6f"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:456",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    456,
+    456
+   ],
+   "sha256": "aecd1ab60c9c4cf5b4ca25f8fa7f7d66733f12c647229fcfdaf2f6625e28b53f"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:458",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    458,
+    458
+   ],
+   "sha256": "e2c7ebdb565591fd3536379d562edc08a7dfd1fd56a2892f017f1d9ec49e5cce"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:459",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    459,
+    459
+   ],
+   "sha256": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:461",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    461,
+    461
+   ],
+   "sha256": "542371343f63e2eeb039499afba753d181610da07e519bdedb6606f18dcb9964"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:462",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    462,
+    462
+   ],
+   "sha256": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:463",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    463,
+    463
+   ],
+   "sha256": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:464",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    464,
+    464
+   ],
+   "sha256": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:307",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    307,
+    307
+   ],
+   "sha256": "1fae9faca6d1838e3e5544fb48d560055ba16028fb7558609c8a4ace109140ce"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:416",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    416,
+    416
+   ],
+   "sha256": "1d455e965791fe58607e8adbda42246a5bff658bdaf8c3d4df20b297ad3f7508"
+  },
+  {
+   "reg": "cone@axis_async_fifo.v:269",
+   "category": "crossing_launch_cone",
+   "scope": "line",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    269,
+    269
+   ],
+   "sha256": "d4ae6240d9fd1543ba798d148a21b1fca57ecf119aa4412f96e82fc0b6e53966"
+  },
+  {
+   "reg": "u.wr_ptr_sync_commit_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    384,
+    560
+   ],
+   "sha256": "cc47a4ef50cd78fdf4ab830daed3a6fbcf80627dea1db8962e9b2392785df38a"
+  },
+  {
+   "reg": "u.wr_ptr_commit_sync_reg",
+   "category": "crossing_capture",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "3f5f34878a9d667d2c8f8da598dfa44bb7969e83de2bad4e6b0dd746d1b6504e"
+  },
+  {
+   "reg": "u.wr_ptr_update_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    384,
+    560
+   ],
+   "sha256": "018c2c9f704fbf031292836975f0123bde05f074d69ba3553f6dfb9911fb2a00"
+  },
+  {
+   "reg": "u.wr_ptr_update_sync3_reg",
+   "category": "crossing_launch",
+   "scope": "assignments",
+   "file": "axis_async_fifo.v",
+   "lines": [
+    584,
+    606
+   ],
+   "sha256": "b3f0132f50b149fc6c4f89eb8b9193a0cf439a6b941f778ab4eef31b04054ea4"
+  }
+ ]
+}

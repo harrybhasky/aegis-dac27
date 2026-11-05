@@ -1,0 +1,23 @@
+{
+ "clocks": {
+  "logic_clk": {
+   "period_ns": 0.99,
+   "master": null,
+   "root": "logic_clk",
+   "source": "logic_clk"
+  },
+  "rx_clk": {
+   "period_ns": 0.56,
+   "master": null,
+   "root": "rx_clk",
+   "source": "rx_clk"
+  },
+  "tx_clk": {
+   "period_ns": 1.03,
+   "master": null,
+   "root": "tx_clk",
+   "source": "tx_clk"
+  }
+ },
+ "synchronous_groups": []
+}

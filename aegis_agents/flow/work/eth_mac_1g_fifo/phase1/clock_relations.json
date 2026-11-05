@@ -1,0 +1,17 @@
+{
+ "logic_clk": {
+  "logic_clk": "identical",
+  "rx_clk": "asynchronous",
+  "tx_clk": "asynchronous"
+ },
+ "rx_clk": {
+  "logic_clk": "asynchronous",
+  "rx_clk": "identical",
+  "tx_clk": "asynchronous"
+ },
+ "tx_clk": {
+  "logic_clk": "asynchronous",
+  "rx_clk": "asynchronous",
+  "tx_clk": "identical"
+ }
+}

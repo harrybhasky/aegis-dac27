@@ -1,0 +1,104 @@
+[
+ {
+  "id": "x_fa51bdd9",
+  "src_reg": "u.bad_frame_sync1_reg",
+  "dst_reg": "u.bad_frame_sync2_reg",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_ef4025e7",
+  "src_reg": "u.good_frame_sync1_reg",
+  "dst_reg": "u.good_frame_sync2_reg",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_62543c15",
+  "src_reg": "u.m_rst_sync1_reg",
+  "dst_reg": "u.m_rst_sync2_reg",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_d465b457",
+  "src_reg": "u.overflow_sync1_reg",
+  "dst_reg": "u.overflow_sync2_reg",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_0b91db9a",
+  "src_reg": "u.rd_ptr_gray_reg",
+  "dst_reg": "u.rd_ptr_gray_sync1_reg",
+  "src_clock": "m_clk",
+  "dst_clock": "s_clk",
+  "width": 6,
+  "sync_depth": 2,
+  "kind": "gray_candidate",
+  "contract": "proven"
+ },
+ {
+  "id": "x_18bee3ce",
+  "src_reg": "u.s_rst_sync1_reg",
+  "dst_reg": "u.s_rst_sync2_reg",
+  "src_clock": "m_clk",
+  "dst_clock": "s_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_d33c9e21",
+  "src_reg": "u.wr_ptr_gray_reg",
+  "dst_reg": "u.wr_ptr_gray_sync1_reg",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 6,
+  "sync_depth": 2,
+  "kind": "gray_candidate",
+  "contract": "failed"
+ },
+ {
+  "id": "x_113edd69",
+  "src_reg": "u.wr_ptr_sync_commit_reg",
+  "dst_reg": "u.wr_ptr_commit_sync_reg",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 6,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_e985f96a",
+  "src_reg": "u.wr_ptr_update_reg",
+  "dst_reg": "u.wr_ptr_update_sync1_reg",
+  "src_clock": "s_clk",
+  "dst_clock": "m_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_317afc4b",
+  "src_reg": "u.wr_ptr_update_sync3_reg",
+  "dst_reg": "u.wr_ptr_update_ack_sync1_reg",
+  "src_clock": "m_clk",
+  "dst_clock": "s_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ }
+]

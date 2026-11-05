@@ -1,0 +1,187 @@
+{
+ "clocks": {
+  "logic_clk": {
+   "period_ns": 0.99
+  },
+  "rx_clk": {
+   "period_ns": 0.56
+  },
+  "tx_clk": {
+   "period_ns": 1.03
+  }
+ },
+ "crossings": [
+  {
+   "id": "x_4f5bb0f0",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_gmii_rx.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_gmii_tx.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/lfsr.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_async_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_async_fifo_adapter.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_adapter.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/bench_top.v"
+   ],
+   "scope_module": "axis_async_fifo",
+   "clock": "m_clk",
+   "reset": "s_rst",
+   "reset_active_low": false,
+   "src_clock": "logic_clk",
+   "dst_clock": "rx_clk",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "rd_ptr_gray_reg"
+   },
+   "params": {
+    "ADDR_WIDTH": 6,
+    "CL_KEEP_WDITH": 0,
+    "DATA_WIDTH": 8,
+    "DEPTH": 64,
+    "DEST_ENABLE": 0,
+    "DEST_WIDTH": 8,
+    "DROP_BAD_FRAME": 1,
+    "DROP_OVERSIZE_FRAME": 1,
+    "DROP_WHEN_FULL": 1,
+    "FRAME_FIFO": 1,
+    "FRAME_PAUSE": 1,
+    "ID_ENABLE": 0,
+    "ID_WIDTH": 8,
+    "KEEP_ENABLE": 0,
+    "KEEP_WIDTH": 1,
+    "LAST_ENABLE": 1,
+    "MARK_WHEN_FULL": 0,
+    "OUTPUT_FIFO_ADDR_WIDTH": 3,
+    "OUTPUT_FIFO_ENABLE": 0,
+    "PAUSE_ENABLE": 0,
+    "RAM_PIPELINE": 1,
+    "USER_BAD_FRAME_MASK": 1,
+    "USER_BAD_FRAME_VALUE": 1,
+    "USER_ENABLE": 1,
+    "USER_WIDTH": 1
+   },
+   "resets": [
+    [
+     "s_rst",
+     false
+    ],
+    [
+     "m_rst",
+     false
+    ]
+   ],
+   "settle": 6
+  },
+  {
+   "id": "x_7d5121c5",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_gmii_rx.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_gmii_tx.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/lfsr.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_async_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_async_fifo_adapter.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_adapter.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/bench_top.v"
+   ],
+   "scope_module": "eth_mac_1g_fifo",
+   "clock": "rx_clk",
+   "reset": "rx_rst",
+   "reset_active_low": false,
+   "src_clock": "rx_clk",
+   "dst_clock": "logic_clk",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "rx_sync_reg_1"
+   },
+   "params": {
+    "AXIS_DATA_WIDTH": 8,
+    "AXIS_KEEP_ENABLE": 0,
+    "AXIS_KEEP_WIDTH": 1,
+    "ENABLE_PADDING": 1,
+    "MIN_FRAME_LENGTH": 64,
+    "RX_DROP_BAD_FRAME": 1,
+    "RX_DROP_OVERSIZE_FRAME": 1,
+    "RX_DROP_WHEN_FULL": 1,
+    "RX_FIFO_DEPTH": 64,
+    "RX_FIFO_RAM_PIPELINE": 1,
+    "RX_FRAME_FIFO": 1,
+    "TX_DROP_BAD_FRAME": 1,
+    "TX_DROP_OVERSIZE_FRAME": 1,
+    "TX_DROP_WHEN_FULL": 0,
+    "TX_FIFO_DEPTH": 64,
+    "TX_FIFO_RAM_PIPELINE": 1,
+    "TX_FRAME_FIFO": 1
+   },
+   "resets": null,
+   "settle": 1
+  },
+  {
+   "id": "x_2de12529",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/eth_mac_1g.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_gmii_rx.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_gmii_tx.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/lfsr.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_async_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_async_fifo_adapter.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/axis_adapter.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/eth_mac_1g_fifo/rtl/bench_top.v"
+   ],
+   "scope_module": "axis_async_fifo",
+   "clock": "m_clk",
+   "reset": "s_rst",
+   "reset_active_low": false,
+   "src_clock": "tx_clk",
+   "dst_clock": "logic_clk",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "rd_ptr_gray_reg"
+   },
+   "params": {
+    "ADDR_WIDTH": 6,
+    "CL_KEEP_WDITH": 0,
+    "DATA_WIDTH": 8,
+    "DEPTH": 64,
+    "DEST_ENABLE": 0,
+    "DEST_WIDTH": 8,
+    "DROP_BAD_FRAME": 1,
+    "DROP_OVERSIZE_FRAME": 1,
+    "DROP_WHEN_FULL": 0,
+    "FRAME_FIFO": 1,
+    "FRAME_PAUSE": 1,
+    "ID_ENABLE": 0,
+    "ID_WIDTH": 8,
+    "KEEP_ENABLE": 0,
+    "KEEP_WIDTH": 1,
+    "LAST_ENABLE": 1,
+    "MARK_WHEN_FULL": 0,
+    "OUTPUT_FIFO_ADDR_WIDTH": 3,
+    "OUTPUT_FIFO_ENABLE": 0,
+    "PAUSE_ENABLE": 0,
+    "RAM_PIPELINE": 1,
+    "USER_BAD_FRAME_MASK": 1,
+    "USER_BAD_FRAME_VALUE": 1,
+    "USER_ENABLE": 1,
+    "USER_WIDTH": 1
+   },
+   "resets": [
+    [
+     "s_rst",
+     false
+    ],
+    [
+     "m_rst",
+     false
+    ]
+   ],
+   "settle": 6
+  }
+ ]
+}

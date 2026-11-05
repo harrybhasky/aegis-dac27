@@ -1,0 +1,175 @@
+[
+ {
+  "id": "x_5f538ad2",
+  "src_reg": "u.rx_fifo.fifo_inst.bad_frame_sync1_reg",
+  "dst_reg": "u.rx_fifo.fifo_inst.bad_frame_sync2_reg",
+  "src_clock": "rx_clk",
+  "dst_clock": "logic_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_38dd28ad",
+  "src_reg": "u.rx_fifo.fifo_inst.good_frame_sync1_reg",
+  "dst_reg": "u.rx_fifo.fifo_inst.good_frame_sync2_reg",
+  "src_clock": "rx_clk",
+  "dst_clock": "logic_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_73603171",
+  "src_reg": "u.rx_fifo.fifo_inst.m_rst_sync1_reg",
+  "dst_reg": "u.rx_fifo.fifo_inst.m_rst_sync2_reg",
+  "src_clock": "rx_clk",
+  "dst_clock": "logic_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_61b3ea91",
+  "src_reg": "u.rx_fifo.fifo_inst.overflow_sync1_reg",
+  "dst_reg": "u.rx_fifo.fifo_inst.overflow_sync2_reg",
+  "src_clock": "rx_clk",
+  "dst_clock": "logic_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_4f5bb0f0",
+  "src_reg": "u.rx_fifo.fifo_inst.rd_ptr_gray_reg",
+  "dst_reg": "u.rx_fifo.fifo_inst.rd_ptr_gray_sync1_reg",
+  "src_clock": "logic_clk",
+  "dst_clock": "rx_clk",
+  "width": 7,
+  "sync_depth": 2,
+  "kind": "gray_candidate",
+  "contract": "proven"
+ },
+ {
+  "id": "x_b1694fe5",
+  "src_reg": "u.rx_fifo.fifo_inst.s_rst_sync1_reg",
+  "dst_reg": "u.rx_fifo.fifo_inst.s_rst_sync2_reg",
+  "src_clock": "logic_clk",
+  "dst_clock": "rx_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_2567c465",
+  "src_reg": "u.rx_fifo.fifo_inst.wr_ptr_sync_commit_reg",
+  "dst_reg": "u.rx_fifo.fifo_inst.wr_ptr_commit_sync_reg",
+  "src_clock": "rx_clk",
+  "dst_clock": "logic_clk",
+  "width": 7,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_ef9b1fa5",
+  "src_reg": "u.rx_fifo.fifo_inst.wr_ptr_update_reg",
+  "dst_reg": "u.rx_fifo.fifo_inst.wr_ptr_update_sync1_reg",
+  "src_clock": "rx_clk",
+  "dst_clock": "logic_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_35309357",
+  "src_reg": "u.rx_fifo.fifo_inst.wr_ptr_update_sync3_reg",
+  "dst_reg": "u.rx_fifo.fifo_inst.wr_ptr_update_ack_sync1_reg",
+  "src_clock": "logic_clk",
+  "dst_clock": "rx_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_7d5121c5",
+  "src_reg": "u.rx_sync_reg_1",
+  "dst_reg": "u.rx_sync_reg_2",
+  "src_clock": "rx_clk",
+  "dst_clock": "logic_clk",
+  "width": 2,
+  "sync_depth": 2,
+  "kind": "gray_candidate",
+  "contract": "failed"
+ },
+ {
+  "id": "x_05241c52",
+  "src_reg": "u.tx_fifo.fifo_inst.m_rst_sync1_reg",
+  "dst_reg": "u.tx_fifo.fifo_inst.m_rst_sync2_reg",
+  "src_clock": "logic_clk",
+  "dst_clock": "tx_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_2de12529",
+  "src_reg": "u.tx_fifo.fifo_inst.rd_ptr_gray_reg",
+  "dst_reg": "u.tx_fifo.fifo_inst.rd_ptr_gray_sync1_reg",
+  "src_clock": "tx_clk",
+  "dst_clock": "logic_clk",
+  "width": 7,
+  "sync_depth": 2,
+  "kind": "gray_candidate",
+  "contract": "proven"
+ },
+ {
+  "id": "x_3d495f98",
+  "src_reg": "u.tx_fifo.fifo_inst.s_rst_sync1_reg",
+  "dst_reg": "u.tx_fifo.fifo_inst.s_rst_sync2_reg",
+  "src_clock": "tx_clk",
+  "dst_clock": "logic_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_3835d73a",
+  "src_reg": "u.tx_fifo.fifo_inst.wr_ptr_sync_commit_reg",
+  "dst_reg": "u.tx_fifo.fifo_inst.wr_ptr_commit_sync_reg",
+  "src_clock": "logic_clk",
+  "dst_clock": "tx_clk",
+  "width": 7,
+  "sync_depth": 1,
+  "kind": "qualified_capture"
+ },
+ {
+  "id": "x_a46fe0bb",
+  "src_reg": "u.tx_fifo.fifo_inst.wr_ptr_update_reg",
+  "dst_reg": "u.tx_fifo.fifo_inst.wr_ptr_update_sync1_reg",
+  "src_clock": "logic_clk",
+  "dst_clock": "tx_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_4e73c2c9",
+  "src_reg": "u.tx_fifo.fifo_inst.wr_ptr_update_sync3_reg",
+  "dst_reg": "u.tx_fifo.fifo_inst.wr_ptr_update_ack_sync1_reg",
+  "src_clock": "tx_clk",
+  "dst_clock": "logic_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ },
+ {
+  "id": "x_79b863a8",
+  "src_reg": "u.tx_sync_reg_1",
+  "dst_reg": "u.tx_sync_reg_2",
+  "src_clock": "tx_clk",
+  "dst_clock": "logic_clk",
+  "width": 1,
+  "sync_depth": 2,
+  "kind": "synchronizer"
+ }
+]

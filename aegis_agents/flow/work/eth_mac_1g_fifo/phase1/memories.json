@@ -1,0 +1,4 @@
+[
+ "u.rx_fifo.fifo_inst.mem",
+ "u.tx_fifo.fifo_inst.mem"
+]

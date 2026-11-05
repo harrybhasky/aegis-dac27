@@ -1,0 +1,20 @@
+{
+ "sdc": {
+  "file": "drrtl_router.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "router_top",
+ "entries": [
+  {
+   "reg": "param@router.v0.v:197",
+   "category": "capacity",
+   "scope": "line",
+   "file": "router.v0.v",
+   "lines": [
+    197,
+    197
+   ],
+   "sha256": "a2c350ca92251d37184e4dd95cb91714f4f94aa099e7dbecb6a9d098b5bd64f6"
+  }
+ ]
+}

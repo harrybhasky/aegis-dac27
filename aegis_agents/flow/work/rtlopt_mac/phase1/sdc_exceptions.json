@@ -1,0 +1,8 @@
+{
+ "clock_groups": [],
+ "exceptions": [],
+ "other": [
+  "set_input_delay 0 -clock clk [delete_from_list [all_inputs] [get_ports clk]]",
+  "set_output_delay 0 -clock clk [all_outputs]"
+ ]
+}

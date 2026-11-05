@@ -1,0 +1,31 @@
+{
+ "sdc": {
+  "file": "drrtl_pcie.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "top",
+ "entries": [
+  {
+   "reg": "param@pcie.v0.v:66",
+   "category": "capacity",
+   "scope": "line",
+   "file": "pcie.v0.v",
+   "lines": [
+    66,
+    66
+   ],
+   "sha256": "0527eb1b092aca3b83f008ca1751faea923a2553c7670bbbff493c7825564820"
+  },
+  {
+   "reg": "param@pcie.v0.v:94",
+   "category": "capacity",
+   "scope": "line",
+   "file": "pcie.v0.v",
+   "lines": [
+    94,
+    94
+   ],
+   "sha256": "2acfc6f0e652e67706f7be4468d6c934630c68501fe653390cbc6c1b641825dc"
+  }
+ ]
+}

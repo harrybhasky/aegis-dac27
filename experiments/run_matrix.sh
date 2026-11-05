@@ -14,7 +14,7 @@ for pass in $(seq 1 "$MAX_PASSES"); do
     [ -f "flow/runs/$d/$c.sonnet-5-5.r$r/summary.json" ] || missing=$((missing+1)); done; done; done
   echo "=== pass $pass: $missing runs missing"
   [ "$missing" -eq 0 ] && break
-  if grep -qsi "session limit\|usage limit\|hour limit\|weekly limit\|hit your .*limit" $(for d in $DESIGNS; do echo flow/runs/$d/*.log; done); then
+  if grep -qsi "session limit\|usage limit\|hour limit\|weekly limit\|hit your .*limit\|LLM backend unavailable" $(for d in $DESIGNS; do echo flow/runs/$d/*.log; done); then
     echo "=== usage limit hit; sleeping 20 min"; sleep 1200
   else
     echo "=== remaining failures are not usage-limit failures; stopping for a human to look"; break

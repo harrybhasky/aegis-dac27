@@ -1,0 +1,312 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `aegis_formal_top'. Setting top module to aegis_formal_top.
+
+2.1. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_7d5121c5
+Used module:     \eth_mac_1g_fifo
+Used module:         \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g
+Used module:             \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx
+Used module:                 \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr
+Used module:             \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx
+Used module:         \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter
+Used module:             \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo
+
+2.2. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_7d5121c5
+Used module:     \eth_mac_1g_fifo
+Used module:         \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g
+Used module:             \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx
+Used module:                 \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr
+Used module:             \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx
+Used module:         \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter
+Used module:             \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo
+Removed 0 unused modules.
+Module aegis_chk_gray_src_x_7d5121c5 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module aegis_formal_top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       52 wires
+      160 wire bits
+       50 public wires
+      158 public wire bits
+       34 ports
+      100 port bits
+        4 cells
+        2   $assume
+        2   $not
+        1 submodules
+        1   \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo
+
+=== \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      174 wires
+      828 wire bits
+      166 public wires
+      820 public wire bits
+       20 ports
+      246 port bits
+      154 cells
+        1   $add
+        1   $assume
+       11   $eq
+       16   $ff
+        4   $logic_and
+        4   $logic_not
+        3   $logic_or
+        2   $lt
+       87   $mux
+        5   $not
+       10   $pmux
+        8   $reduce_or
+        2   $sub
+        1 submodules
+        1   \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr
+
+=== \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      109 wires
+     1276 wire bits
+      107 public wires
+     1274 public wire bits
+       98 ports
+     1251 port bits
+        4 cells
+        2   $assume
+        2   $not
+        2 submodules
+        1   \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx
+        1   \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx
+
+=== \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      372 wires
+     1409 wire bits
+      336 public wires
+     1188 public wire bits
+       34 ports
+      100 port bits
+      340 cells
+        2   $add
+        2   $anyinit
+       33   $anyseq
+        2   $assume
+        4   $eq
+       52   $ff
+       24   $logic_and
+       11   $logic_not
+        9   $logic_or
+        1   $mem_v2
+      165   $mux
+        5   $not
+        2   $or
+       14   $reduce_xor
+        4   $sub
+       10   $xor
+
+=== \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      180 wires
+      616 wire bits
+      179 public wires
+      615 public wire bits
+       16 ports
+      125 port bits
+      162 cells
+        4   $and
+        1   $assume
+        6   $eq
+       27   $ff
+        7   $logic_and
+        3   $logic_not
+        3   $logic_or
+      107   $mux
+        2   $not
+        1   $or
+        1   $pmux
+        1 submodules
+        1   \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr
+
+=== \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       44 wires
+     1680 wire bits
+       44 public wires
+     1680 public wire bits
+        4 ports
+       80 port bits
+       39 cells
+       39   $reduce_xor
+
+=== aegis_chk_gray_src_x_7d5121c5 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       24 wires
+      120 wire bits
+        9 public wires
+       21 public wire bits
+        3 ports
+        4 port bits
+       24 cells
+        2   $add
+        1   $and
+        1   $anyinit
+        2   $assert
+        1   $assume
+        2   $eq
+        1   $ff
+        1   $ge
+        1   $logic_and
+        2   $logic_not
+        1   $logic_or
+        3   $mux
+        1   $ne
+        1   $not
+        1   $sub
+        3   $xor
+
+=== aegis_formal_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       28 wires
+       50 wire bits
+       26 public wires
+       48 public wire bits
+       22 ports
+       43 port bits
+        5 cells
+        2   $assume
+        1   $ff
+        1   $mux
+        1   $not
+        2 submodules
+        1   aegis_chk_gray_src_x_7d5121c5
+        1   eth_mac_1g_fifo
+
+=== eth_mac_1g_fifo ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       48 wires
+       94 wire bits
+       43 public wires
+       87 public wire bits
+       23 ports
+       45 port bits
+       10 cells
+        3   $assume
+        1   $ff
+        2   $mux
+        3   $not
+        1   $xor
+        2 submodules
+        1   \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter
+        1   \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      781 aegis_formal_top
+       24 aegis_chk_gray_src_x_7d5121c5
+       10 eth_mac_1g_fifo
+        4   \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter
+      340     \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo
+        4   \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g
+      154     \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx
+       39       \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr
+      162     \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx
+       39       \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr
+
+        +----------Count including submodules.
+        | 
+     1075 wires
+     7913 wire bits
+     1004 public wires
+     7571 public wire bits
+      258 ports
+     2074 port bits
+        - memories
+        - memory bits
+        - processes
+      781 cells
+        5   $add
+        5   $and
+        3   $anyinit
+       33   $anyseq
+        2   $assert
+       14   $assume
+       23   $eq
+       98   $ff
+        1   $ge
+       36   $logic_and
+       20   $logic_not
+       16   $logic_or
+        2   $lt
+        1   $mem_v2
+      365   $mux
+        1   $ne
+       21   $not
+        3   $or
+       11   $pmux
+        8   $reduce_or
+       92   $reduce_xor
+        7   $sub
+       14   $xor
+        2 submodules
+        1   aegis_chk_gray_src_x_7d5121c5
+        1   eth_mac_1g_fifo
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module aegis_chk_gray_src_x_7d5121c5.
+Creating SMT-LIBv2 representation of module \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr.
+Creating SMT-LIBv2 representation of module \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo.
+Creating SMT-LIBv2 representation of module \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx.
+Creating SMT-LIBv2 representation of module \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx.
+Creating SMT-LIBv2 representation of module \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter.
+Creating SMT-LIBv2 representation of module \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g.
+Creating SMT-LIBv2 representation of module eth_mac_1g_fifo.
+Creating SMT-LIBv2 representation of module aegis_formal_top.
+
+End of script. Logfile hash: e59f73f017, time: 0.02s, user: 0.02s, system: 0.00s, MEM: 13.73 MB peak
+Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+Time spent: 67% 2x write_smt2 (0 sec), 18% 2x read_rtlil (0 sec), ...

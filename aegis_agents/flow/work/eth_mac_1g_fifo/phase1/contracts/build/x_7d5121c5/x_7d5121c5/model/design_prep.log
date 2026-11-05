@@ -1,0 +1,155 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+
+-- Executing script file `design_prep.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter.
+Found 0 SCCs in module \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx.
+Found 0 SCCs in module \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g.
+Found 0 SCCs in module \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo.
+Found 0 SCCs in module \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx.
+Found 0 SCCs in module \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr.
+Found 0 SCCs in module aegis_chk_gray_src_x_7d5121c5.
+Found 0 SCCs in module aegis_formal_top.
+Found 0 SCCs in module eth_mac_1g_fifo.
+Found 0 SCCs.
+
+3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+4. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+5. Executing ASYNC2SYNC pass.
+Replacing \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo.$procdff$1598 ($adff): ARST=\m_rst, D=1'0, Q=\s_rst_sync1_reg
+Replacing \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo.$procdff$1603 ($adff): ARST=\s_rst, D=1'0, Q=\m_rst_sync1_reg
+Replacing eth_mac_1g_fifo.$procdff$1592 ($adff): ARST=\rx_rst, D=\_0_, Q=\rx_sync_reg_1
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter..
+Finding unused cells or wires in module \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx..
+Finding unused cells or wires in module \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g..
+Finding unused cells or wires in module \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo..
+Finding unused cells or wires in module \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx..
+Finding unused cells or wires in module \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_7d5121c5..
+Finding unused cells or wires in module \aegis_formal_top..
+Finding unused cells or wires in module \eth_mac_1g_fifo..
+Removed 6 unused cells and 6 unused wires.
+<suppressed ~8 debug messages>
+
+7. Executing FORMALFF pass.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter..
+Finding unused cells or wires in module \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx..
+Finding unused cells or wires in module \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g..
+Finding unused cells or wires in module \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo..
+Finding unused cells or wires in module \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx..
+Finding unused cells or wires in module \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_7d5121c5..
+Finding unused cells or wires in module \aegis_formal_top..
+Finding unused cells or wires in module \eth_mac_1g_fifo..
+Removed 13 unused cells and 13 unused wires.
+<suppressed ~21 debug messages>
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter...
+Checking module \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx...
+Checking module \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g...
+Checking module \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo...
+Checking module \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx...
+Checking module \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr...
+Checking module aegis_chk_gray_src_x_7d5121c5...
+Checking module aegis_formal_top...
+Checking module eth_mac_1g_fifo...
+Found and reported 0 problems.
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter.
+Optimizing module \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx.
+Optimizing module \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g.
+Optimizing module \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo.
+Optimizing module \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx.
+Optimizing module \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr.
+Optimizing module aegis_chk_gray_src_x_7d5121c5.
+Optimizing module aegis_formal_top.
+Optimizing module eth_mac_1g_fifo.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter'.
+Computing hashes of 1 cells of `\$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter'.
+Finding duplicate cells in `\$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter'.
+Finding identical cells in module `\$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx'.
+Computing hashes of 180 cells of `\$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx'.
+Finding duplicate cells in `\$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx'.
+Finding identical cells in module `\$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g'.
+Computing hashes of 2 cells of `\$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g'.
+Finding duplicate cells in `\$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g'.
+Finding identical cells in module `\$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo'.
+Computing hashes of 336 cells of `\$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo'.
+Finding duplicate cells in `\$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo'.
+Finding identical cells in module `\$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx'.
+Computing hashes of 163 cells of `\$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx'.
+Finding duplicate cells in `\$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx'.
+Finding identical cells in module `\$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr'.
+Computing hashes of 3439 cells of `\$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr'.
+Finding duplicate cells in `\$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr'.
+Finding identical cells in module `\aegis_chk_gray_src_x_7d5121c5'.
+Computing hashes of 26 cells of `\aegis_chk_gray_src_x_7d5121c5'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_7d5121c5'.
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 5 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Finding identical cells in module `\eth_mac_1g_fifo'.
+Computing hashes of 6 cells of `\eth_mac_1g_fifo'.
+Finding duplicate cells in `\eth_mac_1g_fifo'.
+Removed a total of 0 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter..
+Finding unused cells or wires in module \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx..
+Finding unused cells or wires in module \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g..
+Finding unused cells or wires in module \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo..
+Finding unused cells or wires in module \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx..
+Finding unused cells or wires in module \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_7d5121c5..
+Finding unused cells or wires in module \aegis_formal_top..
+Finding unused cells or wires in module \eth_mac_1g_fifo..
+Removed 3433 unused cells and 6866 unused wires.
+<suppressed ~6870 debug messages>
+
+11.5. Finished fast OPT passes.
+
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \$paramod$1b94ee1a4dfc46cb2e28f2f0fd0a2f260f1e4ff4\axis_async_fifo_adapter..
+Finding unused cells or wires in module \$paramod$5d1cd71b08360185f4b6b5e5c2d762626eadbcd7\axis_gmii_tx..
+Finding unused cells or wires in module \$paramod$a1737bbd843fa27902cc3746696291615106444d\eth_mac_1g..
+Finding unused cells or wires in module \$paramod$ae3aeec800cf982f74205a596be7f9e0ba7f955f\axis_async_fifo..
+Finding unused cells or wires in module \$paramod$c3e38fb477f908375ca6533153df4765c7bdb1cf\axis_gmii_rx..
+Finding unused cells or wires in module \$paramod$dcc385845125e865c6cbe00aa77d605b1aee47c4\lfsr..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_7d5121c5..
+Finding unused cells or wires in module \aegis_formal_top..
+Finding unused cells or wires in module \eth_mac_1g_fifo..
+Removed 0 unused cells and 33 unused wires.
+<suppressed ~1 debug messages>
+
+13. Executing RTLIL backend.
+Output filename: ../model/design_prep.il
+
+End of script. Logfile hash: 4f99fb636e, time: 0.17s, user: 0.16s, system: 0.02s, MEM: 109.03 MB peak
+Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+Time spent: 41% 4x opt_clean (0 sec), 20% 1x opt_dff (0 sec), ...

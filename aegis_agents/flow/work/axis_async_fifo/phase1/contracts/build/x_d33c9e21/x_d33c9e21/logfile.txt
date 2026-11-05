@@ -1,0 +1,54 @@
+SBY 13:55:45 [x_d33c9e21] Removing directory '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/axis_async_fifo/phase1.new/contracts/build/x_d33c9e21/x_d33c9e21'.
+SBY 13:55:45 [x_d33c9e21] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/axis_async_fifo/phase1.new/contracts/build/x_d33c9e21/aegis_exposed.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/axis_async_fifo/phase1.new/contracts/build/x_d33c9e21/x_d33c9e21/src/aegis_exposed.v'.
+SBY 13:55:45 [x_d33c9e21] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/axis_async_fifo/phase1.new/contracts/build/x_d33c9e21/checker.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/axis_async_fifo/phase1.new/contracts/build/x_d33c9e21/x_d33c9e21/src/checker.v'.
+SBY 13:55:45 [x_d33c9e21] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/axis_async_fifo/phase1.new/contracts/build/x_d33c9e21/formal_top.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/axis_async_fifo/phase1.new/contracts/build/x_d33c9e21/x_d33c9e21/src/formal_top.v'.
+SBY 13:55:45 [x_d33c9e21] engine_0: smtbmc z3
+SBY 13:55:45 [x_d33c9e21] base: starting process "cd x_d33c9e21/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 13:55:45 [x_d33c9e21] base: finished (returncode=0)
+SBY 13:55:45 [x_d33c9e21] prep: starting process "cd x_d33c9e21/model; yosys -ql design_prep.log design_prep.ys"
+SBY 13:55:45 [x_d33c9e21] prep: finished (returncode=0)
+SBY 13:55:45 [x_d33c9e21] smt2: starting process "cd x_d33c9e21/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 13:55:45 [x_d33c9e21] smt2: finished (returncode=0)
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: starting process "cd x_d33c9e21; yosys-smtbmc -s z3 --presat --noprogress -t 32  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 13:55:45 [x_d33c9e21] engine_0.induction: starting process "cd x_d33c9e21; yosys-smtbmc -s z3 --presat -i --noprogress -t 32  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Solver: z3
+SBY 13:55:45 [x_d33c9e21] engine_0.induction: ##   0:00:00  Solver: z3
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 13:55:45 [x_d33c9e21] engine_0.induction: ##   0:00:00  Trying induction in step 32..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 13:55:45 [x_d33c9e21] engine_0.induction: ##   0:00:00  Trying induction in step 31..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 13:55:45 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 13:55:45 [x_d33c9e21] engine_0.induction: ##   0:00:00  Trying induction in step 30..
+SBY 13:55:46 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 13:55:46 [x_d33c9e21] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 13:55:46 [x_d33c9e21] engine_0.induction: ##   0:00:00  Trying induction in step 29..
+SBY 13:55:47 [x_d33c9e21] engine_0.basecase: ##   0:00:01  Checking assertions in step 6..
+SBY 13:55:47 [x_d33c9e21] engine_0.basecase: ##   0:00:01  Checking assumptions in step 7..
+SBY 13:55:48 [x_d33c9e21] engine_0.induction: ##   0:00:02  Trying induction in step 28..
+SBY 13:55:49 [x_d33c9e21] engine_0.basecase: ##   0:00:03  Checking assertions in step 7..
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: ##   0:00:04  BMC failed!
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: ##   0:00:04  Assert failed in aegis_formal_top.chk: checker.v:41.26-41.62 (_witness_.check_assert_checker_v_41_21)
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: ##   0:00:04  Assert failed in aegis_formal_top.chk: checker.v:42.26-42.80 (_witness_.check_assert_checker_v_42_26)
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: ##   0:00:04  Writing trace to VCD file: engine_0/trace.vcd
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: ##   0:00:04  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: ##   0:00:04  Writing trace to constraints file: engine_0/trace.smtc
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: ##   0:00:04  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: ##   0:00:04  Status: failed
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: finished (returncode=1)
+SBY 13:55:50 [x_d33c9e21] engine_0.basecase: Status returned by engine for basecase: FAIL
+SBY 13:55:50 [x_d33c9e21] engine_0.induction: terminating process
+SBY 13:55:50 [x_d33c9e21] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:05 (5)
+SBY 13:55:50 [x_d33c9e21] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:04 (4)
+SBY 13:55:50 [x_d33c9e21] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY 13:55:50 [x_d33c9e21] summary: counterexample trace [basecase]: x_d33c9e21/engine_0/trace.vcd
+SBY 13:55:50 [x_d33c9e21] summary:   failed assertion aegis_formal_top.chk._witness_.check_assert_checker_v_41_21 at checker.v:41.26-41.62 step 7
+SBY 13:55:50 [x_d33c9e21] summary:   failed assertion aegis_formal_top.chk._witness_.check_assert_checker_v_42_26 at checker.v:42.26-42.80 step 7
+SBY 13:55:50 [x_d33c9e21] DONE (FAIL, rc=2)

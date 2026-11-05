@@ -1,0 +1,17 @@
+{
+ "clocks": {
+  "m_clk": {
+   "period_ns": 0.73,
+   "master": null,
+   "root": "m_clk",
+   "source": "m_clk"
+  },
+  "s_clk": {
+   "period_ns": 0.58,
+   "master": null,
+   "root": "s_clk",
+   "source": "s_clk"
+  }
+ },
+ "synchronous_groups": []
+}

@@ -168,5 +168,22 @@
     "tns_ns": -2.38
    }
   ]
+ },
+ "axis_async_fifo": {
+  "wns_ns": -0.24,
+  "tns_ns": -25.86,
+  "area_um2": 3785.978,
+  "per_domain": [
+   {
+    "clock": "m_clk",
+    "wns_ns": -0.24,
+    "tns_ns": -2.64
+   },
+   {
+    "clock": "s_clk",
+    "wns_ns": -0.11,
+    "tns_ns": -23.22
+   }
+  ]
  }
 }

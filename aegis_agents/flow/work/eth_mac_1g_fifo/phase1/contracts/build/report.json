@@ -1,0 +1,78 @@
+[
+  {
+    "id": "x_4f5bb0f0",
+    "type": "gray_src",
+    "dir": "flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_4f5bb0f0",
+    "job": "x_4f5bb0f0",
+    "checker_module": "aegis_chk_gray_src_x_4f5bb0f0",
+    "lat": 1,
+    "n_hold": 3,
+    "min_gap": 2,
+    "obligations": [],
+    "proof": {
+      "status": "PASS",
+      "failed": [],
+      "trace": null,
+      "engine": "abc pdr",
+      "note": "PDR PASS"
+    },
+    "structural": {
+      "rule": "R4 registered launch",
+      "signal": "rd_ptr_gray_reg",
+      "ok": true,
+      "problems": []
+    }
+  },
+  {
+    "id": "x_7d5121c5",
+    "type": "gray_src",
+    "dir": "flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_7d5121c5",
+    "job": "x_7d5121c5",
+    "checker_module": "aegis_chk_gray_src_x_7d5121c5",
+    "lat": 1,
+    "n_hold": 8,
+    "min_gap": 4,
+    "obligations": [],
+    "proof": {
+      "status": "FAIL",
+      "failed": [
+        "G1",
+        "G2"
+      ],
+      "trace": "flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_7d5121c5/x_7d5121c5/engine_0/trace.vcd",
+      "engine": "smtbmc z3",
+      "note": "PDR FAIL; k-induction FAIL"
+    },
+    "structural": {
+      "rule": "R4 registered launch",
+      "signal": "rx_sync_reg_1",
+      "ok": true,
+      "problems": []
+    },
+    "baseline_violation": "contract fails on the unmodified design: pre-existing CDC bug or missing assumption -- review before locking"
+  },
+  {
+    "id": "x_2de12529",
+    "type": "gray_src",
+    "dir": "flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_2de12529",
+    "job": "x_2de12529",
+    "checker_module": "aegis_chk_gray_src_x_2de12529",
+    "lat": 1,
+    "n_hold": 4,
+    "min_gap": 2,
+    "obligations": [],
+    "proof": {
+      "status": "PASS",
+      "failed": [],
+      "trace": null,
+      "engine": "abc pdr",
+      "note": "PDR PASS"
+    },
+    "structural": {
+      "rule": "R4 registered launch",
+      "signal": "rd_ptr_gray_reg",
+      "ok": true,
+      "problems": []
+    }
+  }
+]

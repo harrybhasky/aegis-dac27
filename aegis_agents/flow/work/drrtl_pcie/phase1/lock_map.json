@@ -1,0 +1,12 @@
+{
+ "immutable": [
+  "pcie.v0.v:66",
+  "pcie.v0.v:94"
+ ],
+ "category": {
+  "pcie.v0.v:66": "capacity",
+  "pcie.v0.v:94": "capacity"
+ },
+ "contract": {},
+ "contracts": {}
+}

@@ -1,0 +1,42 @@
+{
+ "immutable": [
+  "DSP.v0.v:10",
+  "DSP.v0.v:11",
+  "DSP.v0.v:12",
+  "DSP.v0.v:125",
+  "DSP.v0.v:126",
+  "DSP.v0.v:127",
+  "DSP.v0.v:13",
+  "DSP.v0.v:14",
+  "DSP.v0.v:15",
+  "DSP.v0.v:16",
+  "DSP.v0.v:18",
+  "DSP.v0.v:19",
+  "DSP.v0.v:20",
+  "DSP.v0.v:5",
+  "DSP.v0.v:6",
+  "DSP.v0.v:7",
+  "DSP.v0.v:8"
+ ],
+ "category": {
+  "DSP.v0.v:5": "capacity",
+  "DSP.v0.v:6": "capacity",
+  "DSP.v0.v:7": "capacity",
+  "DSP.v0.v:8": "capacity",
+  "DSP.v0.v:10": "capacity",
+  "DSP.v0.v:11": "capacity",
+  "DSP.v0.v:12": "capacity",
+  "DSP.v0.v:13": "capacity",
+  "DSP.v0.v:14": "capacity",
+  "DSP.v0.v:15": "capacity",
+  "DSP.v0.v:16": "capacity",
+  "DSP.v0.v:18": "capacity",
+  "DSP.v0.v:19": "capacity",
+  "DSP.v0.v:20": "capacity",
+  "DSP.v0.v:125": "capacity",
+  "DSP.v0.v:126": "capacity",
+  "DSP.v0.v:127": "capacity"
+ },
+ "contract": {},
+ "contracts": {}
+}

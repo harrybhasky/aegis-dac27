@@ -1,0 +1,124 @@
+{
+ "clocks": {
+  "m_clk": {
+   "period_ns": 0.73
+  },
+  "s_clk": {
+   "period_ns": 0.58
+  }
+ },
+ "crossings": [
+  {
+   "id": "x_0b91db9a",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/axis_async_fifo/rtl/axis_async_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/axis_async_fifo/rtl/bench_top.v"
+   ],
+   "scope_module": "axis_async_fifo",
+   "clock": "m_clk",
+   "reset": "s_rst",
+   "reset_active_low": false,
+   "src_clock": "m_clk",
+   "dst_clock": "s_clk",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "rd_ptr_gray_reg"
+   },
+   "params": {
+    "ADDR_WIDTH": 5,
+    "CL_KEEP_WDITH": 0,
+    "DATA_WIDTH": 8,
+    "DEPTH": 32,
+    "DEST_ENABLE": 0,
+    "DEST_WIDTH": 8,
+    "DROP_BAD_FRAME": 1,
+    "DROP_OVERSIZE_FRAME": 1,
+    "DROP_WHEN_FULL": 0,
+    "FRAME_FIFO": 1,
+    "FRAME_PAUSE": 1,
+    "ID_ENABLE": 0,
+    "ID_WIDTH": 8,
+    "KEEP_ENABLE": 0,
+    "KEEP_WIDTH": 1,
+    "LAST_ENABLE": 1,
+    "MARK_WHEN_FULL": 0,
+    "OUTPUT_FIFO_ADDR_WIDTH": 3,
+    "OUTPUT_FIFO_ENABLE": 0,
+    "PAUSE_ENABLE": 0,
+    "RAM_PIPELINE": 1,
+    "USER_BAD_FRAME_MASK": 1,
+    "USER_BAD_FRAME_VALUE": 1,
+    "USER_ENABLE": 1,
+    "USER_WIDTH": 1
+   },
+   "resets": [
+    [
+     "s_rst",
+     false
+    ],
+    [
+     "m_rst",
+     false
+    ]
+   ],
+   "settle": 6
+  },
+  {
+   "id": "x_d33c9e21",
+   "type": "gray_src",
+   "rtl": [
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/axis_async_fifo/rtl/axis_async_fifo.v",
+    "/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/designs/axis_async_fifo/rtl/bench_top.v"
+   ],
+   "scope_module": "axis_async_fifo",
+   "clock": "s_clk",
+   "reset": "s_rst",
+   "reset_active_low": false,
+   "src_clock": "s_clk",
+   "dst_clock": "m_clk",
+   "sync_stages": 2,
+   "signals": {
+    "ptr": "wr_ptr_gray_reg"
+   },
+   "params": {
+    "ADDR_WIDTH": 5,
+    "CL_KEEP_WDITH": 0,
+    "DATA_WIDTH": 8,
+    "DEPTH": 32,
+    "DEST_ENABLE": 0,
+    "DEST_WIDTH": 8,
+    "DROP_BAD_FRAME": 1,
+    "DROP_OVERSIZE_FRAME": 1,
+    "DROP_WHEN_FULL": 0,
+    "FRAME_FIFO": 1,
+    "FRAME_PAUSE": 1,
+    "ID_ENABLE": 0,
+    "ID_WIDTH": 8,
+    "KEEP_ENABLE": 0,
+    "KEEP_WIDTH": 1,
+    "LAST_ENABLE": 1,
+    "MARK_WHEN_FULL": 0,
+    "OUTPUT_FIFO_ADDR_WIDTH": 3,
+    "OUTPUT_FIFO_ENABLE": 0,
+    "PAUSE_ENABLE": 0,
+    "RAM_PIPELINE": 1,
+    "USER_BAD_FRAME_MASK": 1,
+    "USER_BAD_FRAME_VALUE": 1,
+    "USER_ENABLE": 1,
+    "USER_WIDTH": 1
+   },
+   "resets": [
+    [
+     "s_rst",
+     false
+    ],
+    [
+     "m_rst",
+     false
+    ]
+   ],
+   "settle": 6
+  }
+ ]
+}

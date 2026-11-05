@@ -1,0 +1,7 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:05 (5)
+Elapsed process time [H:MM:SS (secs)]: 0:00:04 (4)
+engine_0 (smtbmc z3) returned FAIL for basecase
+counterexample trace [basecase]: engine_0/trace.vcd
+counterexample trace [basecase]: engine_0/trace.yw
+  failed assertion aegis_formal_top.chk._witness_.check_assert_checker_v_41_21 at checker.v:41.26-41.62 step 7
+  failed assertion aegis_formal_top.chk._witness_.check_assert_checker_v_42_26 at checker.v:42.26-42.80 step 7

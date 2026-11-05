@@ -1,0 +1,287 @@
+SBY 18:16:43 [x_2de12529] Removing directory '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_2de12529/x_2de12529'.
+SBY 18:16:43 [x_2de12529] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_2de12529/aegis_exposed.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_2de12529/x_2de12529/src/aegis_exposed.v'.
+SBY 18:16:43 [x_2de12529] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_2de12529/checker.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_2de12529/x_2de12529/src/checker.v'.
+SBY 18:16:43 [x_2de12529] Copy '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_2de12529/formal_top.v' to '/Users/harib/code/Projects/AI_RTL_Ver/aegis_agents/flow/work/eth_mac_1g_fifo/phase1.new/contracts/build/x_2de12529/x_2de12529/src/formal_top.v'.
+SBY 18:16:43 [x_2de12529] engine_0: abc pdr
+SBY 18:16:43 [x_2de12529] base: starting process "cd x_2de12529/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 18:16:43 [x_2de12529] base: finished (returncode=0)
+SBY 18:16:43 [x_2de12529] prep: starting process "cd x_2de12529/model; yosys -ql design_prep.log design_prep.ys"
+SBY 18:16:43 [x_2de12529] prep: finished (returncode=0)
+SBY 18:16:43 [x_2de12529] aig: starting process "cd x_2de12529/model; yosys -ql design_aiger.log design_aiger.ys"
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_rst like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_clk like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tvalid like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tuser like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tlast like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tdata [0] like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tdata [1] like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tdata [2] like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tdata [3] like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tdata [4] like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tdata [5] like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tdata [6] like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\s_axis_tdata [7] like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\m_rst like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\m_clk like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating undriven bit aegis_formal_top.\m_axis_tready like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: Warning: Treating a total of 16 undriven bits in aegis_formal_top like $anyseq.
+SBY 18:16:43 [x_2de12529] aig: finished (returncode=0)
+SBY 18:16:43 [x_2de12529] engine_0: starting process "cd x_2de12529; yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw'"
+SBY 18:16:43 [x_2de12529] engine_0: ======== ABC command line "read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw"
+SBY 18:16:43 [x_2de12529] engine_0: Warning: The last 3 outputs are interpreted as constraints.
+SBY 18:16:43 [x_2de12529] engine_0: VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 139. MonoCNF = no. SkipGen = no. SolveAll = no.
+SBY 18:16:43 [x_2de12529] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 18:16:43 [x_2de12529] engine_0: 1 : 0 11                                                                1    11      0.00 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 2 : 0 7 23                                                              2    25      0.01 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 3 : 0 2 9 25 ~2                                                          2    31      0.01 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 4 : 0 3 3 7 33 ~2                                                        4    35      0.02 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 5 : 0 3 3 6 15 34 ~9                                                    3    36      0.03 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 6 : 0 3 3 6 12 15 38 ~11                                                 3    37      0.04 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 7 : 0 3 3 6 12 10 28 48 ~17                                              3    37      0.05 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 8 : 0 3 3 6 12 10 11 19 49 ~22                                           3    37      0.06 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 9 : 0 3 3 6 12 10 11 14 23 64 ~25                                        3    37      0.07 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 10 : 0 3 3 6 12 10 11 14 13 14 63 ~37                                     2    37      0.09 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 11 : 0 3 3 6 12 10 11 14 13 5 47 61 ~46                                   3    37      0.11 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 12 : 0 3 3 6 12 10 11 14 13 5 7 6 66 ~53                                  2    37      0.11 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 13 : 0 3 3 6 12 10 11 14 13 5 7 6 18 62 ~54                               3    37      0.13 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 14 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 62 ~54                             1    37      0.13 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 15 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 37 56 ~54                          2    37      0.15 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 16 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 68 ~55                        1    37      0.16 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 17 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 64 ~55                     1    37      0.17 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 18 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 11 91 ~55                  2    37      0.18 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 19 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 63 81 ~63                3    37      0.20 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 20 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 90 ~69               1    37      0.21 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 21 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 85 ~72             1    37      0.23 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 22 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 82 ~70           1    37      0.24 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 23 : ... 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 15 81 ~70      3    37      0.25 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 24 : ... 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 84 ~78       1    37      0.27 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 25 : ... 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 72 ~88       1    37      0.28 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 26 : ... 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 72 ~86      1    37      0.29 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 27 : ... 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 51 72 ~86      3    37      0.31 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 28 : ... 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 90 ~86        1    37      0.32 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 29 : ... 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 91 ~86      1    37      0.34 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 30 : ... 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 87 ~86      1    37      0.35 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 31 : ... 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 8 96 ~86       1    37      0.36 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 32 : ... 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 86 ~86       1    37      0.37 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 33 : ... 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 80 ~86      1    37      0.39 sec  T/O =  0  PRV =  0
+SBY 18:16:43 [x_2de12529] engine_0: 34 : ... 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 11 96 ~86       2    37      0.40 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 35 : ... 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 91 108 ~94      3    37      0.44 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 36 : ... 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 112 ~106       1    37      0.46 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 37 : ... 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 107 ~108       1    37      0.48 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 38 : ... 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 105 ~104        1    37      0.50 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 39 : ... 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 108 ~104      1    37      0.51 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 40 : ... 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 107 ~104       1    37      0.53 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 41 : ... 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 107 ~104       1    37      0.55 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 42 : ... 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 106 ~104       1    37      0.56 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 43 : ... 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 22 120 ~104      3    37      0.59 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 44 : ... 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 110 ~115       1    37      0.61 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 45 : ... 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 110 ~110       1    37      0.63 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 46 : ... 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 109 ~110       1    37      0.64 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 47 : ... 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 111 ~110       1    37      0.66 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 48 : ... 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 112 ~110       1    37      0.68 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 49 : ... 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 111 ~110        1    37      0.69 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 50 : ... 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 115 ~110       1    37      0.71 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 51 : ... 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 91 106 ~110      3    37      0.75 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 52 : ... 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 140 ~119       1    37      0.77 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 53 : ... 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 129 ~123        1    37      0.80 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 54 : ... 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 127 ~118      1    37      0.82 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 55 : ... 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 16 124 ~118        3    37      0.84 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 56 : ... 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 129 ~119       1    37      0.87 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 57 : ... 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 128 ~118        1    37      0.89 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 58 : ... 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 125 ~118       1    37      0.90 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 59 : ... 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 25 130 ~118      3    37      0.93 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 60 : ... 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 129 ~119       1    37      0.95 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 61 : ... 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 129 ~118       1    37      0.97 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 62 : ... 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 126 ~118      1    37      0.99 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 63 : ... 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 126 ~118      1    37      1.01 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 64 : ... 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 120 ~118       1    37      1.04 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 65 : ... 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 22 117 ~119      1    37      1.07 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 66 : ... 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 11 130 ~119       2    37      1.09 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 67 : ... 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 127 133 ~126      3    37      1.15 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 68 : ... 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 144 ~140      1    37      1.18 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 69 : ... 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 140 ~145      1    37      1.22 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 70 : ... 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 139 ~144      1    37      1.25 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 71 : ... 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 139 ~147      1    37      1.29 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 72 : ... 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 139 ~148      1    37      1.33 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 73 : ... 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 138 ~149       1    37      1.37 sec  T/O =  0  PRV =  0
+SBY 18:16:44 [x_2de12529] engine_0: 74 : ... 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 136 ~150       1    37      1.40 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 75 : ... 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 139 ~151       1    37      1.44 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 76 : ... 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 138 ~153       1    37      1.47 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 77 : ... 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 137 ~154       1    37      1.51 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 78 : ... 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 136 ~155       1    37      1.55 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 79 : ... 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 138 ~156       1    37      1.58 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 80 : ... 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 136 ~157       1    37      1.62 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 81 : ... 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 136 ~158        1    37      1.66 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 82 : ... 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 132 ~159      1    37      1.69 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 83 : ... 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 33 136 ~160       3    37      1.74 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 84 : ... 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 140 ~170      1    37      1.78 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 85 : ... 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 133 ~170      1    37      1.83 sec  T/O =  0  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: Timing out on output 1 in frame 85 (retrying in next anytime pass).
+SBY 18:16:45 [x_2de12529] engine_0: 85 : ... 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 133 ~170      0    37      1.83 sec  T/O =  1  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 86 : ... 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 2 130 ~169       0    37      1.87 sec  T/O =  1  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 87 : ... 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 2 3 127 ~169       0    37      1.89 sec  T/O =  1  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 88 : ... 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 2 3 7 120 ~169        0    37      1.91 sec  T/O =  1  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 89 : ... 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 2 3 7 3 117 ~169      0    37      1.93 sec  T/O =  1  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 90 : ... 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 2 3 7 3 27 100 ~169      1    37      1.95 sec  T/O =  1  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 91 : ... 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 2 3 7 3 27 64 85 ~173      3    37      2.00 sec  T/O =  1  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 92 : ... 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 2 3 7 3 27 9 15 79 ~205      0    37      2.03 sec  T/O =  1  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: 93 : ... 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 2 3 7 3 27 9 15 41 47 ~205       1    37      2.06 sec  T/O =  1  PRV =  0
+SBY 18:16:45 [x_2de12529] engine_0: Proved output 0 in frame 93.
+SBY 18:16:45 [x_2de12529] engine_0: 94 : ... 3 4 4 4 4 5 5 5 4 4 4 2 3 7 3 27 9 15 41 39 -29 ~236      0    37      2.09 sec  T/O =  1  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 95 : ... 4 4 4 4 5 5 5 4 4 4 2 3 7 3 27 9 15 41 39 0 -29 ~236      0    37      2.11 sec  T/O =  1  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: All outputs solved or timed out in frame 95.
+SBY 18:16:45 [x_2de12529] engine_0: Starting new anytime pass, reusing clauses.
+SBY 18:16:45 [x_2de12529] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 18:16:45 [x_2de12529] engine_0: 1 : 0 661 ~232                                                           0     0      0.16 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 2 : 0 3 658 ~232                                                         0     0      0.16 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 3 : 0 3 3 655 ~232                                                       0     0      0.17 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 4 : 0 3 3 6 649 ~232                                                     0     0      0.17 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 5 : 0 3 3 6 12 637 ~232                                                  0     0      0.17 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 6 : 0 3 3 6 12 10 627 ~232                                               0     0      0.17 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 7 : 0 3 3 6 12 10 11 616 ~232                                            0     0      0.18 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 8 : 0 3 3 6 12 10 11 14 602 ~232                                         0     0      0.18 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 9 : 0 3 3 6 12 10 11 14 13 589 ~232                                      0     0      0.19 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 10 : 0 3 3 6 12 10 11 14 13 5 584 ~232                                    0     0      0.19 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 11 : 0 3 3 6 12 10 11 14 13 5 7 577 ~232                                  0     0      0.19 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 12 : 0 3 3 6 12 10 11 14 13 5 7 6 571 ~232                                0     0      0.20 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 13 : 0 3 3 6 12 10 11 14 13 5 7 6 6 565 ~232                              0     0      0.20 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 14 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 552 ~232                           0     0      0.21 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 15 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 546 ~232                         0     0      0.21 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 16 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 536 ~232                      0     0      0.22 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 17 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 517 ~232                   0     0      0.22 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 18 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 512 ~232                 0     0      0.23 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 19 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 506 ~232               0     0      0.23 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 20 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 500 ~232             0     0      0.24 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 21 : 0 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 496 ~232           0     0      0.24 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 22 : ... 3 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 491 ~232       0     0      0.25 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 23 : ... 3 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 486 ~232       0     0      0.25 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 24 : ... 6 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 482 ~232       0     0      0.26 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 25 : ... 12 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 477 ~232       0     0      0.26 sec  T/O =  0  PRV =  1
+SBY 18:16:45 [x_2de12529] engine_0: 26 : ... 10 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 465 ~232       0     0      0.27 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 27 : ... 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 458 ~232        0     0      0.28 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 28 : ... 11 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 454 ~232      0     0      0.28 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 29 : ... 14 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 450 ~232       0     0      0.29 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 30 : ... 13 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 438 ~232       0     0      0.30 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 31 : ... 5 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 434 ~232        0     0      0.31 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 32 : ... 7 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 418 ~232       0     0      0.32 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 33 : ... 6 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 401 ~232      0     0      0.32 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 34 : ... 6 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 396 ~232      0     0      0.33 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 35 : ... 13 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 389 ~232      0     0      0.34 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 36 : ... 6 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 387 ~232       0     0      0.35 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 37 : ... 10 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 384 ~232       0     0      0.36 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 38 : ... 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 380 ~232        0     0      0.36 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 39 : ... 19 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 377 ~232      0     0      0.37 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 40 : ... 5 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 373 ~232       0     0      0.38 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 41 : ... 6 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 368 ~232       0     0      0.39 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 42 : ... 6 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 364 ~232       0     0      0.39 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 43 : ... 4 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 360 ~232       0     0      0.40 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 44 : ... 5 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 356 ~232       0     0      0.41 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 45 : ... 5 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 351 ~232       0     0      0.42 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 46 : ... 4 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 347 ~232       0     0      0.43 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 47 : ... 5 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 343 ~232       0     0      0.43 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 48 : ... 12 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 338 ~232       0     0      0.44 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 49 : ... 7 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 332 ~232        0     0      0.45 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 50 : ... 4 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 320 ~232       0     0      0.46 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 51 : ... 4 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 313 ~232       0     0      0.47 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 52 : ... 12 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 309 ~232       0     0      0.48 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 53 : ... 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 305 ~232        0     0      0.49 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 54 : ... 4 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 300 ~232      0     0      0.50 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 55 : ... 16 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 293 ~232      0     0      0.51 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 56 : ... 17 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 287 ~232       0     0      0.52 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 57 : ... 5 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 281 ~232        0     0      0.53 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 58 : ... 7 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 270 ~232       0     0      0.54 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 59 : ... 2 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 264 ~232       0     0      0.55 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 60 : ... 3 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 259 ~232       0     0      0.56 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 61 : ... 4 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 254 ~232       0     0      0.56 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 62 : ... 3 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 237 ~232      0     0      0.58 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 63 : ... 4 5 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 232 ~232      0     0      0.59 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 64 : ... 4 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 214 ~232       0     0      0.60 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 65 : ... 4 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 196 ~232      0     0      0.61 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 66 : ... 4 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 191 ~232      0     0      0.62 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 67 : ... 5 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 185 ~232      0     0      0.63 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 68 : ... 4 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 183 ~232      0     0      0.65 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 69 : ... 4 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 180 ~232      0     0      0.66 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 70 : ... 5 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 177 ~232      0     0      0.67 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 71 : ... 6 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 174 ~232      0     0      0.69 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 72 : ... 12 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 170 ~232      0     0      0.70 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 73 : ... 7 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 166 ~232       0     0      0.71 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 74 : ... 4 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 163 ~232       0     0      0.73 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 75 : ... 4 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 160 ~232       0     0      0.74 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 76 : ... 5 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 156 ~232       0     0      0.75 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 77 : ... 7 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 152 ~232       0     0      0.77 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 78 : ... 6 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 148 ~232       0     0      0.78 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 79 : ... 6 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 144 ~232       0     0      0.80 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 80 : ... 11 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 139 ~232       0     0      0.82 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 81 : ... 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 134 ~232        0     0      0.83 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 82 : ... 6 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 129 ~232      0     0      0.84 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 83 : ... 5 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 125 ~232      0     0      0.86 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 84 : ... 5 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 121 ~232      0     0      0.87 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 85 : ... 17 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 120 ~232      1     6      0.89 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 86 : ... 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 120 ~232       1    11      0.92 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 87 : ... 5 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 85 ~233      1    13      0.95 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 88 : ... 18 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 85 ~234      1    13      0.99 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 89 : ... 18 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 84 ~235       1    13      1.02 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 90 : ... 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 82 ~236        1    13      1.05 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 91 : ... 5 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 81 ~237      1    13      1.08 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 92 : ... 6 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 80 ~238      1    13      1.12 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 93 : ... 2 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 80 ~239      1    13      1.15 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 94 : ... 3 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 78 ~240      1    13      1.18 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 95 : ... 3 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 7 76 ~242      1    13      1.21 sec  T/O =  0  PRV =  1
+SBY 18:16:46 [x_2de12529] engine_0: 96 : ... 3 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 78 ~243      1    13      1.24 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 97 : ... 4 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 76 ~245      1    13      1.27 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 98 : ... 4 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 73 ~247      1    21      1.31 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 99 : ... 3 3 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 71 ~254      1    21      1.34 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 100 : ... 4 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 10 63 ~257       1    21      1.37 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 101 : ... 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 10 5 63 ~259       1    21      1.41 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 102 : ... 4 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 66 ~261      1    21      1.44 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 103 : ... 4 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 66 ~263      1    21      1.47 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 104 : ... 4 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 65 ~265      1    21      1.51 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 105 : ... 5 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 63 ~267      1    21      1.54 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 106 : ... 5 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 63 ~269      1    21      1.58 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 107 : ... 5 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 62 ~271      1    21      1.61 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 108 : ... 4 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 59 ~274      1    21      1.64 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 109 : ... 4 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 58 ~276      1    21      1.68 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 110 : ... 4 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 56 ~278      1    21      1.71 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 111 : ... 3 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 56 ~281      1    21      1.74 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 112 : ... 4 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 53 ~283      1    21      1.78 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 113 : ... 5 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 53 ~285      1    22      1.81 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 114 : ... 5 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 51 ~287      1    22      1.85 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 115 : ... 3 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 46 ~295      1    22      1.88 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 116 : ... 4 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 43 ~299      1    22      1.92 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 117 : ... 5 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 40 ~302      1    22      1.95 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 118 : ... 5 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 5 37 ~305      1    22      1.99 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 119 : ... 5 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 5 5 37 ~308      1    22      2.02 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 120 : ... 5 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 5 5 6 33 ~312      1    22      2.06 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 121 : ... 6 6 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 5 5 6 6 31 ~315      1    22      2.10 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 122 : ... 9 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 5 5 6 6 10 29 ~319       1    22      2.13 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 123 : ... 3 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 5 5 6 6 10 11 15 ~327      1    22      2.17 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 124 : ... 4 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 5 5 6 6 10 5 6 17 ~331       1    22      2.20 sec  T/O =  0  PRV =  1
+SBY 18:16:47 [x_2de12529] engine_0: 125 : ... 5 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 5 5 6 6 10 5 6 6 15 ~335       1    22      2.24 sec  T/O =  0  PRV =  1
+SBY 18:16:48 [x_2de12529] engine_0: 126 : ... 4 4 5 5 4 4 4 5 5 5 6 6 9 5 5 5 5 5 6 6 10 5 6 6 10 9 ~342       1    22      2.28 sec  T/O =  0  PRV =  1
+SBY 18:16:48 [x_2de12529] engine_0: 127 : ... 4 5 5 5 6 6 9 5 5 5 5 5 6 6 10 5 6 6 10 12 -5 ~350       1    22      2.31 sec  T/O =  0  PRV =  1
+SBY 18:16:48 [x_2de12529] engine_0: 128 : ... 5 5 5 6 6 9 5 5 5 5 5 6 6 10 5 6 6 10 6 11 -4 ~355       1    22      2.35 sec  T/O =  0  PRV =  1
+SBY 18:16:48 [x_2de12529] engine_0: 129 : ... 5 5 6 6 9 5 5 5 5 5 6 6 10 5 6 6 10 6 11 10 -12 ~364      1    22      2.39 sec  T/O =  0  PRV =  1
+SBY 18:16:48 [x_2de12529] engine_0: Proved output 1 in frame 129.
+SBY 18:16:48 [x_2de12529] engine_0: 130 : ... 5 6 6 9 5 5 5 5 5 6 6 10 5 6 6 10 6 11 10 6 -29 ~375      0    22      2.42 sec  T/O =  0  PRV =  2
+SBY 18:16:48 [x_2de12529] engine_0: 131 : ... 6 6 9 5 5 5 5 5 6 6 10 5 6 6 10 6 11 10 6 0 -29 ~375      0    22      2.44 sec  T/O =  0  PRV =  2
+SBY 18:16:48 [x_2de12529] engine_0: All outputs solved or timed out in frame 131.
+SBY 18:16:48 [x_2de12529] engine_0: Block = 1536  Oblig =  1904  Clause =  1732  Call =113953 (sat=85.2%)  Cex =   0  Start = 258
+SBY 18:16:48 [x_2de12529] engine_0: SAT solving =     2.51 sec ( 54.75 %)
+SBY 18:16:48 [x_2de12529] engine_0: unsat     =     0.16 sec (  3.52 %)
+SBY 18:16:48 [x_2de12529] engine_0: sat       =     2.35 sec ( 51.23 %)
+SBY 18:16:48 [x_2de12529] engine_0: Generalize  =     0.24 sec (  5.18 %)
+SBY 18:16:48 [x_2de12529] engine_0: Push clause =     2.46 sec ( 53.68 %)
+SBY 18:16:48 [x_2de12529] engine_0: Ternary sim =     0.03 sec (  0.73 %)
+SBY 18:16:48 [x_2de12529] engine_0: Containment =     0.00 sec (  0.03 %)
+SBY 18:16:48 [x_2de12529] engine_0: CNF compute =     0.28 sec (  6.18 %)
+SBY 18:16:48 [x_2de12529] engine_0: Refinement  =     0.00 sec (  0.00 %)
+SBY 18:16:48 [x_2de12529] engine_0: TOTAL       =     4.58 sec (100.00 %)
+SBY 18:16:48 [x_2de12529] engine_0: Property proved.  Time =     4.62 sec
+SBY 18:16:48 [x_2de12529] engine_0: Counter-example is not available.
+SBY 18:16:48 [x_2de12529] engine_0: finished (returncode=0)
+SBY 18:16:48 [x_2de12529] engine_0: Status returned by engine: PASS
+SBY 18:16:48 [x_2de12529] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:05 (5)
+SBY 18:16:48 [x_2de12529] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:05 (5)
+SBY 18:16:48 [x_2de12529] summary: engine_0 (abc pdr) returned PASS
+SBY 18:16:48 [x_2de12529] summary: engine_0 did not produce any traces
+SBY 18:16:48 [x_2de12529] DONE (PASS, rc=0)

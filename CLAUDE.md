@@ -1,3 +1,38 @@
+# ROUND 2 (2026-11-05) -- READ THIS FIRST
+
+Round 1 (Exp 01 subset + Exp 03 ablation, 15 runs) is done and imported on machine 1. Thank you!
+Machine 1 overheats, so this machine now runs ALL remaining benchmark runs (21 runs, a few days).
+
+1. Stop anything still running from round 1: `pkill -f run_machine2.sh; pkill -f run_matrix.sh` (it should be done).
+2. Get the round-2 code (two small fixes + Phase 1 data for 12 more designs). Your finished runs in
+   `aegis_agents/flow/runs/` are untracked and are NOT touched by this:
+   ```
+   git fetch origin && git checkout main && git pull origin main
+   ```
+   What changed: `tools/aegis_select.py` (a region with >1000 timing endpoints, e.g. a FIFO memory synthesized to
+   flops, is shown to the analyzer as one endpoint per register; regions <=1000 are unchanged, so round-1 runs are
+   unaffected), `run_matrix.sh` (also retries when the Claude CLI is briefly unreachable),
+   `handoff/pack_results.sh` (pushes to the NEW branch `results-machine2-r2`), `handoff/reference_baselines.json`
+   (+ axis_async_fifo), `handoff/run_machine2_round2.sh` (new queue), and `flow/work/<d>/phase1/` for axis_async_fifo,
+   eth_mac_1g_fifo, drrtl_spi, drrtl_pcie, drrtl_dsp, drrtl_router and the 6 rtlopt_* designs.
+3. Same environment as round 1 (section "Environment" below; nothing new to install). The queue first runs
+   `handoff/check_env.py`; it must print `ENVIRONMENT MATCHES` (11 designs now).
+4. Start the queue (keep the laptop on the charger, awake, online):
+   ```
+   cd experiments && nohup caffeinate -i bash handoff/run_machine2_round2.sh >> handoff/machine2_r2.out 2>&1 &
+   ```
+   Order (most important first): axis_async_fifo/aegis -> drrtl_spi/pcie/dsp/router x {aegis, drrtl} ->
+   RTL-OPT 6 designs x {aegis, drrtl} -> eth_mac_1g_fifo x {aegis, drrtl} (largest, ~1 day each, EQY limit 2700 s).
+5. It packs and pushes after every step automatically. You can also push any time: `bash experiments/handoff/pack_results.sh`.
+6. All rules below still apply: no code edits, never type numbers, invalid runs are archived and re-run automatically,
+   low load. Additionally, kill orphaned EDA processes if you see any running for hours with parent PID 1:
+   `for p in $(pgrep -P 1 -f "yosys|yosys-smtbmc|bin/eqy|bin/sby|z3"); do kill $p; done`
+   (machine 1 found yosys / yosys-smtbmc processes left behind by timed-out EQY calls, running 9-21 h).
+7. Report to the user in plain words after each step: which runs finished, anything abnormal
+   (write abnormal events to `experiments/handoff/MACHINE2_NOTES.md`).
+
+---------------------------------------------------------------------------------------------------------------
+
 # CLAUDE.md — Aegis DAC 2027 benchmark, machine 2 handoff
 
 You are helping run the second half of the benchmark for the paper **"Aegis: Clock-Domain-Aware Guardrails for

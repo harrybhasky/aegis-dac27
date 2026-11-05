@@ -1,0 +1,165 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `aegis_formal_top'. Setting top module to aegis_formal_top.
+
+2.1. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_d33c9e21
+Used module:     \axis_async_fifo
+
+2.2. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_d33c9e21
+Used module:     \axis_async_fifo
+Removed 0 unused modules.
+Module aegis_chk_gray_src_x_d33c9e21 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module aegis_formal_top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== aegis_chk_gray_src_x_d33c9e21 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       24 wires
+      144 wire bits
+        9 public wires
+       41 public wire bits
+        3 ports
+        8 port bits
+       32 cells
+        2   $add
+        1   $and
+        1   $anyinit
+        2   $assert
+        1   $assume
+        2   $eq
+        1   $ff
+        1   $ge
+        1   $logic_and
+        2   $logic_not
+        1   $logic_or
+        3   $mux
+        1   $ne
+        1   $not
+        1   $sub
+       11   $xor
+
+=== aegis_formal_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       20 wires
+       46 wire bits
+       18 public wires
+       44 public wire bits
+       14 ports
+       35 port bits
+        7 cells
+        1   $and
+        2   $assume
+        1   $ff
+        1   $mux
+        1   $not
+        1   $or
+        2 submodules
+        1   aegis_chk_gray_src_x_d33c9e21
+        1   axis_async_fifo
+
+=== axis_async_fifo ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      298 wires
+     1131 wire bits
+      262 public wires
+      920 public wire bits
+       15 ports
+       41 port bits
+      262 cells
+        2   $add
+        2   $anyinit
+       33   $anyseq
+        2   $assume
+        4   $eq
+       29   $ff
+       23   $logic_and
+       11   $logic_not
+        9   $logic_or
+        1   $mem_v2
+      135   $mux
+        5   $not
+        2   $or
+        4   $xor
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      301 aegis_formal_top
+       32 aegis_chk_gray_src_x_d33c9e21
+      262 axis_async_fifo
+
+        +----------Count including submodules.
+        | 
+      342 wires
+     1321 wire bits
+      289 public wires
+     1005 public wire bits
+       32 ports
+       84 port bits
+        - memories
+        - memory bits
+        - processes
+      301 cells
+        4   $add
+        2   $and
+        3   $anyinit
+       33   $anyseq
+        2   $assert
+        5   $assume
+        6   $eq
+       31   $ff
+        1   $ge
+       24   $logic_and
+       13   $logic_not
+       10   $logic_or
+        1   $mem_v2
+      139   $mux
+        1   $ne
+        7   $not
+        3   $or
+        1   $sub
+       15   $xor
+        2 submodules
+        1   aegis_chk_gray_src_x_d33c9e21
+        1   axis_async_fifo
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module axis_async_fifo.
+Creating SMT-LIBv2 representation of module aegis_chk_gray_src_x_d33c9e21.
+Creating SMT-LIBv2 representation of module aegis_formal_top.
+
+End of script. Logfile hash: 2c860d39ef, time: 0.01s, user: 0.02s, system: 0.00s, MEM: 13.95 MB peak
+Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+Time spent: 66% 2x write_smt2 (0 sec), 22% 2x read_rtlil (0 sec), ...

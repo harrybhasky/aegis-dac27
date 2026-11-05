@@ -1,0 +1,31 @@
+{
+ "sdc": {
+  "file": "rtlopt_ticket_machine.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "ticket_machine",
+ "entries": [
+  {
+   "reg": "param@ticket_machine.v0.v:3",
+   "category": "capacity",
+   "scope": "line",
+   "file": "ticket_machine.v0.v",
+   "lines": [
+    3,
+    3
+   ],
+   "sha256": "af1a2e3a1672b3c643d86be5097b4b92f4c363369a12daff55b450ae72185956"
+  },
+  {
+   "reg": "param@ticket_machine.v0.v:4",
+   "category": "capacity",
+   "scope": "line",
+   "file": "ticket_machine.v0.v",
+   "lines": [
+    4,
+    4
+   ],
+   "sha256": "8a643ed5d861163441af69b4f539e7c037f97be4961f6c7c8b21776e614e9b59"
+  }
+ ]
+}

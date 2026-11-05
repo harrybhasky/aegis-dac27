@@ -1,0 +1,8 @@
+# running in x_d33c9e21/src/
+read -formal aegis_exposed.v checker.v formal_top.v
+prep -top aegis_formal_top
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

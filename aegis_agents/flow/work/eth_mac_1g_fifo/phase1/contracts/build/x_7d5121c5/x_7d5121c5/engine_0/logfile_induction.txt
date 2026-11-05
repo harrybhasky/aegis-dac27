@@ -1,0 +1,9 @@
+##   0:00:00  Solver: z3
+##   0:00:00  Trying induction in step 32..
+##   0:00:00  Trying induction in step 31..
+##   0:00:00  Trying induction in step 30..
+##   0:00:00  Trying induction in step 29..
+##   0:00:02  Trying induction in step 28..
+##   0:00:41  Trying induction in step 27..
+##   0:01:41  waiting for solver (1 minute)
+##   0:01:54  Trying induction in step 26..

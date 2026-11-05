@@ -1,0 +1,24 @@
+{
+ "clocks": 2,
+ "asynchronous_pairs": 2,
+ "constraint_audit": 2,
+ "flops": 52,
+ "unclocked_flops": 0,
+ "crossings": {
+  "synchronizer": 7,
+  "gray_candidate": 2,
+  "qualified_capture": 1,
+  "insufficient_depth": 0,
+  "unsynchronized": 0
+ },
+ "contracts_proven": [
+  "x_0b91db9a"
+ ],
+ "immutable_lines": 168,
+ "contract_lines": 76,
+ "checksum_entries": 91,
+ "warnings": [],
+ "issues": [
+  "contract x_d33c9e21 (gray_src) does not hold on the unmodified design: pre-existing CDC issue or missing assumption; its logic stays immutable"
+ ]
+}

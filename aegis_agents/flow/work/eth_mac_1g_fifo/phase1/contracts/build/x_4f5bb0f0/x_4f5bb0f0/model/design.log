@@ -1,0 +1,875 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: aegis_exposed.v
+Parsing formal SystemVerilog input from `aegis_exposed.v' to AST representation.
+Storing AST representation for module `$abstract\axis_async_fifo'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: checker.v
+Parsing formal SystemVerilog input from `checker.v' to AST representation.
+Storing AST representation for module `$abstract\aegis_chk_gray_src_x_4f5bb0f0'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: formal_top.v
+Parsing formal SystemVerilog input from `formal_top.v' to AST representation.
+Storing AST representation for module `$abstract\aegis_formal_top'.
+Successfully finished Verilog frontend.
+
+4. Executing PREP pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\aegis_formal_top'.
+Generating RTLIL representation for module `\aegis_formal_top'.
+
+4.2.1. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+
+4.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\aegis_chk_gray_src_x_4f5bb0f0'.
+Generating RTLIL representation for module `\aegis_chk_gray_src_x_4f5bb0f0'.
+
+4.2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\axis_async_fifo'.
+Generating RTLIL representation for module `\axis_async_fifo'.
+
+4.2.4. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_4f5bb0f0
+Used module:     \axis_async_fifo
+
+4.2.5. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_4f5bb0f0
+Used module:     \axis_async_fifo
+Removing unused module `$abstract\aegis_formal_top'.
+Removing unused module `$abstract\aegis_chk_gray_src_x_4f5bb0f0'.
+Removing unused module `$abstract\axis_async_fifo'.
+Removed 3 unused modules.
+Module aegis_chk_gray_src_x_4f5bb0f0 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module aegis_formal_top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4.3. Executing PROC pass (convert processes to netlists).
+
+4.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:417$222 in module axis_async_fifo.
+Marked 1 switch rules as full_case in process $proc$aegis_exposed.v:360$194 in module axis_async_fifo.
+Marked 10 switch rules as full_case in process $proc$aegis_exposed.v:267$64 in module axis_async_fifo.
+Marked 1 switch rules as full_case in process $proc$checker.v:21$12 in module aegis_chk_gray_src_x_4f5bb0f0.
+Removed a total of 0 dead cases.
+
+4.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 112 assignments to connections.
+
+4.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:265$362'.
+  Set init value: \wr_ptr_update_valid_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:264$361'.
+  Set init value: \wr_ptr_update_sync3_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:263$360'.
+  Set init value: \wr_ptr_update_sync2_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:262$359'.
+  Set init value: \wr_ptr_update_sync1_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:261$358'.
+  Set init value: \wr_ptr_update_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:260$357'.
+  Set init value: \wr_ptr_update_ack_sync2_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:259$356'.
+  Set init value: \wr_ptr_update_ack_sync1_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:258$355'.
+  Set init value: \wr_ptr_sync_commit_reg = 7'0000000
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:257$354'.
+  Set init value: \wr_ptr_reg = 7'0000000
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:256$353'.
+  Set init value: \wr_ptr_gray_reg = 7'0000000
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:255$352'.
+  Set init value: \wr_ptr_commit_sync_reg = 7'0000000
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:254$351'.
+  Set init value: \wr_ptr_commit_reg = 7'0000000
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:253$350'.
+  Set init value: \s_rst_sync3_reg = 1'1
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:252$349'.
+  Set init value: \s_rst_sync2_reg = 1'1
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:251$348'.
+  Set init value: \s_rst_sync1_reg = 1'1
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:249$347'.
+  Set init value: \s_frame_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:246$346'.
+  Set init value: \rd_ptr_reg = 7'0000000
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:245$345'.
+  Set init value: \rd_ptr_gray_sync2_reg = 7'0000000
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:244$344'.
+  Set init value: \rd_ptr_gray_sync1_reg = 7'0000000
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:241$343'.
+  Set init value: \mark_frame_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:240$342'.
+  Set init value: \m_terminate_frame_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:239$341'.
+  Set init value: \m_rst_sync3_reg = 1'1
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:238$340'.
+  Set init value: \m_rst_sync2_reg = 1'1
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:237$339'.
+  Set init value: \m_rst_sync1_reg = 1'1
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:235$338'.
+  Set init value: \m_frame_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:234$337'.
+  Set init value: \m_drop_frame_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:233$336'.
+  Set init value: \m_axis_tvalid_pipe_reg = 2'00
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:206$335'.
+  Set init value: \drop_frame_reg = 1'0
+Found init rule in `\axis_async_fifo.$proc$aegis_exposed.v:33$334'.
+  Set init value: \rd_ptr_gray_reg = 7'0000000
+Found init rule in `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:20$53'.
+  Set init value: \f_ok = 8'00000000
+Found init rule in `\aegis_formal_top.$proc$formal_top.v:23$7'.
+  Set init value: \aegis_init = 1'1
+
+4.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \m_rst in `\axis_async_fifo.$proc$aegis_exposed.v:417$222'.
+Found async reset \s_rst in `\axis_async_fifo.$proc$aegis_exposed.v:360$194'.
+
+4.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~15 debug messages>
+
+4.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:265$362'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:264$361'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:263$360'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:262$359'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:261$358'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:260$357'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:259$356'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:258$355'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:257$354'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:256$353'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:255$352'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:254$351'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:253$350'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:252$349'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:251$348'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:249$347'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:246$346'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:245$345'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:244$344'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:241$343'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:240$342'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:239$341'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:238$340'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:237$339'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:235$338'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:234$337'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:233$336'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:206$335'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:33$334'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:417$222'.
+     1/1: $0\s_rst_sync1_reg[0:0]
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:415$221'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:413$220'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:411$219'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:409$218'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:407$217'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:405$216'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:403$215'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:401$214'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:399$213'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:397$212'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:395$211'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:393$210'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:391$209'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:389$208'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:387$207'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:385$206'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:383$205'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:381$204'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:379$203'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:377$202'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:375$201'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:373$200'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:371$199'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:369$198'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:367$197'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:365$196'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:363$195'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:360$194'.
+     1/1: $0\m_rst_sync1_reg[0:0]
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:358$193'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:356$192'.
+Creating decoders for process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+     1/30: $1$memwr$\mem$aegis_exposed.v:287$63_EN[9:0]$124
+     2/30: $1$memwr$\mem$aegis_exposed.v:287$63_DATA[9:0]$123
+     3/30: $1$memwr$\mem$aegis_exposed.v:287$63_ADDR[5:0]$122
+     4/30: $1$memwr$\mem$aegis_exposed.v:285$62_EN[9:0]$121
+     5/30: $1$memwr$\mem$aegis_exposed.v:285$62_DATA[9:0]$120
+     6/30: $1$memwr$\mem$aegis_exposed.v:285$62_ADDR[5:0]$119
+     7/30: $1$memwr$\mem$aegis_exposed.v:283$61_EN[9:0]$118
+     8/30: $1$memwr$\mem$aegis_exposed.v:283$61_DATA[9:0]$117
+     9/30: $1$memwr$\mem$aegis_exposed.v:283$61_ADDR[5:0]$116
+    10/30: $1$memwr$\mem$aegis_exposed.v:281$60_EN[9:0]$115
+    11/30: $1$memwr$\mem$aegis_exposed.v:281$60_DATA[9:0]$114
+    12/30: $1$memwr$\mem$aegis_exposed.v:281$60_ADDR[5:0]$113
+    13/30: $1$memwr$\mem$aegis_exposed.v:279$59_EN[9:0]$112
+    14/30: $1$memwr$\mem$aegis_exposed.v:279$59_DATA[9:0]$111
+    15/30: $1$memwr$\mem$aegis_exposed.v:279$59_ADDR[5:0]$110
+    16/30: $1$memwr$\mem$aegis_exposed.v:277$58_EN[9:0]$109
+    17/30: $1$memwr$\mem$aegis_exposed.v:277$58_DATA[9:0]$108
+    18/30: $1$memwr$\mem$aegis_exposed.v:277$58_ADDR[5:0]$107
+    19/30: $1$memwr$\mem$aegis_exposed.v:275$57_EN[9:0]$106
+    20/30: $1$memwr$\mem$aegis_exposed.v:275$57_DATA[9:0]$105
+    21/30: $1$memwr$\mem$aegis_exposed.v:275$57_ADDR[5:0]$104
+    22/30: $1$memwr$\mem$aegis_exposed.v:273$56_EN[9:0]$103
+    23/30: $1$memwr$\mem$aegis_exposed.v:273$56_DATA[9:0]$102
+    24/30: $1$memwr$\mem$aegis_exposed.v:273$56_ADDR[5:0]$101
+    25/30: $1$memwr$\mem$aegis_exposed.v:271$55_EN[9:0]$100
+    26/30: $1$memwr$\mem$aegis_exposed.v:271$55_DATA[9:0]$99
+    27/30: $1$memwr$\mem$aegis_exposed.v:271$55_ADDR[5:0]$98
+    28/30: $1$memwr$\mem$aegis_exposed.v:269$54_EN[9:0]$97
+    29/30: $1$memwr$\mem$aegis_exposed.v:269$54_DATA[9:0]$96
+    30/30: $1$memwr$\mem$aegis_exposed.v:269$54_ADDR[5:0]$95
+Creating decoders for process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:20$53'.
+Creating decoders for process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:38$42'.
+Creating decoders for process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:37$31'.
+Creating decoders for process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:42$25'.
+     1/1: $assert$checker.v:42$26_EN
+Creating decoders for process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:41$20'.
+     1/1: $assert$checker.v:41$21_EN
+Creating decoders for process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:25$15'.
+Creating decoders for process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:21$12'.
+     1/1: $0\f_ok[7:0]
+Creating decoders for process `\aegis_formal_top.$proc$formal_top.v:23$7'.
+Creating decoders for process `\aegis_formal_top.$proc$formal_top.v:25$5'.
+     1/1: $assume$formal_top.v:25$6_EN
+Creating decoders for process `\aegis_formal_top.$proc$formal_top.v:24$4'.
+
+4.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\aegis_chk_gray_src_x_4f5bb0f0.\g2b$func$checker.v:38$9.$result' from process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:38$42'.
+No latch inferred for signal `\aegis_chk_gray_src_x_4f5bb0f0.\g2b$func$checker.v:37$8.$result' from process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:37$31'.
+
+4.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\axis_async_fifo.\s_rst_sync1_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:417$222'.
+  created $adff cell `$procdff$466' with positive edge clock and positive level reset.
+Creating register for signal `\axis_async_fifo.\m_axis_pipe_reg[1]' using process `\axis_async_fifo.$proc$aegis_exposed.v:415$221'.
+  created $dff cell `$procdff$467' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\m_axis_pipe_reg[0]' using process `\axis_async_fifo.$proc$aegis_exposed.v:413$220'.
+  created $dff cell `$procdff$468' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\m_terminate_frame_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:411$219'.
+  created $dff cell `$procdff$469' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\m_drop_frame_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:409$218'.
+  created $dff cell `$procdff$470' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\m_frame_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:407$217'.
+  created $dff cell `$procdff$471' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\m_axis_tvalid_pipe_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:405$216'.
+  created $dff cell `$procdff$472' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\rd_ptr_gray_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:403$215'.
+  created $dff cell `$procdff$473' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\rd_ptr_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:401$214'.
+  created $dff cell `$procdff$474' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_update_sync3_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:399$213'.
+  created $dff cell `$procdff$475' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_update_sync2_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:397$212'.
+  created $dff cell `$procdff$476' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_update_sync1_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:395$211'.
+  created $dff cell `$procdff$477' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_commit_sync_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:393$210'.
+  created $dff cell `$procdff$478' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_update_ack_sync2_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:391$209'.
+  created $dff cell `$procdff$479' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_update_ack_sync1_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:389$208'.
+  created $dff cell `$procdff$480' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\rd_ptr_gray_sync2_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:387$207'.
+  created $dff cell `$procdff$481' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\rd_ptr_gray_sync1_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:385$206'.
+  created $dff cell `$procdff$482' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\mark_frame_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:383$205'.
+  created $dff cell `$procdff$483' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\drop_frame_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:381$204'.
+  created $dff cell `$procdff$484' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\s_frame_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:379$203'.
+  created $dff cell `$procdff$485' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_update_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:377$202'.
+  created $dff cell `$procdff$486' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_update_valid_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:375$201'.
+  created $dff cell `$procdff$487' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_sync_commit_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:373$200'.
+  created $dff cell `$procdff$488' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_gray_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:371$199'.
+  created $dff cell `$procdff$489' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_commit_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:369$198'.
+  created $dff cell `$procdff$490' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\wr_ptr_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:367$197'.
+  created $dff cell `$procdff$491' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\m_rst_sync3_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:365$196'.
+  created $dff cell `$procdff$492' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\m_rst_sync2_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:363$195'.
+  created $dff cell `$procdff$493' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\m_rst_sync1_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:360$194'.
+  created $adff cell `$procdff$496' with positive edge clock and positive level reset.
+Creating register for signal `\axis_async_fifo.\s_rst_sync3_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:358$193'.
+  created $dff cell `$procdff$497' with positive edge clock.
+Creating register for signal `\axis_async_fifo.\s_rst_sync2_reg' using process `\axis_async_fifo.$proc$aegis_exposed.v:356$192'.
+  created $dff cell `$procdff$498' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:269$54_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$499' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:269$54_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$500' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:269$54_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$501' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:271$55_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$502' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:271$55_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$503' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:271$55_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$504' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:273$56_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$505' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:273$56_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$506' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:273$56_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$507' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:275$57_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$508' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:275$57_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$509' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:275$57_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$510' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:277$58_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$511' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:277$58_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$512' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:277$58_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$513' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:279$59_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$514' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:279$59_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$515' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:279$59_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$516' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:281$60_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$517' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:281$60_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$518' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:281$60_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$519' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:283$61_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$520' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:283$61_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$521' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:283$61_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$522' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:285$62_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$523' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:285$62_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$524' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:285$62_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$525' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:287$63_ADDR' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$526' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:287$63_DATA' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$527' with positive edge clock.
+Creating register for signal `\axis_async_fifo.$memwr$\mem$aegis_exposed.v:287$63_EN' using process `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+  created $dff cell `$procdff$528' with positive edge clock.
+Creating register for signal `\aegis_chk_gray_src_x_4f5bb0f0.\past_ptr' using process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:25$15'.
+  created $dff cell `$procdff$529' with positive edge clock.
+Creating register for signal `\aegis_chk_gray_src_x_4f5bb0f0.\f_ok' using process `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:21$12'.
+  created $dff cell `$procdff$530' with positive edge clock.
+Creating register for signal `\aegis_formal_top.\aegis_init' using process `\aegis_formal_top.$proc$formal_top.v:24$4'.
+  created $dff cell `$procdff$531' with positive edge clock.
+
+4.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:265$362'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:264$361'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:263$360'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:262$359'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:261$358'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:260$357'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:259$356'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:258$355'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:257$354'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:256$353'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:255$352'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:254$351'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:253$350'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:252$349'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:251$348'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:249$347'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:246$346'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:245$345'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:244$344'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:241$343'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:240$342'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:239$341'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:238$340'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:237$339'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:235$338'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:234$337'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:233$336'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:206$335'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:33$334'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:417$222'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:415$221'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:413$220'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:411$219'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:409$218'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:407$217'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:405$216'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:403$215'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:401$214'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:399$213'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:397$212'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:395$211'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:393$210'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:391$209'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:389$208'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:387$207'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:385$206'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:383$205'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:381$204'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:379$203'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:377$202'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:375$201'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:373$200'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:371$199'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:369$198'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:367$197'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:365$196'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:363$195'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:360$194'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:358$193'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:356$192'.
+Found and cleaned up 10 empty switches in `\axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+Removing empty process `axis_async_fifo.$proc$aegis_exposed.v:267$64'.
+Removing empty process `aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:20$53'.
+Removing empty process `aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:38$42'.
+Removing empty process `aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:37$31'.
+Found and cleaned up 1 empty switch in `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:42$25'.
+Removing empty process `aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:42$25'.
+Found and cleaned up 1 empty switch in `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:41$20'.
+Removing empty process `aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:41$20'.
+Removing empty process `aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:25$15'.
+Found and cleaned up 2 empty switches in `\aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:21$12'.
+Removing empty process `aegis_chk_gray_src_x_4f5bb0f0.$proc$checker.v:21$12'.
+Removing empty process `aegis_formal_top.$proc$formal_top.v:23$7'.
+Found and cleaned up 1 empty switch in `\aegis_formal_top.$proc$formal_top.v:25$5'.
+Removing empty process `aegis_formal_top.$proc$formal_top.v:25$5'.
+Removing empty process `aegis_formal_top.$proc$formal_top.v:24$4'.
+Cleaned up 15 empty switches.
+
+4.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axis_async_fifo.
+<suppressed ~2 debug messages>
+Optimizing module aegis_chk_gray_src_x_4f5bb0f0.
+<suppressed ~1 debug messages>
+Optimizing module aegis_formal_top.
+
+4.4. Executing FUTURE pass.
+
+4.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axis_async_fifo.
+Optimizing module aegis_chk_gray_src_x_4f5bb0f0.
+Optimizing module aegis_formal_top.
+
+4.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axis_async_fifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_4f5bb0f0..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 30 unused cells and 402 unused wires.
+<suppressed ~33 debug messages>
+
+4.7. Executing CHECK pass (checking for obvious problems).
+Checking module axis_async_fifo...
+Checking module aegis_chk_gray_src_x_4f5bb0f0...
+Checking module aegis_formal_top...
+Found and reported 0 problems.
+
+4.8. Executing OPT pass (performing simple optimizations).
+
+4.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axis_async_fifo.
+Optimizing module aegis_chk_gray_src_x_4f5bb0f0.
+Optimizing module aegis_formal_top.
+
+4.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axis_async_fifo'.
+Computing hashes of 249 cells of `\axis_async_fifo'.
+Finding duplicate cells in `\axis_async_fifo'.
+Computing hashes of 238 cells of `\axis_async_fifo'.
+Finding duplicate cells in `\axis_async_fifo'.
+Computing hashes of 237 cells of `\axis_async_fifo'.
+Finding duplicate cells in `\axis_async_fifo'.
+<suppressed ~36 debug messages>
+Finding identical cells in module `\aegis_chk_gray_src_x_4f5bb0f0'.
+Computing hashes of 33 cells of `\aegis_chk_gray_src_x_4f5bb0f0'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_4f5bb0f0'.
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 7 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Removed a total of 12 cells.
+
+4.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axis_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $ternary$aegis_exposed.v:473$276.
+    dead port 2/2 on $mux $ternary$aegis_exposed.v:471$274.
+    dead port 2/2 on $mux $ternary$aegis_exposed.v:469$272.
+Running muxtree optimizer on module \aegis_chk_gray_src_x_4f5bb0f0..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \aegis_formal_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 3 multiplexer ports.
+<suppressed ~314 debug messages>
+
+4.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axis_async_fifo.
+    Consolidated identical input bits for $mux cell $procmux$445:
+      Old ports: A=10'0000000000, B=10'0000000001, Y=$0$memwr$\mem$aegis_exposed.v:269$54_EN[9:0]$67
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:269$54_EN[9:0]$67 [0]
+      New connections: $0$memwr$\mem$aegis_exposed.v:269$54_EN[9:0]$67 [9:1] = 9'000000000
+    Consolidated identical input bits for $mux cell $procmux$436:
+      Old ports: A=10'0000000000, B=10'0000000010, Y=$0$memwr$\mem$aegis_exposed.v:271$55_EN[9:0]$70
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:271$55_EN[9:0]$70 [1]
+      New connections: { $0$memwr$\mem$aegis_exposed.v:271$55_EN[9:0]$70 [9:2] $0$memwr$\mem$aegis_exposed.v:271$55_EN[9:0]$70 [0] } = 9'000000000
+    Consolidated identical input bits for $mux cell $procmux$427:
+      Old ports: A=10'0000000000, B=10'0000000100, Y=$0$memwr$\mem$aegis_exposed.v:273$56_EN[9:0]$73
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:273$56_EN[9:0]$73 [2]
+      New connections: { $0$memwr$\mem$aegis_exposed.v:273$56_EN[9:0]$73 [9:3] $0$memwr$\mem$aegis_exposed.v:273$56_EN[9:0]$73 [1:0] } = 9'000000000
+    Consolidated identical input bits for $mux cell $procmux$418:
+      Old ports: A=10'0000000000, B=10'0000001000, Y=$0$memwr$\mem$aegis_exposed.v:275$57_EN[9:0]$76
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:275$57_EN[9:0]$76 [3]
+      New connections: { $0$memwr$\mem$aegis_exposed.v:275$57_EN[9:0]$76 [9:4] $0$memwr$\mem$aegis_exposed.v:275$57_EN[9:0]$76 [2:0] } = 9'000000000
+    Consolidated identical input bits for $mux cell $procmux$409:
+      Old ports: A=10'0000000000, B=10'0000010000, Y=$0$memwr$\mem$aegis_exposed.v:277$58_EN[9:0]$79
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:277$58_EN[9:0]$79 [4]
+      New connections: { $0$memwr$\mem$aegis_exposed.v:277$58_EN[9:0]$79 [9:5] $0$memwr$\mem$aegis_exposed.v:277$58_EN[9:0]$79 [3:0] } = 9'000000000
+    Consolidated identical input bits for $mux cell $procmux$400:
+      Old ports: A=10'0000000000, B=10'0000100000, Y=$0$memwr$\mem$aegis_exposed.v:279$59_EN[9:0]$82
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:279$59_EN[9:0]$82 [5]
+      New connections: { $0$memwr$\mem$aegis_exposed.v:279$59_EN[9:0]$82 [9:6] $0$memwr$\mem$aegis_exposed.v:279$59_EN[9:0]$82 [4:0] } = 9'000000000
+    Consolidated identical input bits for $mux cell $procmux$391:
+      Old ports: A=10'0000000000, B=10'0001000000, Y=$0$memwr$\mem$aegis_exposed.v:281$60_EN[9:0]$85
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:281$60_EN[9:0]$85 [6]
+      New connections: { $0$memwr$\mem$aegis_exposed.v:281$60_EN[9:0]$85 [9:7] $0$memwr$\mem$aegis_exposed.v:281$60_EN[9:0]$85 [5:0] } = 9'000000000
+    Consolidated identical input bits for $mux cell $procmux$382:
+      Old ports: A=10'0000000000, B=10'0010000000, Y=$0$memwr$\mem$aegis_exposed.v:283$61_EN[9:0]$88
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:283$61_EN[9:0]$88 [7]
+      New connections: { $0$memwr$\mem$aegis_exposed.v:283$61_EN[9:0]$88 [9:8] $0$memwr$\mem$aegis_exposed.v:283$61_EN[9:0]$88 [6:0] } = 9'000000000
+    Consolidated identical input bits for $mux cell $procmux$373:
+      Old ports: A=10'0000000000, B=10'0100000000, Y=$0$memwr$\mem$aegis_exposed.v:285$62_EN[9:0]$91
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:285$62_EN[9:0]$91 [8]
+      New connections: { $0$memwr$\mem$aegis_exposed.v:285$62_EN[9:0]$91 [9] $0$memwr$\mem$aegis_exposed.v:285$62_EN[9:0]$91 [7:0] } = 9'000000000
+    Consolidated identical input bits for $mux cell $procmux$364:
+      Old ports: A=10'0000000000, B=10'1000000000, Y=$0$memwr$\mem$aegis_exposed.v:287$63_EN[9:0]$94
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$aegis_exposed.v:287$63_EN[9:0]$94 [9]
+      New connections: $0$memwr$\mem$aegis_exposed.v:287$63_EN[9:0]$94 [8:0] = 9'000000000
+  Optimizing cells in module \axis_async_fifo.
+  Optimizing cells in module \aegis_chk_gray_src_x_4f5bb0f0.
+  Optimizing cells in module \aegis_formal_top.
+Performed a total of 10 changes.
+
+4.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axis_async_fifo'.
+Computing hashes of 234 cells of `\axis_async_fifo'.
+Finding duplicate cells in `\axis_async_fifo'.
+Computing hashes of 233 cells of `\axis_async_fifo'.
+Finding duplicate cells in `\axis_async_fifo'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\aegis_chk_gray_src_x_4f5bb0f0'.
+Computing hashes of 33 cells of `\aegis_chk_gray_src_x_4f5bb0f0'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_4f5bb0f0'.
+Computing hashes of 32 cells of `\aegis_chk_gray_src_x_4f5bb0f0'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_4f5bb0f0'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 7 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Removed a total of 2 cells.
+
+4.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axis_async_fifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_4f5bb0f0..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 0 unused cells and 15 unused wires.
+<suppressed ~2 debug messages>
+
+4.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axis_async_fifo.
+Optimizing module aegis_chk_gray_src_x_4f5bb0f0.
+Optimizing module aegis_formal_top.
+
+4.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axis_async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \aegis_chk_gray_src_x_4f5bb0f0..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \aegis_formal_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~291 debug messages>
+
+4.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axis_async_fifo.
+  Optimizing cells in module \aegis_chk_gray_src_x_4f5bb0f0.
+  Optimizing cells in module \aegis_formal_top.
+Performed a total of 0 changes.
+
+4.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axis_async_fifo'.
+Computing hashes of 233 cells of `\axis_async_fifo'.
+Finding duplicate cells in `\axis_async_fifo'.
+Finding identical cells in module `\aegis_chk_gray_src_x_4f5bb0f0'.
+Computing hashes of 32 cells of `\aegis_chk_gray_src_x_4f5bb0f0'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_4f5bb0f0'.
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 7 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Removed a total of 0 cells.
+
+4.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axis_async_fifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_4f5bb0f0..
+Finding unused cells or wires in module \aegis_formal_top..
+
+4.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axis_async_fifo.
+Optimizing module aegis_chk_gray_src_x_4f5bb0f0.
+Optimizing module aegis_formal_top.
+
+4.8.14. Finished fast OPT passes. (There is nothing left to do.)
+
+4.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell axis_async_fifo.$add$aegis_exposed.v:291$127 ($add).
+Removed top 25 bits (of 32) from port Y of cell axis_async_fifo.$add$aegis_exposed.v:291$127 ($add).
+Removed top 31 bits (of 32) from port B of cell axis_async_fifo.$add$aegis_exposed.v:292$128 ($add).
+Removed top 25 bits (of 32) from port Y of cell axis_async_fifo.$add$aegis_exposed.v:292$128 ($add).
+Removed top 31 bits (of 32) from port A of cell axis_async_fifo.$not$aegis_exposed.v:351$187 ($not).
+Removed top 31 bits (of 32) from port Y of cell axis_async_fifo.$not$aegis_exposed.v:351$187 ($not).
+Removed top 31 bits (of 32) from mux cell axis_async_fifo.$ternary$aegis_exposed.v:524$327 ($mux).
+Removed top 1 bits (of 7) from port B of cell axis_async_fifo.$xor$aegis_exposed.v:527$330 ($xor).
+Removed top 1 bits (of 7) from port B of cell axis_async_fifo.$xor$aegis_exposed.v:528$331 ($xor).
+Removed top 1 bits (of 7) from port B of cell axis_async_fifo.$xor$aegis_exposed.v:530$333 ($xor).
+Removed top 5 bits (of 10) from wire axis_async_fifo.$0$memwr$\mem$aegis_exposed.v:277$58_EN[9:0]$79.
+Removed top 6 bits (of 10) from wire axis_async_fifo.$0$memwr$\mem$aegis_exposed.v:275$57_EN[9:0]$76.
+Removed top 7 bits (of 10) from wire axis_async_fifo.$0$memwr$\mem$aegis_exposed.v:273$56_EN[9:0]$73.
+Removed top 8 bits (of 10) from wire axis_async_fifo.$0$memwr$\mem$aegis_exposed.v:271$55_EN[9:0]$70.
+Removed top 9 bits (of 10) from wire axis_async_fifo.$0$memwr$\mem$aegis_exposed.v:269$54_EN[9:0]$67.
+Removed top 31 bits (of 32) from wire axis_async_fifo._165_.
+Removed top 4 bits (of 10) from wire axis_async_fifo.$0$memwr$\mem$aegis_exposed.v:279$59_EN[9:0]$82.
+Removed top 3 bits (of 10) from wire axis_async_fifo.$0$memwr$\mem$aegis_exposed.v:281$60_EN[9:0]$85.
+Removed top 31 bits (of 32) from wire axis_async_fifo._090_.
+Removed top 2 bits (of 10) from wire axis_async_fifo.$0$memwr$\mem$aegis_exposed.v:283$61_EN[9:0]$88.
+Removed top 1 bits (of 10) from wire axis_async_fifo.$0$memwr$\mem$aegis_exposed.v:285$62_EN[9:0]$91.
+Removed top 25 bits (of 32) from wire axis_async_fifo._033_.
+Removed top 25 bits (of 32) from wire axis_async_fifo._032_.
+Removed top 25 bits (of 32) from wire axis_async_fifo._031_.
+Removed top 7 bits (of 8) from port B of cell aegis_chk_gray_src_x_4f5bb0f0.$add$checker.v:23$14 ($add).
+Removed top 5 bits (of 8) from port B of cell aegis_chk_gray_src_x_4f5bb0f0.$ge$checker.v:39$17 ($ge).
+Removed top 24 bits (of 32) from port Y of cell aegis_chk_gray_src_x_4f5bb0f0.$sub$checker.v:41$22 ($sub).
+
+4.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axis_async_fifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_4f5bb0f0..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 0 unused cells and 15 unused wires.
+<suppressed ~1 debug messages>
+
+4.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.12. Executing OPT pass (performing simple optimizations).
+
+4.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axis_async_fifo.
+<suppressed ~1 debug messages>
+Optimizing module aegis_chk_gray_src_x_4f5bb0f0.
+Optimizing module aegis_formal_top.
+
+4.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axis_async_fifo'.
+Computing hashes of 222 cells of `\axis_async_fifo'.
+Finding duplicate cells in `\axis_async_fifo'.
+Finding identical cells in module `\aegis_chk_gray_src_x_4f5bb0f0'.
+Computing hashes of 32 cells of `\aegis_chk_gray_src_x_4f5bb0f0'.
+Finding duplicate cells in `\aegis_chk_gray_src_x_4f5bb0f0'.
+Finding identical cells in module `\aegis_formal_top'.
+Computing hashes of 7 cells of `\aegis_formal_top'.
+Finding duplicate cells in `\aegis_formal_top'.
+Removed a total of 0 cells.
+
+4.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axis_async_fifo..
+Finding unused cells or wires in module \aegis_chk_gray_src_x_4f5bb0f0..
+Finding unused cells or wires in module \aegis_formal_top..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
+
+4.12.4. Finished fast OPT passes.
+
+4.13. Executing SORT pass.
+
+4.14. Printing statistics.
+
+=== aegis_chk_gray_src_x_4f5bb0f0 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       27 wires
+      227 wire bits
+       13 public wires
+      124 public wire bits
+        3 ports
+        9 port bits
+       32 cells
+        2   $add
+        1   $and
+        2   $check
+        2   $dff
+        2   $eq
+        1   $ge
+        1   $logic_and
+        2   $logic_not
+        1   $logic_or
+        3   $mux
+        1   $ne
+        1   $sub
+       13   $xor
+
+=== aegis_formal_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       19 wires
+       46 wire bits
+       18 public wires
+       45 public wire bits
+       14 ports
+       35 port bits
+        5 cells
+        1   $and
+        1   $check
+        1   $dff
+        1   $mux
+        1   $or
+        2 submodules
+        1   aegis_chk_gray_src_x_4f5bb0f0
+        1   axis_async_fifo
+
+=== axis_async_fifo ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      259 wires
+      966 wire bits
+      229 public wires
+      751 public wire bits
+       15 ports
+       42 port bits
+      221 cells
+        2   $add
+        2   $adff
+       29   $dff
+        4   $eq
+       23   $logic_and
+       11   $logic_not
+        9   $logic_or
+        1   $mem_v2
+      131   $mux
+        3   $not
+        2   $or
+        4   $xor
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      258 aegis_formal_top
+       32 aegis_chk_gray_src_x_4f5bb0f0
+      221 axis_async_fifo
+
+        +----------Count including submodules.
+        | 
+      305 wires
+     1239 wire bits
+      260 public wires
+      920 public wire bits
+       32 ports
+       86 port bits
+        - memories
+        - memory bits
+        - processes
+      258 cells
+        4   $add
+        2   $adff
+        2   $and
+        3   $check
+       32   $dff
+        6   $eq
+        1   $ge
+       24   $logic_and
+       13   $logic_not
+       10   $logic_or
+        1   $mem_v2
+      135   $mux
+        1   $ne
+        3   $not
+        3   $or
+        1   $sub
+       17   $xor
+        2 submodules
+        1   aegis_chk_gray_src_x_4f5bb0f0
+        1   axis_async_fifo
+
+4.15. Executing CHECK pass (checking for obvious problems).
+Checking module aegis_chk_gray_src_x_4f5bb0f0...
+Checking module aegis_formal_top...
+Checking module axis_async_fifo...
+Found and reported 0 problems.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `aegis_formal_top'. Setting top module to aegis_formal_top.
+
+5.1. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_4f5bb0f0
+Used module:     \axis_async_fifo
+
+5.2. Analyzing design hierarchy..
+Top module:  \aegis_formal_top
+Used module:     \aegis_chk_gray_src_x_4f5bb0f0
+Used module:     \axis_async_fifo
+Removed 0 unused modules.
+Module aegis_chk_gray_src_x_4f5bb0f0 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module aegis_formal_top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+6. Executing jny backend.
+
+7. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: cdee8447d0, time: 0.05s, user: 0.06s, system: 0.00s, MEM: 18.25 MB peak
+Yosys 0.67+post (git sha1 b8e7da6f40ae8f552c116bf6c359b07c6533e159, Release, AppleClang clang++ 17.0.0.17000604)
+Time spent: 28% 2x hierarchy (0 sec), 19% 5x opt_clean (0 sec), ...

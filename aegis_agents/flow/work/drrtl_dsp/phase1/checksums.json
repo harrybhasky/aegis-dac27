@@ -1,0 +1,196 @@
+{
+ "sdc": {
+  "file": "drrtl_dsp.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "DSP",
+ "entries": [
+  {
+   "reg": "param@DSP.v0.v:5",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    5,
+    5
+   ],
+   "sha256": "11ef98faa51767744d83383cfdf05b1cde240808c18da8bf8b50fd189567184e"
+  },
+  {
+   "reg": "param@DSP.v0.v:6",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    6,
+    6
+   ],
+   "sha256": "56e02e49e6600cb9e79283012f7aa10c274284460ea0c0d58094fbe480e69846"
+  },
+  {
+   "reg": "param@DSP.v0.v:7",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    7,
+    7
+   ],
+   "sha256": "9fe047172a498cc271ffc76f2600408820eb975e4e64987b64ce3f1086174a19"
+  },
+  {
+   "reg": "param@DSP.v0.v:8",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    8,
+    8
+   ],
+   "sha256": "fa8d9f01453946b36a8a4e905faab20fec5573e747ef69809e5a72483d0cb3c3"
+  },
+  {
+   "reg": "param@DSP.v0.v:10",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    10,
+    10
+   ],
+   "sha256": "153ca2a93890c2f2bbc94b521e2af6dc5028316f24d6e91777eb247fe992a7dd"
+  },
+  {
+   "reg": "param@DSP.v0.v:11",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    11,
+    11
+   ],
+   "sha256": "6f886037b2a89bd963aa79b4723d07db9d08decbc085e61ba9e5c10b5d1a5a79"
+  },
+  {
+   "reg": "param@DSP.v0.v:12",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    12,
+    12
+   ],
+   "sha256": "a73675e6a93f0de680f72c1b6bcbfb5196aea588c530c2817a6195f83642efe1"
+  },
+  {
+   "reg": "param@DSP.v0.v:13",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    13,
+    13
+   ],
+   "sha256": "9d502499e76636621b8853b3d3ca242480e84d32204a2494d632b85d0d404eef"
+  },
+  {
+   "reg": "param@DSP.v0.v:14",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    14,
+    14
+   ],
+   "sha256": "3ac495326d1dfa4feae81b6ae5976d241a7bd1d1ff8e55c12520ab903ad70ab5"
+  },
+  {
+   "reg": "param@DSP.v0.v:15",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    15,
+    15
+   ],
+   "sha256": "b5f17de033559f867b61e92941756fc524a8c389f319c4976b477cc28e3087cb"
+  },
+  {
+   "reg": "param@DSP.v0.v:16",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    16,
+    16
+   ],
+   "sha256": "e00f091dcc3dee7709320e9e89919ca527b4deeecfdaf5c3e1eb84fb2e9e2556"
+  },
+  {
+   "reg": "param@DSP.v0.v:18",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    18,
+    18
+   ],
+   "sha256": "e0fbc8d75376d045596b53e16884aedf231657076f6a5a19cbf7a16529a72ebb"
+  },
+  {
+   "reg": "param@DSP.v0.v:19",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    19,
+    19
+   ],
+   "sha256": "0d10ab51cc2c625f1b7d14dde9fc02eb74861f94bad2234251531af656884d96"
+  },
+  {
+   "reg": "param@DSP.v0.v:20",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    20,
+    20
+   ],
+   "sha256": "9d79595a4b23953524b49b26dbffc81d7395498474b6b3bd7318e2e19e646bb6"
+  },
+  {
+   "reg": "param@DSP.v0.v:125",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    125,
+    125
+   ],
+   "sha256": "d05fe3f1e21ce10b3721f5ea4e91028096583ef4065d2ef9bede8a5eeb270a8c"
+  },
+  {
+   "reg": "param@DSP.v0.v:126",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    126,
+    126
+   ],
+   "sha256": "9d79595a4b23953524b49b26dbffc81d7395498474b6b3bd7318e2e19e646bb6"
+  },
+  {
+   "reg": "param@DSP.v0.v:127",
+   "category": "capacity",
+   "scope": "line",
+   "file": "DSP.v0.v",
+   "lines": [
+    127,
+    127
+   ],
+   "sha256": "e791ee84c9f9f5ccbd44715bcb81a4e259ca831b58e8ef3b765585f816ef1cb6"
+  }
+ ]
+}

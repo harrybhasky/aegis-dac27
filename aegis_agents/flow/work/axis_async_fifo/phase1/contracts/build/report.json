@@ -1,0 +1,54 @@
+[
+  {
+    "id": "x_0b91db9a",
+    "type": "gray_src",
+    "dir": "flow/work/axis_async_fifo/phase1.new/contracts/build/x_0b91db9a",
+    "job": "x_0b91db9a",
+    "checker_module": "aegis_chk_gray_src_x_0b91db9a",
+    "lat": 1,
+    "n_hold": 4,
+    "min_gap": 2,
+    "obligations": [],
+    "proof": {
+      "status": "PASS",
+      "failed": [],
+      "trace": null,
+      "engine": "abc pdr",
+      "note": "PDR PASS"
+    },
+    "structural": {
+      "rule": "R4 registered launch",
+      "signal": "rd_ptr_gray_reg",
+      "ok": true,
+      "problems": []
+    }
+  },
+  {
+    "id": "x_d33c9e21",
+    "type": "gray_src",
+    "dir": "flow/work/axis_async_fifo/phase1.new/contracts/build/x_d33c9e21",
+    "job": "x_d33c9e21",
+    "checker_module": "aegis_chk_gray_src_x_d33c9e21",
+    "lat": 1,
+    "n_hold": 6,
+    "min_gap": 3,
+    "obligations": [],
+    "proof": {
+      "status": "FAIL",
+      "failed": [
+        "G1",
+        "G2"
+      ],
+      "trace": "flow/work/axis_async_fifo/phase1.new/contracts/build/x_d33c9e21/x_d33c9e21/engine_0/trace.vcd",
+      "engine": "smtbmc z3",
+      "note": "PDR FAIL; k-induction FAIL"
+    },
+    "structural": {
+      "rule": "R4 registered launch",
+      "signal": "wr_ptr_gray_reg",
+      "ok": true,
+      "problems": []
+    },
+    "baseline_violation": "contract fails on the unmodified design: pre-existing CDC bug or missing assumption -- review before locking"
+  }
+]
