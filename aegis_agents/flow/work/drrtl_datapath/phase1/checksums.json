@@ -1,0 +1,31 @@
+{
+ "sdc": {
+  "file": "drrtl_datapath.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "datapath",
+ "entries": [
+  {
+   "reg": "param@datapath.v0.v:693",
+   "category": "capacity",
+   "scope": "line",
+   "file": "datapath.v0.v",
+   "lines": [
+    693,
+    693
+   ],
+   "sha256": "6a8a05b18408cf327556e38f01016b9ed3480bb8723a44b26d69b423fd5b795c"
+  },
+  {
+   "reg": "param@datapath.v0.v:1028",
+   "category": "capacity",
+   "scope": "line",
+   "file": "datapath.v0.v",
+   "lines": [
+    1028,
+    1028
+   ],
+   "sha256": "e7c9ccb5ed43ab00f4303e63788284e673ae4e8a545158f6b16cfee979105e31"
+  }
+ ]
+}

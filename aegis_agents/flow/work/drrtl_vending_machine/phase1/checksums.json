@@ -1,0 +1,31 @@
+{
+ "sdc": {
+  "file": "drrtl_vending_machine.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "vending_machine",
+ "entries": [
+  {
+   "reg": "param@vending_machine.v0.v:28",
+   "category": "capacity",
+   "scope": "line",
+   "file": "vending_machine.v0.v",
+   "lines": [
+    28,
+    28
+   ],
+   "sha256": "f9f65f60c0204ebcd7d4e9f1fefa5db36e177668c830dbe06efa60d8c3b4ddaa"
+  },
+  {
+   "reg": "param@vending_machine.v0.v:29",
+   "category": "capacity",
+   "scope": "line",
+   "file": "vending_machine.v0.v",
+   "lines": [
+    29,
+    29
+   ],
+   "sha256": "12b9f2e3ba3197d9118c500952030e81a6653fd46ea97a3e1a85ee7d2f7d5260"
+  }
+ ]
+}

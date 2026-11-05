@@ -1,0 +1,11 @@
+{
+ "clocks": {
+  "clk_in": {
+   "period_ns": 0.1,
+   "master": null,
+   "root": "clk_in",
+   "source": "clk_in"
+  }
+ },
+ "synchronous_groups": []
+}

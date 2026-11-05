@@ -1,0 +1,504 @@
+{
+ "sdc": {
+  "file": "drrtl_tv80.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "tv80s",
+ "entries": [
+  {
+   "reg": "param@tv80.v0.v:8",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    8,
+    8
+   ],
+   "sha256": "f68bd460833a7f29897970919ed2ec26545d53ea4beb235e26a5f2041ae9c7f3"
+  },
+  {
+   "reg": "param@tv80.v0.v:9",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    9,
+    9
+   ],
+   "sha256": "7e1dddbaad5862e4cd386fd164590abd0436c092b0ca36c12ac94a9cfe895d2a"
+  },
+  {
+   "reg": "param@tv80.v0.v:10",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    10,
+    10
+   ],
+   "sha256": "fd340ba2828e5f4d63f16f9aa0c8de92bdbdebad148316fb87cee157acf9ecc5"
+  },
+  {
+   "reg": "param@tv80.v0.v:11",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    11,
+    11
+   ],
+   "sha256": "c168a7bced1af9279626ea50915863c7ffe514702509f5aeab73a45f2fb705b7"
+  },
+  {
+   "reg": "param@tv80.v0.v:12",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    12,
+    12
+   ],
+   "sha256": "e2b86d4e1c4a2442b3899cdb4a054272d40f743ccfb7c5f548128f1ea7ff72ca"
+  },
+  {
+   "reg": "param@tv80.v0.v:13",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    13,
+    13
+   ],
+   "sha256": "56c29e0f3d960e73c9f49308cd53a4d46807414f2b2a0b506581664fa96cb00d"
+  },
+  {
+   "reg": "param@tv80.v0.v:14",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    14,
+    14
+   ],
+   "sha256": "a80a5ed0ce9b111496e8e18c06327b3b3e8ecffa2276f5565de87ecf55947423"
+  },
+  {
+   "reg": "param@tv80.v0.v:15",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    15,
+    15
+   ],
+   "sha256": "0afc82da07e34dcebf2d2f0594c6caafca7f12c1ec2d3a4b3b28bc8dcb2a64fd"
+  },
+  {
+   "reg": "param@tv80.v0.v:16",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    16,
+    16
+   ],
+   "sha256": "4807576e8933af5206be5fad2f98699edc184d304fc0c1e29dd9dd9815d37f63"
+  },
+  {
+   "reg": "param@tv80.v0.v:431",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    431,
+    431
+   ],
+   "sha256": "68702eb6f939cef9d23e179973259b1035ccf3ce4222ffda0e3f18ca23b3235a"
+  },
+  {
+   "reg": "param@tv80.v0.v:432",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    432,
+    432
+   ],
+   "sha256": "0fb5292436d66fdcb4b9963abb4dc3f3ce0a3de1ca5b59b8ba69b2bc1b3135b3"
+  },
+  {
+   "reg": "param@tv80.v0.v:433",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    433,
+    433
+   ],
+   "sha256": "7e1dddbaad5862e4cd386fd164590abd0436c092b0ca36c12ac94a9cfe895d2a"
+  },
+  {
+   "reg": "param@tv80.v0.v:434",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    434,
+    434
+   ],
+   "sha256": "fd340ba2828e5f4d63f16f9aa0c8de92bdbdebad148316fb87cee157acf9ecc5"
+  },
+  {
+   "reg": "param@tv80.v0.v:435",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    435,
+    435
+   ],
+   "sha256": "c168a7bced1af9279626ea50915863c7ffe514702509f5aeab73a45f2fb705b7"
+  },
+  {
+   "reg": "param@tv80.v0.v:436",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    436,
+    436
+   ],
+   "sha256": "e2b86d4e1c4a2442b3899cdb4a054272d40f743ccfb7c5f548128f1ea7ff72ca"
+  },
+  {
+   "reg": "param@tv80.v0.v:437",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    437,
+    437
+   ],
+   "sha256": "56c29e0f3d960e73c9f49308cd53a4d46807414f2b2a0b506581664fa96cb00d"
+  },
+  {
+   "reg": "param@tv80.v0.v:438",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    438,
+    438
+   ],
+   "sha256": "a80a5ed0ce9b111496e8e18c06327b3b3e8ecffa2276f5565de87ecf55947423"
+  },
+  {
+   "reg": "param@tv80.v0.v:439",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    439,
+    439
+   ],
+   "sha256": "0afc82da07e34dcebf2d2f0594c6caafca7f12c1ec2d3a4b3b28bc8dcb2a64fd"
+  },
+  {
+   "reg": "param@tv80.v0.v:440",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    440,
+    440
+   ],
+   "sha256": "4807576e8933af5206be5fad2f98699edc184d304fc0c1e29dd9dd9815d37f63"
+  },
+  {
+   "reg": "param@tv80.v0.v:479",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    479,
+    479
+   ],
+   "sha256": "6dffb233c65553fb5e4f2bff22f6971db73de7aacfb14bfc3c34d685ee4bc134"
+  },
+  {
+   "reg": "param@tv80.v0.v:480",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    480,
+    480
+   ],
+   "sha256": "32dfa32278b66b5d6bc4dd324bf3ee698069a709d55926fa4552532b7ad76cd0"
+  },
+  {
+   "reg": "param@tv80.v0.v:481",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    481,
+    481
+   ],
+   "sha256": "13de7a382c9ab427ef5c456a296ac535b40a9fc17f3919c1da60ff6f3345e2a8"
+  },
+  {
+   "reg": "param@tv80.v0.v:482",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    482,
+    482
+   ],
+   "sha256": "14c893f03b81446f4b977a6f7546a6feb2058c86320a90d9d49c7410d0243385"
+  },
+  {
+   "reg": "param@tv80.v0.v:483",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    483,
+    483
+   ],
+   "sha256": "77c8c6e1ed8a290c80f4b80f1715bbe6b04d0f5b21e124b59794015385c385da"
+  },
+  {
+   "reg": "param@tv80.v0.v:484",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    484,
+    484
+   ],
+   "sha256": "3ad4a7f62e46354cd5d6e72ecb2c47c7c51ad73cf0d70c8b996b551599c4c2d2"
+  },
+  {
+   "reg": "param@tv80.v0.v:485",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    485,
+    485
+   ],
+   "sha256": "0c923266a9a9843434cdd3aed689884d32b4c485505a06047bbe2670ff88bb12"
+  },
+  {
+   "reg": "param@tv80.v0.v:1713",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1713,
+    1713
+   ],
+   "sha256": "f68bd460833a7f29897970919ed2ec26545d53ea4beb235e26a5f2041ae9c7f3"
+  },
+  {
+   "reg": "param@tv80.v0.v:1714",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1714,
+    1714
+   ],
+   "sha256": "7e1dddbaad5862e4cd386fd164590abd0436c092b0ca36c12ac94a9cfe895d2a"
+  },
+  {
+   "reg": "param@tv80.v0.v:1715",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1715,
+    1715
+   ],
+   "sha256": "fd340ba2828e5f4d63f16f9aa0c8de92bdbdebad148316fb87cee157acf9ecc5"
+  },
+  {
+   "reg": "param@tv80.v0.v:1716",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1716,
+    1716
+   ],
+   "sha256": "c168a7bced1af9279626ea50915863c7ffe514702509f5aeab73a45f2fb705b7"
+  },
+  {
+   "reg": "param@tv80.v0.v:1717",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1717,
+    1717
+   ],
+   "sha256": "e2b86d4e1c4a2442b3899cdb4a054272d40f743ccfb7c5f548128f1ea7ff72ca"
+  },
+  {
+   "reg": "param@tv80.v0.v:1718",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1718,
+    1718
+   ],
+   "sha256": "56c29e0f3d960e73c9f49308cd53a4d46807414f2b2a0b506581664fa96cb00d"
+  },
+  {
+   "reg": "param@tv80.v0.v:1719",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1719,
+    1719
+   ],
+   "sha256": "a80a5ed0ce9b111496e8e18c06327b3b3e8ecffa2276f5565de87ecf55947423"
+  },
+  {
+   "reg": "param@tv80.v0.v:1720",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1720,
+    1720
+   ],
+   "sha256": "0afc82da07e34dcebf2d2f0594c6caafca7f12c1ec2d3a4b3b28bc8dcb2a64fd"
+  },
+  {
+   "reg": "param@tv80.v0.v:1721",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1721,
+    1721
+   ],
+   "sha256": "4807576e8933af5206be5fad2f98699edc184d304fc0c1e29dd9dd9815d37f63"
+  },
+  {
+   "reg": "param@tv80.v0.v:1824",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1824,
+    1824
+   ],
+   "sha256": "6dffb233c65553fb5e4f2bff22f6971db73de7aacfb14bfc3c34d685ee4bc134"
+  },
+  {
+   "reg": "param@tv80.v0.v:1825",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1825,
+    1825
+   ],
+   "sha256": "32dfa32278b66b5d6bc4dd324bf3ee698069a709d55926fa4552532b7ad76cd0"
+  },
+  {
+   "reg": "param@tv80.v0.v:1826",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1826,
+    1826
+   ],
+   "sha256": "13de7a382c9ab427ef5c456a296ac535b40a9fc17f3919c1da60ff6f3345e2a8"
+  },
+  {
+   "reg": "param@tv80.v0.v:1827",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1827,
+    1827
+   ],
+   "sha256": "14c893f03b81446f4b977a6f7546a6feb2058c86320a90d9d49c7410d0243385"
+  },
+  {
+   "reg": "param@tv80.v0.v:1828",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1828,
+    1828
+   ],
+   "sha256": "77c8c6e1ed8a290c80f4b80f1715bbe6b04d0f5b21e124b59794015385c385da"
+  },
+  {
+   "reg": "param@tv80.v0.v:1829",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1829,
+    1829
+   ],
+   "sha256": "3ad4a7f62e46354cd5d6e72ecb2c47c7c51ad73cf0d70c8b996b551599c4c2d2"
+  },
+  {
+   "reg": "param@tv80.v0.v:1830",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    1830,
+    1830
+   ],
+   "sha256": "0c923266a9a9843434cdd3aed689884d32b4c485505a06047bbe2670ff88bb12"
+  },
+  {
+   "reg": "param@tv80.v0.v:4488",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    4488,
+    4488
+   ],
+   "sha256": "f68bd460833a7f29897970919ed2ec26545d53ea4beb235e26a5f2041ae9c7f3"
+  },
+  {
+   "reg": "param@tv80.v0.v:4489",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    4489,
+    4489
+   ],
+   "sha256": "860c215e40e8e2aaaad2937ea6c3ae1b660d491705a7996f0f35e34ed48898ff"
+  },
+  {
+   "reg": "param@tv80.v0.v:4490",
+   "category": "capacity",
+   "scope": "line",
+   "file": "tv80.v0.v",
+   "lines": [
+    4490,
+    4490
+   ],
+   "sha256": "0fb5292436d66fdcb4b9963abb4dc3f3ce0a3de1ca5b59b8ba69b2bc1b3135b3"
+  }
+ ]
+}

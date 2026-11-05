@@ -1,0 +1,97 @@
+{
+ "sdc": {
+  "file": "drrtl_lstm.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "lstm_cell",
+ "entries": [
+  {
+   "reg": "param@LSTM.v0.v:6",
+   "category": "capacity",
+   "scope": "line",
+   "file": "LSTM.v0.v",
+   "lines": [
+    6,
+    6
+   ],
+   "sha256": "ef833038528d866dec906c8df7f623d716481b24df6d5d12bee1cac57493f3e9"
+  },
+  {
+   "reg": "param@LSTM.v0.v:7",
+   "category": "capacity",
+   "scope": "line",
+   "file": "LSTM.v0.v",
+   "lines": [
+    7,
+    7
+   ],
+   "sha256": "5526e2189a4e5b296971e08b4d283d641833148c5809d48b1ff29d05b7308a0a"
+  },
+  {
+   "reg": "param@LSTM.v0.v:79",
+   "category": "capacity",
+   "scope": "line",
+   "file": "LSTM.v0.v",
+   "lines": [
+    79,
+    79
+   ],
+   "sha256": "ef833038528d866dec906c8df7f623d716481b24df6d5d12bee1cac57493f3e9"
+  },
+  {
+   "reg": "param@LSTM.v0.v:80",
+   "category": "capacity",
+   "scope": "line",
+   "file": "LSTM.v0.v",
+   "lines": [
+    80,
+    80
+   ],
+   "sha256": "5526e2189a4e5b296971e08b4d283d641833148c5809d48b1ff29d05b7308a0a"
+  },
+  {
+   "reg": "param@LSTM.v0.v:102",
+   "category": "capacity",
+   "scope": "line",
+   "file": "LSTM.v0.v",
+   "lines": [
+    102,
+    102
+   ],
+   "sha256": "ef833038528d866dec906c8df7f623d716481b24df6d5d12bee1cac57493f3e9"
+  },
+  {
+   "reg": "param@LSTM.v0.v:103",
+   "category": "capacity",
+   "scope": "line",
+   "file": "LSTM.v0.v",
+   "lines": [
+    103,
+    103
+   ],
+   "sha256": "5526e2189a4e5b296971e08b4d283d641833148c5809d48b1ff29d05b7308a0a"
+  },
+  {
+   "reg": "param@LSTM.v0.v:120",
+   "category": "capacity",
+   "scope": "line",
+   "file": "LSTM.v0.v",
+   "lines": [
+    120,
+    120
+   ],
+   "sha256": "ef833038528d866dec906c8df7f623d716481b24df6d5d12bee1cac57493f3e9"
+  },
+  {
+   "reg": "param@LSTM.v0.v:121",
+   "category": "capacity",
+   "scope": "line",
+   "file": "LSTM.v0.v",
+   "lines": [
+    121,
+    121
+   ],
+   "sha256": "5526e2189a4e5b296971e08b4d283d641833148c5809d48b1ff29d05b7308a0a"
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "sdc": {
+  "file": "drrtl_fifo.sdc",
+  "sha256": "91ea0b991d2d83fc7fb0dc7e6b8885a53615a0445a83d0ab58d4c4964c9e5ec6"
+ },
+ "rtl_top": "fifo",
+ "entries": [
+  {
+   "reg": "param@FIFO.v0.v:1",
+   "category": "capacity",
+   "scope": "line",
+   "file": "FIFO.v0.v",
+   "lines": [
+    1,
+    1
+   ],
+   "sha256": "42747c129fab86362309cad57fcfc8b2e9988a4bb0dad8593716227828b30b14"
+  },
+  {
+   "reg": "param@FIFO.v0.v:2",
+   "category": "capacity",
+   "scope": "line",
+   "file": "FIFO.v0.v",
+   "lines": [
+    2,
+    2
+   ],
+   "sha256": "bbbde78f52d5911184fe5655d42de8295e37f749af4277c604ce50534429c5e9"
+  },
+  {
+   "reg": "param@FIFO.v0.v:3",
+   "category": "capacity",
+   "scope": "line",
+   "file": "FIFO.v0.v",
+   "lines": [
+    3,
+    3
+   ],
+   "sha256": "07806c7dd3fd268ba05ad1bc0af355654e8d0e211adffb7416ab73e8be833ef5"
+  },
+  {
+   "reg": "param@FIFO.v0.v:46",
+   "category": "capacity",
+   "scope": "line",
+   "file": "FIFO.v0.v",
+   "lines": [
+    46,
+    46
+   ],
+   "sha256": "5cdee1d306aa414e017922450346bd2e1a65d041cf7ea23d0a6111e3298aed2b"
+  },
+  {
+   "reg": "param@FIFO.v0.v:75",
+   "category": "capacity",
+   "scope": "line",
+   "file": "FIFO.v0.v",
+   "lines": [
+    75,
+    75
+   ],
+   "sha256": "b9cc1a7e316235ccca7672eee7d6c25677cda9727479edb022dfe75063ee4650"
+  },
+  {
+   "reg": "param@FIFO.v0.v:125",
+   "category": "capacity",
+   "scope": "line",
+   "file": "FIFO.v0.v",
+   "lines": [
+    125,
+    125
+   ],
+   "sha256": "82fef4098c34252a90c9e46f8f6d44d56814a07ba3a9154a03fd8be8d63264f3"
+  },
+  {
+   "reg": "param@FIFO.v0.v:229",
+   "category": "capacity",
+   "scope": "line",
+   "file": "FIFO.v0.v",
+   "lines": [
+    229,
+    229
+   ],
+   "sha256": "084ee856247fbc87e08552e7d4a7dd23993b15acf4df41d577c8df26cf5ae3ed"
+  },
+  {
+   "reg": "param@FIFO.v0.v:332",
+   "category": "capacity",
+   "scope": "line",
+   "file": "FIFO.v0.v",
+   "lines": [
+    332,
+    332
+   ],
+   "sha256": "8a9bc07598428b0e9908ffde5c8063d5d1654476a9318ed03c5f5a32321b537e"
+  }
+ ]
+}

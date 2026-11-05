@@ -1,0 +1,24 @@
+{
+ "immutable": [
+  "LSTM.v0.v:102",
+  "LSTM.v0.v:103",
+  "LSTM.v0.v:120",
+  "LSTM.v0.v:121",
+  "LSTM.v0.v:6",
+  "LSTM.v0.v:7",
+  "LSTM.v0.v:79",
+  "LSTM.v0.v:80"
+ ],
+ "category": {
+  "LSTM.v0.v:6": "capacity",
+  "LSTM.v0.v:7": "capacity",
+  "LSTM.v0.v:79": "capacity",
+  "LSTM.v0.v:80": "capacity",
+  "LSTM.v0.v:102": "capacity",
+  "LSTM.v0.v:103": "capacity",
+  "LSTM.v0.v:120": "capacity",
+  "LSTM.v0.v:121": "capacity"
+ },
+ "contract": {},
+ "contracts": {}
+}

@@ -1,0 +1,24 @@
+{
+ "immutable": [
+  "FIFO.v0.v:1",
+  "FIFO.v0.v:125",
+  "FIFO.v0.v:2",
+  "FIFO.v0.v:229",
+  "FIFO.v0.v:3",
+  "FIFO.v0.v:332",
+  "FIFO.v0.v:46",
+  "FIFO.v0.v:75"
+ ],
+ "category": {
+  "FIFO.v0.v:1": "capacity",
+  "FIFO.v0.v:2": "capacity",
+  "FIFO.v0.v:3": "capacity",
+  "FIFO.v0.v:46": "capacity",
+  "FIFO.v0.v:75": "capacity",
+  "FIFO.v0.v:125": "capacity",
+  "FIFO.v0.v:229": "capacity",
+  "FIFO.v0.v:332": "capacity"
+ },
+ "contract": {},
+ "contracts": {}
+}

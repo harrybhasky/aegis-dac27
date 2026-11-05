@@ -1,0 +1,12 @@
+{
+ "immutable": [
+  "datapath.v0.v:1028",
+  "datapath.v0.v:693"
+ ],
+ "category": {
+  "datapath.v0.v:693": "capacity",
+  "datapath.v0.v:1028": "capacity"
+ },
+ "contract": {},
+ "contracts": {}
+}

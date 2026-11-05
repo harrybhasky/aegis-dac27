@@ -1,0 +1,31 @@
+{
+ "sdc": {
+  "file": "drrtl_aes.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "key_expansion_128aes",
+ "entries": [
+  {
+   "reg": "param@aes.v0.sv:2",
+   "category": "capacity",
+   "scope": "line",
+   "file": "aes.v0.sv",
+   "lines": [
+    2,
+    2
+   ],
+   "sha256": "f794b04e67cc91094cd9af59fd68ef70a3801684daa436bb18733331ad0e4e17"
+  },
+  {
+   "reg": "param@aes.v0.sv:3",
+   "category": "capacity",
+   "scope": "line",
+   "file": "aes.v0.sv",
+   "lines": [
+    3,
+    3
+   ],
+   "sha256": "b0d9cfe2c60e79ee6c1f9c0b4b74d5ccd46d33ce9e09164a2a0155e68b0bd2a3"
+  }
+ ]
+}

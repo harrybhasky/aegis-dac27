@@ -1,0 +1,12 @@
+{
+ "immutable": [
+  "aes.v0.sv:2",
+  "aes.v0.sv:3"
+ ],
+ "category": {
+  "aes.v0.sv:2": "capacity",
+  "aes.v0.sv:3": "capacity"
+ },
+ "contract": {},
+ "contracts": {}
+}

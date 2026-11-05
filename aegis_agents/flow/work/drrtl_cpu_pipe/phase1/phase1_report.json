@@ -1,0 +1,20 @@
+{
+ "clocks": 1,
+ "asynchronous_pairs": 0,
+ "constraint_audit": 0,
+ "flops": 32,
+ "unclocked_flops": 0,
+ "crossings": {
+  "synchronizer": 0,
+  "gray_candidate": 0,
+  "qualified_capture": 0,
+  "insufficient_depth": 0,
+  "unsynchronized": 0
+ },
+ "contracts_proven": [],
+ "immutable_lines": 0,
+ "contract_lines": 0,
+ "checksum_entries": 0,
+ "warnings": [],
+ "issues": []
+}

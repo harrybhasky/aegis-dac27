@@ -1,0 +1,22 @@
+{
+ "clocks": 1,
+ "asynchronous_pairs": 0,
+ "constraint_audit": 0,
+ "flops": 145,
+ "unclocked_flops": 8,
+ "crossings": {
+  "synchronizer": 0,
+  "gray_candidate": 0,
+  "qualified_capture": 0,
+  "insufficient_depth": 0,
+  "unsynchronized": 0
+ },
+ "contracts_proven": [],
+ "immutable_lines": 8,
+ "contract_lines": 0,
+ "checksum_entries": 8,
+ "warnings": [],
+ "issues": [
+  "flops with no SDC clock (gated or muxed clocks are not traced): ['mem_uut.dataOut', 'r2w_uut.r0', 'r2w_uut.sync_rdptr', 'rdaddr', 'rdptr', 'read_uut.current_state', 'read_uut.empty', 'read_uut.rden']"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "immutable": [
+  "vending_machine.v0.v:28",
+  "vending_machine.v0.v:29"
+ ],
+ "category": {
+  "vending_machine.v0.v:28": "capacity",
+  "vending_machine.v0.v:29": "capacity"
+ },
+ "contract": {},
+ "contracts": {}
+}

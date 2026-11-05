@@ -1,3 +1,19 @@
+# ROUND 3 (2026-11-05, after round 2 was started) -- READ THIS FIRST
+
+The paper now covers Dr. RTL's FULL 20-design suite, so 10 more designs (20 runs) are added and run BEFORE
+eth_mac_1g_fifo. Do NOT stop round 2. Just pull and start the round-3 script; it waits by itself until round 2 has
+finished its RTL-OPT step, then takes over (stops round 2 before eth_mac, runs the 20 runs, then eth_mac):
+```
+git pull origin main          # only adds Phase 1 data for 10 designs + handoff/run_machine2_round3.sh; no code change
+cd experiments && nohup caffeinate -i bash handoff/run_machine2_round3.sh >> handoff/machine2_r3.out 2>&1 &
+```
+If `git pull` complains because round 2 packed results on branch results-machine2-r2, run
+`git stash; git checkout main; git pull origin main` first (your runs in aegis_agents/flow/runs are untracked and
+safe). Results are packed and pushed to results-machine2-r2 after every design. Report progress to the user after
+each design. All rules of rounds 1-2 still apply.
+
+---------------------------------------------------------------------------------------------------------------
+
 # ROUND 2 (2026-11-05) -- READ THIS FIRST
 
 Round 1 (Exp 01 subset + Exp 03 ablation, 15 runs) is done and imported on machine 1. Thank you!

@@ -1,0 +1,8 @@
+{
+ "sdc": {
+  "file": "drrtl_arm_cpu1.sdc",
+  "sha256": "a931dfc9609c371c8e44d81fadfb670eb9a52333ef6c8bd5db9f60a8cc5d5892"
+ },
+ "rtl_top": "arm9_compatiable_code",
+ "entries": []
+}
