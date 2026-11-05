@@ -1,3 +1,14 @@
+# UPDATE (2026-11-05 21:00) -- RTL-OPT moved to machine 1
+Machine 1 now runs RTL-OPT (round 2, step 3). Do not stop anything; just pull and start the skipper, which waits for
+step 3 and stops only that step (round 2 then goes to step 4, where round 3 takes over as planned):
+```
+git pull origin main
+cd experiments && nohup bash handoff/skip_rtlopt.sh >> handoff/skip_rtlopt.out 2>&1 &
+```
+If RTL-OPT runs already finished on this machine before you saw this, keep them (they are packed as usual).
+
+---------------------------------------------------------------------------------------------------------------
+
 # ROUND 3 (2026-11-05, after round 2 was started) -- READ THIS FIRST
 
 The paper now covers Dr. RTL's FULL 20-design suite, so 10 more designs (20 runs) are added and run BEFORE
