@@ -1,3 +1,37 @@
+# CURRENT MACHINE-2 HANDOFF (2026-11-12)
+
+This section supersedes all older round notes below. When opened in Claude Code, do not ask the user to reconstruct
+the plan: inspect the repository and execute these checks.
+
+1. Run `git status --short --branch` and preserve any existing untracked run outputs. Do not edit benchmark code,
+   RTL, SDC, liberty, Phase 1 data, or skill files.
+2. Confirm Claude Code is authenticated with `claude -p "say ok"`.
+3. Run `python3 experiments/handoff/check_env.py`. The final line must be `ENVIRONMENT MATCHES ...`. If it does
+   not match, stop without running benchmarks and append the exact mismatch to
+   `experiments/handoff/MACHINE2_NOTES.md`.
+4. If the environment matches, use the current Round 3 runner:
+   ```
+   cd experiments
+   nohup caffeinate -i bash handoff/run_machine2_round3.sh >> handoff/machine2_r3.out 2>&1 &
+   ```
+   On Linux, omit `caffeinate -i`. Do not start an older round runner in parallel.
+5. After inspecting status, and after every completed step, run
+   `bash experiments/handoff/pack_results.sh`. Never push benchmark outputs manually.
+6. Log automatically using `experiments/handoff/log_event.sh`. The queue and packer already call it for normal
+   events. For failures, crashes, tool errors, environment mismatches, or manual interventions, append the exact
+   error text:
+   ```
+   bash experiments/handoff/log_event.sh "ABNORMAL: <short description>" "<exact error text>"
+   ```
+   Keep `MACHINE2_NOTES.md` factual and timestamped. Do not invent progress or numerical results.
+7. At the end, report the queue PID, completed/remaining runs from files on disk, the last log entries, and any
+   abnormal events. Do not claim completion merely because the background process started.
+
+The repository is marked private/double-blind in these instructions. Do not publish its contents, results, logs, or
+paper material. If repository visibility or access must be changed, stop and ask the owner before doing so.
+
+---------------------------------------------------------------------------------------------------------------
+
 # UPDATE (2026-11-05 21:00) -- RTL-OPT moved to machine 1
 Machine 1 now runs RTL-OPT (round 2, step 3). Do not stop anything; just pull and start the skipper, which waits for
 step 3 and stops only that step (round 2 then goes to step 4, where round 3 takes over as planned):
